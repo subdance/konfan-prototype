@@ -26,5 +26,6 @@ export default {
 <style>
   .totalContainer {
     width: 85%;
+    margin: auto;
   }
 </style>
