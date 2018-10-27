@@ -27,11 +27,11 @@ export default {
 </script>
 
 <style scoped>
-  main {
+  .el-main {
     min-height: 1000px;
   }
-  .totalContainer {
-    width: 85%;
-    margin: auto;
+  .el-container {
+    background-repeat: repeat;
+    background-image: url('assets/background/1.jpg');
   }
 </style>
