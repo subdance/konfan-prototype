@@ -16,7 +16,6 @@ export default {
 
 <style scoped>
   .homePageHolder {
-    width: 100%;
   }
   .showBox {
     background-size: cover;
