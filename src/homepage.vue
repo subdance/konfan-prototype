@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="homePageHolder">
-    <div  class="showBox" id="box1">
+    <div class="showBox" id="box1">
     </div>
-    <div  class="showBox" id="box2">
+    <div class="showBox" id="box2">
     </div>
-    <div  class="showBox" id="box3">
+    <div class="showBox" id="box3">
     </div>
   </div>
 </template>

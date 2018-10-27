@@ -1,5 +1,5 @@
 <template>
-  <el-container class="totalContainer">
+  <el-container>
     <el-header>
       <navBar></navBar>
     </el-header>
@@ -29,9 +29,10 @@ export default {
 <style scoped>
   .el-main {
     min-height: 1000px;
+    margin-top: -120px;
+    padding: 0;
   }
   .el-container {
-    background-repeat: repeat;
     background-image: url('assets/background/1.jpg');
   }
 </style>
