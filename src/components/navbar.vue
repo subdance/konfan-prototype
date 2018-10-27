@@ -27,10 +27,14 @@
     text-decoration: none;/*remove router link underline*/
   }
   .navBar {
-    display: inline-block;
+  float: left;
   }
   .el-menu {
     background-color: inherit;
+  }
+  .el-menu-item:hover {
+    background-color: inherit !important;
+    font-size: 0px;
   }
   .el-menu--horizontal>.el-menu-item.is-active {
     border-bottom: 3px solid white;
