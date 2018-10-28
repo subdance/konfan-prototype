@@ -34,8 +34,9 @@ export default {
     border-bottom: 2px solid white;
   }
   .navHolder {
+    margin-top: 6px;
     float: left;
-    width: 50%;
+    width: 43%;
     height: 60px;
     overflow: hidden;
   }
