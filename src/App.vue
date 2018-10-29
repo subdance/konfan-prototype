@@ -42,6 +42,5 @@ export default {
     z-index: 1;
   }
   .el-container {
-    background-image: url('assets/background/1.jpg');
   }
 </style>

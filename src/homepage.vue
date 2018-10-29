@@ -3,14 +3,22 @@
     <div class="showBox" id="box1">
     </div>
     <div class="showBox" id="box2">
-      <table border="1">
+      <table>
         <tr>
-          <td><img class="introPic" src="./assets/home_pic/3.jpg"></td>
-          <td></td>
+          <td><img class="introPic" src="./assets/home_pic/7.jpg"></td>
+          <td><div class="introText"></div></td>
         </tr>
         <tr>
-          <td></td>
-          <td><img class="introPic" src="./assets/home_pic/3.jpg"></td>
+          <td><div class="introText"></div></td>
+          <td><img class="introPic" src="./assets/home_pic/4.jpg"></td>
+        </tr>
+        <tr>
+          <td><img class="introPic" src="./assets/home_pic/6.jpg"></td>
+          <td><div class="introText"></div></td>
+        </tr>
+        <tr>
+          <td><div class="introText"></div></td>
+          <td><img class="introPic" src="./assets/home_pic/5.jpg"></td>
         </tr>
       </table>
     </div>
