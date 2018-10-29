@@ -28,11 +28,11 @@ export default {
     text-align: center;
     text-shadow: 1px 1px 1px #666666;
     margin-bottom: 20px;
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid grey;
     transition: border-bottom 0.5s;
   }
   td:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     transition: border-bottom 0.5s;
   }
   .navHolder {
