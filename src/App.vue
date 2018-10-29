@@ -43,4 +43,8 @@ export default {
   }
   .el-container {
   }
+  .el-footer {
+    padding: 0;
+    margin-bottom: 10px;
+  }
 </style>
