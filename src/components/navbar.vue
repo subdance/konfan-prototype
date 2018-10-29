@@ -1,48 +1,50 @@
 <template lang="html">
-  <div class="navBar">
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu"
-      mode="horizontal"
-      >
-      <el-menu-item index="1"><router-link to="/"><span class="navTextHome">HTT活动部室</span></router-link></el-menu-item>
-      <el-menu-item index="2"><router-link to="/"><span class="navTextHome">茶色相簿</span></router-link></el-menu-item>
-      <el-menu-item index="3"><router-link to="/"><span class="navTextHome">放映机</span></router-link></el-menu-item>
-    </el-menu>
+  <div class="navHolder">
+    <table>
+      <tr>
+        <td><router-link to="/"><span class="navTextHome">HTT活动部室</span></router-link></td>
+        <td><router-link to="/"><span class="navTextHome">茶色相簿</span></router-link></td>
+        <td><router-link to="/"><span class="navTextHome">放映机</span></router-link></td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
-  export default {
-      data() {
-        return {
-          activeIndex: '1',
-        };
-      },
-    }
+export default {
+}
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   a {
-    text-decoration: none;/*remove router link underline*/
+    text-decoration: none;
   }
-  .navBar {
-  float: left;
+  td {
+    width: 120px;
+    height: 54px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #666666;
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+    transition: border-bottom 0.5s;
   }
-  .el-menu {
-    background-color: inherit;
+  td:hover {
+    border-bottom: 1px solid white;
+    transition: border-bottom 0.5s;
   }
-  .el-menu-item:hover {
-    background-color: inherit !important;
-    font-size: 0px;
-  }
-  .el-menu--horizontal>.el-menu-item.is-active {
-    border-bottom: 3px solid white;
+  .navHolder {
+    margin-top: 6px;
+    float: left;
+    width: 43%;
+    height: 60px;
+    overflow: hidden;
   }
   .navTextHome {
     font-size: 1rem;
     color: #df000a;
-    text-shadow: 1px 1px 1px #666666;
     font-weight: bold;
   }
 </style>

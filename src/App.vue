@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header height='62px'>
-      <navBar2></navBar2>
+      <navBar></navBar>
       <iconHolder></iconHolder>
     </el-header>
 
@@ -16,17 +16,15 @@
 </template>
 
 <script>
-import navBar from '@/components/navbar.vue'
 import footBar from '@/components/footbar.vue'
 import iconHolder from '@/components/icon_holder.vue'
-import navBar2 from '@/components/navbar2.vue'
+import navBar from '@/components/navbar.vue'
 export default {
   name: 'App',
   components: {
     navBar,
     footBar,
     iconHolder,
-    navBar2,
   }
 }
 </script>
