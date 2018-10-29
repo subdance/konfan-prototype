@@ -20,8 +20,8 @@ export default {
     margin-top: -3px;
   }
   .iconHolder {
-    float: left;
-    overflow: hidden;
+    display: inline-block;
+    margin-right: 0;
     height: 60px;
   }
 </style>

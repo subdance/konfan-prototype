@@ -44,7 +44,6 @@ export default {
     background-size: cover;
     width: 100%;
     height: 760px;
-    border-radius: 3px;
     margin-bottom: 4rem;
   }
   .subText {

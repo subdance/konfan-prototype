@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header height='100px'>
+    <el-header height='62px'>
       <navBar2></navBar2>
       <iconHolder></iconHolder>
     </el-header>
@@ -34,12 +34,13 @@ export default {
 <style scoped>
   .el-main {
     min-height: 1000px;
-    margin-top: -120px;
+    margin-top: -62px;
     padding: 0;
     z-index: 0;
   }
   .el-header {
     z-index: 1;
+    border-bottom: 1px solid grey;
   }
   .el-container {
   }
