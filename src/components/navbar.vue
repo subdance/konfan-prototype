@@ -29,11 +29,10 @@ export default {
     text-shadow: 1px 1px 1px #666666;
     margin-bottom: 20px;
     border-bottom: 1px solid grey;
-    transition: border-bottom 0.5s;
+    transition: 0.5s ease;
   }
   td:hover {
     border-bottom: 1px solid white;
-    transition: border-bottom 0.5s;
   }
   .navHolder {
     margin-top: 6px;
