@@ -87,7 +87,7 @@ export default {
     text-align: right;
   }
   #box1 {
-    background-image: url('assets/home_pic/1.jpg');
+    background-image: url('./assets/home_pic/1.jpg');
     background-position: center;
     box-shadow: 3px 3px 3px grey;
   }
