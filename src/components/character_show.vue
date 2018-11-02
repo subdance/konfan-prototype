@@ -88,7 +88,6 @@ export default {
     cursor: pointer;
   }
   .introHolder {
-    float: right;
-    margin-top: 62px;
+    display: inline-block;
   }
 </style>
