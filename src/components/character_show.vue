@@ -3,11 +3,11 @@
     <div class="tabHolder" :style="{ backgroundImage: 'url(' + nowBackPic + ')' }">
       <div class="tabHeaderHolder">
         <ul>
-          <li @click='showCharacter(1)'><span class="girlSubNameText">平泽 唯</span><i v-show='isIconShow[0]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(2)'><span class="girlSubNameText">田井中 律</span><i v-show='isIconShow[1]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(3)'><span class="girlSubNameText">秋山 澪</span><i v-show='isIconShow[2]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(4)'><span class="girlSubNameText">琴吹</span><i v-show='isIconShow[3]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(5)'><span class="girlSubNameText">中野 梓</span><i v-show='isIconShow[4]' class="el-icon-star-off"></i></li>
+          <li @click='showCharacter(1)'><i v-show='isIconShow[0]' class="el-icon-star-off"></i><span class="girlSubNameText">平泽 唯</span><i v-show='isIconShow[0]' class="el-icon-star-off"></i></li>
+          <li @click='showCharacter(2)'><i v-show='isIconShow[1]' class="el-icon-star-off"></i><span class="girlSubNameText">田井中 律</span><i v-show='isIconShow[1]' class="el-icon-star-off"></i></li>
+          <li @click='showCharacter(3)'><i v-show='isIconShow[2]' class="el-icon-star-off"></i><span class="girlSubNameText">秋山 澪</span><i v-show='isIconShow[2]' class="el-icon-star-off"></i></li>
+          <li @click='showCharacter(4)'><i v-show='isIconShow[3]' class="el-icon-star-off"></i><span class="girlSubNameText">琴吹</span><i v-show='isIconShow[3]' class="el-icon-star-off"></i></li>
+          <li @click='showCharacter(5)'><i v-show='isIconShow[4]' class="el-icon-star-off"></i><span class="girlSubNameText">中野 梓</span><i v-show='isIconShow[4]' class="el-icon-star-off"></i></li>
         </ul>
       </div>
       <div class="introHolder">
@@ -22,9 +22,9 @@
 export default {
   data(){
     return{
-      nowBackPic: require('../assets/character/yuimain.jpg'),
+      nowBackPic: require('../assets/character/yuimain.png'),
       backPic: [
-        require('../assets/character/yuimain.jpg'),
+        require('../assets/character/yuimain.png'),
         require('../assets/character/miomain.jpg'),
         require('../assets/character/ritsumain.png'),
         require('../assets/character/mugimain.jpg'),
@@ -87,7 +87,6 @@ export default {
     text-shadow: 1px 1px 1px #666666;
     cursor: pointer;
   }
-  .girlSubNameText:hover {}
   .introHolder {
     float: right;
     margin-top: 62px;
