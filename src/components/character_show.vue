@@ -22,13 +22,13 @@
 export default {
   data(){
     return{
-      nowBackPic: require('../assets/home_pic/6.jpg'),
+      nowBackPic: require('../assets/character/yuimain.jpg'),
       backPic: [
-        require('../assets/home_pic/6.jpg'),
-        require('../assets/home_pic/2.jpg'),
-        require('../assets/home_pic/3.jpg'),
-        require('../assets/home_pic/4.jpg'),
-        require('../assets/home_pic/5.jpg'),
+        require('../assets/character/yuimain.jpg'),
+        require('../assets/character/miomain.jpg'),
+        require('../assets/character/ritsumain.png'),
+        require('../assets/character/mugimain.jpg'),
+        require('../assets/character/azusamain.jpg'),
       ],
       nowGirlName: 'Hirasawa Yui',
       nowGirlIntro: 'aaa',
@@ -56,7 +56,6 @@ export default {
       }
       this.isIconShow[ index - 1 ] = true;
 
-
     },
   },
 }
@@ -75,7 +74,7 @@ export default {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    height: 750px;
     transition: 0.3s;
   }
   .tabHeaderHolder {
