@@ -52,7 +52,7 @@ export default {
     z-index: -1;
   }
   .el-container {
-    
+
   }
   .el-footer {
     padding: 0;
