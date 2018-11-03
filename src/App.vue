@@ -43,7 +43,7 @@ export default {
   .el-header::after {
     background-color: white;
     content: "";
-    opacity: 0.2;
+    opacity: 0.4;
     position: absolute;
     top: 0;
     left: 0;
@@ -52,6 +52,7 @@ export default {
     z-index: -1;
   }
   .el-container {
+    
   }
   .el-footer {
     padding: 0;
