@@ -1,9 +1,9 @@
 <template lang="html">
-  <div class="">
-    <el-row :gutter="20">
+  <div id="mainHolder">
+    <el-row>
       <el-col :span="8">
         <div class="grid-content bg-purple">
-          <img src="" alt="">
+          <img src="../assets/character_intro/yui1.png" alt="">
         </div>
       </el-col>
       <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
@@ -16,5 +16,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped>
+ #mainHolder {
+   width: 100%;
+ }
 </style>
