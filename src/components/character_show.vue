@@ -22,11 +22,11 @@
 export default {
   data(){
     return{
-      nowBackPic: require('../assets/character/yuimain.png'),
+      nowBackPic: require('../assets/character/yuimain.jpg'),
       backPic: [
-        require('../assets/character/yuimain.png'),
-        require('../assets/character/miomain.jpg'),
+        require('../assets/character/yuimain.jpg'),
         require('../assets/character/ritsumain.jpg'),
+        require('../assets/character/miomain.jpg'),
         require('../assets/character/mugimain.jpg'),
         require('../assets/character/azusamain.jpg'),
       ],
