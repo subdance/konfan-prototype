@@ -25,7 +25,25 @@ export default {
     navBar,
     footBar,
     iconHolder,
-  }
+  },
+  data(){
+    return{
+      scollTop: null,
+      elementScollTop: null,
+    }
+  },
+  methods:{
+    // navBarChange(){
+    //   var this.scollTop = document.body.scrollTop;
+    //   var this.elementScollTop = document.documentElement.scrollTop;
+    //
+    //   if (this.scollTop > 20 || this.elementScollTop > 20) {
+    //     this.
+    // } else {
+    //     document.getElementById("myBtn").style.display = "none";
+    // }
+    // }
+  },
 }
 </script>
 
@@ -38,9 +56,10 @@ export default {
   }
   .el-header {
     z-index: 1;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
-  .el-header::after {
+  .el-header:after {
     background-color: white;
     content: "";
     opacity: 0.4;
