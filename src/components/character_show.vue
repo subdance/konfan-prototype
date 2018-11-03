@@ -26,7 +26,7 @@ export default {
       backPic: [
         require('../assets/character/yuimain.png'),
         require('../assets/character/miomain.jpg'),
-        require('../assets/character/ritsumain.png'),
+        require('../assets/character/ritsumain.jpg'),
         require('../assets/character/mugimain.jpg'),
         require('../assets/character/azusamain.jpg'),
       ],
