@@ -69,6 +69,14 @@ export default {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+    cursor: pointer;
+  }
+  li {
+    border-bottom: 1px solid grey;
+  }
+  li:hover {
+    border-bottom: 1px solid white;
+    transition: 0.3s;
   }
   .tabHolder {
     background-position: center;
@@ -85,9 +93,19 @@ export default {
   .girlSubNameText {
     color: white;
     text-shadow: 1px 1px 1px #666666;
-    cursor: pointer;
+
   }
   .introHolder {
     display: inline-block;
+    margin-top: 200px;
+    margin-left: 200px;
+  }
+  .girlNameText {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #e23622;
+    color: white;
+    text-shadow: 3px 3px 1px grey, -1px -1px 1px white, 1px -1px 1px white, 0px 0px 0px white;
+
   }
 </style>

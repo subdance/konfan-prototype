@@ -40,6 +40,7 @@ export default {
     width: 43%;
     height: 60px;
     overflow: hidden;
+
   }
   .navTextHome {
     font-size: 1rem;
