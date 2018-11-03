@@ -38,7 +38,18 @@ export default {
   }
   .el-header {
     z-index: 1;
-    border-bottom: 1px solid grey;
+    position: relative;
+  }
+  .el-header::after {
+    background-color: white;
+    content: "";
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
   }
   .el-container {
   }

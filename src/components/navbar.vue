@@ -22,25 +22,34 @@ export default {
   a {
     text-decoration: none;
   }
+  table {
+
+  }
   td {
     width: 120px;
     height: 54px;
     text-align: center;
     text-shadow: 1px 1px 1px #666666;
-    margin-bottom: 20px;
-    border-bottom: 1px solid grey;
     transition: 0.5s ease;
   }
-  td:hover {
-    border-bottom: 1px solid white;
+  td:after {
+    display:block;
+    content: '';
+    border-bottom: 2px solid white;
+    transform: scaleX(0);
+    /* transition: transform 250ms ease-in-out; */
+    transition: 0.1s;
+  }
+  td:hover:after {
+    transform: scaleX(1);
   }
   .navHolder {
     margin-top: 6px;
     float: left;
     width: 43%;
     height: 60px;
-    overflow: hidden;
-
+    position: relative;
+    margin-bottom: 20px;
   }
   .navTextHome {
     font-size: 1rem;

@@ -73,6 +73,7 @@ export default {
   }
   li {
     border-bottom: 1px solid grey;
+    width: 7rem;
   }
   li:hover {
     border-bottom: 1px solid white;
