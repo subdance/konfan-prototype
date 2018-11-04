@@ -21,7 +21,12 @@ export default {
   }
   .iconHolder {
     display: inline-block;
-    margin-right: 0;
     height: 60px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 </style>
