@@ -22,25 +22,20 @@ export default {
   a {
     text-decoration: none;
   }
-  table {
-
-  }
   td {
     width: 120px;
     height: 54px;
     text-align: center;
     text-shadow: 1px 1px 1px #666666;
-    transition: 0.5s ease;
   }
-  td:after {
+  td::after {
     display:block;
-    content: '';
-    border-bottom: 2px solid white;
+    content: ' ';
+    border-bottom: 1px solid white;
     transform: scaleX(0);
-    /* transition: transform 250ms ease-in-out; */
-    transition: 0.1s;
+    transition: transform 250ms ease-in-out;
   }
-  td:hover:after {
+  td:hover::after {
     transform: scaleX(1);
   }
   .navHolder {

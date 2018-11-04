@@ -57,12 +57,12 @@ export default {
   .el-header {
     z-index: 1;
     position: sticky;
-    top: 0;
+    display: block;
   }
-  .el-header:after {
+  .el-header::after {
     background-color: white;
     content: "";
-    opacity: 0.4;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
