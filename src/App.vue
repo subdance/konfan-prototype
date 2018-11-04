@@ -28,8 +28,8 @@ export default {
   },
   data(){
     return{
-      scollTop: null,
-      elementScollTop: null,
+      // scollTop: null,
+      // elementScollTop: null,
     }
   },
   methods:{
@@ -56,13 +56,13 @@ export default {
   }
   .el-header {
     z-index: 1;
-    position: sticky;
+    position: relative;
     display: block;
   }
   .el-header::after {
     background-color: white;
     content: "";
-    opacity: 0.3;
+    opacity: 0.2;
     position: absolute;
     top: 0;
     left: 0;
