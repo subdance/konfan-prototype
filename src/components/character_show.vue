@@ -3,11 +3,11 @@
     <div class="tabHolder" :style="{ backgroundImage: 'url(' + nowBackPic + ')' }">
       <div class="tabHeaderHolder">
         <ul>
-          <li @click='showCharacter(1)'><i v-show='isIconShow[0]' class="el-icon-star-off"></i><span class="girlSubNameText">平泽 唯</span><i v-show='isIconShow[0]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(2)'><i v-show='isIconShow[1]' class="el-icon-star-off"></i><span class="girlSubNameText">田井中 律</span><i v-show='isIconShow[1]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(3)'><i v-show='isIconShow[2]' class="el-icon-star-off"></i><span class="girlSubNameText">秋山 澪</span><i v-show='isIconShow[2]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(4)'><i v-show='isIconShow[3]' class="el-icon-star-off"></i><span class="girlSubNameText">琴吹</span><i v-show='isIconShow[3]' class="el-icon-star-off"></i></li>
-          <li @click='showCharacter(5)'><i v-show='isIconShow[4]' class="el-icon-star-off"></i><span class="girlSubNameText">中野 梓</span><i v-show='isIconShow[4]' class="el-icon-star-off"></i></li>
+          <li @click='showCharacter(1)'><span class="girlSubNameText"><i v-show='isIconShow[0]' class="el-icon-star-off"></i>平泽 唯<i v-show='isIconShow[0]' class="el-icon-star-off"></i></span></li>
+          <li @click='showCharacter(2)'><span class="girlSubNameText"><i v-show='isIconShow[1]' class="el-icon-star-off"></i>田井中 律<i v-show='isIconShow[1]' class="el-icon-star-off"></i></span></li>
+          <li @click='showCharacter(3)'><span class="girlSubNameText"><i v-show='isIconShow[2]' class="el-icon-star-off"></i>秋山 澪<i v-show='isIconShow[2]' class="el-icon-star-off"></i></span></li>
+          <li @click='showCharacter(4)'><span class="girlSubNameText"><i v-show='isIconShow[3]' class="el-icon-star-off"></i>琴吹<i v-show='isIconShow[3]' class="el-icon-star-off"></i></span></li>
+          <li @click='showCharacter(5)'><span class="girlSubNameText"><i v-show='isIconShow[4]' class="el-icon-star-off"></i>中野 梓<i v-show='isIconShow[4]' class="el-icon-star-off"></i></span></li>
         </ul>
       </div>
       <div class="introHolder">
@@ -32,7 +32,7 @@ export default {
       ],
       nowGirlName: 'Hirasawa Yui',
       nowGirlIntro: 'aaa',
-      backName: ['Hirasawa Yui', 'Mio Akiyama', 'Tainaka Ritsu', 'Kotobuki Tsumugi', 'Nakano Azusa'],
+      backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Mio Akiyama', 'Kotobuki Tsumugi', 'Nakano Azusa'],
       backIntro: [
         'aaa',
         'bbb',
