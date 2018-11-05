@@ -6,7 +6,7 @@
           <li @click='showCharacter(1)'><span class="girlSubNameText"><i v-show='isIconShow[0]' class="el-icon-star-off"></i>平泽 唯<i v-show='isIconShow[0]' class="el-icon-star-off"></i></span></li>
           <li @click='showCharacter(2)'><span class="girlSubNameText"><i v-show='isIconShow[1]' class="el-icon-star-off"></i>田井中 律<i v-show='isIconShow[1]' class="el-icon-star-off"></i></span></li>
           <li @click='showCharacter(3)'><span class="girlSubNameText"><i v-show='isIconShow[2]' class="el-icon-star-off"></i>秋山 澪<i v-show='isIconShow[2]' class="el-icon-star-off"></i></span></li>
-          <li @click='showCharacter(4)'><span class="girlSubNameText"><i v-show='isIconShow[3]' class="el-icon-star-off"></i>琴吹<i v-show='isIconShow[3]' class="el-icon-star-off"></i></span></li>
+          <li @click='showCharacter(4)'><span class="girlSubNameText"><i v-show='isIconShow[3]' class="el-icon-star-off"></i>琴吹 紬<i v-show='isIconShow[3]' class="el-icon-star-off"></i></span></li>
           <li @click='showCharacter(5)'><span class="girlSubNameText"><i v-show='isIconShow[4]' class="el-icon-star-off"></i>中野 梓<i v-show='isIconShow[4]' class="el-icon-star-off"></i></span></li>
         </ul>
       </div>

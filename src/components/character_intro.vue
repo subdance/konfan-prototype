@@ -1,24 +1,24 @@
 <template lang="html">
   <div id="mainHolder">
     <div id="addTextHolder">
-      <p id="addText"><i class="el-icon-star-on"></i>把我们照的这么帅气，咱给摄影师一块蛋糕吧！下面才是大家地真面目哦(❁´▽`❁)<i class="el-icon-star-on"></i></p>
+      <p id="addText"><i class="el-icon-star-on"></i>摄影师小姐把咱拍得太好看了吧！<i class="el-icon-star-on"></i></p>
     </div>
     <div class="introHolder">
       <el-row>
-        <el-col :span="2">
+        <el-col :span="3">
           <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
             aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           </div>
         </el-col>
-        <el-col :span="8">
+        <el-col :span="7">
           <div class="imgHolder">
             <img style="height:600px;" src="../assets/character_intro/yui3.png" alt="">
           </div>
 
         </el-col>
         <el-col :span="14">
-          <div class="">
-
+          <div class="introTextHolder">
+            <p>HI!<span class="girlText">平泽 唯</span></p>
           </div>
         </el-col>
       </el-row>
@@ -35,7 +35,6 @@ export default {
 <style scoped>
  #mainHolder {
    width: 100%;
-
    background-position: center;
    background-size: cover;
  }
@@ -47,7 +46,6 @@ export default {
    color: #909399;
  }
  .introHolder {
-   /* background-image: url('../assets/background/4.jpg'); */
    position: relative;
    z-index: 1;
  }
@@ -64,5 +62,15 @@ export default {
  }
  .imgHolder {
    text-align: center;
+ }
+ .girlText {
+   color: #df000a;
+   font-weight: bold;
+   font-size: 3rem;
+   /* -webkit-text-stroke: 2px white; */
+   text-shadow: 1px 1px 1px #666666;
+ }
+ .introTextHolder {
+   padding-top: 4rem;
  }
 </style>
