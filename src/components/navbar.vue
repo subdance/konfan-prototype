@@ -47,7 +47,7 @@ export default {
     margin-bottom: 20px;
   }
   .navTextHome {
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: #df000a;
     font-weight: bold;
   }

@@ -66,11 +66,11 @@ export default {
   }
   .subText {
     color: white;
-    font-size: 1rem;
+    font-size: 3rem;
   }
   .mainText {
     color: white;
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
   .introPic {
     width: 85%;

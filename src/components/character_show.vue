@@ -73,7 +73,7 @@ export default {
   }
   li {
     border-bottom: 1px solid grey;
-    width: 7rem;
+    width: 10rem;
   }
   li:hover {
     border-bottom: 1px solid white;
@@ -92,6 +92,7 @@ export default {
     float: left;
   }
   .girlSubNameText {
+    font-size: 1.5rem;
     color: white;
     text-shadow: 1px 1px 1px #666666;
   }
@@ -101,7 +102,7 @@ export default {
     margin-left: 200px;
   }
   .girlNameText {
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: 800;
     color: #e23622;
     color: white;

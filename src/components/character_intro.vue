@@ -42,7 +42,8 @@ export default {
    background-size: cover;
  }
  #addTextHolder {
-   height: 2.2rem;
+   font-size: 1.6rem;
+
    text-align: center;
  }
  #addText {
@@ -77,7 +78,7 @@ export default {
  .girlText {
    color: #df000a;
    font-weight: bold;
-   font-size: 3rem;
+   font-size: 4.5rem;
    /* -webkit-text-stroke: 2px white; */
    text-shadow: 1px 1px 1px #666666;
  }
