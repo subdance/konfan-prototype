@@ -22,6 +22,9 @@
           </div>
           <div class="introTextHolder">
             <span class="girlText">{{ nowGirlName }}</span>
+            <div class="girlTextHolder">
+              aaaa
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -37,7 +40,7 @@
       return{
         nowGirlName: '平泽 唯',
         backGirlName: ['平泽 唯', '田井中 律', '秋山 澪', '琴吹 紬', '中野 梓' ],
-        verticalText: 'aaa',
+        verticalText: 'what should i put in?',
         nowHeadPic: require('../assets/character_intro/yui1.png'),
         backHeadPic: [
           require('../assets/character_intro/yui1.png'),
@@ -93,11 +96,9 @@
    text-align: center;
  }
  .mcHolder {
-
    position: absolute;
    right: 12rem;
-   top: 10rem;
-
+   bottom: 0;
    width: 4rem;
  }
  .girlText {
@@ -109,5 +110,17 @@
  }
  .introTextHolder {
    padding-top: 4rem;
+ }
+ .girlTextHolder {
+   position: absolute;
+   right: 10rem;
+   width: 45rem;
+   height: 40rem;
+   background-image: url('../assets/element/dialog1.png');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   box-sizing: border-box;
+   padding: 10rem 3rem 0px 3rem;
  }
 </style>
