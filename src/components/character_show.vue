@@ -19,37 +19,38 @@
 </template>
 
 <script>
-export default {
-  data(){
-    return{
-      nowBackPic: require('../assets/character/yuimain.jpg'),
-      backPic: [
-        require('../assets/character/yuimain.jpg'),
-        require('../assets/character/ritsumain.jpg'),
-        require('../assets/character/miomain.jpg'),
-        require('../assets/character/mugimain.jpg'),
-        require('../assets/character/azusamain.jpg'),
-      ],
-      nowGirlName: 'Hirasawa Yui',
-      nowGirlIntro: 'aaa',
-      backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Mio Akiyama', 'Kotobuki Tsumugi', 'Nakano Azusa'],
-      backIntro: [
-        'aaa',
-        'bbb',
-        'ccc',
-        'ddd',
-        'fff',
-      ],
-      isIconShow: [true, false, false, false, false],
-    }
-  },
+  import eventBus from '@/eventbus.js'
+  export default {
+    data(){
+      return{
+        nowBackPic: require('../assets/character/yuimain.jpg'),
+        backPic: [
+          require('../assets/character/yuimain.jpg'),
+          require('../assets/character/ritsumain.jpg'),
+          require('../assets/character/miomain.jpg'),
+          require('../assets/character/mugimain.jpg'),
+          require('../assets/character/azusamain.jpg'),
+        ],
+        nowGirlName: 'Hirasawa Yui',
+        nowGirlIntro: 'aaa',
+        backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Mio Akiyama', 'Kotobuki Tsumugi', 'Nakano Azusa'],
+        backIntro: [
+          'aaa',
+          'bbb',
+          'ccc',
+          'ddd',
+          'fff',
+        ],
+        isIconShow: [true, false, false, false, false],
+      }
+    },
   methods: {
     showCharacter(index){
       //更改背景以及介绍文字
       this.nowBackPic = this.backPic[ index - 1 ];
       this.nowGirlName = this.backName[ index - 1 ];
       this.nowGirlIntro = this.backIntro[ index - 1 ];
-
+      eventBus.$emit('changeCharacter', index);
       //调整星星显示位置
       for(let i = 0; i < 5; i ++){
         this.isIconShow[i] = false;

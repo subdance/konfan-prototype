@@ -7,12 +7,12 @@
       <el-row>
         <el-col :span="3">
           <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          {{ verticalText }}
           </div>
         </el-col>
         <el-col :span="7">
           <div class="imgHolder">
-            <img style="height:600px;" src="../assets/character_intro/yui3.png" alt="">
+            <img style="height:600px;" :src="nowHeadPic" alt="">
           </div>
 
         </el-col>
@@ -21,7 +21,7 @@
             <img style="width:16rem;" src="../assets/character_intro/mc1.png" alt="">
           </div>
           <div class="introTextHolder">
-            <p>HI!<span class="girlText">平泽 唯</span></p>
+            <span class="girlText">{{ nowGirlName }}</span>
           </div>
         </el-col>
       </el-row>
@@ -31,8 +31,33 @@
 </template>
 
 <script>
-export default {
-}
+  import eventBus from '@/eventbus.js'
+  export default {
+    data(){
+      return{
+        nowGirlName: '平泽 唯',
+        backGirlName: ['平泽 唯', '田井中 律', '秋山 澪', '琴吹 紬', '中野 梓' ],
+        verticalText: 'aaa',
+        nowHeadPic: require('../assets/character_intro/yui1.png'),
+        backHeadPic: [
+          require('../assets/character_intro/yui1.png'),
+          require('../assets/character_intro/ritsu1.png'),
+          require('../assets/character_intro/mio1.png'),
+          require('../assets/character_intro/mugi1.png'),
+          require('../assets/character_intro/azusa1.png')
+        ],
+      }
+    },
+    created(){
+      eventBus.$on('changeCharacter', index => this.changeCharacter(index))
+    },
+    methods:{
+      changeCharacter(index){
+        this.nowHeadPic = this.backHeadPic[ index - 1 ];
+        this.nowGirlName = this.backGirlName[ index - 1 ];
+      },
+    },
+  }
 </script>
 
 <style scoped>
