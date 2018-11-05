@@ -17,6 +17,9 @@
 
         </el-col>
         <el-col :span="14">
+          <div class="mcHolder">
+            <img style="width:16rem;" src="../assets/character_intro/mc1.png" alt="">
+          </div>
           <div class="introTextHolder">
             <p>HI!<span class="girlText">平泽 唯</span></p>
           </div>
@@ -62,6 +65,14 @@ export default {
  }
  .imgHolder {
    text-align: center;
+ }
+ .mcHolder {
+
+   position: absolute;
+   right: 12rem;
+   top: 10rem;
+
+   width: 4rem;
  }
  .girlText {
    color: #df000a;
