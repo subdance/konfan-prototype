@@ -33,7 +33,7 @@
         ],
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: 'aaa',
-        backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Mio Akiyama', 'Kotobuki Tsumugi', 'Nakano Azusa'],
+        backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Akiyama Mio', 'Kotobuki Tsumugi', 'Nakano Azusa'],
         backIntro: [
           'aaa',
           'bbb',
