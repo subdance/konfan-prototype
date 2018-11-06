@@ -143,7 +143,7 @@
    background-size: contain;
    background-repeat: no-repeat;
    box-sizing: border-box;
-   padding: 12rem 5rem 0 7rem;
+   padding: 11rem 5rem 0 7rem;
    font-size: 3.2rem;
  }
 </style>
