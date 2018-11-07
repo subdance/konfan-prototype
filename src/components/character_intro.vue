@@ -20,7 +20,10 @@
           <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
           </div>
           <div class="introTextHolder">
-            <span class="girlText">{{ nowGirlName }}</span>
+            <div class="mainIntroHolder">
+              <span class="girlNameText">{{ nowGirlName }}</span>
+              <p class="mainIntro">{{ nowMainIntro }}</p>
+            </div>
             <div class="girlTextHolder">
               {{ nowGirlIntro }}
             </div>
@@ -43,8 +46,16 @@
         backGirlIntro: [
           '吉他手兼主唱！放假时总是无所事事，甜食一律包在她身上，悠哉游哉小妖精--平泽唯!',
           '架子鼓手，容貌秀丽，头脑明晰，用爽朗的笑容为大家带来幸福，大众偶像--田井中律！',
-          '贝斯手兼主唱，超怕恐怕和疼疼的事情，轻音乐部的老大，DANGEROUS QUEEN--秋山澪！',
+          '贝斯手兼主唱，超怕恐怖和疼疼的事情，轻音乐部的老大，DANGEROUS QUEEN--秋山澪！',
           '键盘手！在点心方面一眼辨乾坤，外柔内刚的天然系大小姐--琴吹紬！',
+        ],
+        nowMainIntro: '樱丘女子高中轻音部的吉他手兼主唱，天然呆，拥有名为绝对音感的特殊能力。最初错把轻音乐当成轻便、简易的音乐而加入了轻音部。',
+        backMainIntro: [
+          '樱丘女子高中轻音部的吉他手兼主唱，天然呆，拥有名为绝对音感的特殊能力。最初错把轻音乐当成轻便、简易的音乐而加入了轻音部。',
+          '樱丘女子高中轻音部的部长及鼓手，个性比较像男孩子，与澪是从幼儿园起就已经认识的青梅竹马.善于交际，是个有着使部室的气氛明亮高涨能力的女孩。',
+          '樱丘女子轻音部的电贝斯手及合唱（有时也会担任主唱）。是一个左撇子，丹凤眼，有着到腰长度的黑发。是轻音部中唯一有后援会的部员。',
+          '樱丘女子高中轻音部的键盘手，被田井中律和秋山澪拉入轻音部（本来想加入合唱团）。大家闺秀，举止得体，身为千斤大小姐却有很大的力气。',
+          '樱丘女子高中轻音部辅音吉他手，是故第二年轻音部新加入的成员。在新生欢迎会上看过轻音部的演出后，被唯等人的演奏感动憧憬而加入了轻音部。有着十分强悍的吉他能力。',
         ],
         verticalText: 'what should i put in?',
         nowHeadPic: require('../assets/character_intro/yui1.png'),
@@ -74,6 +85,7 @@
         this.nowGirlName = this.backGirlName[ index - 1 ];
         this.nowGirlIntro = this.backGirlIntro[ index - 1 ];
         this.nowMcPic = this.backMcPic[ index - 1 ];
+        this.nowMainIntro = this.backMainIntro[ index - 1 ];
       },
     },
   }
@@ -94,12 +106,18 @@
    color: #909399;
  }
  .introHolder {
+   width: 98%;
    position: relative;
    z-index: 1;
+   margin: auto;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 5px 5px 4px grey;
  }
  .introHolder::after {
-   background-image: url('../assets/background/4.jpg');
-   opacity: 0.6;
+   background-image: url('../assets/background/1.png');
+   background-repeat: repeat-x;
+   opacity: 0.9;
    content: '';
    position: absolute;
    top: 0;
@@ -122,12 +140,28 @@
    width: 22rem;
    height: 21rem;
  }
- .girlText {
+ .girlNameText {
    color: #df000a;
    font-weight: bold;
    font-size: 7rem;
-   /* -webkit-text-stroke: 2px white; */
-   text-shadow: 1px 1px 1px #666666;
+   text-shadow: 3px 3px black;
+ }
+ .mainIntroHolder {
+   width: 35rem;
+   height: 40rem;
+   font-size: 2rem;
+   box-shadow: 4px 4px 3px black;
+   background-image: url('../assets/background/1.gif');
+   background-repeat: repeat-y;
+   background-position: center;
+   word-break: break-all;
+   border-radius: 10px;
+   border: 2px solid white;
+   overflow: hidden;
+   letter-spacing: 0.8rem;
+ }
+ .mainIntro {
+   line-height: 4rem;
  }
  .introTextHolder {
    padding-top: 4rem;
