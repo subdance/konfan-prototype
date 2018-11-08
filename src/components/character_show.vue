@@ -32,14 +32,14 @@
           require('../assets/character/azusamain.jpg'),
         ],
         nowGirlName: 'Hirasawa Yui',
-        nowGirlIntro: 'aaa',
+        nowGirlIntro: '主唱，主音吉他',
         backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Akiyama Mio', 'Kotobuki Tsumugi', 'Nakano Azusa'],
         backIntro: [
-          'aaa',
-          'bbb',
-          'ccc',
-          'ddd',
-          'fff',
+          '主唱，主音吉他',
+          '部长，架子鼓手',
+          '主唱，贝斯手',
+          '金主，电子琴手',
+          '团宠，辅音吉他手',
         ],
         isIconShow: [true, false, false, false, false],
       }
@@ -92,11 +92,10 @@
     margin-top: 120px;
     margin-left: 30px;
     float: left;
-
   }
   .girlSubNameText {
     font-size: 1.5rem;
-    color: white;
+    color: black;
     text-shadow: 1px 1px 1px #666666;
   }
   .introHolder {
@@ -107,9 +106,13 @@
   .girlNameText {
     font-size: 7rem;
     font-weight: 800;
-    color: #e23622;
+    color: #df000a;
+    text-shadow: 3px 3px 1px grey, -1px -1px 1px grey, 1px -1px 1px grey, 0px 0px 0px grey;
+    -webkit-text-stroke: 1px white;
+  }
+  .girlIntroText {
     color: white;
-    text-shadow: 3px 3px 1px grey, -1px -1px 1px white, 1px -1px 1px white, 0px 0px 0px white;
-
+    font-size: 2rem;
+    font-weight: bold;
   }
 </style>

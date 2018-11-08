@@ -45,7 +45,7 @@ export default {
   }
   td {
     width: 20rem;
-    height: 24rem;
+    height: 25rem;
     cursor: pointer;
     background-position: center;
     background-size: cover;
