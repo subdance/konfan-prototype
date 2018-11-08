@@ -5,7 +5,7 @@
     <div class="showBox" id="box2">
       <table>
         <tr>
-          <td><img class="introPic" src="./assets/home_pic/7.jpg"></td>
+          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/7.jpg"></td>
           <td><div class="introTextHolder to-left">
                 <p>{{ introTitle[0] }}</p>
                 <p>{{ introText[0] }}</p>
@@ -16,10 +16,10 @@
               <p>{{ introTitle[1] }}</p>
               <p>{{ introText[1] }}</p>
               </div></td>
-          <td><img class="introPic" src="./assets/home_pic/4.jpg"></td>
+          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/4.jpg"></td>
         </tr>
         <tr>
-          <td><img class="introPic" src="./assets/home_pic/6.jpg"></td>
+          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/6.jpg"></td>
           <td><div class="introTextHolder to-left">
               <p>{{ introTitle[2] }}</p>
               <p>{{ introText[2] }}</p>
@@ -30,7 +30,7 @@
               <p>{{ introTitle[3] }}</p>
               <p>{{ introText[3] }}</p>
               </div></td>
-          <td><img class="introPic" src="./assets/home_pic/5.jpg"></td>
+          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/5.jpg"></td>
         </tr>
       </table>
     </div>
@@ -58,6 +58,9 @@ export default {
   .homePageHolder {
     position: relative;
   }
+  .imgHolder {
+
+  }
   .showBox {
     background-size: cover;
     width: 100%;
@@ -74,6 +77,9 @@ export default {
   }
   .introPic {
     width: 85%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px grey;
   }
   .introTextHolder {
     margin: auto;
