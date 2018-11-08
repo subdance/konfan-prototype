@@ -99,7 +99,6 @@
  }
  #addTextHolder {
    font-size: 1.6rem;
-
    text-align: center;
  }
  #addText {

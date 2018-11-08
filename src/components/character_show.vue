@@ -73,11 +73,12 @@
     cursor: pointer;
   }
   li {
-    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
     width: 10rem;
+    height: 6rem;
   }
   li:hover {
-    border-bottom: 1px solid white;
+    border-top: 1px solid white;
     transition: 0.3s;
   }
   .tabHolder {
@@ -91,6 +92,7 @@
     margin-top: 120px;
     margin-left: 30px;
     float: left;
+
   }
   .girlSubNameText {
     font-size: 1.5rem;
