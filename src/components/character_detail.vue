@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="mainHolder">
     <div id="addTextHolder">
-      <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非核心部员禁止点击！<i class="el-icon-star-on"></i></p>
+      <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非粉丝会成员禁止点击！<i class="el-icon-star-on"></i></p>
     </div>
     <div class="tableHolder">
       <table style="margin:auto">
