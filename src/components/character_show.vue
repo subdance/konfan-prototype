@@ -96,9 +96,11 @@
   .tabHeaderHolder {
     margin-left: 30px;
     float: left;
-    position: relative;
+    position: sticky;
     top: 120px;
     z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .tabHeaderHolder::after {
     content: '';
@@ -109,7 +111,7 @@
     bottom: 0;
     left: 0;
     background-color: white;
-    opacity: 0.3;
+    opacity: 0.6;
     z-index: -1;
   }
   .girlSubNameText {

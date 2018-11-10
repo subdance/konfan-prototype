@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="mainHolder">
     <div id="addTextHolder">
-      <p id="addText"><i class="el-icon-star-on"></i>摄影师小姐把咱拍得太好看了吧！<i class="el-icon-star-on"></i></p>
+      <p id="addText"><i class="el-icon-star-on"></i>摄影师小姐把咱拍得太好看了吧！(´・ω・｀)<i class="el-icon-star-on"></i></p>
     </div>
     <div class="introHolder">
       <el-row>
