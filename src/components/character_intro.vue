@@ -55,7 +55,7 @@
           '樱丘女子高中轻音部的部长及鼓手，个性比较像男孩子，与澪是从幼儿园起就已经认识的青梅竹马。善于交际，是个有着使部室的气氛明亮高涨能力的女孩。',
           '樱丘女子轻音部的电贝斯手及合唱（有时也会担任主唱）。左撇子，丹凤眼，有着到腰长度的黑发。是轻音部中唯一有后援会的部员。',
           '樱丘女子高中轻音部的键盘手，被田井中律和秋山澪拉入轻音部（本来想加入合唱团）。大家闺秀，举止得体，身为千金大小姐却有很大的力气。',
-          '樱丘女子高中轻音部辅音吉他手，是第二年轻音部新加入的成员。在新生欢迎会上看过轻音部的演出后，被唯等人的演奏感动憧憬而加入了轻音部。有着十分强悍的吉他能力。',
+          '樱丘女子高中轻音部辅音吉他手，是第二年轻音部新加入的成员。在做事认真，却又不时地透露出小孩子气。有着十分强悍的吉他能力。',
         ],
         verticalText: 'what should i put in?',
         nowHeadPic: require('../assets/character_intro/yui1.png'),
@@ -154,6 +154,7 @@
    border: 2px solid white;
    overflow: hidden;
    padding-left: 2rem;
+   color: #303133;
  }
  .mainIntro {
    line-height: 4rem;
@@ -166,14 +167,16 @@
    position: absolute;
    right: 5rem;
    bottom: 15rem;
-   width: 45rem;
-   height: 40rem;
+   width: 30rem;
+   height:25rem;
    background-image: url('../assets/element/dialog1.png');
    background-position: center;
    background-size: contain;
    background-repeat: no-repeat;
    box-sizing: border-box;
-   padding: 11rem 5rem 0 7rem;
-   font-size: 3.2rem;
+   padding: 6rem 5rem 0 7rem;
+   font-size: 2rem;
+   font-style: italic;
+   color: #606266;
  }
 </style>

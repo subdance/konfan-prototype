@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div>
     <div class="tabHolder" :style="{ backgroundImage: 'url(' + nowBackPic + ')' }">
       <div class="tabHeaderHolder">
         <ul>
@@ -32,14 +32,14 @@
           require('../assets/character/azusamain.jpg'),
         ],
         nowGirlName: 'Hirasawa Yui',
-        nowGirlIntro: '主唱，主音吉他',
+        nowGirlIntro: '主唱，主音吉他，团宠',
         backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Akiyama Mio', 'Kotobuki Tsumugi', 'Nakano Azusa'],
         backIntro: [
-          '主唱，主音吉他',
+          '主唱，主音吉他，团宠',
           '部长，架子鼓手',
           '主唱，贝斯手',
           '金主，电子琴手',
-          '团宠，辅音吉他手',
+          '唯宠，辅音吉他手',
         ],
         isIconShow: [true, false, false, false, false],
       }
@@ -56,7 +56,6 @@
         this.isIconShow[i] = false;
       }
       this.isIconShow[ index - 1 ] = true;
-
     },
   },
 }
@@ -89,9 +88,10 @@
     transition: 0.3s;
   }
   .tabHeaderHolder {
-    margin-top: 120px;
     margin-left: 30px;
     float: left;
+    position: sticky;
+    top: 120px;
   }
   .girlSubNameText {
     font-size: 1.5rem;
