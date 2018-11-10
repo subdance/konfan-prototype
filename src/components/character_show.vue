@@ -23,13 +23,19 @@
   export default {
     data(){
       return{
-        nowBackPic: require('../assets/character/yuimain.jpg'),
+        // nowBackPic: require('../assets/character/yuimain.jpg'),
+        nowBackPic: require('../assets/character/yui1.png'),
         backPic: [
-          require('../assets/character/yuimain.jpg'),
-          require('../assets/character/ritsumain.jpg'),
-          require('../assets/character/miomain.jpg'),
-          require('../assets/character/mugimain.jpg'),
-          require('../assets/character/azusamain.jpg'),
+          // require('../assets/character/yuimain.jpg'),
+          // require('../assets/character/ritsumain.jpg'),
+          // require('../assets/character/miomain.jpg'),
+          // require('../assets/character/mugimain.jpg'),
+          // require('../assets/character/azusamain.jpg'),
+          require('../assets/character/yui1.png'),
+          require('../assets/character/ritsu1.png'),
+          require('../assets/character/mio1.png'),
+          require('../assets/character/mugi1.png'),
+          require('../assets/character/azusa1.png'),
         ],
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: '主唱，主音吉他，团宠',
@@ -90,8 +96,21 @@
   .tabHeaderHolder {
     margin-left: 30px;
     float: left;
-    position: sticky;
+    position: relative;
     top: 120px;
+    z-index: 1;
+  }
+  .tabHeaderHolder::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.3;
+    z-index: -1;
   }
   .girlSubNameText {
     font-size: 1.5rem;
@@ -100,7 +119,7 @@
   }
   .introHolder {
     display: inline-block;
-    margin-top: 200px;
+    margin-top: 40rem;
     margin-left: 200px;
   }
   .girlNameText {
