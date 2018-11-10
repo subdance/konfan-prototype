@@ -124,30 +124,35 @@ export default {
   }
   #yui:hover {
     background-image: url('../assets/character_element/yui2.jpg');
+    filter: blur(0px);
   }
   #ritsu {
     background-image: url('../assets/character_element/ritsu1.jpg');
   }
   #ritsu:hover {
     background-image: url('../assets/character_element/ritsu2.jpg');
+    filter: blur(0px);
   }
   #mio {
     background-image: url('../assets/character_element/mio1.jpg');
   }
   #mio:hover {
     background-image: url('../assets/character_element/mio2.jpg');
+    filter: blur(0px);
   }
   #mugi {
     background-image: url('../assets/character_element/mugi1.jpg');
   }
   #mugi:hover {
     background-image: url('../assets/character_element/mugi2.jpg');
+    filter: blur(0px);
   }
   #azusa {
     background-image: url('../assets/character_element/azusa1.jpg');
   }
   #azusa:hover {
     background-image: url('../assets/character_element/azusa2.jpg');
+    filter: blur(0px);
   }
   .detailHolder {
   }
