@@ -106,7 +106,6 @@ export default {
   }
   #myVideo {
     position: absolute;
-
     top: -6rem;
     width: 100%;
   }

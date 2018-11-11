@@ -28,21 +28,9 @@ export default {
   },
   data(){
     return{
-      // scollTop: null,
-      // elementScollTop: null,
     }
   },
   methods:{
-    // navBarChange(){
-    //   var this.scollTop = document.body.scrollTop;
-    //   var this.elementScollTop = document.documentElement.scrollTop;
-    //
-    //   if (this.scollTop > 20 || this.elementScollTop > 20) {
-    //     this.
-    // } else {
-    //     document.getElementById("myBtn").style.display = "none";
-    // }
-    // }
   },
 }
 </script>
@@ -62,7 +50,7 @@ export default {
   .el-header::after {
     background-color: white;
     content: "";
-    opacity: 0.2;
+    opacity: 0.4;
     position: absolute;
     top: 0;
     left: 0;
