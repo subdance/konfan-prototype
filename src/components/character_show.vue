@@ -83,7 +83,7 @@
     height: 6rem;
   }
   li:hover {
-    border-top: 1px solid white;
+    border-top: 1px solid #D70040;
     transition: 0.3s;
   }
   .tabHolder {
@@ -111,7 +111,7 @@
     bottom: 0;
     left: 0;
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.3;
     z-index: -1;
   }
   .girlSubNameText {

@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="homePageHolder">
     <div class="showBox" id="box1">
+      <video autoplay muted loop id="myVideo" >
+        <source src="./assets/video/trim1.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="showBox" id="box2">
       <table>
@@ -35,6 +38,7 @@
       </table>
     </div>
     <div class="showBox" id="box3">
+
     </div>
   </div>
 </template>
@@ -56,10 +60,10 @@ export default {
     width: 45%;
   }
   .homePageHolder {
+    width: 100%;
     position: relative;
   }
   .imgHolder {
-
   }
   .showBox {
     background-size: cover;
@@ -93,8 +97,18 @@ export default {
     text-align: right;
   }
   #box1 {
-    background-image: url('./assets/home_pic/1.jpg');
-    background-position: center;
+    /* background-image: url('./assets/home_pic/1.jpg');
+    background-position: center; */
     box-shadow: 3px 3px 3px grey;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  #myVideo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  #box2 {
   }
 </style>
