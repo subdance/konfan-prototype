@@ -4,6 +4,13 @@
       <video autoplay muted loop id="myVideo" >
         <source src="./assets/video/trim1.mp4" type="video/mp4">
       </video>
+      <div class="mainIntro">
+        <p class="ui">姐姐，轻音部的卖点是什么呀？</p>
+
+        <p class="ui">哦？ 嗯...应该是开心吧</p>
+        <p class="yui">开心？</p>
+        <p class="yui">开心就是开心嘛</p>
+      </div>
     </div>
     <div class="showBox" id="box2">
       <table>
@@ -81,7 +88,7 @@ export default {
   }
   .introPic {
     width: 85%;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 3px 3px 3px grey;
   }
@@ -96,10 +103,75 @@ export default {
   .to-right {
     text-align: right;
   }
+  .mainIntro {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin: 0;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 60rem;
+    padding: 3rem 1rem 0rem 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .mainIntro::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: white;
+    opacity: 0.6; */
+    z-index: -1;
+  }
+  .yui {
+    font-size: 3rem;
+    color: #606266;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0rem 1rem 0rem 1rem;
+    float: right;
+  }
+  .yui::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #DCDFE6;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  .ui {
+    font-size: 3rem;
+    color: #DCDFE6;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0rem 1rem 0rem 1rem;
+    float: left;
+  }
+  .ui::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #606266;
+    opacity: 0.8;
+    z-index: -1;
+  }
   #box1 {
     /* background-image: url('./assets/home_pic/1.jpg');
     background-position: center; */
-    box-shadow: 3px 3px 3px grey;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -108,6 +180,7 @@ export default {
     position: absolute;
     top: -6rem;
     width: 100%;
+    z-index: -100;
   }
   #box2 {
   }
