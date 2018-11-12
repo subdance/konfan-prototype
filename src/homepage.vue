@@ -5,13 +5,13 @@
         <source src="./assets/video/trim1.mp4" type="video/mp4">
       </video>
       <transition name="el-fade-in-linear">
-        <div class="mainIntro" v-show='isTextOneShow'>
-          <p :style="styleObject1">"我当初听到轻音部，还以为是十分简单，轻松的音乐呢"</p>
+        <div class="mainIntro" :style='divStyle'v-show='isTextOneShow'>
+          <p :style="styleObject1">{{ nowMainIntroText }}</p>
         </div>
       </transition>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextTwoShow'>
-          <p :style="styleObject2">所以，也请大家怀着轻松的心情加入就行了！</p>
+          <p :style="styleObject2">{{ nowMainIntroText }}</p>
         </div>
       </transition>
     </div>
@@ -61,6 +61,7 @@ export default {
       introText: [1,2,3,4],
       isTextOneShow: true,
       isTextTwoShow: false,
+      textIndex: 1,
       styleObject1: {
         fontSize: '3rem',
         color: '#606266',
@@ -69,6 +70,15 @@ export default {
         fontSize: '3rem',
         color: '#606266',
       },
+      nowMainIntroText: "'当初听到轻音部，还以为是十分简单，轻松的音乐呢'",
+      backMainIntroText: [
+        "'当初听到轻音部，还以为只演奏十分简单，轻松的音乐呢.'",
+        "'所以，也请大家怀着轻松的心情加入就行了！'",
+        "'姐姐，轻音部的卖点是什么？'",
+        "'卖点...就是开心嘛'",
+        "'呃!重新介绍一下，我们是放学后下午茶'",
+        "'我们高喊着【目标武道馆】的口号组建了轻音部'",
+      ],
     }
   },
   created(){
@@ -77,7 +87,12 @@ export default {
   methods: {
     changeShow(){
       this.isTextOneShow = !this.isTextOneShow;
+      this.nowMainIntroText = this.backMainIntroText[this.textIndex];
       this.isTextTwoShow = !this.isTextTwoShow;
+      this.textIndex++;
+      if(this.textIndex > 5){
+        this.textIndex = 0;
+      }
     },
   },
 }
@@ -133,8 +148,6 @@ export default {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 60rem;
-    padding: 1rem 1rem 1rem 1rem;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -150,7 +163,7 @@ export default {
     z-index: -1;
   }
   .mainIntro::first-letter {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   #box1 {
     /* background-image: url('./assets/home_pic/1.jpg');
