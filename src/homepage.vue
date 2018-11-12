@@ -4,13 +4,16 @@
       <video autoplay muted loop id="myVideo" >
         <source src="./assets/video/trim1.mp4" type="video/mp4">
       </video>
-      <div class="mainIntro">
-        <p class="ui">姐姐，轻音部的卖点是什么呀？</p>
-
-        <p class="ui">哦？ 嗯...应该是开心吧</p>
-        <p class="yui">开心？</p>
-        <p class="yui">开心就是开心嘛</p>
-      </div>
+      <transition name="el-fade-in-linear">
+        <div class="mainIntro" v-show='isTextOneShow'>
+          <p :style="styleObject1">"我当初听到轻音部，还以为是十分简单，轻松的音乐呢"</p>
+        </div>
+      </transition>
+      <transition name="el-fade-in-linear">
+        <div class="mainIntro" v-show='isTextTwoShow'>
+          <p :style="styleObject2">所以，也请大家怀着轻松的心情加入就行了！</p>
+        </div>
+      </transition>
     </div>
     <div class="showBox" id="box2">
       <table>
@@ -56,7 +59,26 @@ export default {
     return {
       introTitle: [1,2,3,4],
       introText: [1,2,3,4],
+      isTextOneShow: true,
+      isTextTwoShow: false,
+      styleObject1: {
+        fontSize: '3rem',
+        color: '#606266',
+      },
+      styleObject2: {
+        fontSize: '3rem',
+        color: '#606266',
+      },
     }
+  },
+  created(){
+    setInterval(this.changeShow, 5000);
+  },
+  methods: {
+    changeShow(){
+      this.isTextOneShow = !this.isTextOneShow;
+      this.isTextTwoShow = !this.isTextTwoShow;
+    },
   },
 }
 </script>
@@ -112,7 +134,7 @@ export default {
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 60rem;
-    padding: 3rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -123,51 +145,12 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    /* background-color: white;
-    opacity: 0.6; */
+    background-color: white;
+    opacity: 0.6;
     z-index: -1;
   }
-  .yui {
-    font-size: 3rem;
-    color: #606266;
-    position: relative;
-    z-index: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 0rem 1rem 0rem 1rem;
-    float: right;
-  }
-  .yui::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #DCDFE6;
-    opacity: 0.8;
-    z-index: -1;
-  }
-  .ui {
-    font-size: 3rem;
-    color: #DCDFE6;
-    position: relative;
-    z-index: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 0rem 1rem 0rem 1rem;
-    float: left;
-  }
-  .ui::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #606266;
-    opacity: 0.8;
-    z-index: -1;
+  .mainIntro::first-letter {
+    font-size: 4rem;
   }
   #box1 {
     /* background-image: url('./assets/home_pic/1.jpg');
