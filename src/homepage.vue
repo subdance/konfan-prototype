@@ -5,7 +5,7 @@
         <source src="./assets/video/trim1.mp4" type="video/mp4">
       </video>
       <transition name="el-fade-in-linear">
-        <div class="mainIntro" :style='divStyle'v-show='isTextOneShow'>
+        <div class="mainIntro" v-show='isTextOneShow'>
           <p :style="styleObject1">{{ nowMainIntroText }}</p>
         </div>
       </transition>
@@ -18,7 +18,7 @@
     <div class="showBox" id="box2">
       <table>
         <tr>
-          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/7.jpg"></td>
+          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[0] + ')' }"></div></td>
           <td><div class="introTextHolder to-left">
                 <p>{{ introTitle[0] }}</p>
                 <p>{{ introText[0] }}</p>
@@ -29,10 +29,10 @@
               <p>{{ introTitle[1] }}</p>
               <p>{{ introText[1] }}</p>
               </div></td>
-          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/4.jpg"></td>
+          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[1] + ')' }"></div></td>
         </tr>
         <tr>
-          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/6.jpg"></td>
+          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[2] + ')' }"></div></td>
           <td><div class="introTextHolder to-left">
               <p>{{ introTitle[2] }}</p>
               <p>{{ introText[2] }}</p>
@@ -43,7 +43,7 @@
               <p>{{ introTitle[3] }}</p>
               <p>{{ introText[3] }}</p>
               </div></td>
-          <td class="imgHolder"><img class="introPic" src="./assets/home_pic/5.jpg"></td>
+          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[3] + ')' }"></div></td>
         </tr>
       </table>
     </div>
@@ -79,6 +79,12 @@ export default {
         "'呃!重新介绍一下，我们是放学后下午茶。'",
         "'我们高喊着【目标武道馆】的口号组建了轻音部。'",
       ],
+      introPic: [
+        require('./assets/home_pic/7.jpg'),
+        require('./assets/home_pic/4.jpg'),
+        require('./assets/home_pic/6.jpg'),
+        require('./assets/home_pic/5.jpg'),
+      ],
     }
   },
   created(){
@@ -99,15 +105,23 @@ export default {
 </script>
 
 <style scoped>
+  table {
+    width: 100%;
+  }
   td {
-    text-align: center;
-    width: 45%;
+    width: 50% !important;
   }
   .homePageHolder {
     width: 100%;
     position: relative;
   }
   .imgHolder {
+    margin: auto;
+    position: relative;
+    width: 80%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
   }
   .showBox {
     background-size: cover;
@@ -122,12 +136,6 @@ export default {
   .mainText {
     color: white;
     font-size: 3rem;
-  }
-  .introPic {
-    width: 85%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 3px 3px 3px grey;
   }
   .introTextHolder {
     margin: auto;

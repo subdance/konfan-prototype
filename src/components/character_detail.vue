@@ -168,7 +168,7 @@ export default {
   }
   .detailTd {
     color: #606266;
-    font-size: 2rem;
+    font-size: 1.7rem;
     max-width: 40rem;
     padding: 1rem 1rem 0rem 1rem;
     vertical-align: top;
