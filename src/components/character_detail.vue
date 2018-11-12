@@ -20,7 +20,11 @@
               <tr>
                 <td class="detailTd">{{ nowDetail1 }}</td>
                 <td class="detailTd">{{ nowDetail2 }}</td>
-                <td class="detailTd">{{ nowDetail3 }}</td>
+                <td class="detailTd">
+                  {{ nowDetail3 }}
+                  <div class="InstrumentHolder" :style="{ backgroundImage: 'url(' + nowInsPic + ')' }">
+                  </div>
+                </td>
               </tr>
             </table>
           </div>
@@ -40,6 +44,14 @@ export default {
       nowDetail1: null,
       nowDetail2: null,
       nowDetail3: null,
+      nowInsPic: require('../assets/character_element/yuiI.png'),
+      backInsPic: [
+        require('../assets/character_element/yuiI.png'),
+        require('../assets/character_element/ritsuI.png'),
+        require('../assets/character_element/mioI.png'),
+        require('../assets/character_element/mugiI.png'),
+        require('../assets/character_element/azusaI.png'),
+      ],
       backDetail1: [
         '姓氏源自乐团P-MODEL主唱兼吉他手平泽进。轻音部的吉他手，同时兼任主唱。天然呆指数爆灯。在学会弹吉他后练就了名为“绝对音感”的特殊能力。能"专注于一件事情"并且做到非常好的地步,常被调侃为内存不足的单线程超级CPU。运动学习样样不行，但认真起来可以在补考中取得满分。加入轻音部后从头开始学习吉他。平日生活闲散，又很爱吃甜食，却无论如何也不会变胖。喜欢可爱的东西。给自己的吉他起名为吉太。官配是中野梓，把中野梓叫做“梓喵”，且喜欢拥抱梓。有一个姐控，能干的妹妹——平泽忧，姐妹之间的关系非常好。与真锅和是青梅竹马。最后与四人一同考上同所大学。',
 
@@ -85,6 +97,7 @@ export default {
         that.nowDetail1 = that.backDetail1[ index - 1 ];
         that.nowDetail2 = that.backDetail2[ index - 1 ];
         that.nowDetail3 = that.backDetail3[ index - 1 ];
+        that.nowInsPic = that.backInsPic[ index - 1 ];
         that.isDetailShowed = true;
       }, 600);
     },
@@ -128,6 +141,13 @@ export default {
   }
   .blurTd {
     filter: blur(2px);
+  }
+  .InstrumentHolder {
+    width: 100%;
+    height: 20rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   #yui {
     background-image: url('../assets/character_element/yui1.jpg');

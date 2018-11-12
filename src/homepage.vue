@@ -122,6 +122,21 @@ export default {
     height: 30rem;
     background-position: center;
     background-size: cover;
+    z-index: 1;
+    border-radius: 7px;
+  }
+  .imgHolder:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(10px);
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+    transform: scale(1.08);
   }
   .showBox {
     background-size: cover;
