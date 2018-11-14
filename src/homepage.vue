@@ -6,12 +6,12 @@
       </video>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextOneShow'>
-          <p :style="styleObject1">{{ nowMainIntroText }}</p>
+          <span :style="styleObject1">{{ nowMainIntroText }}</span>
         </div>
       </transition>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextTwoShow'>
-          <p :style="styleObject2">{{ nowMainIntroText }}</p>
+          <span :style="styleObject2">{{ nowMainIntroText }}</span>
         </div>
       </transition>
     </div>
@@ -70,9 +70,9 @@ export default {
         fontSize: '3rem',
         color: '#606266',
       },
-      nowMainIntroText: "'当初听到轻音部，还以为只演奏十分简单，轻松的音乐呢。'",
+      nowMainIntroText: "“如果你说最喜欢我，我会用最最喜欢回应你。”—唯 ",
       backMainIntroText: [
-        "'当初听到轻音部，还以为只演奏十分简单，轻松的音乐呢。'",
+        "“如果你说最喜欢我，我会用最最喜欢回应你。”—唯 ",
         "'所以，也请大家怀着轻松的心情加入就行了！'",
         "'姐姐，轻音部的卖点是什么？'",
         "'卖点...就是开心嘛！'",
@@ -164,6 +164,8 @@ export default {
     text-align: right;
   }
   .mainIntro {
+    display: inline-block;
+    padding: 0rem 2rem 0rem;
     position: absolute;
     top: 35%;
     left: 50%;
@@ -186,7 +188,7 @@ export default {
     z-index: -1;
   }
   .mainIntro::first-letter {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   #box1 {
     /* background-image: url('./assets/home_pic/1.jpg');
