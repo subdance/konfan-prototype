@@ -14,8 +14,8 @@
         </tr>
       </table></el-collapse-transition>
       <div class="detailHolder">
-        <el-collapse-transition>
-          <div v-show='isDetailShowed'>
+        <transition name="el-fade-in-linear">
+          <div v-show='isDetailShowe'>
             <table >
               <tr>
                 <td class="detailTd">{{ nowDetail1 }}</td>
@@ -28,7 +28,13 @@
               </tr>
             </table>
           </div>
-        </el-collapse-transition>
+        </transition name="el-fade-in-linear">
+
+        <transition name="el-fade-in-linear">
+          <div class="altHolder" v-show='isAltShow'>
+
+          </div>
+        </transition name="el-fade-in-linear">
       </div>
     </div>
   </div>
@@ -40,7 +46,8 @@ export default {
   data(){
     return{
       isBlur: [true, true, true, true, true],
-      isDetailShowed: false,
+      isDetailShowe: false,
+      isAltShow: true,
       nowDetail1: null,
       nowDetail2: null,
       nowDetail3: null,
@@ -88,7 +95,8 @@ export default {
     changeDetail(index){
       // eventBus.$emit('changeCharacter', index);
       var that  = this;
-      this.isDetailShowed = false;
+      this.isAltShow = false;
+      this.isDetailShowe = false;
       for(let i = 0; i < this.isBlur.length; i++){
         this.isBlur[i] = true;
       }
@@ -98,8 +106,8 @@ export default {
         that.nowDetail2 = that.backDetail2[ index - 1 ];
         that.nowDetail3 = that.backDetail3[ index - 1 ];
         that.nowInsPic = that.backInsPic[ index - 1 ];
-        that.isDetailShowed = true;
-      }, 600);
+        that.isDetailShowe = true;
+      }, 100);
     },
   },
 }
@@ -127,20 +135,33 @@ export default {
   .tableHolder {
     width: 100%;
     text-align: center;
-    background-image: url('../assets/background/4.jpg');
-    background-position: top;
-    background-size: cover;
+    position: relative;
+  }
+  .tableHolder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../assets/element/backdot2.png');
+    background-repeat: repeat;
+    opacity: 0.4;
+    z-index: -1;
   }
   .picTd {
-    width: 20rem;
-    height: 25rem;
+    width: 19rem;
+    height: 19rem;
     cursor: pointer;
     background-position: center;
     background-size: cover;
     transition: 0.2s;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
   }
   .blurTd {
-    filter: blur(2px);
+    filter: blur(3px);
   }
   .InstrumentHolder {
     width: 100%;
@@ -185,6 +206,7 @@ export default {
     filter: blur(0px);
   }
   .detailHolder {
+    min-height:65rem; 
   }
   .detailTd {
     color: #606266;
@@ -197,5 +219,15 @@ export default {
   .detailTd::first-letter {
     font-size: 4rem;
     color: #df000a;
+  }
+  .altHolder {
+    margin: auto;
+    width: 80%;
+    height: 60rem;
+    background-image: url('../assets/background/2.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    overflow: hidden;
   }
 </style>
