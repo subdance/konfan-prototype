@@ -18,32 +18,63 @@
     <div class="showBox" id="box2">
       <table>
         <tr>
-          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[0] + ')' }"></div></td>
-          <td><div class="introTextHolder to-left">
-                <p>{{ introTitle[0] }}</p>
-                <p>{{ introText[0] }}</p>
-              </div></td>
+          <td >
+            <div
+              class="imgHolder"
+              :style="{ backgroundImage: 'url(' + introPic[0] + ')' }"
+              @mouseenter='setDisplay(0)'
+              @mouseleave='setHide(0)'
+              >
+              <div
+                class="innerHolder"
+                v-show='innerDisplay[0]'
+                >
+                aaa
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="introTextHolder to-left">
+              <p>{{ introTitle[0] }}</p>
+              <p>{{ introText[0] }}</p>
+            </div>
+          </td>
         </tr>
         <tr>
-          <td><div class="introTextHolder to-right">
+          <td>
+            <div class="introTextHolder to-right">
               <p>{{ introTitle[1] }}</p>
               <p>{{ introText[1] }}</p>
-              </div></td>
-          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[1] + ')' }"></div></td>
+            </div>
+          </td>
+          <td >
+            <div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[1] + ')' }">
+            </div>
+          </td>
         </tr>
         <tr>
-          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[2] + ')' }"></div></td>
-          <td><div class="introTextHolder to-left">
+          <td >
+            <div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[2] + ')' }">
+            </div>
+          </td>
+          <td>
+            <div class="introTextHolder to-left">
               <p>{{ introTitle[2] }}</p>
               <p>{{ introText[2] }}</p>
-              </div></td>
+            </div>
+          </td>
         </tr>
         <tr>
-          <td><div class="introTextHolder to-right">
+          <td>
+            <div class="introTextHolder to-right">
               <p>{{ introTitle[3] }}</p>
               <p>{{ introText[3] }}</p>
-              </div></td>
-          <td ><div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[3] + ')' }"></div></td>
+            </div>
+          </td>
+          <td >
+            <div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[3] + ')' }">
+            </div>
+          </td>
         </tr>
       </table>
     </div>
@@ -57,6 +88,8 @@
 export default {
   data(){
     return {
+      innerDisplay:[false],
+      innerDisplayArray: [false, false, false, false, ],
       introTitle: [1,2,3,4],
       introText: [1,2,3,4],
       isTextOneShow: true,
@@ -90,6 +123,9 @@ export default {
   created(){
     setInterval(this.changeShow, 5000);
   },
+  computed:{
+
+  },
   methods: {
     changeShow(){
       this.isTextOneShow = !this.isTextOneShow;
@@ -99,6 +135,14 @@ export default {
       if(this.textIndex > 5){
         this.textIndex = 0;
       }
+    },
+    setDisplay(index){
+      this.innerDisplay[index] = true;
+      this.innerDisplayArray[index] = true;
+    },
+    setHide(index){
+      this.innerDisplay[index] = false;
+      this.innerDisplayArray[index] = false;
     },
   },
 }
@@ -110,6 +154,15 @@ export default {
   }
   td {
     width: 50% !important;
+  }
+  .innerHolder {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    color: white;
+    font-size: 6rem;
   }
   .homePageHolder {
     width: 100%;
@@ -125,6 +178,7 @@ export default {
     z-index: 1;
     border-radius: 7px;
   }
+
   .imgHolder:hover::after {
     content: '';
     position: absolute;
