@@ -135,14 +135,11 @@ export default {
         fontSize: '3rem',
         color: '#606266',
       },
-      nowMainIntroText: "“如果你说最喜欢我，我会用最最喜欢回应你。”—唯 ",
+      nowMainIntroText: "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】",
       backMainIntroText: [
-        "“如果你说最喜欢我，我会用最最喜欢回应你。”—唯 ",
-        "'所以，也请大家怀着轻松的心情加入就行了！'",
-        "'姐姐，轻音部的卖点是什么？'",
-        "'卖点...就是开心嘛！'",
-        "'呃!重新介绍一下，我们是放学后下午茶。'",
-        "'我们高喊着【目标武道馆】的口号组建了轻音部。'",
+        "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
+        "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
+        "“轻音部的卖点,嗯...就是开心嘛。开心就是开心”—唯",
       ],
       introPic: [
         require('./assets/home_pic/7.jpg'),
@@ -164,7 +161,7 @@ export default {
       this.nowMainIntroText = this.backMainIntroText[this.textIndex];
       this.isTextTwoShow = !this.isTextTwoShow;
       this.textIndex++;
-      if(this.textIndex > 5){
+      if(this.textIndex > 2){
         this.textIndex = 0;
       }
     },
@@ -186,13 +183,11 @@ export default {
     width: 50% !important;
   }
   .innerHolder {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     color: white;
     font-size: 6rem;
+    text-align: center;
   }
   .homePageHolder {
     width: 100%;
@@ -249,7 +244,7 @@ export default {
   }
   .mainIntro {
     display: inline-block;
-    padding: 0rem 2rem 0rem;
+    padding: 1rem 2rem 1rem;
     position: absolute;
     top: 35%;
     left: 50%;
