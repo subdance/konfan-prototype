@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import homePage from '@/homepage.vue'
 import character from '@/character.vue'
+import album from '@/album.vue'
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ export default new Router({
     {
       path: '/c',
       component: character,
-    }
+    },
+    {
+      path: '/a',
+      component: album,
+    },
+
   ]
 })

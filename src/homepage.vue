@@ -140,6 +140,7 @@ export default {
         "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
         "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
         "“轻音部的卖点,嗯...就是开心嘛。开心就是开心”—唯",
+        "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”—梓",
       ],
       introPic: [
         require('./assets/home_pic/7.jpg'),
@@ -161,7 +162,7 @@ export default {
       this.nowMainIntroText = this.backMainIntroText[this.textIndex];
       this.isTextTwoShow = !this.isTextTwoShow;
       this.textIndex++;
-      if(this.textIndex > 2){
+      if(this.textIndex > 3){
         this.textIndex = 0;
       }
     },

@@ -4,7 +4,7 @@
       <tr>
         <td><router-link to="/"><span class="navTextHome">HTT活动部室</span></router-link></td>
         <td><router-link to="/c"><span class="navTextHome">部员登记表</span></router-link></td>
-        <td><router-link to="/"><span class="navTextHome">茶色相簿</span></router-link></td>
+        <td><router-link to="/a"><span class="navTextHome">茶色相簿</span></router-link></td>
         <td><router-link to="/"><span class="navTextHome">放映机</span></router-link></td>
       </tr>
     </table>
