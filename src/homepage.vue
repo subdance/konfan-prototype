@@ -27,7 +27,7 @@
               >
               <div
                 class="innerHolder"
-                v-show='innerDisplay[0]'
+                v-show='innerDisplayArray[0]'
                 >
                 aaa
               </div>
@@ -48,13 +48,35 @@
             </div>
           </td>
           <td >
-            <div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[1] + ')' }">
+            <div
+              class="imgHolder"
+              :style="{ backgroundImage: 'url(' + introPic[1] + ')' }"
+              @mouseenter='setDisplay(1)'
+              @mouseleave='setHide(1)'
+              >
+              <div
+                class="innerHolder"
+                v-show='innerDisplayArray[1]'
+                >
+                aaa
+              </div>
             </div>
           </td>
         </tr>
         <tr>
           <td >
-            <div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[2] + ')' }">
+            <div
+              class="imgHolder"
+              :style="{ backgroundImage: 'url(' + introPic[2] + ')' }"
+              @mouseenter='setDisplay(2)'
+              @mouseleave='setHide(2)'
+              >
+              <div
+                class="innerHolder"
+                v-show='innerDisplayArray[2]'
+                >
+                aaa
+              </div>
             </div>
           </td>
           <td>
@@ -72,7 +94,18 @@
             </div>
           </td>
           <td >
-            <div class="imgHolder" :style="{ backgroundImage: 'url(' + introPic[3] + ')' }">
+            <div
+              class="imgHolder"
+              :style="{ backgroundImage: 'url(' + introPic[3] + ')' }"
+              @mouseenter='setDisplay(3)'
+              @mouseleave='setHide(3)'
+              >
+              <div
+                class="innerHolder"
+                v-show='innerDisplayArray[3]'
+                >
+                aaa
+              </div>
             </div>
           </td>
         </tr>
@@ -88,7 +121,6 @@
 export default {
   data(){
     return {
-      innerDisplay:[false],
       innerDisplayArray: [false, false, false, false, ],
       introTitle: [1,2,3,4],
       introText: [1,2,3,4],
@@ -137,12 +169,10 @@ export default {
       }
     },
     setDisplay(index){
-      this.innerDisplay[index] = true;
-      this.innerDisplayArray[index] = true;
+      this.$set(this.innerDisplayArray, index, true);
     },
     setHide(index){
-      this.innerDisplay[index] = false;
-      this.innerDisplayArray[index] = false;
+      this.$set(this.innerDisplayArray, index, false);
     },
   },
 }
