@@ -1,5 +1,10 @@
 <template lang="html">
   <div class="mainHolder">
+    <div class="titleHolder">
+      <div class="textHolder">
+        <span class="titileText">捕捉轻音部的闪光瞬间(●'◡'●)</span>
+      </div>
+    </div>
     <el-carousel
       indicator-position="outside"
       height='40rem'
@@ -43,5 +48,16 @@ export default {
     width: 100%;
     height: 40rem;
     object-fit: cover;
+  }
+  .titleHolder {
+    height: 20rem;
+  }
+  .textHolder {
+    text-align: right;
+    padding-top: 110px;
+  }
+  .titileText {
+    font-size: 4rem;
+    color: #303133;
   }
 </style>
