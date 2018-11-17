@@ -5,6 +5,7 @@
       height='40rem'
       :interval="4000"
       type="card"
+      trigger='click'
       >
       <el-carousel-item
         v-for="item in 5"
@@ -38,6 +39,7 @@ export default {
     height: 70rem;
   }
   .carouselPic {
+    border-radius: 5px;
     width: 100%;
     height: 40rem;
     object-fit: cover;
