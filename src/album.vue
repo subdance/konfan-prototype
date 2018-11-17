@@ -25,7 +25,7 @@ export default {
     z-index: 1;
     position: relative;
   }
-  .mainHolder::after {
+  /* .mainHolder::after {
     content: '';
     background-image: url('./assets/element/backdot2.png');
     background-repeat: repeat;
@@ -36,5 +36,5 @@ export default {
     bottom: 0;
     left: 0;
     z-index: -1;
-  }
+  } */
 </style>
