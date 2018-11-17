@@ -9,6 +9,8 @@
             <i class="fa fa-diamond fa-5x"></i>
             &nbsp &nbsp
             <i class="fa fa-heart fa-5x"></i>
+            &nbsp &nbsp
+            <i class="fa fa-music fa-5x"></i>
           </span>
         </div>
         <div class="text">
