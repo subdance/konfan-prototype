@@ -2,7 +2,19 @@
   <div class="mainHolder">
     <div class="titleHolder">
       <div class="textHolder">
-        <span class="titileText">捕捉轻音部的闪光瞬间(●'◡'●)</span>
+        <div class="icon">
+          <span class="iconStyle">
+            <i class="fa fa-camera-retro fa-5x"></i>
+            &nbsp &nbsp
+            <i class="fa fa-diamond fa-5x"></i>
+            &nbsp &nbsp
+            <i class="fa fa-heart fa-5x"></i>
+          </span>
+        </div>
+        <div class="text">
+          <span class="titileText">捕捉轻音部的闪光瞬间(●'◡'●)</span>
+        </div>
+
       </div>
     </div>
     <el-carousel
@@ -53,11 +65,25 @@ export default {
     height: 20rem;
   }
   .textHolder {
-    text-align: right;
     padding-top: 110px;
   }
   .titileText {
     font-size: 4rem;
     color: #303133;
+    text-align: right;
+  }
+  .icon {
+    text-align: left;
+    display: inline-block;
+    padding-left: 3rem;
+  }
+  .iconStyle {
+    color: white;
+    text-shadow: 2px 2px 2px grey;
+  }
+  .text {
+    float: right;
+    display: inline-block;
+    text-align: right;
   }
 </style>
