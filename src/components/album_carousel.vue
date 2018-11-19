@@ -22,7 +22,7 @@
       <el-carousel
         indicator-position="outside"
         height='40rem'
-        :interval="4000"
+        :interval="3000"
         type="card"
         trigger='click'
         >
@@ -43,9 +43,8 @@
     <div class="carouselPart">
       <p class="introText">烟火下我看到了我们的梦想</p>
       <el-carousel
-        indicator-position="outside"
         height='65rem'
-        :interval="4000"
+        :interval="3000"
         trigger='click'
         >
         <el-carousel-item
@@ -65,9 +64,8 @@
     <div class="carouselPart">
       <p class="introText">律澪</p>
       <el-carousel
-        indicator-position="outside"
         height='65rem'
-        :interval="4000"
+        :interval="3000"
         trigger='click'
         >
         <el-carousel-item
