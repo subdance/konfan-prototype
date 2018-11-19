@@ -34,7 +34,7 @@
           :key="item"
           >
           <div class="detailHolderOuter">
-            <div class="detailHolderInner">
+            <div class="detailHolderInnerCard">
               <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
             </div>
             <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
@@ -48,7 +48,7 @@
       <p class="introText">烟火下看到梦想的样子</p>
       <el-carousel
         indicator-position="outside"
-        height='60rem'
+        height='65rem'
         :interval="4000"
         trigger='click'
         >
@@ -65,7 +65,7 @@
       <p class="introText">律澪</p>
       <el-carousel
         indicator-position="outside"
-        height='60rem'
+        height='65rem'
         :interval="4000"
         trigger='click'
         >
@@ -94,11 +94,11 @@ export default {
         require('../assets/album/set1/5.png'),
       ],
       nowText1: [
-        'yui',
-        'ritsu',
-        'mio',
-        'mugi',
-        'azusa',
+        'Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
+        'Yamaha Hipgig HG6T46RMMY',
+        'Fender japan JB62-DMC/VSP/3TS LH',
+        'KORG Triton Extreme 76、KORG RK-100',
+        'Fender Japan Mustang MG69/MH CAR',
       ],
       nowPic2: [
         require('../assets/album/set2/1.png'),
@@ -132,7 +132,7 @@ export default {
   }
   .carouselPic {
     width: 100%;
-    height: 60rem;
+    height: 65rem;
     object-fit: cover;
   }
   .titleHolder {
@@ -171,7 +171,7 @@ export default {
     text-align: center;
     position: relative;
   }
-  .detailHolderInner {
+  .detailHolderInnerCard {
     position: absolute;
     top: 2rem;
     width: 100%;
@@ -180,7 +180,8 @@ export default {
     text-align: center;
     width: 100%;
     font-size: 2rem;
-    color: #C0C4CC;
-    -webkit-text-stroke: 2px white;
+    color: #303133;
+    font-weight: bold;
+    -webkit-text-stroke: 1px white;
   }
 </style>
