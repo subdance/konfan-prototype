@@ -139,8 +139,8 @@ export default {
       backMainIntroText: [
         "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
         "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
-        "“轻音部的卖点,嗯...就是开心嘛。开心就是开心”—唯",
         "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”—梓",
+        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”—澪"
       ],
       introPic: [
         require('./assets/home_pic/7.jpg'),
@@ -151,7 +151,7 @@ export default {
     }
   },
   created(){
-    setInterval(this.changeShow, 5000);
+    setInterval(this.changeShow, 4000);
   },
   computed:{
 
@@ -271,8 +271,6 @@ export default {
     font-size: 4rem;
   }
   #box1 {
-    /* background-image: url('./assets/home_pic/1.jpg');
-    background-position: center; */
     position: relative;
     width: 100%;
     overflow: hidden;

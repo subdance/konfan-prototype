@@ -2,9 +2,6 @@
   <div class="mainHolder">
     <div class="titleHolder">
       <div class="textHolder">
-        <!-- <div class="icon">
-
-        </div> -->
         <div class="text">
           <span class="iconStyle">
             <i class="fa fa-camera-retro fa-5x"></i>
@@ -37,15 +34,14 @@
             <div class="detailHolderInnerCard">
               <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
             </div>
-            <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
           </div>
-
+          <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
         </el-carousel-item>
       </el-carousel>
     </div>
 
     <div class="carouselPart">
-      <p class="introText">烟火下看到梦想的样子</p>
+      <p class="introText">烟火下我看到了我们的梦想</p>
       <el-carousel
         indicator-position="outside"
         height='65rem'
@@ -56,6 +52,11 @@
           v-for="item in 6"
           :key="item"
           >
+          <div class="detailHolderOuter">
+            <div class="detailHolderInnerCard">
+              <span class="detailText">{{ nowText2[ item - 1 ] }}</span>
+            </div>
+          </div>
           <img class="carouselPic" :src='nowPic2[item - 1]' alt="">
         </el-carousel-item>
       </el-carousel>
@@ -73,6 +74,11 @@
           v-for="item in 5"
           :key="item"
           >
+          <div class="detailHolderOuter">
+            <div class="detailHolderInnerCard">
+              <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
+            </div>
+          </div>
           <img class="carouselPic" :src='nowPic3[item - 1]' alt="">
         </el-carousel-item>
       </el-carousel>
@@ -108,6 +114,13 @@ export default {
         require('../assets/album/set2/5.png'),
         require('../assets/album/set2/6.png'),
       ],
+      nowText2: [
+        'Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
+        'Yamaha Hipgig HG6T46RMMY',
+        'Fender japan JB62-DMC/VSP/3TS LH',
+        'KORG Triton Extreme 76、KORG RK-100',
+        'Fender Japan Mustang MG69/MH CAR',
+      ],
       nowPic3: [
         require('../assets/album/set3/1.png'),
         require('../assets/album/set3/2.png'),
@@ -139,7 +152,7 @@ export default {
     height: 30rem;
   }
   .textHolder {
-    padding-top: 110px;
+    padding-top: 170px;
   }
   .titileText {
     font-size: 4rem;
@@ -163,9 +176,11 @@ export default {
     color: #303133;
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 0;
+    font-style: italic;
   }
   .carouselPart {
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
   .detailHolderOuter {
     text-align: center;
