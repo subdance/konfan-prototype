@@ -112,13 +112,24 @@
       </table>
     </div>
     <div class="showBox" id="box3">
-
+      <aplayer
+        :music="{
+        title: 'secret base~君がくれたもの~',
+        artist: 'Silent Siren',
+        src: 'https://moeplayer.b0.upaiyun.com/aplayer/secretbase.mp3',
+        pic: 'https://moeplayer.b0.upaiyun.com/aplayer/secretbase.jpg'
+        }"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import Aplayer from 'vue-aplayer'
 export default {
+  components: {
+    Aplayer,
+  },
   data(){
     return {
       innerDisplayArray: [false, false, false, false, ],
@@ -221,7 +232,7 @@ export default {
   .showBox {
     background-size: cover;
     width: 100%;
-    height: 760px;
+    min-height: 760px;
     margin-bottom: 4rem;
   }
   .subText {
