@@ -18,7 +18,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">唯律澪紬梓的乐器</p>
+      <p class="introText">乐器</p>
       <el-carousel
         indicator-position="outside"
         height='40rem'
@@ -41,7 +41,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">烟火下我看到了我们的梦想</p>
+      <p class="introText">烟花下的梦</p>
       <el-carousel
         height='65rem'
         :interval="3000"
@@ -69,12 +69,12 @@
         trigger='click'
         >
         <el-carousel-item
-          v-for="item in 5"
+          v-for="item in 6"
           :key="item"
           >
           <div class="detailHolderOuter">
             <div class="detailHolderInnerCard">
-              <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
+              <span class="detailText">{{ nowText3[ item - 1 ] }}</span>
             </div>
           </div>
           <img class="carouselPic" :src='nowPic3[item - 1]' alt="">
@@ -113,11 +113,12 @@ export default {
         require('../assets/album/set2/6.png'),
       ],
       nowText2: [
-        'Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
-        'Yamaha Hipgig HG6T46RMMY',
-        'Fender japan JB62-DMC/VSP/3TS LH',
-        'KORG Triton Extreme 76、KORG RK-100',
-        'Fender Japan Mustang MG69/MH CAR',
+        '烟花下，唯抱着吉他兴奋地跳着',
+        '那无拘无束地样子，羞涩的澪从来不敢想象',
+        '滑动着拨片，唯睁着大大的眼睛望着澪',
+        '梦想...永恒...海角天边...',
+        '这样啊，原来我的梦想只是永远和你们在一起',
+        '和你一起唱我们的歌'
       ],
       nowPic3: [
         require('../assets/album/set3/1.png'),
@@ -125,6 +126,15 @@ export default {
         require('../assets/album/set3/3.png'),
         require('../assets/album/set3/4.png'),
         require('../assets/album/set3/5.png'),
+        require('../assets/album/set3/6.png'),
+      ],
+      nowText3: [
+        '“澪会生我的气吗？”',
+        '“不生气啊，那还用说...”',
+        '“只是，没有律的鼓，会有点寂寞”',
+        '“虽然有点抢，但我还是喜欢律充满气势，力道十足的鼓点”',
+        '“那就陪我到睡着嘛~求你啦澪”',
+        '“哎...真受不了你...”',
       ],
     }
   },
@@ -171,7 +181,7 @@ export default {
     text-align: right;
   }
   .introText {
-    color: #303133;
+    color: #606266;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 0;
@@ -193,8 +203,10 @@ export default {
     text-align: center;
     width: 100%;
     font-size: 2rem;
-    color: #303133;
+    /* color: #303133; */
+    color: #F2F6FC;
     font-weight: bold;
-    -webkit-text-stroke: 1px white;
+    /* -webkit-text-stroke: 1px white; */
+    mix-blend-mode: exclusion;
   }
 </style>

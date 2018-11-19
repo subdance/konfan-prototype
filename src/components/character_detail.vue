@@ -22,8 +22,8 @@
                 <td class="detailTd">{{ nowDetail2 }}</td>
                 <td class="detailTd">
                   {{ nowDetail3 }}
-                  <div class="InstrumentHolder" :style="{ backgroundImage: 'url(' + nowInsPic + ')' }">
-                  </div>
+                  <!-- <div class="InstrumentHolder" :style="{ backgroundImage: 'url(' + nowInsPic + ')' }">
+                  </div> -->
                 </td>
               </tr>
             </table>
