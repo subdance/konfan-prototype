@@ -33,7 +33,13 @@
           v-for="item in 5"
           :key="item"
           >
-          <img class="carouselPicCard" :src='nowPic1[item - 1]' alt="">
+          <div class="detailHolderOuter">
+            <div class="detailHolderInner">
+              <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
+            </div>
+            <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
+          </div>
+
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -86,6 +92,13 @@ export default {
         require('../assets/album/set1/3.png'),
         require('../assets/album/set1/4.png'),
         require('../assets/album/set1/5.png'),
+      ],
+      nowText1: [
+        'yui',
+        'ritsu',
+        'mio',
+        'mugi',
+        'azusa',
       ],
       nowPic2: [
         require('../assets/album/set2/1.png'),
@@ -153,5 +166,21 @@ export default {
   }
   .carouselPart {
     margin-bottom: 10rem;
+  }
+  .detailHolderOuter {
+    text-align: center;
+    position: relative;
+  }
+  .detailHolderInner {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+  }
+  .detailText {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    color: #C0C4CC;
+    -webkit-text-stroke: 2px white;
   }
 </style>
