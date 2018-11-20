@@ -165,7 +165,6 @@ export default {
   .titileText {
     font-size: 4rem;
     color: #303133;
-    text-align: right;
   }
   .icon {
     text-align: left;
@@ -176,9 +175,7 @@ export default {
     text-shadow: 2px 2px 2px grey;
   }
   .text {
-    float: right;
-    display: inline-block;
-    text-align: right;
+    text-align: center;
   }
   .introText {
     color: #606266;

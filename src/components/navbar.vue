@@ -3,7 +3,7 @@
     <table>
       <tr>
         <td><router-link to="/"><span class="navTextHome">HTT活动室&nbsp<i class="fa fa-home fa-lg" style="color: white;"></i></span></router-link></td>
-        <td><router-link to="/c"><span class="navTextHome">部员登记表&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></td>
+        <td><router-link to="/c"><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/a"><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/"><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></td>
       </tr>

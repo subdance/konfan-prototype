@@ -23,14 +23,8 @@
   export default {
     data(){
       return{
-        // nowBackPic: require('../assets/character/yuimain.jpg'),
         nowBackPic: require('../assets/character/yui1.jpg'),
         backPic: [
-          // require('../assets/character/yuimain.jpg'),
-          // require('../assets/character/ritsumain.jpg'),
-          // require('../assets/character/miomain.jpg'),
-          // require('../assets/character/mugimain.jpg'),
-          // require('../assets/character/azusamain.jpg'),
           require('../assets/character/yui1.jpg'),
           require('../assets/character/ritsu1.jpg'),
           require('../assets/character/mio1.jpg'),
