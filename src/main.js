@@ -7,7 +7,11 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import Aplayer from 'vue-aplayer'
+import APlayer from '@moefe/vue-aplayer';
+Vue.use(APlayer, {
+  defaultCover: 'https://github.com/u3u.png',
+  productionTip: true,
+});
 
 Vue.use(ElementUI);
 

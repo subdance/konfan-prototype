@@ -41,7 +41,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">烟花下的梦</p>
+      <p class="introText">梦</p>
       <el-carousel
         height='65rem'
         :interval="3000"
@@ -113,7 +113,7 @@ export default {
         require('../assets/album/set2/6.png'),
       ],
       nowText2: [
-        '烟花下，唯抱着吉他兴奋地跳着',
+        '烟花下的唯抱着吉他兴奋地跳着',
         '那无拘无束地样子，羞涩的澪从来不敢想象',
         '滑动着拨片，唯睁着大大的眼睛望着澪',
         '梦想...永恒...海角天边...',
