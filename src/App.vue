@@ -50,13 +50,13 @@ export default {
         {
           name: 'ふでペン 〜ボールペン〜/毛笔圆珠笔',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181120135513/c2410b9d88ecf6e57e3de897cc8ae77e/ymusic/693e/8e1c/22e7/41d6e709fd50d33eaffc255a97224bc6.mp3',
+          url: 'http://m10.music.126.net/20181120220303/c51579f1d743891a683dbe11d7f9e01b/ymusic/693e/8e1c/22e7/41d6e709fd50d33eaffc255a97224bc6.mp3',
           cover: require('./assets/album/cover/3.jpg'),
         },
         {
           name: 'U&I',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181120211628/3bab4907925cff53c679acf03abe165f/ymusic/f268/92ae/8ba6/c0e04206e0cb2bfe7fb05a9e915e435f.mp3',
+          url: 'http://m10.music.126.net/20181120220344/4de845abe207d251c137ea83d8493c94/ymusic/f268/92ae/8ba6/c0e04206e0cb2bfe7fb05a9e915e435f.mp3',
           cover: require('./assets/album/cover/3.jpg'),
         },
       ],

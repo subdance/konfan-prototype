@@ -111,8 +111,6 @@
         </tr>
       </table>
     </div>
-    <div class="showBox" id="box3">
-    </div>
   </div>
 </template>
 
@@ -123,8 +121,18 @@ export default {
   data(){
     return {
       innerDisplayArray: [false, false, false, false, ],
-      introTitle: [1,2,3,4],
-      introText: [1,2,3,4],
+      introTitle: [
+        'K-ON是“轻音部”这一高中社团的简称',
+        '两位吉他手，一个键盘手，一个鼓手',
+        '可口的点心，悠闲的午后',
+        '生活，音乐，还有懵懂的梦想',
+      ],
+      introText: [
+        '在这一社团中，五位少女成立了名为“放学后下午茶”（HTT）的乐队',
+        '和一位贪吃的顾问，便是这个社团的全部成员',
+        '以及些许手忙脚乱的练习，构成了云朵般的日常',
+        '还有最最,最重要的——互相陪伴的彼此',
+      ],
       isTextOneShow: true,
       isTextTwoShow: false,
       textIndex: 1,
@@ -143,14 +151,14 @@ export default {
         "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”—梓",
         "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”—澪",
         "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”—律",
-        "“所以去寻找，为了邂逅心中的第一，出发吧！—【最多】”",
-        "“被蓝天精致地包装好的世界，就是送给我的礼物—【Honey sweet tea time】”"
+        "“所以去寻找，为了邂逅心中的第一，出发吧！—【最多最多】”",
+        "“被蓝天精致地包装好的世界，就是送给我的礼物—【甜茶时光】”"
       ],
       introPic: [
         require('./assets/home_pic/7.jpg'),
         require('./assets/home_pic/4.jpg'),
         require('./assets/home_pic/6.jpg'),
-        require('./assets/home_pic/5.jpg'),
+        require('./assets/home_pic/1.jpg'),
       ],
     }
   },
@@ -183,6 +191,8 @@ export default {
 <style scoped>
   table {
     width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   td {
     width: 50% !important;
@@ -226,7 +236,6 @@ export default {
     background-size: cover;
     width: 100%;
     min-height: 760px;
-    margin-bottom: 4rem;
   }
   .subText {
     color: white;
@@ -237,9 +246,10 @@ export default {
     font-size: 3rem;
   }
   .introTextHolder {
+    font-size: 2rem;
+    color: #606266;
     margin: auto;
     width: 80%;
-    border: 2px solid black;
   }
   .to-left {
     text-align: left;
@@ -278,6 +288,7 @@ export default {
     position: relative;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
   }
   #myVideo {
     position: absolute;
@@ -286,5 +297,8 @@ export default {
     z-index: -100;
   }
   #box2 {
+    background: #ff6e7f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 </style>

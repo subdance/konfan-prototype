@@ -11,7 +11,7 @@ export default {
 <style scoped>
   #footHolder {
     background-color: #DCDFE6;
-    height: 60px;
+    height: 66px;
     text-align: center;
   }
   p {
