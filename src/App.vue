@@ -1,6 +1,11 @@
 <template>
   <el-container>
-    <aplayer :audio="audio" :lrcType="3" />
+    <aplayer
+      :audio="audio"
+      :lrcType="0"
+      fixed
+      autoplay
+      />
     <el-header height='62px'>
       <navBar></navBar>
       <iconHolder></iconHolder>
@@ -29,13 +34,26 @@ export default {
   },
   data(){
     return{
-      audio: {
-        name: 'ヒビカセ',
-        artist: 'れをる',
-        url: 'http://pdacsgxq7.bkt.clouddn.com/mp3/hibikase.mp3',
-        cover: 'http://p1.music.126.net/cZPx3peGTuWEI_GaZB5CDg==/8892850045794893.jpg?param=300y300', // prettier-ignore
-        lrc: 'http://pdacsgxq7.bkt.clouddn.com/lrc/hibikase.lrc',
-      },
+      audio: [
+        {
+          name: 'わたしの恋はホッチキス/订书机之恋',
+          artist: '放課後ティータイム',
+          url: 'http://m10.music.126.net/20181120132953/5d71f1ab3e0ce09aba351e98a8ae4449/ymusic/0077/f86d/227f/93dd473dc82acb7a404017d09d6ebe75.mp3',
+          cover: require('./assets/album/cover/1.jpg'), // prettier-ignore
+        },
+        {
+          name: 'ふわふわ時間/轻飘飘的时光',
+          artist: '放課後ティータイム',
+          url: 'http://m10.music.126.net/20181120135051/25a88b6ccba36c8b8834fe3f98db5b0b/ymusic/3aa7/4dba/7a9b/67560fd92e3ecbc53e6c3a336c801126.mp3',
+          cover: require('./assets/album/cover/2.jpg'),
+        },
+        {
+          name: 'ふでペン 〜ボールペン〜/毛笔圆珠笔',
+          artist: '放課後ティータイム',
+          url: 'http://m10.music.126.net/20181120135513/c2410b9d88ecf6e57e3de897cc8ae77e/ymusic/693e/8e1c/22e7/41d6e709fd50d33eaffc255a97224bc6.mp3',
+          cover: require('./assets/album/cover/3.jpg'),
+        },
+      ],
     }
   },
   methods:{
