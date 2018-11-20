@@ -141,7 +141,10 @@ export default {
         "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
         "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
         "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”—梓",
-        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”—澪"
+        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”—澪",
+        "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”—律",
+        "“所以去寻找，为了邂逅心中的第一，出发吧！—【最多】”",
+        "“被蓝天精致地包装好的世界，就是送给我的礼物—【Honey sweet tea time】”"
       ],
       introPic: [
         require('./assets/home_pic/7.jpg'),
@@ -163,7 +166,7 @@ export default {
       this.nowMainIntroText = this.backMainIntroText[this.textIndex];
       this.isTextTwoShow = !this.isTextTwoShow;
       this.textIndex++;
-      if(this.textIndex > 3){
+      if(this.textIndex > 6){
         this.textIndex = 0;
       }
     },
