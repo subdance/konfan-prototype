@@ -12,7 +12,7 @@
           <td @click='changeDetail(4)' :class="{ picTd: true, blurTd: isBlur[3] }" id="mugi"></td>
           <td @click='changeDetail(5)' :class="{ picTd: true, blurTd: isBlur[4] }" id="azusa"></td>
         </tr>
-      </table></el-collapse-transition>
+      </table>
       <div class="detailHolder">
         <transition name="el-fade-in-linear">
           <div v-show='isDetailShowe'>
@@ -206,7 +206,7 @@ export default {
     filter: blur(0px);
   }
   .detailHolder {
-    min-height:50rem;
+    min-height:40rem;
   }
   .detailTd {
     color: #606266;

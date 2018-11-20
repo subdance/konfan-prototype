@@ -58,7 +58,7 @@
           '樱丘女子高中轻音部的键盘手，被田井中律和秋山澪拉入轻音部（本来想加入合唱团）。大家闺秀，举止得体，身为千金大小姐却有很大的力气。',
           '樱丘女子高中轻音部辅音吉他手，是第二年轻音部新加入的成员。做事认真，却又不时地透露出小孩子气。有着十分强悍的吉他能力。',
         ],
-        verticalText: 'what should i put in?',
+        verticalText: '.',
         nowHeadPic: require('../assets/character_intro/yui1.png'),
         backHeadPic: [
           require('../assets/character_intro/yui1.png'),

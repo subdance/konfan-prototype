@@ -118,7 +118,7 @@ export default {
         '滑动着拨片，唯望着澪',
         '梦...演唱会...武道馆...',
         '这样啊，原来我的梦想只是永远和你们在一起',
-        '和你,一起唱我们的歌'
+        '永远一起唱我们的歌'
       ],
       nowPic3: [
         require('../assets/album/set3/1.png'),
@@ -146,7 +146,7 @@ export default {
 
   }
   .carouselPicCard {
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
     height: 40rem;
     object-fit: cover;
@@ -155,6 +155,7 @@ export default {
     width: 100%;
     height: 65rem;
     object-fit: cover;
+    box-shadow: 2px 2px 2px grey;
   }
   .titleHolder {
     height: 30rem;
@@ -196,6 +197,17 @@ export default {
     top: 2rem;
     width: 100%;
   }
+  /* .detailHolderInnerCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: white;
+    opacity: 0.3;
+  } */
   .detailText {
     text-align: center;
     width: 100%;
