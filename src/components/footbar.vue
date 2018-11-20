@@ -17,7 +17,4 @@ export default {
   p {
     display: inline-block;
   }
-  #popOverButton {
-    padding: 1px 1px;
-  }
 </style>
