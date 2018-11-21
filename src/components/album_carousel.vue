@@ -10,7 +10,7 @@
             &nbsp &nbsp
             <i class="fa fa-heart fa-5x"></i>
             &nbsp &nbsp
-            <i class="fa fa-music fa-5x"></i>
+            <i class="fa fa-music fa-spin fa-5x"></i>
           </span>
           <span class="titileText">捕捉轻音部的闪光瞬间(●'◡'●)</span>
         </div>
@@ -98,11 +98,11 @@ export default {
         require('../assets/album/set1/5.png'),
       ],
       nowText1: [
-        'Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
-        'Yamaha Hipgig HG6T46RMMY',
-        'Fender japan JB62-DMC/VSP/3TS LH',
-        'KORG Triton Extreme 76、KORG RK-100',
-        'Fender Japan Mustang MG69/MH CAR',
+        '唯：Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
+        '律：Yamaha Hipgig HG6T46RMMY',
+        '澪：Fender japan JB62-DMC/VSP/3TS LH',
+        '紬：KORG Triton Extreme 76、KORG RK-100',
+        '梓：Fender Japan Mustang MG69/MH CAR',
       ],
       nowPic2: [
         require('../assets/album/set2/1.png'),
@@ -215,7 +215,6 @@ export default {
     /* color: #303133; */
     color: #F2F6FC;
     font-weight: bold;
-    /* -webkit-text-stroke: 1px white; */
     mix-blend-mode: exclusion;
   }
 </style>

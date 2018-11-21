@@ -6,6 +6,7 @@
         <td><router-link to="/c"><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/a"><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/"><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></td>
+        <td><router-link to="/t"><span class="navTextHome">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></td>
       </tr>
     </table>
   </div>
@@ -52,4 +53,5 @@ export default {
     color: #df000a;
     font-weight: bold;
   }
+  #rightTd {}
 </style>

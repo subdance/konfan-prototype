@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import homePage from '@/homepage.vue'
 import character from '@/character.vue'
 import album from '@/album.vue'
+import teaRoom from '@/tea_room.vue'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export default new Router({
     {
       path: '/a',
       component: album,
+    },
+    {
+      path: '/t',
+      component: teaRoom,
     },
 
   ]
