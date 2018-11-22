@@ -155,7 +155,7 @@ export default {
     width: 100%;
     height: 65rem;
     object-fit: cover;
-    box-shadow: 2px 2px 2px grey;
+    border-radius: 10px;
   }
   .titleHolder {
     height: 30rem;
@@ -187,6 +187,8 @@ export default {
   }
   .carouselPart {
     margin-bottom: 6rem;
+    width: 95%;
+    margin: auto;
   }
   .detailHolderOuter {
     text-align: center;
