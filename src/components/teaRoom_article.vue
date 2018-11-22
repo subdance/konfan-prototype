@@ -61,19 +61,24 @@ export default {
 </script>
 
 <style scoped>
+
+  * {
+    box-sizing: border-box;
+  }
   #titleHolder {
     font-size: 3rem;
     text-align: center;
   }
-  * {
-    box-sizing: border-box;
-  }
   .collapse_title {
     height: 4rem;
     font-size: 3rem;
+    cursor: pointer;
+    transition: padding-left 0.7s ease-out;
   }
   .collapse_title:hover {
-    cursor: pointer;
+    padding-left: 5rem;
+    font-weight: bold;
+    transition: padding-left 0.7s ease-out;
   }
   .collapse_text {
     overflow: hidden;
@@ -86,12 +91,16 @@ export default {
     margin-bottom: 1rem;
   }
   .titleText {
-    text-decoration: underline;
     color: #303133;
+
   }
   .articleText {
     font-size: 2rem;
     color: #EBEEF5;
+  }
+  .articleText::first-letter {
+    font-size: 2.5rem;
+    font-weight: bold;
   }
   .mainHolder {
   }
