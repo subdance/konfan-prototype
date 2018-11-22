@@ -1,35 +1,33 @@
 <template lang="html">
   <div class="mainHolder">
-    <div class="mainHolder">
-      <p>相信的<i class="fa fa-heart-o"></i>就是你的魔法</p>
-    </div>
+    <p id="titleHolder">相信的心就是你的魔法</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
-        <span>this is title</span>
-
+        <span class="titleText">轻音</span>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[0] + 'px'}">
-        <span>this is text</span>
-        <p>aa</p>
-        <p>aa</p>
+        <p class="articleText">aa</p>
+        <p class="articleText">aa</p>
       </div>
     </div>
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(1)'>
-        <span>this is title</span>
+        <span class="titleText">this is title</span>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[1] + 'px'}">
-        <span>this is text</span>
+        <p class="articleText">aa</p>
+        <p class="articleText">aa</p>
       </div>
     </div>
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(2)'>
-        <span>this is title</span>
+        <span class="titleText">this is title</span>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[2] + 'px'}">
-        <span>this is text</span>
+        <p class="articleText">aa</p>
+        <p class="articleText">aa</p>
       </div>
     </div>
 
@@ -63,8 +61,7 @@ export default {
 </script>
 
 <style scoped>
-  p {
-    color: #303133;
+  #titleHolder {
     font-size: 3rem;
     text-align: center;
   }
@@ -82,9 +79,20 @@ export default {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     color: #606266;
+    padding-left: 2rem;
   }
   .single_row {
-    border-bottom: 2px solid #F56C6C;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+  }
+  .titleText {
+    text-decoration: underline;
     color: #303133;
+  }
+  .articleText {
+    font-size: 2rem;
+    color: #EBEEF5;
+  }
+  .mainHolder {
   }
 </style>
