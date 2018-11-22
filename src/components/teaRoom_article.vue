@@ -68,6 +68,7 @@ export default {
   #titleHolder {
     font-size: 3rem;
     text-align: center;
+    color: #303133;
   }
   .collapse_title {
     height: 4rem;
@@ -92,7 +93,6 @@ export default {
   }
   .titleText {
     color: #303133;
-
   }
   .articleText {
     font-size: 2rem;
