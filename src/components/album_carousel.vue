@@ -22,7 +22,6 @@
       <el-carousel
         indicator-position="outside"
         height='40rem'
-        :interval="3000"
         type="card"
         trigger='click'
         >
@@ -44,7 +43,6 @@
       <p class="introText">梦</p>
       <el-carousel
         height='65rem'
-        :interval="3000"
         trigger='click'
         >
         <el-carousel-item
@@ -65,7 +63,6 @@
       <p class="introText">律澪</p>
       <el-carousel
         height='65rem'
-        :interval="3000"
         trigger='click'
         >
         <el-carousel-item
@@ -78,6 +75,26 @@
             </div>
           </div>
           <img class="carouselPic" :src='nowPic3[item - 1]' alt="">
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+
+    <div class="carouselPart">
+      <p class="introText">碰到狗狗,少女会怎样？</p>
+      <el-carousel
+        height='65rem'
+        trigger='click'
+        >
+        <el-carousel-item
+          v-for="item in 4"
+          :key="item"
+          >
+          <div class="detailHolderOuter">
+            <div class="detailHolderInnerCard">
+              <span class="detailText">{{ nowText4[ item - 1 ] }}</span>
+            </div>
+          </div>
+          <img class="carouselPic" :src='nowPic4[item - 1]' alt="">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -135,6 +152,18 @@ export default {
         '“虽然有点抢，但我还是喜欢律充满气势，力道十足的鼓点”',
         '“那就陪我到睡着嘛~求你啦澪”',
         '“哎...真受不了你...”',
+      ],
+      nowPic4: [
+        require('../assets/album/set4/1.jpg'),
+        require('../assets/album/set4/2.jpg'),
+        require('../assets/album/set4/3.jpg'),
+        require('../assets/album/set4/4.jpg'),
+      ],
+      nowText4: [
+        '“澪会生我的气吗？”',
+        '“不生气啊，那还用说...”',
+        '“只是，没有律的鼓，会有点寂寞”',
+        '“虽然有点抢，但我还是喜欢律充满气势，力道十足的鼓点”',
       ],
     }
   },
@@ -199,17 +228,7 @@ export default {
     top: 2rem;
     width: 100%;
   }
-  /* .detailHolderInnerCard::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-color: white;
-    opacity: 0.3;
-  } */
+
   .detailText {
     text-align: center;
     width: 100%;

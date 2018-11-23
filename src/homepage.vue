@@ -29,7 +29,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[0]'
                 >
-                于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉
+                于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。
               </div>
             </div>
           </td>
@@ -58,7 +58,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[1]'
                 >
-                轻音的美人监督山田尚子，也一跃成为业界偶像，同时也将“京都腿”与“京都脸”推向了世界
+                轻音的美人监督山田尚子，也一跃成为业界偶像，同时也将“京都腿”与“京都脸”推向了世界。
               </div>
             </div>
           </td>
@@ -75,7 +75,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[2]'
                 >
-                五位主角的声优也在成为了行业内的新星，日后多次在名作中出演主役
+                五位主角的声优也在成为了行业内的新星，日后多次在名作中出演主役。
               </div>
             </div>
           </td>
@@ -104,7 +104,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[3]'
                 >
-                aaa
+                轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。
               </div>
             </div>
           </td>
@@ -203,7 +203,7 @@ export default {
     color: white;
     font-size: 4rem;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 6rem;
   }
   .homePageHolder {
     width: 100%;

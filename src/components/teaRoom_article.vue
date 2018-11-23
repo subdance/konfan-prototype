@@ -3,7 +3,7 @@
     <p id="titleHolder">相信的心就是你的魔法</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
-        <span class="titleText">轻音</span>
+        <span class="titleText">"轻音"</span>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[0] + 'px'}">
         <p class="articleText">aa</p>
@@ -13,7 +13,7 @@
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(1)'>
-        <span class="titleText">this is title</span>
+        <span class="titleText">"我"</span>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[1] + 'px'}">
         <p class="articleText">aa</p>
@@ -23,7 +23,7 @@
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(2)'>
-        <span class="titleText">this is title</span>
+        <span class="titleText">"this is title"</span>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[2] + 'px'}">
         <p class="articleText">aa</p>
@@ -74,22 +74,22 @@ export default {
     height: 4rem;
     font-size: 3rem;
     cursor: pointer;
-    transition: padding-left 0.7s ease-out;
+    transition: padding-left 1s ease-out;
   }
   .collapse_title:hover {
     padding-left: 5rem;
     font-weight: bold;
-    transition: padding-left 0.7s ease-out;
+    transition: padding-left 0.4s ease-out;
   }
   .collapse_text {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     color: #606266;
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
   .single_row {
     padding-left: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
   }
   .titleText {
     color: #303133;
