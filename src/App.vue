@@ -38,7 +38,7 @@ export default {
         {
           name: 'わたしの恋はホッチキス/订书机之恋',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181120132953/5d71f1ab3e0ce09aba351e98a8ae4449/ymusic/0077/f86d/227f/93dd473dc82acb7a404017d09d6ebe75.mp3',
+          url: 'http://m10.music.126.net/20181124205058/21f51905d52cb25b95be0164b4e4cd6c/ymusic/0077/f86d/227f/93dd473dc82acb7a404017d09d6ebe75.mp3',
           cover: require('./assets/album/cover/1.jpg'), // prettier-ignore
         },
         {
@@ -56,7 +56,7 @@ export default {
         {
           name: 'U&I',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181120220344/4de845abe207d251c137ea83d8493c94/ymusic/f268/92ae/8ba6/c0e04206e0cb2bfe7fb05a9e915e435f.mp3',
+          url: 'http://dl.stream.qqmusic.qq.com/M800001evOkC2lMQhz.mp3?vkey=320EE98C4FEF3A8770CFFF68FF0D7E37839695EB69A1C31B3BC4282E048CD77DF0ED103326FE7663C38A9E94DF530786ED3784910BFF12F1&guid=5150825362&fromtag=1',
           cover: require('./assets/album/cover/3.jpg'),
         },
       ],

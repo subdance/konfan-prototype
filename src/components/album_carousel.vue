@@ -24,6 +24,7 @@
         height='40rem'
         type="card"
         trigger='click'
+        interval='1800'
         >
         <el-carousel-item
           v-for="item in 5"
@@ -44,6 +45,7 @@
       <el-carousel
         height='65rem'
         trigger='click'
+        :autoplay='autoplay'
         >
         <el-carousel-item
           v-for="item in 6"
@@ -64,6 +66,7 @@
       <el-carousel
         height='65rem'
         trigger='click'
+        :autoplay='autoplay'
         >
         <el-carousel-item
           v-for="item in 6"
@@ -84,6 +87,7 @@
       <el-carousel
         height='65rem'
         trigger='click'
+        :autoplay='autoplay'
         >
         <el-carousel-item
           v-for="item in 4"
@@ -107,6 +111,7 @@
 export default {
   data(){
     return {
+      autoplay: false,
       nowPic1: [
         require('../assets/album/set1/1.png'),
         require('../assets/album/set1/2.png'),
@@ -160,10 +165,10 @@ export default {
         require('../assets/album/set4/4.jpg'),
       ],
       nowText4: [
-        '“澪会生我的气吗？”',
-        '“不生气啊，那还用说...”',
-        '“只是，没有律的鼓，会有点寂寞”',
-        '“虽然有点抢，但我还是喜欢律充满气势，力道十足的鼓点”',
+        '“（可真是让人兴奋呢）—紬”',
+        '“走别的路行吗...”—澪',
+        '“没事的啦~”—律',
+        '“小狗乖哦小狗乖哦”—唯',
       ],
     }
   },
@@ -210,7 +215,7 @@ export default {
   .introText {
     color: #606266;
     font-size: 2rem;
-    text-align: center;
+    padding-left: 5rem;
     margin-bottom: 0;
     font-style: italic;
   }
