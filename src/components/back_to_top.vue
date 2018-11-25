@@ -1,7 +1,7 @@
 <template lang="html">
-  <div v-show='isActivated' class="">
-    <a id="back2Top" title="Back to top" href="#" @click='goBack()'>&#10148;</a>
-  </div>
+  <transition name="el-fade-in-linear">
+    <a v-show='isActivated' id="back2Top" title="Back to top" href="#" @click='goBack()'>&#10148;</a>
+  </transition>
 </template>
 
 <script>
@@ -46,10 +46,6 @@ export default {
     overflow: hidden;
     z-index: 999;
     cursor: pointer;
-    -moz-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
     transform: rotate(270deg);
     position: fixed;
     bottom: 50px;
