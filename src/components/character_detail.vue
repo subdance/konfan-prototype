@@ -275,7 +275,7 @@ export default {
     filter: blur(0px);
   }
   .detailHolder {
-    min-height:40rem;
+    min-height:50rem;
   }
   .detailTd {
     color: #606266;
