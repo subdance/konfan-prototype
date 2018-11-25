@@ -30,9 +30,9 @@ export default {
     },
 
     goBack(){
-      do {
-        window.scrollBy(0, -50);
-      } while (document.documentElement.scrollTop > 100);
+      $('html,body').stop().animate({
+        scrollTop: 0
+      }, 'slow', 'swing');
     }
   },
 
