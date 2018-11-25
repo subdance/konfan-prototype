@@ -1,5 +1,6 @@
 <template>
   <el-container>
+    <scrollTop></scrollTop>
     <aplayer
       :audio="audio"
       :lrcType="0"
@@ -25,12 +26,14 @@
 import footBar from '@/components/footbar.vue'
 import iconHolder from '@/components/icon_holder.vue'
 import navBar from '@/components/navbar.vue'
+import scrollTop from '@/components/back_to_top.vue'
 export default {
   name: 'App',
   components: {
     navBar,
     footBar,
     iconHolder,
+    scrollTop,
   },
   data(){
     return{
@@ -91,9 +94,9 @@ export default {
     z-index: -1;
   }
   .el-container {
-
   }
   .el-footer {
     padding: 0;
   }
+
 </style>

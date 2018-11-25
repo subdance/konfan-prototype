@@ -19,13 +19,13 @@
             <table>
               <tr>
                 <td class="detailTd">
-                  <p class="introPara" v-for='(paragraph) in backDetail1[index1].intro'> {{ paragraph }} </p>
+                  <p class="introPara" v-for='(paragraph) in backDetail1[index1].intro'> &nbsp {{ paragraph }} </p>
                 </td>
                 <td class="detailTd">
-                  <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> {{ paragraph }}</p>
+                  <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> &nbsp {{ paragraph }}</p>
                 </td>
                 <td class="detailTd">
-                  <p class="introPara">{{ nowDetail3 }}</p>
+                  <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
                 </td>
               </tr>
             </table>
@@ -34,7 +34,6 @@
 
         <transition name="el-fade-in-linear">
           <div class="altHolder" v-show='isAltShow'>
-
           </div>
         </transition name="el-fade-in-linear">
       </div>
@@ -182,6 +181,9 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   table {
     margin: auto;
   }
@@ -190,7 +192,8 @@ export default {
     text-align: center;
   }
   #addText {
-    color: #909399;
+    color: #DCDFE6;
+    margin-top: 0;
   }
   .introHolder {
     position: relative;
@@ -199,6 +202,10 @@ export default {
   }
   .mainHolder {
     width: 100%;
+    padding-bottom: 1rem;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   .tableHolder {
     width: 100%;
@@ -235,6 +242,8 @@ export default {
     text-align:justify;
     margin-top: 0;
     margin-bottom: 0.5rem;
+    border-bottom: 1px solid #DCDFE6;
+    color: #303133;
   }
   .introPara::first-letter {
     font-size: 1.9rem;
@@ -292,7 +301,8 @@ export default {
     background-image: url('../assets/background/2.png');
     background-position: center;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 10%;
     overflow: hidden;
+    box-shadow: 2px 2px 2px grey;
   }
 </style>
