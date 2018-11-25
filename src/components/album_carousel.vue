@@ -24,7 +24,7 @@
         height='40rem'
         type="card"
         trigger='click'
-        interval='1800'
+        :inerval='interval'
         >
         <el-carousel-item
           v-for="item in 5"
@@ -111,6 +111,7 @@
 export default {
   data(){
     return {
+      interval: 1800,
       autoplay: false,
       nowPic1: [
         require('../assets/album/set1/1.png'),

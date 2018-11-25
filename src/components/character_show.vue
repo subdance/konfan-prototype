@@ -78,14 +78,22 @@
   }
   li:hover {
     border-top: 1px solid #D70040;
-    transition: 0.3s;
+    left: 0px;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
   }
   .tabHolder {
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 750px;
-    transition: 0.3s;
+    background-image: none;
+    transition: background-image 0.2s ease-out;
+    /* -moz-transition: background-image 0.2s ease-out;
+    -webkit-transition: background-image 0.2s ease-out;
+    -o-transition: background-image 0.2s ease-out; */
   }
   .tabHeaderHolder {
     margin-left: 30px;

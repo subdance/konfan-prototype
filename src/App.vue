@@ -38,19 +38,19 @@ export default {
         {
           name: 'わたしの恋はホッチキス/订书机之恋',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181124205058/21f51905d52cb25b95be0164b4e4cd6c/ymusic/0077/f86d/227f/93dd473dc82acb7a404017d09d6ebe75.mp3',
+          url: 'http://dl.stream.qqmusic.qq.com/M800004T6yg21ZG6Xa.mp3?vkey=9AA4708802CD9E2DF3E153328555A8653FDDE2869D5EBF9B9A1D6123978A858126041D5AE71EE6ACA1A500D739C77D26DB694B63E572F2C4&guid=5150825362&fromtag=1',
           cover: require('./assets/album/cover/1.jpg'), // prettier-ignore
         },
         {
           name: 'ふわふわ時間/轻飘飘的时光',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181120135051/25a88b6ccba36c8b8834fe3f98db5b0b/ymusic/3aa7/4dba/7a9b/67560fd92e3ecbc53e6c3a336c801126.mp3',
+          url: 'http://dl.stream.qqmusic.qq.com/M800003zUdY31QQkvC.mp3?vkey=139101F1DAAC3312849932C61906E72BAFA71C6AB3AD8A8FB5A4A62FAA217E77523F116327462308AB9E9A8F0BC38A12C495F6405A098157&guid=5150825362&fromtag=1',
           cover: require('./assets/album/cover/2.jpg'),
         },
         {
           name: 'ふでペン 〜ボールペン〜/毛笔圆珠笔',
           artist: '放課後ティータイム',
-          url: 'http://m10.music.126.net/20181120220303/c51579f1d743891a683dbe11d7f9e01b/ymusic/693e/8e1c/22e7/41d6e709fd50d33eaffc255a97224bc6.mp3',
+          url: 'http://dl.stream.qqmusic.qq.com/M800004Y5Qi60fSqLE.mp3?vkey=C1AB8AF43D8883CE82EA6DA4B61DFFD252670F9F7F163DB5B74B83202682AEDF40251EFB8C8F214D18A8DD57BACA42ABB7BC70880C0ADD89&guid=5150825362&fromtag=1',
           cover: require('./assets/album/cover/3.jpg'),
         },
         {

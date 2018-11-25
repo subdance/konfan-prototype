@@ -74,16 +74,25 @@ export default {
     height: 4rem;
     font-size: 3rem;
     cursor: pointer;
-    transition: padding-left 1s ease-out;
+    transition: padding-left 0.4s ease-out;
+    /* -moz-transition: padding-left 0.4s ease-out;
+    -webkit-transition: padding-left 0.4s ease-out;
+    -o-transition: padding-left 0.4s ease-out; */
   }
   .collapse_title:hover {
     padding-left: 5rem;
     font-weight: bold;
     transition: padding-left 0.4s ease-out;
+    /* -moz-transition: padding-left 0.4s ease-out;
+    -webkit-transition: padding-left 0.4s ease-out;
+    -o-transition: padding-left 0.4s ease-out; */
   }
   .collapse_text {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    /* -moz-transition: max-height 0.3s ease-out;
+    -webkit-transition: max-height 0.3s ease-out;
+    -o-transition: max-height 0.3s ease-out; */
     color: #606266;
     padding-left: 3rem;
   }
