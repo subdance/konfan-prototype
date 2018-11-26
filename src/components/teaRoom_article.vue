@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainHolder">
-    <p id="titleHolder">相信的心就是你的魔法</p>
+    <p class="mainTitle">A believing heart is your magic</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
         <span class="title_text">this is title</span>
@@ -73,7 +73,6 @@ export default {
     height: 8rem;
     padding-left: 2rem;
     transition: padding 0.5s ease-out;
-    /* border: 1px solid #F2F6FC; */
     margin-bottom: 1rem;
     position: relative;
     box-shadow: 2px 2px 5px black;
@@ -111,6 +110,11 @@ export default {
     text-align: right;
     padding-right: 1rem;
     font-size: 1.5rem;
+    color: #F2F6FC;
+  }
+  .mainTitle {
+    font-size: 4rem;
+    text-align: center;
     color: #F2F6FC;
   }
 </style>
