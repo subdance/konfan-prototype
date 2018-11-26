@@ -41,7 +41,7 @@ export default {
         {
           name: 'わたしの恋はホッチキス/订书机之恋',
           artist: '放課後ティータイム',
-          url: 'http://dl.stream.qqmusic.qq.com/M800004T6yg21ZG6Xa.mp3?vkey=9AA4708802CD9E2DF3E153328555A8653FDDE2869D5EBF9B9A1D6123978A858126041D5AE71EE6ACA1A500D739C77D26DB694B63E572F2C4&guid=5150825362&fromtag=1',
+          url: 'http://dl.stream.qqmusic.qq.com/M800004T6yg21ZG6Xa.mp3?vkey=106D8D23CBFF60801F3CB96A05B4B117F560973E4EC815F3667E3C25F7D045CDD51C0D6EE836BEE89FA9E5B7E55A974866BE16B7C5E5FF73&guid=5150825362&fromtag=1',
           cover: require('./assets/album/cover/1.jpg'), // prettier-ignore
         },
         {
