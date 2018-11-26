@@ -3,31 +3,34 @@
     <p id="titleHolder">相信的心就是你的魔法</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
-        <span class="titleText">"轻音"</span>
+        <span class="title_text">this is title</span>
+        <p class="title_text_adding"> a short intro to title</p>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[0] + 'px'}">
-        <p class="articleText">aa</p>
-        <p class="articleText">aa</p>
+        <p class="article_text">aa</p>
+        <p class="article_text">aa</p>
       </div>
     </div>
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(1)'>
-        <span class="titleText">"我"</span>
+        <span class="title_text">this is title</span>
+        <p class="title_text_adding"> a short intro to title</p>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[1] + 'px'}">
-        <p class="articleText">aa</p>
-        <p class="articleText">aa</p>
+        <p class="article_text">aa</p>
+        <p class="article_text">aa</p>
       </div>
     </div>
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(2)'>
-        <span class="titleText">"this is title"</span>
+        <span class="title_text">this is title</span>
+        <p class="title_text_adding"> a short intro to title</p>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[2] + 'px'}">
-        <p class="articleText">aa</p>
-        <p class="articleText">aa</p>
+        <p class="article_text">aa</p>
+        <p class="article_text">aa</p>
       </div>
     </div>
 
@@ -61,56 +64,53 @@ export default {
 </script>
 
 <style scoped>
-
   * {
     box-sizing: border-box;
   }
-  #titleHolder {
-    font-size: 3rem;
-    text-align: center;
-    color: #303133;
-  }
   .collapse_title {
-    height: 4rem;
-    font-size: 3rem;
-    cursor: pointer;
-    transition: padding-left 0.4s ease-out;
-    /* -moz-transition: padding-left 0.4s ease-out;
-    -webkit-transition: padding-left 0.4s ease-out;
-    -o-transition: padding-left 0.4s ease-out; */
+    margin: auto;
+    width: 600px;
+    height: 8rem;
+    padding-left: 2rem;
+    transition: padding 0.5s ease-out;
+    /* border: 1px solid #F2F6FC; */
+    margin-bottom: 1rem;
+    position: relative;
+    box-shadow: 2px 2px 5px black;
   }
   .collapse_title:hover {
+    cursor: pointer;
     padding-left: 5rem;
-    font-weight: bold;
-    transition: padding-left 0.4s ease-out;
-    /* -moz-transition: padding-left 0.4s ease-out;
-    -webkit-transition: padding-left 0.4s ease-out;
-    -o-transition: padding-left 0.4s ease-out; */
+    padding-right: 5rem;
   }
   .collapse_text {
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    /* -moz-transition: max-height 0.3s ease-out;
-    -webkit-transition: max-height 0.3s ease-out;
-    -o-transition: max-height 0.3s ease-out; */
-    color: #606266;
-    padding-left: 3rem;
+    transition: max-height 0.5s ease-out;
+    padding-left: 4rem;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 1rem;
   }
   .single_row {
-    padding-left: 3rem;
-    margin-bottom: 4rem;
   }
-  .titleText {
+  .title_text {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 3rem;
     color: #303133;
   }
-  .articleText {
+  .article_text {
     font-size: 2rem;
-    color: #EBEEF5;
+    color: #F2F6FC;
   }
-  .articleText::first-letter {
+  .article_text::first-letter {
     font-size: 2.5rem;
     font-weight: bold;
   }
-  .mainHolder {
+  .title_text_adding {
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: #F2F6FC;
   }
 </style>
