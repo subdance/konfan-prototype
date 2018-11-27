@@ -7,7 +7,11 @@
         <p class="title_text_adding">{{ articleSet[0].intro }}</p>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[0] + 'px'}">
-        <p class="article_text" v-for='(paragraph, index) in articleSet[0].para'> &nbsp &nbsp {{ paragraph }}</p>
+        <p
+          class="article_text"
+          v-for='(paragraph, index) in articleSet[0].para'
+          :v-key='index'
+          > &nbsp &nbsp {{ paragraph }}</p>
       </div>
     </div>
 
@@ -43,8 +47,9 @@ export default {
       maxHeight: [0, 0, 0,],
       articleSet: [
         {
+          id: 1,
           title: '轻音与梦',
-          intro: '动画中动人的瞬间',
+          intro: '动画中动人的瞬间-11.26/夜',
           para: [
             '在轻音部第一次合宿的那个夜晚，唯晃晃悠悠地将放音机搬到了澪的面前。',
             '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张的滑动着拨片，开怀的跳跃着。',
@@ -72,7 +77,6 @@ export default {
   methods: {
     changeShow(index){
       let nowText = document.getElementsByClassName('collapse_text')[index];
-      console.log(nowText.scrollHeight);
       if(!this.maxHeight[index]){
         for(let i = 0; i < this.maxHeight.length; i ++){
           this.$set(this.maxHeight, i, 0);
@@ -95,7 +99,8 @@ export default {
   .collapse_title {
     margin: auto;
     width: 600px;
-    height: 8rem;
+    height: 10rem;
+    padding-top: 1rem;
     padding-left: 2rem;
     transition: padding 0.5s ease-out;
     margin-bottom: 1rem;
