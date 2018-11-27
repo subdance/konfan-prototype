@@ -1,6 +1,8 @@
 <template lang="html">
   <transition name="el-fade-in-linear">
-    <a v-show='isActivated' id="back2Top" title="Back to top" href="#" @click='goBack()'>&#10148;</a>
+    <a v-show='isActivated' id="back2Top" title="╰(*°▽°*)╯" href="#" @click='goBack()'>
+      <img src="../assets/element/back2top1.png" alt="">
+    </a>
   </transition>
 </template>
 
@@ -40,24 +42,18 @@ export default {
 </script>
 
 <style scoped>
-#back2Top {
-    width: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    z-index: 999;
-    cursor: pointer;
-    transform: rotate(270deg);
-    position: fixed;
-    bottom: 50px;
-    right: 0;
-    background-color: #DDD;
-    color: #555;
-    text-align: center;
-    font-size: 30px;
-    text-decoration: none;
-}
-#back2Top:hover {
-    background-color: #DDF;
-    color: #000;
-}
+  #back2Top {
+      overflow: hidden;
+      z-index: 999;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 1rem;
+      text-decoration: none;
+  }
+  img {
+    height: 10rem;
+    object-fit: contain;
+    object-position: center;
+  }
 </style>
