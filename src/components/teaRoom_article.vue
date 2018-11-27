@@ -3,12 +3,11 @@
     <p class="mainTitle">A believing heart is your magic</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
-        <span class="title_text">this is title</span>
-        <p class="title_text_adding"> a short intro to title</p>
+        <span class="title_text">{{ articleSet[0].title }}</span>
+        <p class="title_text_adding">{{ articleSet[0].intro }}</p>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[0] + 'px'}">
-        <p class="article_text">aa</p>
-        <p class="article_text">aa</p>
+        <p class="article_text" v-for='(paragraph, index) in articleSet[0].para'> &nbsp &nbsp {{ paragraph }}</p>
       </div>
     </div>
 
@@ -42,6 +41,32 @@ export default {
   data(){
     return {
       maxHeight: [0, 0, 0,],
+      articleSet: [
+        {
+          title: '轻音与梦',
+          intro: '动画中动人的瞬间',
+          para: [
+            '在轻音部第一次合宿的那个夜晚，唯晃晃悠悠地将放音机搬到了澪的面前。',
+            '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张的滑动着拨片，开怀的跳跃着。',
+            '澪的眼前被点亮了。是被绚丽的烟火，或许也是被眼前的唯。',
+            '唯像摇滚巨星一样，像站在最灿烂的舞台上一样，忘我地表演着。',
+            '向来羞涩的澪已经忘了自己的表情，痴痴地望着唯。',
+            '还可以这样呀。',
+            '原来就算弹着不成调的曲子，就算舞台只是一个山坡，也可以演奏的如此盛大，开心。',
+            '澪心里软软的地方被触动了。',
+            '是那个存放着梦想的地方。',
+            '海风拂过澪的眼角，肌肤传来些许的清凉感。',
+            '"我们的目标，武道馆！"律曾经夸下的海口，似乎在此刻变得不那么遥远了。',
+            '梦想啊，好像总是很遥远，就像烟火之上淡淡的星光那样永恒。',
+            '可那又是为什么，烟花下的众人，在这一瞬间，都感觉到了最真切的永恒呢？',
+            '烟花的光晕随着海潮消散，海风又起。带着汗珠的唯，傻傻地笑着。',
+            '原来是这样啊。',
+            '原来我的梦想并不是要站在最大的舞台上演奏。',
+            '原来我的梦想，只是一边演奏，一边和你们在一起。',
+            '"这里就是我们的武道馆。"',
+          ],
+        },
+      ],
     }
   },
   methods: {
@@ -85,12 +110,13 @@ export default {
   .collapse_text {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-    padding-left: 4rem;
+    padding-left: 2rem;
     width: 600px;
     margin: auto;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   .single_row {
+    padding-bottom: 3rem;
   }
   .title_text {
     font-weight: bold;
@@ -99,12 +125,12 @@ export default {
     color: #303133;
   }
   .article_text {
-    font-size: 2rem;
+    margin: 0;
+    font-size: 1.8rem;
     color: #F2F6FC;
   }
   .article_text::first-letter {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1.9rem;
   }
   .title_text_adding {
     text-align: right;

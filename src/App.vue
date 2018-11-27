@@ -72,7 +72,7 @@ export default {
 
 <style scoped>
   .el-main {
-    min-height: 1000px;
+    min-height: 500px;
     margin-top: -62px;
     padding: 0;
     z-index: 0;
