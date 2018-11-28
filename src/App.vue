@@ -60,6 +60,12 @@ export default {
           name: 'U&I',
           artist: '放課後ティータイム',
           url: 'http://piwap6ccf.bkt.clouddn.com/u&i.mp3',
+          cover: require('./assets/album/cover/1.jpg'),
+        },
+        {
+          name: '天使にふれたよ!',
+          artist: '放課後ティータイム',
+          url: 'http://piwap6ccf.bkt.clouddn.com/angel.mp3',
           cover: require('./assets/album/cover/3.jpg'),
         },
       ],
