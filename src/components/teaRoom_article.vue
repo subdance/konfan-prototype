@@ -52,9 +52,9 @@ export default {
           intro: '动画中动人的瞬间-11.26/夜',
           para: [
             '在轻音部第一次合宿的那个夜晚，唯晃晃悠悠地将放音机搬到了澪的面前。',
-            '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张的滑动着拨片，开怀的跳跃着。',
+            '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张地滑动着拨片，开怀地跳跃着。',
             '澪的眼前被点亮了。是被绚丽的烟火，或许也是被眼前的唯。',
-            '唯像摇滚巨星一样，像站在最灿烂的舞台上一样，忘我地表演着。',
+            '唯像摇滚巨星一样，像站在最灿烂的舞台上一样，忘我地表演。',
             '向来羞涩的澪已经忘了自己的表情，痴痴地望着唯。',
             '还可以这样呀。',
             '原来就算弹着不成调的曲子，就算舞台只是一个山坡，也可以演奏的如此盛大，开心。',
@@ -99,7 +99,7 @@ export default {
   .collapse_title {
     margin: auto;
     width: 600px;
-    height: 10rem;
+    height: 13rem;
     padding-top: 1rem;
     padding-left: 2rem;
     transition: padding 0.5s ease-out;
@@ -142,6 +142,7 @@ export default {
     padding-right: 1rem;
     font-size: 1.5rem;
     color: #F2F6FC;
+    font-style: italic;
   }
   .mainTitle {
     font-size: 4rem;
