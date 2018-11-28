@@ -26,6 +26,12 @@
                 </td>
                 <td class="detailTd">
                   <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
+                  <table>
+                    <tr v-for='(basic, index) in basicIntro[index1].info'>
+                      <th>{{ basic.header }}</th>
+                      <td>{{ basic.detail }}</td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
@@ -157,6 +163,214 @@ export default {
         '合成器：KORG Triton Extreme 76、KORG RK-100；扩音器：Roland KC-880。',
         '吉他Fender Japan Mustang MG69/MH CAR。爱称木炭。',
       ],
+      basicIntro: [
+        {
+          name: 'yui',
+          info:[
+            {
+              header: '姓名',
+              detail: '平沢 唯',
+            },
+            {
+              header: '别号',
+              detail: '唯、呆唯',
+            },
+            {
+              header: '身高',
+              detail: '156cm',
+            },
+            {
+              header: '体重',
+              detail: '50kg',
+            },
+            {
+              header: '生日',
+              detail: '11月27日',
+            },
+            {
+              header: '血型',
+              detail: 'O型',
+            },
+            {
+              header: '声优',
+              detail: '丰崎爱生',
+            },
+            {
+              header: '萌点',
+              detail: '天然呆、不使用能力的天才少女、姐姐、短发、发卡、呆毛、平地摔跤、父母双忙，有妹有房(无误)、黑丝、LV4.绝对音感',
+            },
+            {
+              header: '兴趣',
+              detail: '吃、睡、吉他、梓喵',
+            },
+          ],
+        },//yui
+        {
+          name: 'ritsu',
+          info:[
+            {
+              header: '姓名',
+              detail: '田井中 律',
+            },
+            {
+              header: '别号',
+              detail: '律队、律酱、部长、律堆、朱律叶',
+            },
+            {
+              header: '身高',
+              detail: '154cm',
+            },
+            {
+              header: '体重',
+              detail: '48kg',
+            },
+            {
+              header: '生日',
+              detail: '8月21日',
+            },
+            {
+              header: '血型',
+              detail: 'B型',
+            },
+            {
+              header: '声优',
+              detail: '佐藤聪美',
+            },
+            {
+              header: '萌点',
+              detail: '元气娘、微傲娇、微电波、百合、高额头、制服、短发、发卡，放下发卡后令人意外地漂亮',
+            },
+            {
+              header: '兴趣',
+              detail: '摇滚，捉弄澪，逗大家笑，赚钱',
+            },
+          ],
+        },//ritsu
+        {
+          name: 'mio',
+          info:[
+            {
+              header: '姓名',
+              detail: '秋山 澪',
+            },
+            {
+              header: '别号',
+              detail: 'Mio，Mio酱，小澪，变装王，澪碳，罗mio',
+            },
+            {
+              header: '身高',
+              detail: '160cm',
+            },
+            {
+              header: '体重',
+              detail: '54kg',
+            },
+            {
+              header: '生日',
+              detail: '1月15日',
+            },
+            {
+              header: '血型',
+              detail: 'A型',
+            },
+            {
+              header: '声优',
+              detail: '	日笠阳子 （阳子豁出去了之前的几乎唯一一个好角色）',
+            },
+            {
+              header: '萌点',
+              detail: '姬发式、吐槽、隐藏巨乳、水手服、黑长直、左撇子、蓝白胖次、软妹、黑化、傲娇、换发型、歌姬',
+            },
+            {
+              header: '兴趣',
+              detail: '',
+            },
+          ],
+        },//mio
+        {
+          name: 'mugi',
+          info:[
+            {
+              header: '姓名',
+              detail: '琴吹 紬',
+            },
+            {
+              header: '别号',
+              detail: '䌷酱、MUGI',
+            },
+            {
+              header: '身高',
+              detail: '157cm',
+            },
+            {
+              header: '体重',
+              detail: '53kg',
+            },
+            {
+              header: '生日',
+              detail: '7月2日',
+            },
+            {
+              header: '血型',
+              detail: 'O型',
+            },
+            {
+              header: '声优',
+              detail: '寿美菜子',
+            },
+            {
+              header: '萌点',
+              detail: '大小姐，粗眉，百合，怪力（53公斤的䌷酱经常背着17公斤的琴上学放学）',
+            },
+            {
+              header: '兴趣',
+              detail: '百合，看别人百合',
+            },
+          ],
+        },//mugi
+        {
+          name: 'azusa',
+          info:[
+            {
+              header: '姓名',
+              detail: '中野梓',
+            },
+            {
+              header: '别号',
+              detail: '梓喵、阿梓喵、梓cat',
+            },
+            {
+              header: '身高',
+              detail: '150cm',
+            },
+            {
+              header: '体重',
+              detail: '46kg',
+            },
+            {
+              header: '生日',
+              detail: '11月11日',
+            },
+            {
+              header: '血型',
+              detail: 'AB型',
+            },
+            {
+              header: '声优',
+              detail: '竹達彩奈',
+            },
+            {
+              header: '萌点',
+              detail: '雙馬尾、傲嬌、天然萌、女王、貧乳、學妹、貓耳、幼兒體型、黑絲、長髮',
+            },
+            {
+              header: '兴趣',
+              detail: '也许是被唯前辈抱住然后嘴上说讨厌心里却窃喜？',
+            },
+          ],
+        },//azusa
+
+      ],
     }
   },
   methods:{
@@ -245,9 +459,6 @@ export default {
     border-bottom: 1px solid #DCDFE6;
     color: #303133;
   }
-  /* .introPara::first-letter {
-    font-size: 1.9rem;
-  } */
   #yui {
     background-image: url('../assets/character_element/yui1.jpg');
   }
