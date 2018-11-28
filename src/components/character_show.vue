@@ -36,10 +36,10 @@
         backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Akiyama Mio', 'Kotobuki Tsumugi', 'Nakano Azusa'],
         backIntro: [
           '主唱，主音吉他，团宠',
-          '部长，架子鼓手',
-          '主唱，贝斯手',
-          '金主，电子琴手',
-          '唯宠，辅音吉他手',
+          '部长，架子鼓手，搞笑担当',
+          '主唱，贝斯手，人气成员',
+          '电子琴手，金主',
+          '辅音吉他手，唯宠',
         ],
         isIconShow: [true, false, false, false, false],
       }
@@ -90,7 +90,7 @@
     width: 100%;
     height: 750px;
     background-image: none;
-    transition: background-image 0.2s ease-out;
+    transition: background-image 0.1s ease-out;
     /* -moz-transition: background-image 0.2s ease-out;
     -webkit-transition: background-image 0.2s ease-out;
     -o-transition: background-image 0.2s ease-out; */

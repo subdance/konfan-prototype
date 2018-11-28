@@ -110,6 +110,9 @@
           </td>
         </tr>
       </table>
+      <div class="bottomHolder">
+        <img class="bottomImg" src="./assets/home_pic/10.png" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -155,9 +158,9 @@ export default {
         "“大家都好厉害哦，不要扔下我独自长大哦”—唯"
       ],
       introPic: [
-        require('./assets/home_pic/7.jpg'),
+        require('./assets/home_pic/9.jpg'),
         require('./assets/home_pic/4.jpg'),
-        require('./assets/home_pic/6.jpg'),
+        require('./assets/home_pic/8.jpg'),
         require('./assets/home_pic/1.jpg'),
       ],
     }
@@ -189,6 +192,9 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   table {
     width: 100%;
     padding-top: 4rem;
@@ -301,5 +307,17 @@ export default {
     background: #ff6e7f;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .bottomHolder {
+    width: 100%;
+    height:58rem;
+    overflow: hidden;
+  }
+  .bottomImg {
+    margin: auto;
+    width: 100%;
+    height:58em;
+    object-fit: cover;
+    object-position: top;
   }
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainHolder">
-    <p class="mainTitle">A believing heart is your magic</p>
+    <p class="mainTitle">或远或近的记录</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
         <span class="title_text">{{ articleSet[0].title }}</span>
@@ -47,9 +47,8 @@ export default {
       maxHeight: [0, 0, 0,],
       articleSet: [
         {
-          id: 1,
           title: '轻音与梦',
-          intro: '动画中动人的瞬间-11.26/夜',
+          intro: '轻音少女动画中的瞬间-11.26/夜',
           para: [
             '在轻音部第一次合宿的那个夜晚，唯晃晃悠悠地将放音机搬到了澪的面前。',
             '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张地滑动着拨片，开怀地跳跃着。',
@@ -138,6 +137,7 @@ export default {
     font-size: 1.9rem;
   }
   .title_text_adding {
+    margin-top: 3.5rem;
     text-align: right;
     padding-right: 1rem;
     font-size: 1.5rem;
@@ -147,6 +147,6 @@ export default {
   .mainTitle {
     font-size: 4rem;
     text-align: center;
-    color: #F2F6FC;
+    color: white;
   }
 </style>
