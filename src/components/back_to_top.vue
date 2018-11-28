@@ -1,6 +1,6 @@
 <template lang="html">
   <transition name="el-fade-in-linear">
-    <a v-show='isActivated' id="back2Top" title="╰(*°▽°*)╯" href="#" @click='goBack()'>
+    <a v-show='isActivated' id="back2Top" title="点我试试看" href="#" @click='goBack()'>
       <img src="../assets/element/back2top1.png" alt="">
     </a>
   </transition>

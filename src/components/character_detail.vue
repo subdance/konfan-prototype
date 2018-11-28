@@ -19,10 +19,10 @@
             <table>
               <tr>
                 <td class="detailTd">
-                  <p class="introPara" v-for='(paragraph) in backDetail1[index1].intro'> &nbsp {{ paragraph }} </p>
+                  <p class="introPara" v-for='(paragraph) in backDetail1[index1].intro'> &nbsp  {{ paragraph }} </p>
                 </td>
                 <td class="detailTd">
-                  <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> &nbsp {{ paragraph }}</p>
+                  <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> &nbsp  {{ paragraph }}</p>
                 </td>
                 <td class="detailTd">
                   <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
@@ -245,9 +245,9 @@ export default {
     border-bottom: 1px solid #DCDFE6;
     color: #303133;
   }
-  .introPara::first-letter {
+  /* .introPara::first-letter {
     font-size: 1.9rem;
-  }
+  } */
   #yui {
     background-image: url('../assets/character_element/yui1.jpg');
   }
