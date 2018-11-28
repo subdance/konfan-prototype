@@ -22,7 +22,7 @@ export default {
     listenScroll(){
       var that = this;
       document.addEventListener("scroll", function(){
-        if(document.documentElement.scrollTop > 450){
+        if(document.documentElement.scrollTop > 250){
           that.isActivated = true;
         }
         else{
