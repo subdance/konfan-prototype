@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import eventBus from '@/eventbus.js'
 import carousel from '@/components/album_carousel.vue'
 export default {
   components: {
@@ -13,6 +14,9 @@ export default {
   data(){
     return {
     }
+  },
+  created(){
+    eventBus.$emit('changeFixPlayer', true);
   },
 }
 </script>

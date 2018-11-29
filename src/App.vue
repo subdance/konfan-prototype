@@ -6,6 +6,7 @@
       :lrcType="0"
       fixed
       autoplay
+      v-show='moePlayer.isFixPlayerShow'
       />
     <el-header height='62px'>
       <navBar></navBar>
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import eventBus from '@/eventbus.js'
 import footBar from '@/components/footbar.vue'
 import iconHolder from '@/components/icon_holder.vue'
 import navBar from '@/components/navbar.vue'
@@ -37,12 +39,15 @@ export default {
   },
   data(){
     return{
+      moePlayer: {
+        isFixPlayerShow: true,
+      },
       audio: [
         {
           name: 'わたしの恋はホッチキス/订书机之恋',
           artist: '放課後ティータイム',
           url: 'http://piwap6ccf.bkt.clouddn.com/love.mp3',
-          cover: require('./assets/album/cover/1.jpg'), // prettier-ignore
+          cover: require('./assets/album/cover/1.jpg'),
         },
         {
           name: 'ふわふわ時間/轻飘飘的时光',
@@ -71,7 +76,15 @@ export default {
       ],
     }
   },
+  created(){
+    this.listenChangeFixPlayer();
+  },
   methods:{
+    listenChangeFixPlayer(){
+      eventBus.$on('changeFixPlayer', reg => {
+        this.moePlayer.isFixPlayerShow = reg;
+      })
+    },
   },
 }
 </script>

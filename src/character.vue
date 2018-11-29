@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import eventBus from '@/eventbus.js'
 import characterShow from '@/components/character_show.vue'
 import characterIntro from '@/components/character_intro.vue'
 import characterDetail from '@/components/character_detail.vue'
@@ -15,6 +16,9 @@ export default {
     characterShow,
     characterIntro,
     characterDetail,
+  },
+  created(){
+    eventBus.$emit('changeFixPlayer', true);
   },
 }
 </script>

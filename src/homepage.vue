@@ -167,6 +167,7 @@ export default {
   },
   created(){
     setInterval(this.changeShow, 4000);
+    eventBus.$emit('changeFixPlayer', true);
   },
   computed:{
 
