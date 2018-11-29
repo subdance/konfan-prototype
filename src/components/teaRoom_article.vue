@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import eventBus from '@/eventbus.js'
 export default {
   data(){
     return {
@@ -75,6 +76,7 @@ export default {
   },
   methods: {
     changeShow(index){
+      eventBus.$emit('changeList', true);
       let nowText = document.getElementsByClassName('collapse_text')[index];
       if(!this.maxHeight[index]){
         for(let i = 0; i < this.maxHeight.length; i ++){

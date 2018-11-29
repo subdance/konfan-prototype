@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="mainContainer">
     <aplayer
+    ref='aplayer'
     :audio="audio"
     autoplay
     :listFolded='moePlayer.isListFolded'
@@ -61,11 +62,16 @@ export default {
   },
   created(){
     this.changeFixPlayer(false);
+    this.listenChangeList();
   },
   methods: {
     changeFixPlayer(reg){
-      console.log(reg);
       eventBus.$emit('changeFixPlayer', reg)
+    },
+    listenChangeList(){
+      eventBus.$on('changeList' ,reg => {
+        this.$refs.aplayer.hideList();
+      })
     },
   },
 }

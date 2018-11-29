@@ -78,6 +78,7 @@ export default {
   },
   created(){
     this.listenChangeFixPlayer();
+    // this.moePlayer.isFixPlayerShow = true;
   },
   methods:{
     listenChangeFixPlayer(){

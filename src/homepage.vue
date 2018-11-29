@@ -118,6 +118,7 @@
 </template>
 
 <script>
+import eventBus from '@/eventbus.js'
 export default {
   components: {
   },
@@ -170,7 +171,6 @@ export default {
     eventBus.$emit('changeFixPlayer', true);
   },
   computed:{
-
   },
   methods: {
     changeShow(){
