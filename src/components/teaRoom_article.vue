@@ -147,6 +147,7 @@ export default {
     font-style: italic;
   }
   .mainTitle {
+    margin-top: 0;
     font-size: 4rem;
     text-align: center;
     color: white;

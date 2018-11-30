@@ -27,34 +27,34 @@ export default {
         {
           name: 'あの日の夢',
           artist: '百石元',
-          url: 'http://piwap6ccf.bkt.clouddn.com/dream.mp3',
+          url: 'http://35.244.189.64/k-on-fan/music/dream.mp3',
           cover: 'https://p1.music.126.net/5zs7IvmLv7KahY3BFzUmrg==/109951163635241613.jpg?param=300y300', // prettier-ignore
 
         },
         {
           name: 'いい夢見てね',
           artist: '百石元',
-          url: 'http://piwap6ccf.bkt.clouddn.com/sweetdrean.mp3',
+          url: 'http://35.244.189.64/k-on-fan/music/sweetdream.mp3',
           cover: 'https://p1.music.126.net/AUGVPQ_rVrngDH9ocQrn3Q==/109951163613037822.jpg?param=300y300', // prettier-ignore
 
         },
         {
           name: 'Winter night in a warm room',
           artist: '百石元',
-          url: 'http://piwap6ccf.bkt.clouddn.com/winternight.mp3',
+          url: 'http://35.244.189.64/k-on-fan/music/winternight.mp3',
           cover: 'https://p1.music.126.net/K0-IPcIQ9QFvA0jXTBqoWQ==/109951163636756693.jpg?param=300y300', // prettier-ignore
 
         },
         {
           name: 'Autumn breeze with you',
           artist: '百石元',
-          url: 'http://piwap6ccf.bkt.clouddn.com/autumn.mp3',
+          url: 'http://35.244.189.64/k-on-fan/music/autumn.mp3',
           cover: 'https://p1.music.126.net/K0-IPcIQ9QFvA0jXTBqoWQ==/109951163636756693.jpg?param=300y300', // prettier-ignore
         },
         {
           name: 'U&I 〜夕日の綺麗なあの丘で〜',
           artist: '百石元',
-          url: 'http://piwap6ccf.bkt.clouddn.com/inst%20u&i.mp3',
+          url: 'http://35.244.189.64/k-on-fan/music/inst%20u%26i.mp3',
           cover: 'https://p1.music.126.net/K0-IPcIQ9QFvA0jXTBqoWQ==/109951163636756693.jpg?param=300y300', // prettier-ignore
         },
       ],
