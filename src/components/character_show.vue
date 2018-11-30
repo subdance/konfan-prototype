@@ -1,7 +1,25 @@
 <template lang="html">
   <div>
-    <div class="tabHolder" :style="{ backgroundImage: 'url(' + nowBackPic + ')' }">
-      <div class="tabHeaderHolder">
+    <div class="tabHolder">
+      <div class="carouselPart">
+        <el-carousel
+          indicator-position="inside"
+          height='80rem'
+          trigger='click'
+          >
+          <el-carousel-item
+            v-for="item in 5"
+            :key="item"
+            >
+            <div class="introHolder">
+              <p class="girlNameText">{{ backName[ item - 1 ] }}</p>
+              <p class="girlIntroText">{{ backIntro[ item - 1 ] }}</p>
+            </div>
+            <img class="bigImg" :src='backPic[ item - 1 ]' alt="">
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <!-- <div class="tabHeaderHolder">
         <ul>
           <li @click='showCharacter(1)'><span class="girlSubNameText"><i v-show='isIconShow[0]' class="el-icon-star-off"></i>平泽 唯<i v-show='isIconShow[0]' class="el-icon-star-off"></i></span></li>
           <li @click='showCharacter(2)'><span class="girlSubNameText"><i v-show='isIconShow[1]' class="el-icon-star-off"></i>田井中 律<i v-show='isIconShow[1]' class="el-icon-star-off"></i></span></li>
@@ -9,11 +27,8 @@
           <li @click='showCharacter(4)'><span class="girlSubNameText"><i v-show='isIconShow[3]' class="el-icon-star-off"></i>琴吹 紬<i v-show='isIconShow[3]' class="el-icon-star-off"></i></span></li>
           <li @click='showCharacter(5)'><span class="girlSubNameText"><i v-show='isIconShow[4]' class="el-icon-star-off"></i>中野 梓<i v-show='isIconShow[4]' class="el-icon-star-off"></i></span></li>
         </ul>
-      </div>
-      <div class="introHolder">
-        <p class="girlNameText">{{ nowGirlName }}</p>
-        <p class="girlIntroText">{{ nowGirlIntro }}</p>
-      </div>
+      </div> -->
+
     </div>
   </div>
 </template>
@@ -23,13 +38,13 @@
   export default {
     data(){
       return{
-        nowBackPic: require('../assets/character/yui1.jpg'),
+        nowBackPic: 'http://35.244.189.64/others/vue-lab/image/1.jpg',
         backPic: [
-          require('../assets/character/yui1.jpg'),
-          require('../assets/character/ritsu1.jpg'),
-          require('../assets/character/mio1.jpg'),
-          require('../assets/character/mugi1.jpg'),
-          require('../assets/character/azusa1.jpg'),
+          'http://35.244.189.64/others/vue-lab/image/1.jpg',
+          'http://35.244.189.64/others/vue-lab/image/2.jpg',
+          'http://35.244.189.64/others/vue-lab/image/3.jpg',
+          'http://35.244.189.64/others/vue-lab/image/4.jpg',
+          'http://35.244.189.64/others/vue-lab/image/5.jpg',
         ],
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: '主唱，主音吉他，团宠',
@@ -62,6 +77,14 @@
 </script>
 
 <style scoped>
+  .bigImg {
+    width: 100%;
+    height: 80rem;
+    object-position: center;
+    object-fit: cover;
+    opacity:1;
+    transition: opacity 0.5s linear;
+  }
   * {
     box-sizing: border-box;
   }
@@ -85,6 +108,7 @@
     -o-transition: 0.2s;
   }
   .tabHolder {
+    position: relative;
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -97,10 +121,9 @@
   }
   .tabHeaderHolder {
     margin-left: 30px;
-    float: left;
-    position: sticky;
+    position: absolute;
     top: 120px;
-    z-index: 1;
+    z-index: 999;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -122,6 +145,9 @@
     text-shadow: 1px 1px 1px #666666;
   }
   .introHolder {
+    position: absolute;
+    bottom: 10rem;
+    left: 10%;
     display: inline-block;
     margin-top: 40rem;
     margin-left: 200px;
