@@ -1,41 +1,45 @@
 <template lang="html">
   <div id="mainHolder">
-    <div class="addTextHolder">
-      <div class="nameTag" @click='changeCharacter(1)'>Yui</div>
-      <div class="nameTag" @click='changeCharacter(2)'>Ritsu</div>
-      <div class="nameTag" @click='changeCharacter(3)'>Mio</div>
-      <div class="nameTag" @click='changeCharacter(4)'>Mugi</div>
-      <div class="nameTag" @click='changeCharacter(5)'>Azusa</div>
-    </div>
-    <div class="introHolder">
-      <el-row>
-        <el-col :span="3">
-          <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
-          {{ verticalText }}
-          </div>
-        </el-col>
-        <el-col :span="7">
-          <div class="imgHolder">
-            <img style="height:600px;" :src="nowHeadPic" alt="">
-          </div>
-
-        </el-col>
-        <el-col :span="14">
-          <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
-          </div>
-          <div class="introTextHolder">
-            <div class="mainIntroHolder">
-              <span class="girlNameText">{{ nowGirlName }}</span>
-              <p class="mainIntro">{{ nowMainIntro }}</p>
+    <div  class="introHolder">
+      <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
+      Yui!</div>
+      <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
+      Ritsu!</div>
+      <div class="button" id="button3" @click='hideAndShow(3)' >Akiyama
+      Mio!</div>
+      <div class="button" id="button4" @click='hideAndShow(4)' >Kotobuki
+      Tsumugi!</div>
+      <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
+      Azusa!</div>
+      <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+      <transition name="el-zoom-in-center">
+        <el-row v-show='isShow'>
+          <el-col :span="3">
+            <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
+            {{ verticalText }}
             </div>
-            <div class="girlTextHolder">
-              {{ nowGirlIntro }}
+          </el-col>
+          <el-col :span="7">
+            <div class="imgHolder">
+              <img style="height:600px;" :src="nowHeadPic" alt="">
             </div>
-          </div>
-        </el-col>
-      </el-row>
+          </el-col>
+          <el-col :span="14">
+            <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
+            </div>
+            <div class="introTextHolder">
+              <div class="mainIntroHolder">
+                <span class="girlNameText">{{ nowGirlName }}</span>
+                <p class="mainIntro">{{ nowMainIntro }}</p>
+              </div>
+              <div class="girlTextHolder">
+                {{ nowGirlIntro }}
+              </div>
+            </div>
+          </el-col>
+        </el-row>
+      </transition>
     </div>
-
   </div>
 </template>
 
@@ -44,6 +48,9 @@
   export default {
     data(){
       return{
+        isClicked: [true, false, false, false, false],
+        isIconShow: [true, false, false, false, false],
+        isShow: true,
         nowGirlName: '平泽 唯',
         backGirlName: ['平泽 唯', '田井中 律', '秋山 澪', '琴吹 紬', '中野 梓' ],
         nowGirlIntro: '吉他手！放假时总是无所事事，甜食一律包在她身上，悠哉游哉小妖精，平泽唯！',
@@ -83,121 +90,203 @@
     },
     methods:{
       changeCharacter(index){
-        this.nowHeadPic = this.backHeadPic[ index - 1 ];
-        this.nowGirlName = this.backGirlName[ index - 1 ];
-        this.nowGirlIntro = this.backGirlIntro[ index - 1 ];
-        this.nowMcPic = this.backMcPic[ index - 1 ];
-        this.nowMainIntro = this.backMainIntro[ index - 1 ];
+        var that = this;
+        setTimeout(function(){
+          that.nowHeadPic = that.backHeadPic[ index - 1 ];
+          that.nowGirlName = that.backGirlName[ index - 1 ];
+          that.nowGirlIntro = that.backGirlIntro[ index - 1 ];
+          that.nowMcPic = that.backMcPic[ index - 1 ];
+          that.nowMainIntro = that.backMainIntro[ index - 1 ];
+        }, 200)
       },
+
+      hideAndShow(index){
+        for(let i = 0; i < 5; i ++){
+          this.isIconShow[i] = false;
+          this.isClicked[i] = false;
+        }
+        this.isClicked[ index - 1 ] = true;
+        this.isIconShow[ index - 1 ] = true;
+        this.isShow = false;
+        var that = this;
+        setTimeout(function(index){
+          that.isShow = true;
+        }, 200)
+        this.changeCharacter(index);
+      }
     },
   }
 </script>
 
 <style scoped>
- #mainHolder {
-   width: 100%;
-   background-position: center;
-   background-size: cover;
- }
- .addTextHolder {
-   width: 100%;
-   font-size: 1.6rem;
-   text-align: center;
-   overflow: hidden;
-   border: 2px solid white;
-   box-sizing: border-box;
-   background: #d9a7c7;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- }
- .introHolder {
-   position: relative;
-   z-index: 1;
-   margin: auto;
- }
- .introHolder::after {
-   background-image: url('../assets/background/1.png');
-   background-repeat: repeat-x;
-   opacity: 0.9;
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   z-index: -1;
- }
- .imgHolder {
-   text-align: center;
- }
- .mcHolder {
-   position: absolute;
-   background-image: url('../assets/character_intro/mc1.png');
-   background-position: right bottom;
-   background-size: contain;
-   background-repeat: no-repeat;
-   right: 0;
-   bottom: 0;
-   width: 22rem;
-   height: 21rem;
- }
- .girlNameText {
-   color: #df000a;
-   font-weight: bold;
-   font-size: 7rem;
-   text-shadow: 3px 3px black;
- }
- .mainIntroHolder {
-   width: 35rem;
-   height: 40rem;
-   font-size: 2rem;
-   box-shadow: 4px 4px 3px black;
-   background-image: url('../assets/background/1.gif');
-   background-repeat: repeat-y;
-   background-position: center;
-   word-break: break-all;
-   border-radius: 10px;
-   border: 2px solid white;
-   overflow: hidden;
-   padding-left: 2rem;
-   color: #303133;
- }
- .mainIntro {
-   line-height: 4rem;
-   letter-spacing: 0.8rem;
- }
- .introTextHolder {
-   padding-top: 4rem;
- }
- .girlTextHolder {
-   position: absolute;
-   right: 5rem;
-   bottom: 15rem;
-   width: 30rem;
-   height:25rem;
-   background-image: url('../assets/element/dialog1.png');
-   background-position: center;
-   background-size: contain;
-   background-repeat: no-repeat;
-   box-sizing: border-box;
-   padding: 6rem 5rem 0 7rem;
-   font-size: 2rem;
-   font-style: italic;
-   color: #606266;
- }
- .nameTag {
-    line-height: 3rem;
+  #mainHolder {
+  width: 100%;
+  }
+  .addTextHolder {
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .introHolder {
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    background-image: url('../assets/background/1.png');
+    background-repeat: repeat-x;
+  }
+  .imgHolder {
+    text-align: center;
+  }
+  .mcHolder {
+    position: absolute;
+    background-image: url('../assets/character_intro/mc1.png');
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+    width: 22rem;
+    height: 21rem;
+  }
+  .girlNameText {
+    color: #df000a;
+    font-weight: bold;
+    font-size: 7rem;
+    text-shadow: 3px 3px black;
+  }
+  .mainIntroHolder {
+    width: 35rem;
+    height: 40rem;
+    font-size: 2rem;
+    box-shadow: 4px 4px 3px black;
+    background-image: url('../assets/background/1.gif');
+    background-repeat: repeat-y;
+    background-position: center;
+    word-break: break-all;
+    border-radius: 10px;
+    border: 2px solid white;
+    overflow: hidden;
+    padding-left: 2rem;
+    color: #303133;
+  }
+  .mainIntro {
+    line-height: 4rem;
+    letter-spacing: 0.8rem;
+  }
+  .introTextHolder {
+    padding-top: 4rem;
+  }
+  .girlTextHolder {
+    position: absolute;
+    right: 5rem;
+    bottom: 15rem;
+    width: 30rem;
+    height:25rem;
+    background-image: url('../assets/element/dialog1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 6rem 5rem 0 7rem;
+    font-size: 2rem;
+    font-style: italic;
+    color: #606266;
+  }
+  .nameTag {
+    line-height: 4rem;
     font-size: 2rem;
     cursor: pointer;
     float: left;
     width: 20%;
     color: #606266;
     box-sizing: border-box;
-    transition: 0.3s ease-in;
-    border-radius: 5px;
+    transition: 0.1s ease-in;
+    border-radius: 20px;
+    border: 2px solid white;
   }
   .nameTag:hover {
+    /* line-height: 5rem; */
     background-color: #303133;
     color: white;
+  }
+  .clicked {
+    background-color: #303133;
+    color: white;
+  }
+  .button {
+    position: absolute;
+    -webkit-border-radius: 0 10px 200px / 0 200px 14px 250px;
+    border-radius: 0 10px 200px / 0 200px 14px 250px;
+    z-index: 1;
+    cursor: pointer;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 229px;
+    height: 208px;
+    display:inline-block;
+    padding: 30px 0 0;
+    font: normal normal normal 34px/1.3 "Gochi Hand", Helvetica, sans-serif;
+    color: rgba(255,0,106,0.58);
+    text-align: center;
+    white-space: pre;
+    background: -webkit-repeating-linear-gradient( -90deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
+    background: -moz-repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
+    background: repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
+    background-position: 50% 50%;
+    -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
+    box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
+    transition: 0.5s ease-in-out;
+  }
+  #button1 {
+    top: 5rem;
+    left: 1rem;
+    -moz-transform: rotateZ(-4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    -webkit-transform: rotateZ(-4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    transform: rotateZ(-4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  }
+  #button2 {
+    top: 30rem;
+    left: 3rem;
+    -moz-transform: rotateZ(4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    -webkit-transform: rotateZ(4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    transform: rotateZ(4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  }
+  #button3 {
+    bottom: 0rem;
+    left: 55rem;
+    -moz-transform: rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    transform: rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  }
+  #button4 {
+    top: 2rem;
+    right: 3rem;
+    -moz-transform: rotateZ(3deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    -webkit-transform: rotateZ(3deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    transform: rotateZ(3deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  }
+  #button5 {
+    bottom: 5rem;
+    right: 30rem;
+    -moz-transform: rotateZ(-7deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    -webkit-transform: rotateZ(-7deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+    transform: rotateZ(-7deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  }
+  #button1:hover {
+    transform: rotate(15deg);
+  }
+  #button2:hover {
+    transform: rotate(-10deg);
+  }
+  #button3:hover {
+    transform: scale(1.2);
+  }
+  #button4:hover {
+    transform: rotate(0deg);
+  }
+  #button5:hover {
+    transform: rotate(-20deg);
   }
 </style>
