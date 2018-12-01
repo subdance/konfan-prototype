@@ -42,6 +42,9 @@ export default {
     text-align: center;
     text-shadow: 1px 1px 1px #666666;
   }
+  .navTextHome:hover {
+    color: red;
+  }
   td::after {
     display:block;
     content: ' ';

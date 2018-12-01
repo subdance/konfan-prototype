@@ -1,7 +1,7 @@
 <template lang="html">
   <transition name="el-fade-in-linear">
     <a v-show='isActivated' id="back2Top" title="点我试试看" href="#" @click='goBack()'>
-      <img src="../assets/element/back2top1.png" alt="">
+      <img src="../assets/element/2.png" alt="">
     </a>
   </transition>
 </template>
@@ -47,8 +47,8 @@ export default {
       z-index: 999;
       cursor: pointer;
       position: fixed;
-      bottom: 20px;
-      right: 1rem;
+      bottom: -0.5rem;
+      right: 0;
       text-decoration: none;
   }
   img {
