@@ -17,12 +17,15 @@
 
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(1)'>
-        <span class="title_text">this is title</span>
-        <p class="title_text_adding"> a short intro to title</p>
+        <span class="title_text">{{ articleSet[1].title }}</span>
+        <p class="title_text_adding">{{ articleSet[1].intro }}</p>
       </div>
       <div class="collapse_text" :style="{maxHeight: maxHeight[1] + 'px'}">
-        <p class="article_text">aa</p>
-        <p class="article_text">aa</p>
+        <p
+          class="article_text"
+          v-for='(paragraph, index) in articleSet[1].para'
+          :v-key='index'
+          > &nbsp &nbsp {{ paragraph }}</p>
       </div>
     </div>
 
@@ -49,7 +52,7 @@ export default {
       articleSet: [
         {
           title: '轻音与梦',
-          intro: '轻音少女动画中的瞬间-11.26/夜',
+          intro: '轻音少女动画中的瞬间-11.26/午夜',
           para: [
             '在轻音部第一次合宿的那个海边的夜晚，唯晃晃悠悠地将放音机搬到了澪的面前。',
             '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张地滑动着拨片，开怀地跳跃着。',
@@ -71,6 +74,20 @@ export default {
             '"这里就是我们的武道馆。"',
           ],
         },
+        {
+          title: '我',
+          intro: '自我肖像-12.1/夜',
+          para: [
+            'HI！How are you doing today?',
+            '我是sub/dance，即将22岁了，现在还在北京读大学。',
+            '初次见面，关于自己该说点什么好呢...',
+            '一个小小的理想主义者',
+            '一个悲观的普通人',
+            '',
+            '',
+            '',
+          ],
+        }
       ],
     }
   },

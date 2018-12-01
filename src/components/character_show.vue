@@ -62,18 +62,6 @@
       }
     },
   methods: {
-    // showCharacter(index){
-    //   //更改背景以及介绍文字
-    //   this.nowBackPic = this.backPic[ index - 1 ];
-    //   this.nowGirlName = this.backName[ index - 1 ];
-    //   this.nowGirlIntro = this.backIntro[ index - 1 ];
-    //   eventBus.$emit('changeCharacter', index);
-    //   //调整星星显示位置
-    //   for(let i = 0; i < 5; i ++){
-    //     this.isIconShow[i] = false;
-    //   }
-    //   this.isIconShow[ index - 1 ] = true;
-    // },
   },
 }
 </script>
@@ -90,25 +78,6 @@
   * {
     box-sizing: border-box;
   }
-  /* ul, li {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    cursor: pointer;
-  }
-  li {
-    border-top: 1px solid grey;
-    width: 10rem;
-    height: 6rem;
-  }
-  li:hover {
-    border-top: 1px solid #D70040;
-    left: 0px;
-    transition: 0.2s;
-    -moz-transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-  } */
   .tabHolder {
     position: relative;
     background-position: center;
@@ -116,9 +85,6 @@
     width: 100%;
     background-image: none;
     transition: background-image 0.1s ease-out;
-    /* -moz-transition: background-image 0.2s ease-out;
-    -webkit-transition: background-image 0.2s ease-out;
-    -o-transition: background-image 0.2s ease-out; */
   }
   /* .tabHeaderHolder {
     margin-left: 30px;

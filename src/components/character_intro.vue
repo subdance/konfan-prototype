@@ -120,7 +120,7 @@
 
 <style scoped>
   #mainHolder {
-  width: 100%;
+    width: 100%;
   }
   .addTextHolder {
     width: 100%;
@@ -206,7 +206,6 @@
     border: 2px solid white;
   }
   .nameTag:hover {
-    /* line-height: 5rem; */
     background-color: #303133;
     color: white;
   }
@@ -227,7 +226,7 @@
     height: 208px;
     display:inline-block;
     padding: 30px 0 0;
-    font: normal normal normal 34px/1.3 "Gochi Hand", Helvetica, sans-serif;
+    font: normal normal normal 5rem/1.3 "Gochi Hand", Helvetica, sans-serif;
     color: rgba(255,0,106,0.58);
     text-align: center;
     white-space: pre;
