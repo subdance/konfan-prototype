@@ -1,7 +1,11 @@
 <template lang="html">
   <div id="mainHolder">
-    <div id="addTextHolder">
-      <p id="addText"><i class="el-icon-star-on"></i>摄影师小姐把咱拍得太好看了吧！(´・ω・｀)<i class="el-icon-star-on"></i></p>
+    <div class="addTextHolder">
+      <div class="nameTag" @click='changeCharacter(1)'>Yui</div>
+      <div class="nameTag" @click='changeCharacter(2)'>Ritsu</div>
+      <div class="nameTag" @click='changeCharacter(3)'>Mio</div>
+      <div class="nameTag" @click='changeCharacter(4)'>Mugi</div>
+      <div class="nameTag" @click='changeCharacter(5)'>Azusa</div>
     </div>
     <div class="introHolder">
       <el-row>
@@ -77,9 +81,6 @@
         ],
       }
     },
-    created(){
-      eventBus.$on('changeCharacter', index => this.changeCharacter(index))
-    },
     methods:{
       changeCharacter(index){
         this.nowHeadPic = this.backHeadPic[ index - 1 ];
@@ -98,12 +99,16 @@
    background-position: center;
    background-size: cover;
  }
- #addTextHolder {
+ .addTextHolder {
+   width: 100%;
    font-size: 1.6rem;
    text-align: center;
- }
- #addText {
-   color: #909399;
+   overflow: hidden;
+   border: 2px solid white;
+   box-sizing: border-box;
+   background: #d9a7c7;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  }
  .introHolder {
    position: relative;
@@ -180,4 +185,19 @@
    font-style: italic;
    color: #606266;
  }
+ .nameTag {
+    line-height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    float: left;
+    width: 20%;
+    color: #606266;
+    box-sizing: border-box;
+    transition: 0.3s ease-in;
+    border-radius: 5px;
+  }
+  .nameTag:hover {
+    background-color: #303133;
+    color: white;
+  }
 </style>

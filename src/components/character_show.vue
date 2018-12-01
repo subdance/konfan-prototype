@@ -62,18 +62,18 @@
       }
     },
   methods: {
-    showCharacter(index){
-      //更改背景以及介绍文字
-      this.nowBackPic = this.backPic[ index - 1 ];
-      this.nowGirlName = this.backName[ index - 1 ];
-      this.nowGirlIntro = this.backIntro[ index - 1 ];
-      eventBus.$emit('changeCharacter', index);
-      //调整星星显示位置
-      for(let i = 0; i < 5; i ++){
-        this.isIconShow[i] = false;
-      }
-      this.isIconShow[ index - 1 ] = true;
-    },
+    // showCharacter(index){
+    //   //更改背景以及介绍文字
+    //   this.nowBackPic = this.backPic[ index - 1 ];
+    //   this.nowGirlName = this.backName[ index - 1 ];
+    //   this.nowGirlIntro = this.backIntro[ index - 1 ];
+    //   eventBus.$emit('changeCharacter', index);
+    //   //调整星星显示位置
+    //   for(let i = 0; i < 5; i ++){
+    //     this.isIconShow[i] = false;
+    //   }
+    //   this.isIconShow[ index - 1 ] = true;
+    // },
   },
 }
 </script>
@@ -148,7 +148,7 @@
   .introHolder {
     position: absolute;
     bottom: 10rem;
-    left: 10%;
+    left: 0;
     display: inline-block;
     margin-top: 40rem;
     margin-left: 200px;

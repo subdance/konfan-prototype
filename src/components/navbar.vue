@@ -65,5 +65,4 @@ export default {
     color: #df000a;
     font-weight: bold;
   }
-  #rightTd {}
 </style>
