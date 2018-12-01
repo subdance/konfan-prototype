@@ -224,6 +224,7 @@ export default {
     background-position: center;
     background-size: cover;
     z-index: 1;
+    cursor: pointer;
     border-radius: 7px;
   }
 
