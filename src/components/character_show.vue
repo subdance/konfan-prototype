@@ -4,8 +4,9 @@
       <div class="carouselPart">
         <el-carousel
           indicator-position="inside"
-          height='80rem'
+          height='72.5rem'
           trigger='click'
+          :autoplay='autoplay'
           >
           <el-carousel-item
             v-for="item in 5"
@@ -38,13 +39,14 @@
   export default {
     data(){
       return{
-        nowBackPic: 'http://35.244.189.64/others/vue-lab/image/1.jpg',
+        autoplay: false,
+        nowBackPic: 'http://35.244.189.64/k-on-fan/image/character-intro/yui1.jpg',
         backPic: [
-          'http://35.244.189.64/others/vue-lab/image/1.jpg',
-          'http://35.244.189.64/others/vue-lab/image/2.jpg',
-          'http://35.244.189.64/others/vue-lab/image/3.jpg',
-          'http://35.244.189.64/others/vue-lab/image/4.jpg',
-          'http://35.244.189.64/others/vue-lab/image/5.jpg',
+          'http://35.244.189.64/k-on-fan/image/character-intro/yui1.jpg',
+          'http://35.244.189.64/k-on-fan/image/character-intro/ritsu1.jpg',
+          'http://35.244.189.64/k-on-fan/image/character-intro/mio1.jpg',
+          'http://35.244.189.64/k-on-fan/image/character-intro/mugi1.jpg',
+          'http://35.244.189.64/k-on-fan/image/character-intro/azusa1.jpg',
         ],
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: '主唱，主音吉他，团宠',
@@ -88,7 +90,7 @@
   * {
     box-sizing: border-box;
   }
-  ul, li {
+  /* ul, li {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
@@ -106,20 +108,19 @@
     -moz-transition: 0.2s;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
-  }
+  } */
   .tabHolder {
     position: relative;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 750px;
     background-image: none;
     transition: background-image 0.1s ease-out;
     /* -moz-transition: background-image 0.2s ease-out;
     -webkit-transition: background-image 0.2s ease-out;
     -o-transition: background-image 0.2s ease-out; */
   }
-  .tabHeaderHolder {
+  /* .tabHeaderHolder {
     margin-left: 30px;
     position: absolute;
     top: 120px;
@@ -138,7 +139,7 @@
     background-color: white;
     opacity: 0.3;
     z-index: -1;
-  }
+  } */
   .girlSubNameText {
     font-size: 1.5rem;
     color: black;
@@ -160,7 +161,7 @@
     -webkit-text-stroke: 1px white;
   }
   .girlIntroText {
-    color: white;
+    color: #C0C4CC;
     font-size: 2rem;
     font-weight: bold;
   }
