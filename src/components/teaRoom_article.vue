@@ -198,15 +198,17 @@ export default {
     height: 13rem;
     padding-top: 1rem;
     padding-left: 2rem;
-    transition: padding 0.5s ease-out;
+    transition: 0.5s ease-out;
     margin-bottom: 1rem;
     position: relative;
+    border: 2px solid transparent;
     box-shadow: 2px 2px 5px black;
   }
   .collapse_title:hover {
     cursor: pointer;
     padding-left: 5rem;
     padding-right: 5rem;
+    border: 2px solid white;
   }
   .collapse_text {
     overflow: hidden;

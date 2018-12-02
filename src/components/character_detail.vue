@@ -375,7 +375,6 @@ export default {
   },
   methods:{
     changeDetail(index){
-      // eventBus.$emit('changeCharacter', index);
       var that  = this;
       this.isAltShow = false;
       this.isDetailShowe = false;
@@ -418,9 +417,6 @@ export default {
     width: 100%;
     padding-bottom: 1rem;
     background-image: url(../assets/background/4.png);
-    /* background: #12c2e9;
-    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); */
   }
   .tableHolder {
     width: 100%;
