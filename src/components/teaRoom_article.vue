@@ -11,7 +11,8 @@
           class="article_text"
           v-for='(paragraph, index) in articleSet[0].para'
           :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}</p>
+          > &nbsp &nbsp {{ paragraph }}
+        </p>
       </div>
     </div>
 
@@ -25,7 +26,12 @@
           class="article_text"
           v-for='(paragraph, index) in articleSet[1].para'
           :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}</p>
+          > &nbsp &nbsp {{ paragraph }}
+        </p>
+        <div style="text-align: center; position: relative">
+          <img class="articleImg" src="../assets/article/1.jpg" alt="">
+          <p class="imgText">摄于2016-秋</p>
+        </div>
       </div>
     </div>
 
@@ -78,14 +84,17 @@ export default {
           title: '我',
           intro: '自我肖像-12.1/夜',
           para: [
-            'HI！How are you doing today?',
-            '我是sub/dance，即将22岁了，现在还在北京读大学。',
-            '初次见面，关于自己该说点什么好呢...',
-            '一个小小的理想主义者',
-            '一个悲观的普通人',
-            '',
-            '',
-            '',
+            'Hi, how are you doing today?',
+            '我是sub/dance，湖北人，北京普通211在读。',
+            '我是一个悲观的理想主义者',
+            '喜欢大卫芬奇与库布里克的电影，还有OASIS领衔的一众英伦摇滚的乐队。',
+            '不过近些年（3年）爱好一直在向游戏，动画片，当然还有代码上转移。（大概就是变宅了◕ˇ∀ˇ◕）',
+            '喜欢逛reddit，已经有近7000karma了',
+            '大多数时间话比较少',
+            '虽然难以启齿，但我相信梦想，相信“你也可以改变世界”这种事情，相信“英雄”',
+            '对那些为了理想奋斗的人有一种病态的崇拜',
+            '我享受用冷酷，愚笨的代码，来搭建出“舒服的页面，实现精准的操作”，这一过程。十分享受',
+            '愿大家能保持谦虚，保持勤奋。',
           ],
         }
       ],
@@ -168,5 +177,23 @@ export default {
     font-size: 4rem;
     text-align: center;
     color: white;
+  }
+  .articleImg {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border: 10px solid white;
+    border-bottom: 40px solid white;
+    transform: rotate(-3deg);
+    box-shadow: 4px 4px 2px black;
+    width: 35%;
+    object-position: center;
+    object-fit: cover;
+  }
+  .imgText {
+    color: #606266;
+    position: absolute;
+    bottom: 2rem;
+    left:50%;
+    transform: rotate(-3deg);
   }
 </style>
