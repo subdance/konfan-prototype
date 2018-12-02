@@ -71,7 +71,7 @@ export default {
           name: '天使にふれたよ!',
           artist: '放課後ティータイム',
           url: 'http://35.244.189.64/k-on-fan/music/angel.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/5.JPG',
+          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/7.JPG',
         },
       ],
     }

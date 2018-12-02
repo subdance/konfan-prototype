@@ -453,7 +453,8 @@ export default {
   #yui:hover {
     background-image: url('../assets/character_element/yui2.jpg');
     filter: blur(0px);
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(15deg);;
+    z-index: 999;
   }
   #ritsu {
     background-image: url('../assets/character_element/ritsu1.jpg');
@@ -461,7 +462,7 @@ export default {
   #ritsu:hover {
     background-image: url('../assets/character_element/ritsu2.jpg');
     filter: blur(0px);
-    transform: scale(1.2);
+    transform: scale(1.1) rotate(-15deg);;
   }
   #mio {
     background-image: url('../assets/character_element/mio1.jpg');
@@ -469,7 +470,7 @@ export default {
   #mio:hover {
     background-image: url('../assets/character_element/mio2.jpg');
     filter: blur(0px);
-    transform: scale(1.2);
+    transform: rotate(-30deg);;
   }
   #mugi {
     background-image: url('../assets/character_element/mugi1.jpg');
@@ -477,7 +478,7 @@ export default {
   #mugi:hover {
     background-image: url('../assets/character_element/mugi2.jpg');
     filter: blur(0px);
-    transform: scale(1.2);
+    transform: rotate(360deg);
   }
   #azusa {
     background-image: url('../assets/character_element/azusa1.jpg');
@@ -485,7 +486,7 @@ export default {
   #azusa:hover {
     background-image: url('../assets/character_element/azusa2.jpg');
     filter: blur(0px);
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   .detailHolder {
     min-height:50rem;
@@ -505,7 +506,7 @@ export default {
     background-image: url('../assets/background/2.png');
     background-position: center;
     background-size: cover;
-    border-radius: 10%;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 2px grey;
   }
