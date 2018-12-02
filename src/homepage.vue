@@ -226,6 +226,7 @@ export default {
     z-index: 1;
     cursor: pointer;
     border-radius: 7px;
+    box-shadow: 3px 3px 2px grey;
   }
 
   .imgHolder:hover::after {
