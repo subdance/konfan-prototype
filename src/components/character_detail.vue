@@ -417,9 +417,10 @@ export default {
   .mainHolder {
     width: 100%;
     padding-bottom: 1rem;
-    background: #12c2e9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(../assets/background/4.png);
+    /* background: #12c2e9;
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); */
   }
   .tableHolder {
     width: 100%;
@@ -436,6 +437,7 @@ export default {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid white;
+    box-shadow: 8px 8px 2px black;
   }
   .blurTd {
     filter: blur(3px);
@@ -445,7 +447,7 @@ export default {
     margin-top: 0;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid #DCDFE6;
-    color: #303133;
+    color: #C0C4CC;
   }
   #yui {
     background-image: url('../assets/character_element/yui1.jpg');
@@ -492,7 +494,7 @@ export default {
     min-height:50rem;
   }
   .detailTd {
-    color: #606266;
+    color: #F2F6FC;
     font-size: 1.7rem;
     max-width: 40rem;
     padding: 1rem 1rem 0rem 1rem;
@@ -506,8 +508,8 @@ export default {
     background-image: url('../assets/background/2.png');
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 2px grey;
+    border: 2rem solid white;
+    box-shadow: 4px 4px 2px black;
   }
 </style>

@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="mainHolder">
     <p class="mainTitle">或远或近的记录</p>
+
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
         <span class="title_text">{{ articleSet[0].title }}</span>
@@ -28,10 +29,6 @@
           :v-key='index'
           > &nbsp &nbsp {{ paragraph }}
         </p>
-        <!-- <div style="text-align: center; position: relative">
-          <img class="articleImg" src="../assets/article/1.jpg" alt="">
-          <p class="imgText">摄于2016-秋</p>
-        </div> -->
       </div>
     </div>
 
@@ -47,10 +44,21 @@
           :v-key='index'
           > &nbsp &nbsp {{ paragraph }}
         </p>
-        <div style="text-align: center; position: relative">
-          <img class="articleImg" src="../assets/article/1.jpg" alt="">
-          <p class="imgText">摄于2016-秋</p>
-        </div>
+      </div>
+    </div>
+
+    <div class="single_row">
+      <div class="collapse_title" @click='changeShow(3)'>
+        <span class="title_text">{{ articleSet[3].title }}</span>
+        <p class="title_text_adding">{{ articleSet[3].intro }}</p>
+      </div>
+      <div class="collapse_text" :style="{maxHeight: maxHeight[3] + 'px'}">
+        <p
+          class="article_text"
+          v-for='(paragraph, index) in articleSet[3].para'
+          :v-key='index'
+          > &nbsp &nbsp {{ paragraph }}
+        </p>
       </div>
     </div>
 
@@ -62,16 +70,16 @@ import eventBus from '@/eventbus.js'
 export default {
   data(){
     return {
-      maxHeight: [0, 0, 0,],
+      maxHeight: [0, 0, 0, 0,],
       articleSet: [
         {
-          title: '轻音与梦',
-          intro: '轻音少女动画中的瞬间-11.26/午夜',
+          title: '梦梦梦',
+          intro: '轻音少女动画中的瞬间-18/11.26/午夜',
           para: [
             '在轻音部第一次合宿的那个海边的夜晚，唯晃晃悠悠地将放音机搬到了澪的面前',
             '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张地滑动着拨片，开怀地跳跃着',
             '澪的眼前被点亮了。是被绚丽的烟火，或许也是被眼前的唯',
-            '唯像摇滚巨星一样，像站在最灿烂的舞台上一样，忘我地表。',
+            '唯像摇滚巨星一样，像站在最灿烂的舞台上一样，忘我地表演',
             '向来羞涩的澪已经忘了自己的表情，痴痴地望着唯',
             '还可以这样呀!',
             '原来就算弹着不成调的曲子，就算舞台只是沙滩，也可以演奏的如此盛大，开心',
@@ -89,8 +97,8 @@ export default {
           ],
         },
         {
-          title: '温柔的循环',
-          intro: '轻音总让我想起些什么-12.2/午夜',
+          title: '温柔循环',
+          intro: '轻音让我想到的-18/12.2/午夜',
           para: [
             '那是种什么样的感觉呢？',
             '冬天的周末，一起床发现窗外下雪了',
@@ -101,18 +109,36 @@ export default {
             '阶梯教室的课堂上，给她发消息说今天她很好看',
             '跟别人谈梦想，别人也在认真地听',
             '去曾经的学校，门卫说你们的老师现在还在教书呢',
+            '',
             '看完轻音，好像世界更好了一点点',
             '啊，不对',
             '是我相信，这个世界更好了一点点',
             '我也很想拥有这样一间雲上茶屋',
             '即使沧海桑田，桑田沧海，沧海又桑田',
-            '我也会一直追寻下去',
             '无所谓失败，无所谓捉弄',
+            '我也会一直追寻下去',
+          ],
+        },
+        {
+          title: '关于这个网站',
+          intro: '起因与未完待续-18/10.01/夜',
+          para: [
+            '第五还是第六遍看轻音了',
+            '在联想前端开发实习了两个月，想着除了公司的东西，自己也该做点什么',
+            '突然想到曾经做的一个轻音的网站，点开看来，确实各方面都有点幼稚',
+            '那就推翻重做一个吧！',
+            '就这样，这个网站的制作开始了',
+            '前端用的Vue.js,结合了ElemenUI。国人（华裔）在开源社区的力量真是让人振奋',
+            '最近在读《JavaScript高级编程》，希望能把js的基础打牢一点，毕竟以后肯定会去接触node.js的后端',
+            '',
+            '',
+            '',
+            '',
           ],
         },
         {
           title: '我',
-          intro: '自我肖像-12.1/夜',
+          intro: '自我肖像-18/12.1/夜',
           para: [
             'Hi, how are you doing today?',
             '我是sub/dance，湖北人，北京普通211在读',
@@ -131,17 +157,26 @@ export default {
     }
   },
   methods: {
+    getDOMArray(className){
+      var temp = document.getElementsByClassName(className);
+      return Array.prototype.slice.call(temp);
+    },
+
     changeShow(index){
       eventBus.$emit('changeList', true);
       let nowText = document.getElementsByClassName('collapse_text')[index];
+      let nowTitle = this.getDOMArray('collapse_title');
       if(!this.maxHeight[index]){
         for(let i = 0; i < this.maxHeight.length; i ++){
           this.$set(this.maxHeight, i, 0);
+          nowTitle[i].style.boxShadow = '2px 2px 5px black';
         }
         this.$set(this.maxHeight, index, nowText.scrollHeight);
+        nowTitle[ index ].style.boxShadow = '0px 0px 0px black';
       }
       else{
         this.$set(this.maxHeight, index, 0);
+        nowTitle[ index ].style.boxShadow = '2px 2px 5px black';
       }
     },
   },
@@ -171,7 +206,7 @@ export default {
   }
   .collapse_text {
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height  0.5s ease-out;
     padding-left: 2rem;
     width: 600px;
     margin: auto;
@@ -198,7 +233,7 @@ export default {
     margin-top: 3.5rem;
     text-align: right;
     padding-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #F2F6FC;
     font-style: italic;
   }
