@@ -36,12 +36,16 @@
               </tr>
             </table>
           </div>
-        </transition name="el-fade-in-linear">
+        </transition>
 
         <transition name="el-fade-in-linear">
-          <div class="altHolder" v-show='isAltShow'>
+          <div
+            :class='{altHolder: isBigPic, smallAltHolder: !isBigPic}'
+            @click='togglePic'
+            :style="{ backgroundImage: 'url(' + backPic[randomIndex] + ')' }"
+            >
           </div>
-        </transition name="el-fade-in-linear">
+        </transition>
       </div>
     </div>
   </div>
@@ -52,7 +56,15 @@ import eventBus from '@/eventbus.js'
 export default {
   data(){
     return{
+      isBigPic: true,
       isBlur: [true, true, true, true, true],
+      backPic: [
+        require('../assets/background/1.jpg'),
+        require('../assets/background/2.jpg'),
+        require('../assets/background/3.jpg'),
+        require('../assets/background/4.jpg'),
+      ],
+      randomIndex: 0,
       isDetailShowe: false,
       isAltShow: true,
       nowDetail1: null,
@@ -373,8 +385,12 @@ export default {
       ],
     }
   },
+  created(){
+    this.generateRandom();
+  },
   methods:{
     changeDetail(index){
+      this.isBigPic = false;
       var that  = this;
       this.isAltShow = false;
       this.isDetailShowe = false;
@@ -388,6 +404,26 @@ export default {
         that.nowDetail3 = that.backDetail3[ index - 1 ];
         that.isDetailShowe = true;
       }, 100);
+    },
+
+    togglePic(){
+      var that  = this;
+      that.isDetailShowe = false;
+      setTimeout(function(){
+        that.isBigPic = true;
+      }, 200);
+    },
+
+    generateRandom(){
+      var that = this;
+      setInterval(function(){
+        if(that.randomIndex < 3 ){
+          that.randomIndex++;
+        }
+        else {
+          that.randomIndex = 0;
+        }
+      }, 5000)
     },
   },
 }
@@ -432,7 +468,7 @@ export default {
     transition: 0.2s;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid white;
+    border: 4px solid white;
     box-shadow: 8px 8px 2px black;
   }
   .blurTd {
@@ -476,7 +512,7 @@ export default {
   #mugi:hover {
     background-image: url('../assets/character_element/mugi2.jpg');
     filter: blur(0px);
-    transform: rotate(360deg);
+    transform: rotate(10deg);
   }
   #azusa {
     background-image: url('../assets/character_element/azusa1.jpg');
@@ -487,7 +523,8 @@ export default {
     transform: scale(1.3);
   }
   .detailHolder {
-    min-height:50rem;
+    min-height:70rem;
+    position: relative;
   }
   .detailTd {
     color: #F2F6FC;
@@ -501,11 +538,28 @@ export default {
     margin: auto;
     width: 80%;
     height: 60rem;
-    background-image: url('../assets/background/2.png');
+    /* background-image: url('../assets/background/2.png'); */
     background-position: center;
     background-size: cover;
     overflow: hidden;
     border: 2rem solid white;
+    box-shadow: 8px 8px 2px black;
+    transition: 0.5s ease-in-out;
+  }
+  .smallAltHolder {
+    /* background-image: url('../assets/background/2.png'); */
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 3rem;
+    bottom: 40rem;
+    width: 20rem;
+    height: 10rem;
+    z-index: 999;
+    border: 0.5rem solid white;
+    transform: rotate(-20deg);
     box-shadow: 4px 4px 2px black;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
   }
 </style>
