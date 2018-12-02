@@ -59,6 +59,10 @@
           :v-key='index'
           > &nbsp &nbsp {{ paragraph }}
         </p>
+        <div style="text-align: center;">
+          <img class="articleImg" src="../assets/article/1.jpg" alt="">
+        </div>
+        <p class="imgText">摄于2016-秋</p>
       </div>
     </div>
 
@@ -211,6 +215,7 @@ export default {
     width: 600px;
     margin: auto;
     margin-top: 1rem;
+    position: relative;
   }
   .single_row {
     padding-bottom: 3rem;
