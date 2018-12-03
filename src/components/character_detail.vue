@@ -4,7 +4,7 @@
       <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非粉丝会成员禁止翻阅！<i class="el-icon-star-on"></i></p>
     </div>
     <div class="tableHolder">
-      <table style="margin:auto">
+      <table style="margin:auto; margin-bottom: 4rem;">
         <tr>
           <td @click='changeDetail(1)' :class="{ picTd: true, blurTd: isBlur[0] }" id="yui"></td>
           <td @click='changeDetail(2)' :class="{ picTd: true, blurTd: isBlur[1] }" id="ritsu"></td>
@@ -415,15 +415,16 @@ export default {
     },
 
     generateRandom(){
+      var sum = this.backPic.length;
       var that = this;
       setInterval(function(){
-        if(that.randomIndex < 3 ){
+        if(that.randomIndex < sum  - 1 ){
           that.randomIndex++;
         }
         else {
           that.randomIndex = 0;
         }
-      }, 5000)
+      }, 3000)
     },
   },
 }
@@ -450,6 +451,7 @@ export default {
     margin: auto;
   }
   .mainHolder {
+    padding-top: 4rem;
     width: 100%;
     padding-bottom: 1rem;
     background-image: url(../assets/background/4.png);
@@ -535,10 +537,10 @@ export default {
     border-right: 1px solid #C0C4CC;
   }
   .altHolder {
+
     margin: auto;
     width: 80%;
     height: 60rem;
-    /* background-image: url('../assets/background/2.png'); */
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -547,15 +549,13 @@ export default {
     transition: 0.5s ease-in-out;
   }
   .smallAltHolder {
-    /* background-image: url('../assets/background/2.png'); */
     background-position: center;
     background-size: cover;
     position: absolute;
-    left: 3rem;
-    bottom: 40rem;
+    left: 1rem;
+    top: -10rem;
     width: 20rem;
     height: 10rem;
-    z-index: 999;
     border: 0.5rem solid white;
     transform: rotate(-20deg);
     box-shadow: 4px 4px 2px black;

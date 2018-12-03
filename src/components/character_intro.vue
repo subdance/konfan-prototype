@@ -1,6 +1,5 @@
 <template lang="html">
-  <div id="mainHolder">
-    <div  class="introHolder">
+  <div  class="introHolder">
       <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
       Yui!</div>
       <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
@@ -21,7 +20,7 @@
           </el-col>
           <el-col :span="7">
             <div class="imgHolder">
-              <img style="height:600px;" :src="nowHeadPic" alt="">
+              <img style="height: 600px;" :src="nowHeadPic" alt="">
             </div>
           </el-col>
           <el-col :span="14">
@@ -40,7 +39,6 @@
         </el-row>
       </transition>
     </div>
-  </div>
 </template>
 
 <script>
@@ -59,7 +57,7 @@
           '架子鼓手，容貌秀丽，头脑明晰，用爽朗的笑容为大家带来幸福，大众偶像--田井中律！',
           '贝斯手兼主唱，超怕恐怖和疼疼的事情，轻音乐部的老大，DANGEROUS QUEEN--秋山澪！',
           '键盘手！在点心方面一眼辨乾坤，外柔内刚的天然系大小姐--琴吹紬！',
-          '超强的吉他手！严肃的外表藏不住萌喵的本质，偶尔会发出咕噜咕噜的叫声，是最佳学妹！',
+          '超强的吉他手！严肃的外表藏不住萌喵的本质，偶尔会做出小猫一样的举动，是最佳学妹！',
         ],
         nowMainIntro: '樱丘女子高中轻音部的吉他手兼主唱，天然呆，拥有名为绝对音感的特殊能力。最初错把轻音乐当成轻便、简易的音乐而加入了轻音部。',
         backMainIntro: [
@@ -119,7 +117,11 @@
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   #mainHolder {
+    /* padding-top: 4rem; */
     width: 100%;
   }
   .addTextHolder {
@@ -136,6 +138,7 @@
     background-repeat: repeat-x;
   }
   .imgHolder {
+    padding-top: 4rem;
     text-align: center;
   }
   .mcHolder {
