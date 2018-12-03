@@ -5,7 +5,7 @@
         <td><router-link to="/" @click='changeFixPlayer(true)'><span class="navTextHome">HTT活动室&nbsp<i class="fa fa-home fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></td>
-        <td><router-link to="/" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></td>
+        <td><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></td>
         <td><router-link to="/t" ><span class="navTextHome">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></td>
       </tr>
     </table>
