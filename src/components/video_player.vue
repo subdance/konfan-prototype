@@ -1,55 +1,45 @@
 <template lang="html">
-  <div class="playerHolder">
-    <video-player
-      id="player"
-      ref="videoPlayer"
-      :options="playerOptions"
-      :playsinline="true"
-      customEventName="customstatechangedeventname">
-    </video-player>
-  </div>
+  <div class="mainHolder">
+    <div class="videoHolder">
+      <video
+        class="player"
+        :src="videoList[index].src"
+        controls
+        poster="posterimage.jpg">
+      </video>
+    </div>
 
+  </div>
 </template>
 
 <script>
-  import 'video.js/dist/video-js.css'
-
-  import { videoPlayer } from 'vue-video-player'
   export default {
-    components: {
-      videoPlayer,
-    },
     data(){
       return {
-        playerOptions: {
-          // videojs options
-          muted: true,
-          language: 'en',
-          playbackRates: [0.7, 1.0, 1.5, 2.0],
-          sources: [{
-            type: "video/mp4",
-            src: "http://35.244.189.64/k-on-fan/video/1.mp4"
-          }],
-          poster: "",
-        }
+        index: 0,
+        videoList: [
+          {
+            id: 1,
+            poster: '',
+            src: 'http://35.244.189.64/k-on-fan/video/1.mp4',
+          },
+        ]
       }
     },
   }
 </script>
 
-<style lang="css">
-  * {
-    box-sizing: border-box;
-  }
-  .playerHolder {
+<style scoped>
+  .mainHolder {
+    background-color: black;
     padding-top: 62px;
+  }
+  .videoHolder {
+    margin-top: 4rem;
     text-align: center;
   }
-  #player {
+  .player {
+    max-height: 60rem;
     margin: auto;
-  }
-  #vjs_video_3 {
-    margin: auto;
-    position: relative;
   }
 </style>
