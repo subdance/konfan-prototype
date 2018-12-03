@@ -4,8 +4,8 @@
       <video
         class="player"
         :src="nowPlaying.src"
-        controls
-        poster="posterimage.jpg">
+        :poster='nowPlaying.poster'
+        controls>
       </video>
     </div>
     <div class="listHolder">
@@ -26,45 +26,57 @@
         nowPlaying: {
           id: 1,
           name: '',
-          poster: '',
-          src: 'http://35.244.189.64/k-on-fan/video/1.mp4',
+          poster: 'http://35.244.189.64/k-on-fan/image/video-cover/1.jpg',
+          src: 'http://35.244.189.64/k-on-fan/video/3.mp4',
         },
         videoList: [
           {
             id: 1,
             name: '',
-            poster: '',
-            src: 'http://35.244.189.64/k-on-fan/video/1.mp4',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/1.jpg',
+            src: 'http://35.244.189.64/k-on-fan/video/3.mp4',
           },
           {
             id: 2,
             name: '',
-            poster: '',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/2.jpg',
             src: 'http://35.244.189.64/k-on-fan/video/2.mp4',
           },
           {
             id: 3,
             name: '',
-            poster: '',
-            src: 'http://35.244.189.64/k-on-fan/video/3.mp4',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/3.jpg',
+            src: 'http://35.244.189.64/k-on-fan/video/1.mp4',
           },
           {
             id: 4,
             name: '',
-            poster: '',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/4.jpg',
             src: 'http://35.244.189.64/k-on-fan/video/4.mp4',
           },
           {
             id: 5,
             name: '',
-            poster: '',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/5.jpg',
             src: 'http://35.244.189.64/k-on-fan/video/5.mp4',
           },
           {
             id: 6,
             name: '',
-            poster: '',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/6.jpg',
             src: 'http://35.244.189.64/k-on-fan/video/6.mp4',
+          },
+          {
+            id: 7,
+            name: '',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/7.jpg',
+            src: 'http://35.244.189.64/k-on-fan/video/8.mp4',
+          },
+          {
+            id: 8,
+            name: '',
+            poster: 'http://35.244.189.64/k-on-fan/image/video-cover/8.jpg',
+            src: 'http://35.244.189.64/k-on-fan/video/7.mp4',
           },
         ]
       }
@@ -90,7 +102,7 @@
     position: relative;
   }
   .videoHolder {
-    margin-top: 4rem;
+    margin-top: 8rem;
     text-align: center;
   }
   .player {
@@ -101,9 +113,7 @@
     position: absolute;
     right: 0;
     top: 20rem;
-    border: 2px solid red;
     width: 18rem;
-    height: 40rem;
     overflow: hidden;
   }
   ul {
@@ -122,7 +132,8 @@
     font-size: 2rem;
     border-left: 2px solid white;
     border-bottom: 2px solid white;
-    transition: all 0.8s;
+    transition-property: margin-left;
+    transition-duration: 1s;
     cursor: pointer;
     border-radius: 30px 0 0 30px ;
     overflow: hidden;
