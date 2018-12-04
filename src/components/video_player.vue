@@ -98,9 +98,8 @@
   }
   .mainHolder {
     background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to top, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-top: 62px;
     position: relative;
   }
@@ -110,7 +109,6 @@
     padding-bottom: 4rem;
   }
   .player {
-    /* border: 1px solid #240b36; */
     height: 62rem;
     margin: auto;
   }
