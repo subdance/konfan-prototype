@@ -97,15 +97,20 @@
     box-sizing: border-box;
   }
   .mainHolder {
-    background-color: black;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     padding-top: 62px;
     position: relative;
   }
   .videoHolder {
     margin-top: 8rem;
     text-align: center;
+    padding-bottom: 4rem;
   }
   .player {
+    /* border: 1px solid #240b36; */
     height: 62rem;
     margin: auto;
   }
@@ -139,6 +144,7 @@
     overflow: hidden;
   }
   li:hover {
+    /* border-top: 2px solid white; */
     margin-left: 0;
   }
 </style>
