@@ -8,9 +8,9 @@
       autoplay
       v-show='moePlayer.isFixPlayerShow'
       />
-    <el-header height='62px'>
-      <navBar></navBar>
-      <iconHolder></iconHolder>
+    <el-header>
+      <navBar style="position: relative; z-index: 1;"></navBar>
+      <iconHolder style=" z-index: 1;"></iconHolder>
     </el-header>
 
     <el-main>
@@ -93,25 +93,27 @@ export default {
 <style scoped>
   .el-main {
     min-height: 500px;
-    margin-top: -62px;
+    margin-top: -60px;
     padding: 0;
     z-index: 0;
   }
+  .el-header::before {
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 1;
+    transform: scale(1.3, 1.3);
+  }
   .el-header {
+    overflow: hidden;
     z-index: 1;
     position: relative;
     display: block;
-  }
-  .el-header::after {
-    background-color: white;
-    content: "";
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
   }
   .el-container {
   }
