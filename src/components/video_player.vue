@@ -97,19 +97,23 @@
     box-sizing: border-box;
   }
   .mainHolder {
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: #c31432;
+    background: -webkit-linear-gradient(to top, #240b36, #c31432);
+    background: linear-gradient(to top, #240b36, #c31432); */
+    background-image: url('../assets/background/5.jpg');
+    background-size: cover;
+    background-position: center;
     padding-top: 62px;
     position: relative;
   }
   .videoHolder {
+    min-height: 60rem;
     margin-top: 8rem;
     text-align: center;
     padding-bottom: 4rem;
   }
   .player {
-    height: 62rem;
+    height: 50rem;
     margin: auto;
   }
   .listHolder {
