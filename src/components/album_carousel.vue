@@ -177,9 +177,6 @@ export default {
 </script>
 
 <style scoped>
-  .mainHolder {
-
-  }
   .carouselPicCard {
     border-radius: 10px;
     width: 100%;

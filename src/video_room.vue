@@ -14,10 +14,10 @@
 </script>
 
 <style scoped>
-  * {
-    box-sizing: border-box;
-  }
   .mainHolder {
-    width: 100%;
+    position: relative;
+    background-image: url('./assets/background/5.jpg');
+    background-size: cover;
+    background-position: center;
   }
 </style>

@@ -96,19 +96,9 @@
   * {
     box-sizing: border-box;
   }
-  .mainHolder {
-    /* background: #c31432;
-    background: -webkit-linear-gradient(to top, #240b36, #c31432);
-    background: linear-gradient(to top, #240b36, #c31432); */
-    background-image: url('../assets/background/5.jpg');
-    background-size: cover;
-    background-position: center;
-    padding-top: 62px;
-    position: relative;
-  }
   .videoHolder {
     min-height: 60rem;
-    margin-top: 8rem;
+    padding-top: 8rem;
     text-align: center;
     padding-bottom: 4rem;
   }
