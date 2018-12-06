@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="mainContainer">
     <aplayer
+    class="musicPlayer"
     ref='aplayer'
     :audio="audio"
     autoplay
@@ -20,7 +21,7 @@ export default {
   data(){
     return {
       moePlayer: {
-        isListFolded: true,
+        isListFolded: false,
         theme: '#1396f1',
       },
       audio: [
@@ -77,10 +78,15 @@ export default {
 
 <style scoped>
   .mainContainer {
+    padding-top: 60px;
     background: #009FFF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    min-height: 200rem;
-    padding-top: 62px;
+  }
+  .musicPlayer {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 40rem;
   }
 </style>

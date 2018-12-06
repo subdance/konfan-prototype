@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="homePageHolder">
+  <div class="mainContainer">
     <div class="showBox" id="box1">
       <video autoplay muted loop id="myVideo" >
         <source src="./assets/video/trim1.mp4" type="video/mp4">
@@ -212,7 +212,7 @@ export default {
     text-align: center;
     padding-top: 6rem;
   }
-  .homePageHolder {
+  .mainContainer {
     width: 100%;
     position: relative;
   }

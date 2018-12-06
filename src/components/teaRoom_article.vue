@@ -1,7 +1,6 @@
 <template lang="html">
   <div class="mainHolder">
     <p class="mainTitle">或远或近的记录</p>
-
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
         <span class="title_text">{{ articleSet[0].title }}</span>
@@ -241,7 +240,7 @@ export default {
     font-style: italic;
   }
   .mainTitle {
-    margin-top: 0;
+    margin-top: 1rem;
     font-size: 4rem;
     text-align: center;
     color: white;

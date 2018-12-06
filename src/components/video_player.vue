@@ -97,14 +97,19 @@
     box-sizing: border-box;
   }
   .videoHolder {
-    min-height: 60rem;
-    padding-top: 8rem;
+    position: relative;
+    padding-top: 15rem;
+    min-height: 80rem;
     text-align: center;
     padding-bottom: 4rem;
   }
   .player {
-    height: 50rem;
-    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 60rem;
   }
   .listHolder {
     position: absolute;
@@ -136,7 +141,6 @@
     overflow: hidden;
   }
   li:hover {
-    /* border-top: 2px solid white; */
     margin-left: 0;
   }
 </style>

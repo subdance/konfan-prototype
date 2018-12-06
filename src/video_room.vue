@@ -15,6 +15,7 @@
 
 <style scoped>
   .mainHolder {
+    width: 100%;
     position: relative;
     background-image: url('./assets/background/5.jpg');
     background-size: cover;

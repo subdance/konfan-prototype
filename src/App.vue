@@ -78,7 +78,6 @@ export default {
   },
   created(){
     this.listenChangeFixPlayer();
-    // this.moePlayer.isFixPlayerShow = true;
   },
   methods:{
     listenChangeFixPlayer(){
@@ -91,8 +90,10 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   .el-main {
-    min-height: 500px;
     margin-top: -60px;
     padding: 0;
     z-index: 0;
@@ -106,16 +107,12 @@ export default {
     left: 0;
     background-color: white;
     opacity: 0.5;
-    z-index: 1;
-    transform: scale(1.3, 1.3);
   }
   .el-header {
     overflow: hidden;
-    z-index: 1;
+    z-index: 999;
     position: relative;
     display: block;
-  }
-  .el-container {
   }
   .el-footer {
     padding: 0;
