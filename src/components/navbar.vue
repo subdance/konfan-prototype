@@ -32,8 +32,9 @@ export default {
     text-decoration: none;
   }
   .navTextHome:hover {
-    /* color: red; */
-    transition: all 250ms ease-in-out;
+    color: red;
+    text-shadow: 2px 2px 2px grey;
+    transition: all 200ms ease-in-out;
   }
   .navHolder {
     display: flex;
