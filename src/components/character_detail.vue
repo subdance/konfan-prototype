@@ -4,15 +4,13 @@
       <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非粉丝会成员禁止翻阅！<i class="el-icon-star-on"></i></p>
     </div>
     <div class="tableHolder">
-      <table style="margin:auto; margin-bottom: 4rem;">
-        <tr>
-          <td @click='changeDetail(1)' :class="{ picTd: true, blurTd: isBlur[0] }" id="yui"></td>
-          <td @click='changeDetail(2)' :class="{ picTd: true, blurTd: isBlur[1] }" id="ritsu"></td>
-          <td @click='changeDetail(3)' :class="{ picTd: true, blurTd: isBlur[2] }" id="mio"></td>
-          <td @click='changeDetail(4)' :class="{ picTd: true, blurTd: isBlur[3] }" id="mugi"></td>
-          <td @click='changeDetail(5)' :class="{ picTd: true, blurTd: isBlur[4] }" id="azusa"></td>
-        </tr>
-      </table>
+      <div class="girlList">
+        <div @click='changeDetail(1)' :class="{ picTd: true, blurTd: isBlur[0] }" id="yui"></div>
+        <div @click='changeDetail(2)' :class="{ picTd: true, blurTd: isBlur[1] }" id="ritsu"></div>
+        <div @click='changeDetail(3)' :class="{ picTd: true, blurTd: isBlur[2] }" id="mio"></div>
+        <div @click='changeDetail(4)' :class="{ picTd: true, blurTd: isBlur[3] }" id="mugi"></div>
+        <div @click='changeDetail(5)' :class="{ picTd: true, blurTd: isBlur[4] }" id="azusa"></div>
+      </div>
       <div class="detailHolder">
         <transition name="el-fade-in-linear">
           <div v-show='isDetailShowe'>
@@ -456,9 +454,13 @@ export default {
     padding-bottom: 1rem;
     background-image: url(../assets/background/4.png);
   }
+  .girlList {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+  }
   .tableHolder {
     width: 100%;
-    text-align: center;
     position: relative;
   }
   .picTd {
@@ -537,7 +539,6 @@ export default {
     border-right: 1px solid #C0C4CC;
   }
   .altHolder {
-
     margin: auto;
     width: 80%;
     height: 60rem;
@@ -552,8 +553,8 @@ export default {
     background-position: center;
     background-size: cover;
     position: absolute;
-    left: 1rem;
-    top: -10rem;
+    left: -4rem;
+    top: 4rem;
     width: 20rem;
     height: 10rem;
     border: 0.5rem solid white;
