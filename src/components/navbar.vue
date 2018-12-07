@@ -39,6 +39,7 @@ export default {
   .navHolder {
     display: flex;
     flex-wrap: nowrap;
+    align-items: baseline;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);

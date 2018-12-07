@@ -9,11 +9,9 @@
       </video>
     </div>
     <div class="listHolder">
-      <ul>
-        <li v-for='(item, index) in videoList' @click='changeVideo(index)'>
-          <span class="listText"> {{ item.id }} </span>
-        </li>
-      </ul>
+      <div class="listBlock" v-for='(item, index) in videoList' @click='changeVideo(index)'>
+        <span class="listText"> {{ item.id }} </span>
+      </div>
     </div>
 
   </div>
@@ -112,35 +110,16 @@
     height: 60rem;
   }
   .listHolder {
-    position: absolute;
-    right: 0;
-    top: 20rem;
-    width: 18rem;
-    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    top: -10rem;
+    justify-content: space-around;
   }
-  ul {
-    margin-top: 0;
-    padding-left: 0;
-    padding-top: 0;
-  }
-  li {
-    line-height: 6rem;
-    padding-left: 1rem;
-    height: 6rem;
-    margin-top: -2px;
-    margin-left: 12rem;
-    list-style-type: none;
+  .listBlock {
     color: white;
-    font-size: 2rem;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-    transition-property: margin-left;
-    transition-duration: 1s;
-    cursor: pointer;
-    border-radius: 30px 0 0 30px ;
-    overflow: hidden;
-  }
-  li:hover {
-    margin-left: 0;
+    width: 8rem;
+    height: 10rem;
+    border: 2px solid red;
   }
 </style>
