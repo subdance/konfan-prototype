@@ -23,10 +23,10 @@
     data(){
       return {
         nowPlaying: {
-          id: 1,
+          id: 8,
           name: '',
-          poster: 'http://35.244.189.64/k-on-fan/image/video-cover/1.jpg',
-          src: 'http://35.244.189.64/k-on-fan/video/3.mp4',
+          poster: 'http://35.244.189.64/k-on-fan/image/video-cover/8.jpg',
+          src: 'http://35.244.189.64/k-on-fan/video/7.mp4',
         },
         videoList: [
           {
@@ -102,6 +102,7 @@
     position: relative;
     padding-top: 15rem;
     min-height: 80rem;
+    overflow: hidden;
     text-align: center;
     padding-bottom: 4rem;
   }
@@ -112,10 +113,12 @@
     transform: translate(-50%, -50%);
     display: block;
     height: 60rem;
+    border: 2px solid white;
   }
   .listHolder {
     width: 100%;
     position: relative;
+    top: -10rem;
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
@@ -123,10 +126,12 @@
   .listBlock {
     cursor: pointer;
     color: white;
-    width: 12rem;
+    width: 15rem;
     transition: all 0.2s ease-in-out;
     font-size: 3rem;
-    margin-left: -5rem;
+  }
+  .listBlock:not(:last-child) {
+    margin-left: -8rem;
   }
   .listBlock:hover {
     color: white;
@@ -134,13 +139,15 @@
     z-index: 1;
   }
   .thumbnail {
+    border-radius: 0 0 10px 10px;
     width: 100%;
-    height: 30rem;
-    border-radius: 10px;
+    height: 10rem;
     object-fit: cover;
-    border: 2px solid #F2F6FC;
+    border-left: 2px solid #F2F6FC;
+    border-right: 2px solid #F2F6FC;
+    border-bottom: 2px solid #F2F6FC;
   }
   .thumbnail:hover {
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
   }
 </style>
