@@ -11,7 +11,10 @@
     <div class="listHolder">
       <div class="listBlock" v-for='(item, index) in videoList' @click='changeVideo(index)'>
         <!-- <span class="listText"> {{ item.id }} </span> -->
-        <img class="thumbnail" :src="item.poster" alt="">
+        <div class="thumbnailHolder">
+          <img class="thumbnail" :src="item.poster" alt="">
+        </div>
+
       </div>
     </div>
 
@@ -124,13 +127,10 @@
     flex-direction: row-reverse;
   }
   .listBlock {
-    padding: 0;
     cursor: pointer;
     color: white;
     width: 15rem;
     transition: all 0.2s ease-in-out;
-    font-size: 3rem;
-    overflow: hidden;
     z-index: 1;
   }
   .listBlock:not(:last-child) {
@@ -142,18 +142,27 @@
     width: 35rem;
     transform: skewX(0deg);
   }
+  .thumbnailHolder {
+    /* border-left: 3px solid #F2F6FC;
+    border-right: 3px solid #F2F6FC;
+    border-bottom: 3px solid #F2F6FC;
+    border-radius: 0 0 10px 10px;*/
+    transform: skewX(-8deg);
+    overflow: hidden;
+    box-shadow: 2px 2px 4px black;
+
+  }
   .thumbnail {
-    border-radius: 0 0 10px 10px;
     width: 100%;
     height: 10rem;
     object-fit: cover;
-    border-left: 2px solid #F2F6FC;
-    border-right: 2px solid #F2F6FC;
-    border-bottom: 2px solid #F2F6FC;
     transition: all 0.2s ease-in-out;
+    margin-bottom: -0.5rem;
+    transform: skewX(8deg) scale(1.1, 1.1);
   }
   .thumbnail:hover {
     height: 15rem;
     border-radius: 0 0 10px 10px;
   }
+
 </style>
