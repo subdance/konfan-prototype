@@ -142,21 +142,20 @@ export default {
       textIndex: 1,
       styleObject1: {
         fontSize: '3rem',
-        color: '#606266',
+        color: '#F2F6FC',
       },
       styleObject2: {
         fontSize: '3rem',
-        color: '#606266',
+        color: '#F2F6FC',
       },
       nowMainIntroText: "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】",
       backMainIntroText: [
         "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
-        "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
         "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”—梓",
+        "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
         "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”—澪",
         "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”—律",
-        "“所以去寻找，为了邂逅心中的第一，出发吧！—【最多最多】”",
-        "“大家都好厉害哦，不要扔下我独自长大哦”—唯"
+        "“大家都好厉害，不要扔下我独自长大哦”—唯"
       ],
       introPic: [
         require('./assets/home_pic/9.jpg'),
@@ -174,11 +173,12 @@ export default {
   },
   methods: {
     changeShow(){
+      var length = this.backMainIntroText.length ;
       this.isTextOneShow = !this.isTextOneShow;
       this.nowMainIntroText = this.backMainIntroText[this.textIndex];
       this.isTextTwoShow = !this.isTextTwoShow;
       this.textIndex++;
-      if(this.textIndex > 6){
+      if(this.textIndex == length){
         this.textIndex = 0;
       }
     },
@@ -226,7 +226,7 @@ export default {
     z-index: 1;
     cursor: pointer;
     border-radius: 7px;
-    box-shadow: 3px 3px 2px grey;
+    box-shadow: 3px 3px 5px black;
   }
 
   .imgHolder:hover::after {
@@ -287,7 +287,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #303133;
     opacity: 0.6;
     z-index: -1;
   }
