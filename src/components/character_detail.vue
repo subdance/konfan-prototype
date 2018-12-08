@@ -24,7 +24,7 @@
                 </td>
                 <td class="detailTd">
                   <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
-                  <table>
+                  <table style="text-align: center;">
                     <tr v-for='(basic, index) in basicIntro[index1].info'>
                       <th>{{ basic.header }}</th>
                       <td>{{ basic.detail }}</td>

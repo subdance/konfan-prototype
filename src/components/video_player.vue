@@ -9,15 +9,32 @@
       </video>
     </div>
     <div class="listHolder">
-      <div class="listBlock" :class="{selectedList: isVideoSelected[index], notSelectedList:!isVideoSelected[index]}" v-for='(item, index) in videoList' @click='changeVideo(index)'>
-        <!-- <span class="listText"> {{ item.id }} </span> -->
+      <div
+        class="listBlock"
+        :class="{selectedList: isVideoSelected[index], notSelectedList:!isVideoSelected[index]}"
+        v-for='(item, index) in videoList'
+        @click='changeVideo(index)'
+        >
         <div class="thumbnailHolder">
-          <img class="thumbnail" :class="{selected: isVideoSelected[index], notSelected:!isVideoSelected[index]}" :src="item.poster" alt="">
+          <img
+          class="thumbnail"
+          :class="{selected: isVideoSelected[index], notSelected:!isVideoSelected[index]}"
+          :src="item.poster"
+          :alt="item.name">
         </div>
-
       </div>
     </div>
+    <!-- <div class="mcHolder">
+      <div class="mcIntroLeft">
 
+      </div>
+      <div class="mcIntroRight">
+
+      </div>
+      <div class="mcImgHolder">
+
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -104,6 +121,7 @@
     box-sizing: border-box;
   }
   .mainHolder {
+    position: relative;
     min-height: 100rem;
   }
   .videoHolder {
@@ -123,6 +141,7 @@
     height: 60rem;
     border: 2px solid white;
   }
+  /* special k-blaze effect */
   .listHolder {
     width: 100%;
     position: relative;
@@ -148,17 +167,13 @@
     transform: skewX(0deg);
   }
   .thumbnailHolder {
-    /* border-left: 3px solid #F2F6FC;
-    border-right: 3px solid #F2F6FC;
-    border-bottom: 3px solid #F2F6FC;
-    border-radius: 0 0 10px 10px;*/
     transform: skewX(-8deg);
     overflow: hidden;
     box-shadow: 2px 2px 4px black;
   }
   .thumbnail {
     width: 100%;
-    height: 10rem;
+    height: 13rem;
     object-fit: cover;
     transition: all 0.2s ease-in-out;
     margin-bottom: -0.5rem;
@@ -168,12 +183,12 @@
     border-radius: 0 0 10px 10px;
   }
   .selected {
-    height: 15rem;
+    height: 18rem;
     border-radius: 0 0 10px 10px;
   }
   .notSelected {
     width: 100%;
-    height: 10rem;
+    height: 13rem;
     object-fit: cover;
     transition: all 0.2s ease-in-out;
     margin-bottom: -0.5rem;
@@ -192,4 +207,37 @@
     transition: all 0.2s ease-in-out;
     z-index: 1;
   }
+  /* .mcHolder {
+    position: absolute;
+    top:20rem;
+    left:0;
+    width: 10%;
+    height: 30rem;
+  }
+  .mcHolder > .mcIntroLeft {
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid red;
+    position: absolute;
+    top: 0;
+    left:0;
+  }
+  .mcHolder > .mcIntroRight{
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid red;
+    position: absolute;
+    top: 0;
+    right:0;
+  }
+  .mcHolder > .mcImgHolder{
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(../assets/element/mc.png);
+    background-position: center;
+    background-size: cover;
+  } */
 </style>
