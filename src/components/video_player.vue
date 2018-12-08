@@ -124,19 +124,23 @@
     flex-direction: row-reverse;
   }
   .listBlock {
+    padding: 0;
     cursor: pointer;
     color: white;
     width: 15rem;
     transition: all 0.2s ease-in-out;
     font-size: 3rem;
+    overflow: hidden;
+    z-index: 1;
   }
   .listBlock:not(:last-child) {
     margin-left: -8rem;
   }
   .listBlock:hover {
+    margin-left: -2rem;
     color: white;
-    width: 40rem;
-    z-index: 1;
+    width: 35rem;
+    transform: skewX(0deg);
   }
   .thumbnail {
     border-radius: 0 0 10px 10px;
@@ -146,8 +150,10 @@
     border-left: 2px solid #F2F6FC;
     border-right: 2px solid #F2F6FC;
     border-bottom: 2px solid #F2F6FC;
+    transition: all 0.2s ease-in-out;
   }
   .thumbnail:hover {
+    height: 15rem;
     border-radius: 0 0 10px 10px;
   }
 </style>
