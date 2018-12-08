@@ -10,7 +10,8 @@
     </div>
     <div class="listHolder">
       <div class="listBlock" v-for='(item, index) in videoList' @click='changeVideo(index)'>
-        <span class="listText"> {{ item.id }} </span>
+        <!-- <span class="listText"> {{ item.id }} </span> -->
+        <img class="thumbnail" :src="item.poster" alt="">
       </div>
     </div>
 
@@ -94,6 +95,9 @@
   * {
     box-sizing: border-box;
   }
+  .mainHolder {
+    min-height: 100rem;
+  }
   .videoHolder {
     position: relative;
     padding-top: 15rem;
@@ -113,13 +117,30 @@
     width: 100%;
     position: relative;
     display: flex;
-    top: -10rem;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: row-reverse;
   }
   .listBlock {
+    cursor: pointer;
     color: white;
-    width: 8rem;
-    height: 10rem;
-    border: 2px solid red;
+    width: 12rem;
+    transition: all 0.2s ease-in-out;
+    font-size: 3rem;
+    margin-left: -5rem;
+  }
+  .listBlock:hover {
+    color: white;
+    width: 40rem;
+    z-index: 1;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 30rem;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #F2F6FC;
+  }
+  .thumbnail:hover {
+    border-radius: 10px;
   }
 </style>

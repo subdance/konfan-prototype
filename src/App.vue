@@ -105,8 +105,9 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: white;
-    opacity: 0.5;
+    background-color: grey;
+    opacity: 0.3;
+    border-bottom: 1px solid black;
   }
   .el-header {
     overflow: hidden;
