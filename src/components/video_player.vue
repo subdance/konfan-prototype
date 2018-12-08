@@ -9,10 +9,10 @@
       </video>
     </div>
     <div class="listHolder">
-      <div class="listBlock" v-for='(item, index) in videoList' @click='changeVideo(index)'>
+      <div class="listBlock" :class="{selectedList: isVideoSelected[index], notSelectedList:!isVideoSelected[index]}" v-for='(item, index) in videoList' @click='changeVideo(index)'>
         <!-- <span class="listText"> {{ item.id }} </span> -->
         <div class="thumbnailHolder">
-          <img class="thumbnail" :src="item.poster" alt="">
+          <img class="thumbnail" :class="{selected: isVideoSelected[index], notSelected:!isVideoSelected[index]}" :src="item.poster" alt="">
         </div>
 
       </div>
@@ -25,6 +25,7 @@
   export default {
     data(){
       return {
+        isVideoSelected: [false, false, false, false, false, false, false, false,],
         nowPlaying: {
           id: 8,
           name: '',
@@ -89,6 +90,10 @@
         this.nowPlaying.name = this.videoList[index].name;
         this.nowPlaying.poster = this.videoList[index].poster;
         this.nowPlaying.src = this.videoList[index].src;
+        for(let i = 0; i < this.isVideoSelected.length; i ++){
+          this.$set(this.isVideoSelected, i, false);
+        }
+        this.$set(this.isVideoSelected, index, true);
       },
     },
   }
@@ -134,7 +139,7 @@
     z-index: 1;
   }
   .listBlock:not(:last-child) {
-    margin-left: -8rem;
+    margin-left: -4rem;
   }
   .listBlock:hover {
     margin-left: -2rem;
@@ -150,7 +155,6 @@
     transform: skewX(-8deg);
     overflow: hidden;
     box-shadow: 2px 2px 4px black;
-
   }
   .thumbnail {
     width: 100%;
@@ -161,8 +165,31 @@
     transform: skewX(8deg) scale(1.1, 1.1);
   }
   .thumbnail:hover {
+    border-radius: 0 0 10px 10px;
+  }
+  .selected {
     height: 15rem;
     border-radius: 0 0 10px 10px;
   }
-
+  .notSelected {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -0.5rem;
+    transform: skewX(8deg) scale(1.1, 1.1);
+  }
+  .selectedList {
+    margin-left: 0rem;
+    color: white;
+    width: 35rem;
+    transform: skewX(0deg);
+  }
+  .notSelectedList {
+    cursor: pointer;
+    color: white;
+    width: 15rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+  }
 </style>
