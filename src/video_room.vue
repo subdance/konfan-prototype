@@ -13,6 +13,7 @@
     },
     created(){
       this.changeFixPlayer(false);
+      eventBus.$emit('stopMusic', true)
     },
     methods:{
       changeFixPlayer(reg){

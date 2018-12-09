@@ -2,6 +2,7 @@
   <el-container>
     <scrollTop></scrollTop>
     <aplayer
+      ref='aplayer'
       :audio="audio"
       :lrcType="0"
       fixed
@@ -84,6 +85,14 @@ export default {
       eventBus.$on('changeFixPlayer', reg => {
         this.moePlayer.isFixPlayerShow = reg;
       })
+      eventBus.$on('stopMusic', reg => {
+        if(reg){
+          this.$refs.aplayer.pause();
+        }
+        else{
+          this.$refs.aplayer.play();
+        }
+      })
     },
   },
 }
@@ -107,7 +116,7 @@ export default {
     left: 0;
     background-color: grey;
     opacity: 0.3;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
   }
   .el-header {
     overflow: hidden;

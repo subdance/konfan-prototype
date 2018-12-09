@@ -39,6 +39,7 @@
 </template>
 
 <script>
+  import eventBus from '@/eventbus.js'
   export default {
     data(){
       return {
@@ -100,6 +101,9 @@
           },
         ]
       }
+    },
+    created(){
+      eventBus.$emit('stopMusic', true)
     },
     methods:{
       changeVideo(index){
