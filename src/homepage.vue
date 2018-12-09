@@ -110,6 +110,7 @@
           </td>
         </tr>
       </table>
+      <interview></interview>
       <div class="bottomHolder">
         <img class="bottomImg" src="./assets/home_pic/10.png" alt="">
       </div>
@@ -119,8 +120,10 @@
 
 <script>
 import eventBus from '@/eventbus.js'
+import interview from '@/components/homePage_interview.vue'
 export default {
   components: {
+    interview,
   },
   data(){
     return {
