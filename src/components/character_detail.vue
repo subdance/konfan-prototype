@@ -24,15 +24,21 @@
                 </td>
                 <td class="detailTd">
                   <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
-                  <table style="text-align: center;">
+                  <table style="text-align: center; position: relative;">
                     <tr v-for='(basic, index) in basicIntro[index1].info'>
                       <th>{{ basic.header }}</th>
                       <td>{{ basic.detail }}</td>
                     </tr>
+                    <div class="outerHolder">
+                      <span class="outerText">本文部分引自<a href="https://zh.moegirl.org/" target="_blank">萌娘百科</a>,文字内容遵守【知识共享 署名-非商业性使用-相同方式共享 3.0】协议。</span></br>
+                      <span class="outerText">本文部分引自<a href="https://wiki.komica.org/" target="_blank">KomicaWiki</a></span>
+                    </div>
                   </table>
                 </td>
               </tr>
+
             </table>
+
           </div>
         </transition>
 
@@ -465,6 +471,10 @@ export default {
 </script>
 
 <style scoped>
+  a {
+    text-decoration: none;
+    color: #F56C6C;
+  }
   * {
     box-sizing: border-box;
   }
@@ -598,5 +608,16 @@ export default {
     box-shadow: 4px 4px 2px black;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+  }
+  .outerHolder {
+    display: inline-block;
+    position: absolute;
+    bottom: -10rem;
+    right: 0;
+    text-align: right;
+  }
+  .outerText {
+    font-size: 1.1rem;
+    color: #909399;
   }
 </style>
