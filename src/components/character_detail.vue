@@ -573,6 +573,7 @@ export default {
     transform: scale(1.3);
   }
   .detailHolder {
+    overflow: hidden;
     min-height:62rem;
     position: relative;
   }
