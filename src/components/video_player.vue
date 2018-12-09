@@ -212,37 +212,4 @@
     transition: all 0.2s ease-in-out;
     z-index: 1;
   }
-  /* .mcHolder {
-    position: absolute;
-    top:20rem;
-    left:0;
-    width: 10%;
-    height: 30rem;
-  }
-  .mcHolder > .mcIntroLeft {
-    width: 6rem;
-    height: 6rem;
-    border: 2px solid red;
-    position: absolute;
-    top: 0;
-    left:0;
-  }
-  .mcHolder > .mcIntroRight{
-    width: 6rem;
-    height: 6rem;
-    border: 2px solid red;
-    position: absolute;
-    top: 0;
-    right:0;
-  }
-  .mcHolder > .mcImgHolder{
-    width: 100%;
-    height: 20rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(../assets/element/mc.png);
-    background-position: center;
-    background-size: cover;
-  } */
 </style>

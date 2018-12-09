@@ -601,7 +601,7 @@ export default {
     background-size: cover;
     position: absolute;
     left: -4rem;
-    top: 4rem;
+    top: 8rem;
     width: 20rem;
     height: 10rem;
     border: 0.5rem solid white;
