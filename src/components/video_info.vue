@@ -4,50 +4,84 @@
     </div>
     <div class="dialogHolder">
       <p class="infoText">
-        <span class="videoName">{{ nowVideoInfo.name }}</span>
-        <span></span>
+        <span class="videoNameText">{{ nowVideoInfo.name }}</span>
+        <span class="videoInfoText">{{ nowVideoInfo.info }}</span>
       </p>
     </div>
   </div>
 </template>
 
 <script>
+import eventBus from '@/eventbus.js'
 export default {
   data(){
     return {
       nowVideoInfo: {
-        id: 1,
-        name: 'aaaa',
-        info: '',
+        id: 8,
+        name: 'Singing!',
+        info: '--OVA ENDING',
         author: '',
       },
-
       backVideoInfo: [
         {
           id: 1,
-          name: '',
-          info: '',
+          name: 'Cagayake! Girls',
+          info: '--S1 OPENING',
           author: '',
         },
         {
           id: 2,
-          name: '',
-          info: '',
+          name: 'Go! Go! Maniac',
+          info: '--S2 OPENING 1',
           author: '',
         },
         {
           id: 3,
-          name: '',
-          info: '',
+          name: 'Utauyo!! Miracle',
+          info: '--S2 OPENING 2',
           author: '',
         },
         {
           id: 4,
-          name: '',
-          info: '',
+          name: 'Listen!!',
+          info: '--S2 ENDING 1',
+          author: '',
+        },
+        {
+          id: 5,
+          name: "Don't say 'lazy'",
+          info: '--S1 ENDING ',
+          author: '',
+        },
+        {
+          id: 6,
+          name: "No, Thank You!",
+          info: '--S2 ENDING 2',
+          author: '',
+        },
+        {
+          id: 7,
+          name: "Unmei♪wa♪Endless!",
+          info: '--OVA OPENING',
+          author: '',
+        },
+        {
+          id: 8,
+          name: "Singing!",
+          info: '--OVA ENDING',
           author: '',
         },
       ],
+    }
+  },
+  created(){
+    eventBus.$on('changeVideo', reg => {
+      this.changeVideo(reg);
+    })
+  },
+  methods:{
+    changeVideo(reg){
+      this.nowVideoInfo = this.backVideoInfo[ reg - 1 ];
     }
   },
 }
@@ -96,10 +130,18 @@ export default {
     margin-left: -17px;
   }
   .infoText {
+    text-align: center;
     margin: 0;
-    padding-left: 4rem;
     line-height: 10rem;
     font-size: 4rem;
     color: #606266;
+  }
+  .videoNameText {
+    font-weight: bold;
+  }
+  .videoInfoText {
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-style: italic;
   }
 </style>

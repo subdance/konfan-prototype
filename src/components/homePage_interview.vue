@@ -9,7 +9,7 @@
     </div>
     <div class="contentHolder leftContent">
       <p class="contentText">
-        “姐姐她以前无聊的时候就在地上打滚。自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!”</br>
+        “姐姐她以前可以无聊到在地上打滚，自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!”</br>
         <span class="name">平泽唯的妹妹--平泽忧</br></span>
       </p>
       <img class="contentImg" src="../assets/character/ui.jpg" alt="">
@@ -32,6 +32,7 @@ export default {
 
 <style scoped>
   .mainContainer {
+    margin-top: 4rem;
     width: 100%;
     min-height: 30rem;
     position: relative;
@@ -61,7 +62,7 @@ export default {
     color: white;
     margin-top: 0;
     position: relative;
-    top: -10rem;
+    bottom: 6rem;
   }
   .name {
     font-style: italic;

@@ -115,6 +115,7 @@
           this.$set(this.isVideoSelected, i, false);
         }
         this.$set(this.isVideoSelected, index, true);
+        eventBus.$emit('changeVideo', this.nowPlaying.id)
       },
     },
   }

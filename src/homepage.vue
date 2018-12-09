@@ -228,7 +228,6 @@ export default {
     background-position: center;
     background-size: cover;
     z-index: 1;
-    cursor: pointer;
     border-radius: 7px;
     box-shadow: 3px 3px 5px black;
   }
