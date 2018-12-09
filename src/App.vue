@@ -5,6 +5,7 @@
       ref='aplayer'
       :audio="audio"
       :lrcType="0"
+      :volume='moePlayer.volume'
       fixed
       autoplay
       v-show='moePlayer.isFixPlayerShow'
@@ -42,6 +43,7 @@ export default {
     return{
       moePlayer: {
         isFixPlayerShow: true,
+        volume: 0.1,
       },
       audio: [
         {
@@ -79,6 +81,9 @@ export default {
   },
   created(){
     this.listenChangeFixPlayer();
+  },
+  mounted(){
+    this.$refs.aplayer.play();
   },
   methods:{
     listenChangeFixPlayer(){

@@ -5,6 +5,7 @@
     ref='aplayer'
     :audio="audio"
     autoplay
+    :volume='moePlayer.volume'
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
     <teaArticle></teaArticle>
@@ -23,6 +24,7 @@ export default {
       moePlayer: {
         isListFolded: false,
         theme: '#1396f1',
+        volume: 0.2,
       },
       audio: [
         {
@@ -55,6 +57,36 @@ export default {
           artist: '百石元',
           url: 'http://35.244.189.64/k-on-fan/music/inst%20u%26i.mp3',
           cover: 'http://35.244.189.64/k-on-fan/image/music-cover/3.JPG',
+        },
+        {
+          name: 'わたしの恋はホッチキス/订书机之恋',
+          artist: '放課後ティータイム',
+          url: 'http://35.244.189.64/k-on-fan/music/love.mp3',
+          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/1.JPG',
+        },
+        {
+          name: 'ふわふわ時間/轻飘飘的时光',
+          artist: '放課後ティータイム',
+          url: 'http://35.244.189.64/k-on-fan/music/time.mp3',
+          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/2.JPG',
+        },
+        {
+          name: 'ふでペン 〜ボールペン〜/毛笔圆珠笔',
+          artist: '放課後ティータイム',
+          url: 'http://35.244.189.64/k-on-fan/music/pen.mp3',
+          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/3.JPG',
+        },
+        {
+          name: 'U&I',
+          artist: '放課後ティータイム',
+          url: 'http://35.244.189.64/k-on-fan/music/u%26i.mp3',
+          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/1.JPG',
+        },
+        {
+          name: '天使にふれたよ!',
+          artist: '放課後ティータイム',
+          url: 'http://35.244.189.64/k-on-fan/music/angel.mp3',
+          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/7.JPG',
         },
       ],
     }
