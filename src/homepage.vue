@@ -260,7 +260,7 @@ export default {
   }
   .introTextHolder {
     font-size: 2rem;
-    color: #606266;
+    color: #303133;
     margin: auto;
     width: 80%;
   }

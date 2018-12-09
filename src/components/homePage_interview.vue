@@ -18,7 +18,7 @@
       <img class="contentImg" src="../assets/character/sawako.jpg" alt="">
       <p class="contentText">
         “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”</br>
-        <span class="name">班主任，轻音部顾问--山中佐和子</br></span>
+        <span class="name">班主任，轻音部顾问, 前轻音部成员--山中佐和子</br></span>
       </p>
     </div>
   </div>
