@@ -1,15 +1,18 @@
 <template lang="html">
   <div class="mainHolder">
     <videoPlayer></videoPlayer>
+    <videoInfo></videoInfo>
   </div>
 </template>
 
 <script>
   import eventBus from '@/eventbus.js'
   import videoPlayer from '@/components/video_player.vue'
+  import videoInfo from '@/components/video_info.vue'
   export default {
     components:{
       videoPlayer,
+      videoInfo
     },
     created(){
       this.changeFixPlayer(false);
