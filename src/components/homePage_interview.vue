@@ -51,7 +51,7 @@ export default {
     height: 20rem;
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 8px 8px 2px black;
   }
   .contentText {
     word-break: break-all;
