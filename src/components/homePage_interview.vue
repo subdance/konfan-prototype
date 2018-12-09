@@ -7,21 +7,20 @@
         <span class="name">学生会长--真锅和</br></span>
       </p>
     </div>
-    <div class="contentHolder leftContent">
+    <div class="contentHolder">
       <p class="contentText">
         “姐姐她以前可以无聊到在地上打滚，自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!”</br>
         <span class="name">平泽唯的妹妹--平泽忧</br></span>
       </p>
       <img class="contentImg" src="../assets/character/ui.jpg" alt="">
     </div>
-    <div class="contentHolder rightContent">
+    <div class="contentHolder">
       <img class="contentImg" src="../assets/character/sawako.jpg" alt="">
       <p class="contentText">
         “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”</br>
         <span class="name">班主任，轻音部顾问--山中佐和子</br></span>
       </p>
     </div>
-
   </div>
 </template>
 
@@ -42,10 +41,6 @@ export default {
     padding: 1rem 0rem;
     text-align: center;
     min-height: 20rem;
-  }
-  .rightContent {
-  }
-  .leftContent {
   }
   .contentImg {
     width: 20rem;
