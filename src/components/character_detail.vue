@@ -94,6 +94,7 @@ export default {
           '善于模仿他人，有着模仿他人到惟妙惟肖的能力，轻音部内的搞笑主力，昵称为律队或律酱',
           '据本人说练习音乐是为了预防老年痴呆',
           '擅长料理，曾为轻音部成员亲手做菜，说出过“日本人就应该吃米饭”的豪言',
+          '經常性的忘東忘西，甚至連自己社團的成立名單、學園祭舞台申請表等等必要之事都會發生忘記交給學生會的慘況',
         ]},
         {
           intro: [
@@ -159,6 +160,7 @@ export default {
           '被琴吹紬宠爱着，在很多轻音部决策上紬都是站在律一边',
           '中野梓的榜样，高三时为了当好部长梓多次刻意模仿了律的以前的举动。',
           '有男孩子气息的元气娘，性格粗枝大叶，经常忘交轻音部活动申请表，女工什么的完全不会，但意外地对缝扣子非常在行。和秋山澪小时候就认识，喜欢讲让澪害怕的事，经常被用拳头制裁。因为觉得“吉他或键盘等要手指不停的按来按去而感到难以应付，而打鼓则不需要而且很帅”而选择当鼓手，但是曾对于演出时鼓手在后排无法成为焦点懊恼过。憧憬的鼓手是现实乐队“THE WHO”中的Keith Moon',
+          '會因為澪交到新朋友而吃醋無理取鬧大鬧脾氣',
         ]},
         {
           intro: [
@@ -201,11 +203,11 @@ export default {
         ]},
       ],
       backDetail3: [
-        '电吉他：Gibson 2008 Les Paul Standard Heritage Cherry Sunburst；昵称: ギー太;扩音器：Marshall MG15CDR;还有神一般的响板！',
-        '鼓组Yamaha Hipgig HG6T46RMMY、铙钹/踏钹组Zildjian。',
-        '贝斯是Fender japan JB62-DMC/VSP/3TS LH。扩音器是Fender Japan BMC-20CE。',
-        '合成器：KORG Triton Extreme 76、KORG RK-100；扩音器：Roland KC-880。',
-        '吉他Fender Japan Mustang MG69/MH CAR。爱称木炭。',
+        '电吉他：Gibson 2008 Les Paul Standard Heritage Cherry Sunburst;扩音器：Marshall MG15CDR;响板',
+        '鼓组Yamaha Hipgig HG6T46RMMY;铙钹/踏钹组Zildjian',
+        '贝斯Fender japan JB62-DMC/VSP/3TS LH;扩音器Fender Japan BMC-20CE',
+        '合成器：KORG Triton Extreme 76、KORG RK-100;扩音器：Roland KC-880',
+        '吉他Fender Japan Mustang MG69/MH CAR',
       ],
       basicIntro: [
         {
@@ -241,11 +243,11 @@ export default {
             },
             {
               header: '萌点',
-              detail: '天然呆、不使用能力的天才少女、姐姐、短发、发卡、呆毛、平地摔跤、父母双忙，有妹有房(无误)、黑丝、LV4.绝对音感',
+              detail: '天然呆、百合、姐姐、呆毛、父母双忙，有妹有房(无误)、黑丝、绝对音感',
             },
             {
               header: '兴趣',
-              detail: '吃、睡、吉他、梓喵',
+              detail: '吃、睡、吉他、梓喵、摟吻',
             },
           ],
         },//yui
@@ -405,11 +407,11 @@ export default {
             },
             {
               header: '萌点',
-              detail: '雙馬尾、傲嬌、天然萌、女王、貧乳、學妹、貓耳、幼兒體型、黑絲、長髮',
+              detail: '雙馬尾、傲嬌、天然萌、女王、貧乳、學妹、貓耳、黑絲、長髮',
             },
             {
               header: '兴趣',
-              detail: '也许是被唯前辈抱住然后嘴上说讨厌心里却窃喜？',
+              detail: '唯前輩、鯛魚燒、澪前輩',
             },
           ],
         },//azusa
@@ -561,7 +563,7 @@ export default {
     transform: scale(1.3);
   }
   .detailHolder {
-    min-height:70rem;
+    min-height:62rem;
     position: relative;
   }
   .detailTd {
