@@ -3,22 +3,22 @@
     <div class="contentHolder rightContent">
       <img class="contentImg" src="../assets/character/nodoka.jpg" alt="">
       <p class="contentText">
+        “轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演还是十分有感染力。”</br>
         <span class="name">学生会长--真锅和</br></span>
-        “轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演还是十分有感染力。”
       </p>
     </div>
     <div class="contentHolder leftContent">
       <p class="contentText">
+        “姐姐她以前无聊的时候就在地上打滚。自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多”</br>
         <span class="name">平泽唯的妹妹--平泽忧</br></span>
-        “姐姐她以前无聊的时候就在地上打滚。自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多”
       </p>
       <img class="contentImg" src="../assets/character/ui.jpg" alt="">
     </div>
     <div class="contentHolder rightContent">
       <img class="contentImg" src="../assets/character/sawako.jpg" alt="">
       <p class="contentText">
+        “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”</br>
         <span class="name">班主任，轻音部顾问--山中佐和子</br></span>
-        “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”
       </p>
     </div>
 
@@ -64,7 +64,8 @@ export default {
     top: -10rem;
   }
   .name {
+    font-style: italic;
     color: #606266;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 </style>
