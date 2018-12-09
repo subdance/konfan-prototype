@@ -43,7 +43,7 @@
   export default {
     data(){
       return {
-        isVideoSelected: [false, false, false, false, false, false, false, false,],
+        isVideoSelected: [false, false, false, false, false, false, false, true,],
         nowPlaying: {
           id: 8,
           name: '',
