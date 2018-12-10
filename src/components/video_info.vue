@@ -20,7 +20,7 @@ export default {
       nowVideoInfo: {
         id: 8,
         name: 'Singing!',
-        info: '--OVA ENDING',
+        info: '--剧场版 ENDING',
         author: '',
       },
       backVideoInfo: [
@@ -63,13 +63,13 @@ export default {
         {
           id: 7,
           name: "Unmei♪wa♪Endless!",
-          info: '--OVA OPENING',
+          info: '--剧场版 OPENING',
           author: '',
         },
         {
           id: 8,
           name: "Singing!",
-          info: '--OVA ENDING',
+          info: '--剧场版 ENDING',
           author: '',
         },
       ],

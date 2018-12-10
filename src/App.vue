@@ -43,7 +43,7 @@ export default {
     return{
       moePlayer: {
         isFixPlayerShow: true,
-        volume: 0.1,
+        volume: 0.05,
       },
       audio: [
         {
