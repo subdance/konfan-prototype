@@ -30,7 +30,7 @@
   .mainHolder {
     width: 100%;
     position: relative;
-    background-image: url('./assets/background/5.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/video-room/5.jpg');
     background-size: cover;
     background-position: center;
   }

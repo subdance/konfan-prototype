@@ -112,7 +112,7 @@
       </table>
       <interview></interview>
       <div class="bottomHolder">
-        <img class="bottomImg" src="./assets/home_pic/10.png" alt="">
+        <img class="bottomImg" src="http://35.244.189.64/k-on-fan/image/home-pic/10.png" alt="">
       </div>
     </div>
   </div>
@@ -161,10 +161,10 @@ export default {
         "“大家都好厉害，不要扔下我独自长大哦”— 唯"
       ],
       introPic: [
-        require('./assets/home_pic/9.jpg'),
-        require('./assets/home_pic/4.jpg'),
-        require('./assets/home_pic/8.jpg'),
-        require('./assets/home_pic/1.jpg'),
+        'http://35.244.189.64/k-on-fan/image/home-pic/9.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/4.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/8.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/1.jpg',
       ],
     }
   },

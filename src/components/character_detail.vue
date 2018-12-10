@@ -63,10 +63,10 @@ export default {
       isBigPic: true,
       isBlur: [true, true, true, true, true],
       backPic: [
-        require('../assets/background/1.jpg'),
-        require('../assets/background/2.jpg'),
-        require('../assets/background/3.jpg'),
-        require('../assets/background/4.jpg'),
+        'http://35.244.189.64/k-on-fan/image/video-room/1.jpg',
+        'http://35.244.189.64/k-on-fan/image/video-room/2.jpg',
+        'http://35.244.189.64/k-on-fan/image/video-room/3.jpg',
+        'http://35.244.189.64/k-on-fan/image/video-room/4.jpg',
       ],
       randomIndex: 0,
       isDetailShowe: false,
@@ -464,7 +464,7 @@ export default {
         else {
           that.randomIndex = 0;
         }
-      }, 3000)
+      }, 4000)
     },
   },
 }

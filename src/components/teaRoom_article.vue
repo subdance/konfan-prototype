@@ -59,7 +59,7 @@
           > &nbsp &nbsp {{ paragraph }}
         </p>
         <div style="text-align: center;">
-          <img class="articleImg" src="../assets/article/1.jpg" alt="">
+          <img class="articleImg" src="http://35.244.189.64/k-on-fan/image/article/1.jpg" alt="">
         </div>
         <p class="imgText">摄于2016-秋</p>
       </div>
