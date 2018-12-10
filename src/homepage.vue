@@ -58,7 +58,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[1]'
                 >
-                轻音的美人监督山田尚子，也一跃成为业界偶像，同时也将“京都腿”与“京都脸”推向了世界。
+                废萌时代自此开启，“京都腿”与“京都脸”也被推向了世界。
               </div>
             </div>
           </td>
@@ -75,7 +75,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[2]'
                 >
-                五位主角的声优也在成为了行业内的新星，日后多次在名作中出演主役。
+                五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。
               </div>
             </div>
           </td>
