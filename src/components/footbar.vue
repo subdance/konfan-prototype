@@ -1,11 +1,12 @@
 <template lang="html">
   <div id="footHolder">
-    <img class="iconPic" src="../assets/element/k-on.png" alt="">
+    <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="iconPic" src="../assets/element/k-on.png" alt=""></a>
+
     <div class="textHolder">
       开源技术支持 :
       <span>
         <a target='_blank' href="https://cn.vuejs.org/">Vue.js&nbsp &nbsp</a>
-        <a target='_blank' href="https://element.eleme.io/#/zh-CN">Element.UI&nbsp &nbsp</a>
+        <a target='_blank' href="https://github.com/ElemeFE/element">Element.UI&nbsp &nbsp</a>
         <a target='_blank' href="https://github.com/MoePlayer/vue-aplayer">MoePlayer&nbsp &nbsp</a>
         <a target='_blank' href="http://fontawesome.dashgame.com/">fontawesome</a>
       </span>
