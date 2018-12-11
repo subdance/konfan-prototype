@@ -4,7 +4,7 @@
       <div class="carouselPart">
         <el-carousel
           indicator-position="inside"
-          height='72.5rem'
+          height='100vh'
           trigger='click'
           :autoplay='autoplay'
           >
@@ -57,6 +57,9 @@
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   .bigImg {
     width: 100%;
     height: 80rem;
@@ -65,37 +68,10 @@
     opacity:1;
     transition: opacity 0.5s linear;
   }
-  * {
-    box-sizing: border-box;
-  }
   .tabHolder {
     position: relative;
-    background-position: center;
-    background-size: cover;
     width: 100%;
-    background-image: none;
-    transition: background-image 0.1s ease-out;
   }
-  /* .tabHeaderHolder {
-    margin-left: 30px;
-    position: absolute;
-    top: 120px;
-    z-index: 999;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .tabHeaderHolder::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    opacity: 0.3;
-    z-index: -1;
-  } */
   .girlSubNameText {
     font-size: 1.5rem;
     color: black;

@@ -1,43 +1,43 @@
 <template lang="html">
   <div  class="introHolder">
-      <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
-      Yui!</div>
-      <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
-      Ritsu!</div>
-      <div class="button" id="button3" @click='hideAndShow(3)' >Akiyama
-      Mio!</div>
-      <div class="button" id="button4" @click='hideAndShow(4)' >Kotobuki
-      Tsumugi!</div>
-      <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
-      Azusa!</div>
-      <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-      <transition name="el-zoom-in-center">
-        <el-row v-show='isShow'>
-          <el-col :span="3">
-            <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
-            {{ verticalText }}
+    <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
+    Yui!</div>
+    <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
+    Ritsu!</div>
+    <div class="button" id="button3" @click='hideAndShow(3)' >Akiyama
+    Mio!</div>
+    <div class="button" id="button4" @click='hideAndShow(4)' >Kotobuki
+    Tsumugi!</div>
+    <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
+    Azusa!</div>
+    <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <transition name="el-zoom-in-center">
+      <el-row v-show='isShow'>
+        <el-col :span="3">
+          <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
+          {{ verticalText }}
+          </div>
+        </el-col>
+        <el-col :span="7">
+          <div class="imgHolder">
+            <img style="height: 600px;" :src="nowHeadPic" alt="">
+          </div>
+        </el-col>
+        <el-col :span="14">
+          <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
+          </div>
+          <div class="introTextHolder">
+            <div class="mainIntroHolder">
+              <span class="girlNameText">{{ nowGirlName }}</span>
+              <p class="mainIntro">{{ nowMainIntro }}</p>
             </div>
-          </el-col>
-          <el-col :span="7">
-            <div class="imgHolder">
-              <img style="height: 600px;" :src="nowHeadPic" alt="">
+            <div class="girlTextHolder">
+              {{ nowGirlIntro }}
             </div>
-          </el-col>
-          <el-col :span="14">
-            <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
-            </div>
-            <div class="introTextHolder">
-              <div class="mainIntroHolder">
-                <span class="girlNameText">{{ nowGirlName }}</span>
-                <p class="mainIntro">{{ nowMainIntro }}</p>
-              </div>
-              <div class="girlTextHolder">
-                {{ nowGirlIntro }}
-              </div>
-            </div>
-          </el-col>
-        </el-row>
-      </transition>
+          </div>
+        </el-col>
+      </el-row>
+    </transition>
     </div>
 </template>
 
@@ -121,7 +121,6 @@
     box-sizing: border-box;
   }
   #mainHolder {
-    /* padding-top: 4rem; */
     width: 100%;
   }
   .addTextHolder {
@@ -136,6 +135,7 @@
     margin: auto;
     background-image: url('../assets/background/1.png');
     background-repeat: repeat-x;
+    height: 100vh;
   }
   .imgHolder {
     padding-top: 4rem;
