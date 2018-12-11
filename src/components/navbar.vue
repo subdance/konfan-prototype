@@ -1,14 +1,10 @@
 <template lang="html">
   <div class="navHolder">
-    <table>
-      <tr>
-        <td><router-link to="/" @click='changeFixPlayer(true)'><span class="navTextHome">HTT活动室&nbsp<i class="fa fa-home fa-lg" style="color: white;"></i></span></router-link></td>
-        <td><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></td>
-        <td><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></td>
-        <td><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></td>
-        <td><router-link to="/t" ><span class="navTextHome">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></td>
-      </tr>
-    </table>
+    <div><router-link to="/"  @click='changeFixPlayer(true)'><span class="navTextHome">HTT活动室&nbsp<i class="fa fa-home fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/t" ><span class="navTextHome">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
   </div>
 </template>
 
@@ -21,7 +17,6 @@ export default {
   },
   methods: {
     changeFixPlayer(reg){
-      console.log('aaa');
       eventBus.$emit('changeFixPlayer', reg)
     },
   },
@@ -36,32 +31,32 @@ export default {
   a {
     text-decoration: none;
   }
-  td {
-    width: 140px;
-    height: 54px;
-    text-align: center;
-    text-shadow: 1px 1px 1px #666666;
-  }
   .navTextHome:hover {
     color: red;
-  }
-  td::after {
-    display:block;
-    content: ' ';
-    border-bottom: 1px solid white;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  td:hover::after {
-    transform: scaleX(1);
+    text-shadow: 2px 2px 2px grey;
+    transition: all 200ms ease-in-out;
   }
   .navHolder {
-    margin-top: 6px;
-    float: left;
-    width: 43%;
-    height: 60px;
-    position: relative;
-    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .navHolder > div {
+    text-align: center;
+    width: 8%;
+  }
+  .navHolder > div::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid white;
+    transform: scale(0);
+    transition: transform 250ms ease-in-out;
+  }
+  .navHolder > div:hover::after {
+    transform: scale(1);
   }
   .navTextHome {
     font-size: 1.6rem;

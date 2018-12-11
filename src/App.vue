@@ -2,15 +2,17 @@
   <el-container>
     <scrollTop></scrollTop>
     <aplayer
+      ref='aplayer'
       :audio="audio"
       :lrcType="0"
+      :volume='moePlayer.volume'
       fixed
       autoplay
       v-show='moePlayer.isFixPlayerShow'
       />
-    <el-header height='62px'>
-      <navBar></navBar>
-      <iconHolder></iconHolder>
+    <el-header>
+      <navBar style="position: relative; z-index: 1;"></navBar>
+      <iconHolder style=" z-index: 1;"></iconHolder>
     </el-header>
 
     <el-main>
@@ -41,6 +43,7 @@ export default {
     return{
       moePlayer: {
         isFixPlayerShow: true,
+        volume: 0.2,
       },
       audio: [
         {
@@ -78,12 +81,22 @@ export default {
   },
   created(){
     this.listenChangeFixPlayer();
-    // this.moePlayer.isFixPlayerShow = true;
+  },
+  mounted(){
+    this.$refs.aplayer.play();
   },
   methods:{
     listenChangeFixPlayer(){
       eventBus.$on('changeFixPlayer', reg => {
         this.moePlayer.isFixPlayerShow = reg;
+      })
+      eventBus.$on('stopMusic', reg => {
+        if(reg){
+          this.$refs.aplayer.pause();
+        }
+        else{
+          this.$refs.aplayer.play();
+        }
       })
     },
   },
@@ -91,29 +104,30 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
   .el-main {
-    min-height: 500px;
-    margin-top: -62px;
+    margin-top: -60px;
     padding: 0;
     z-index: 0;
   }
+  .el-header::before {
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: grey;
+    opacity: 0.3;
+    border-bottom: 1px solid white;
+  }
   .el-header {
-    z-index: 1;
+    overflow: hidden;
+    z-index: 999;
     position: relative;
     display: block;
-  }
-  .el-header::after {
-    background-color: white;
-    content: "";
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-  .el-container {
   }
   .el-footer {
     padding: 0;

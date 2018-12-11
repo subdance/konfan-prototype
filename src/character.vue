@@ -19,6 +19,7 @@ export default {
   },
   created(){
     eventBus.$emit('changeFixPlayer', true);
+    eventBus.$emit('stopMusic', false);
   },
 }
 </script>

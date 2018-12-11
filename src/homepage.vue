@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="homePageHolder">
+  <div class="mainContainer">
     <div class="showBox" id="box1">
       <video autoplay muted loop id="myVideo" >
         <source src="./assets/video/trim1.mp4" type="video/mp4">
@@ -58,7 +58,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[1]'
                 >
-                轻音的美人监督山田尚子，也一跃成为业界偶像，同时也将“京都腿”与“京都脸”推向了世界。
+                废萌时代自此开启，“京都腿”与“京都脸”也被推向了世界。
               </div>
             </div>
           </td>
@@ -75,7 +75,7 @@
                 class="innerHolder"
                 v-show='innerDisplayArray[2]'
                 >
-                五位主角的声优也在成为了行业内的新星，日后多次在名作中出演主役。
+                五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。
               </div>
             </div>
           </td>
@@ -110,8 +110,9 @@
           </td>
         </tr>
       </table>
+      <interview></interview>
       <div class="bottomHolder">
-        <img class="bottomImg" src="./assets/home_pic/10.png" alt="">
+        <img class="bottomImg" src="http://35.244.189.64/k-on-fan/image/home-pic/10.png" alt="">
       </div>
     </div>
   </div>
@@ -119,8 +120,10 @@
 
 <script>
 import eventBus from '@/eventbus.js'
+import interview from '@/components/homePage_interview.vue'
 export default {
   components: {
+    interview,
   },
   data(){
     return {
@@ -142,43 +145,44 @@ export default {
       textIndex: 1,
       styleObject1: {
         fontSize: '3rem',
-        color: '#606266',
+        color: '#F2F6FC',
       },
       styleObject2: {
         fontSize: '3rem',
-        color: '#606266',
+        color: '#F2F6FC',
       },
       nowMainIntroText: "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】",
       backMainIntroText: [
         "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
+        "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”— 梓",
         "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
-        "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”—梓",
-        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”—澪",
-        "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”—律",
-        "“所以去寻找，为了邂逅心中的第一，出发吧！—【最多最多】”",
-        "“大家都好厉害哦，不要扔下我独自长大哦”—唯"
+        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”— 澪",
+        "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”— 律",
+        "“大家都好厉害，不要扔下我独自长大哦”— 唯"
       ],
       introPic: [
-        require('./assets/home_pic/9.jpg'),
-        require('./assets/home_pic/4.jpg'),
-        require('./assets/home_pic/8.jpg'),
-        require('./assets/home_pic/1.jpg'),
+        'http://35.244.189.64/k-on-fan/image/home-pic/9.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/4.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/8.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/1.jpg',
       ],
     }
   },
   created(){
     setInterval(this.changeShow, 4000);
     eventBus.$emit('changeFixPlayer', true);
+    eventBus.$emit('stopMusic', false);
   },
   computed:{
   },
   methods: {
     changeShow(){
+      var length = this.backMainIntroText.length ;
       this.isTextOneShow = !this.isTextOneShow;
       this.nowMainIntroText = this.backMainIntroText[this.textIndex];
       this.isTextTwoShow = !this.isTextTwoShow;
       this.textIndex++;
-      if(this.textIndex > 6){
+      if(this.textIndex == length){
         this.textIndex = 0;
       }
     },
@@ -212,7 +216,7 @@ export default {
     text-align: center;
     padding-top: 6rem;
   }
-  .homePageHolder {
+  .mainContainer {
     width: 100%;
     position: relative;
   }
@@ -224,9 +228,8 @@ export default {
     background-position: center;
     background-size: cover;
     z-index: 1;
-    cursor: pointer;
     border-radius: 7px;
-    box-shadow: 3px 3px 2px grey;
+    box-shadow: 3px 3px 5px black;
   }
 
   .imgHolder:hover::after {
@@ -257,7 +260,7 @@ export default {
   }
   .introTextHolder {
     font-size: 2rem;
-    color: #606266;
+    color: #303133;
     margin: auto;
     width: 80%;
   }
@@ -287,7 +290,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #303133;
     opacity: 0.6;
     z-index: -1;
   }

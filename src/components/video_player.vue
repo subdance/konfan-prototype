@@ -9,25 +9,46 @@
       </video>
     </div>
     <div class="listHolder">
-      <ul>
-        <li v-for='(item, index) in videoList' @click='changeVideo(index)'>
-          <span class="listText"> {{ item.id }} </span>
-        </li>
-      </ul>
+      <div
+        class="listBlock"
+        :class="{selectedList: isVideoSelected[index], notSelectedList:!isVideoSelected[index]}"
+        v-for='(item, index) in videoList'
+        @click='changeVideo(index)'
+        >
+        <div class="thumbnailHolder">
+          <img
+          class="thumbnail"
+          :class="{selected: isVideoSelected[index], notSelected:!isVideoSelected[index]}"
+          :src="item.poster"
+          :alt="item.name">
+        </div>
+      </div>
     </div>
+    <!-- <div class="mcHolder">
+      <div class="mcIntroLeft">
 
+      </div>
+      <div class="mcIntroRight">
+
+      </div>
+      <div class="mcImgHolder">
+
+      </div>
+    </div> -->
   </div>
 </template>
 
 <script>
+  import eventBus from '@/eventbus.js'
   export default {
     data(){
       return {
+        isVideoSelected: [false, false, false, false, false, false, false, true,],
         nowPlaying: {
-          id: 1,
+          id: 8,
           name: '',
-          poster: 'http://35.244.189.64/k-on-fan/image/video-cover/1.jpg',
-          src: 'http://35.244.189.64/k-on-fan/video/3.mp4',
+          poster: 'http://35.244.189.64/k-on-fan/image/video-cover/8.jpg',
+          src: 'http://35.244.189.64/k-on-fan/video/7.mp4',
         },
         videoList: [
           {
@@ -81,12 +102,20 @@
         ]
       }
     },
+    created(){
+      eventBus.$emit('stopMusic', true)
+    },
     methods:{
       changeVideo(index){
         this.nowPlaying.id = this.videoList[index].id;
         this.nowPlaying.name = this.videoList[index].name;
         this.nowPlaying.poster = this.videoList[index].poster;
         this.nowPlaying.src = this.videoList[index].src;
+        for(let i = 0; i < this.isVideoSelected.length; i ++){
+          this.$set(this.isVideoSelected, i, false);
+        }
+        this.$set(this.isVideoSelected, index, true);
+        eventBus.$emit('changeVideo', this.nowPlaying.id)
       },
     },
   }
@@ -97,48 +126,90 @@
     box-sizing: border-box;
   }
   .mainHolder {
-    background-color: black;
-    padding-top: 62px;
     position: relative;
+    min-height: 100rem;
   }
   .videoHolder {
-    margin-top: 8rem;
+    position: relative;
+    padding-top: 15rem;
+    min-height: 80rem;
+    overflow: hidden;
     text-align: center;
+    padding-bottom: 4rem;
   }
   .player {
-    height: 62rem;
-    margin: auto;
-  }
-  .listHolder {
     position: absolute;
-    right: 0;
-    top: 20rem;
-    width: 18rem;
-    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 60rem;
+    border: 2px solid white;
   }
-  ul {
-    margin-top: 0;
-    padding-left: 0;
-    padding-top: 0;
+  /* special k-blaze effect */
+  .listHolder {
+    width: 100%;
+    position: relative;
+    top: -10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
   }
-  li {
-    line-height: 6rem;
-    padding-left: 1rem;
-    height: 6rem;
-    margin-top: -2px;
-    margin-left: 12rem;
-    list-style-type: none;
-    color: white;
-    font-size: 2rem;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-    transition-property: margin-left;
-    transition-duration: 1s;
+  .listBlock {
     cursor: pointer;
-    border-radius: 30px 0 0 30px ;
-    overflow: hidden;
+    color: white;
+    width: 15rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
   }
-  li:hover {
-    margin-left: 0;
+  .listBlock:not(:last-child) {
+    margin-left: -4rem;
+  }
+  .listBlock:hover {
+    margin-left: -2rem;
+    color: white;
+    width: 35rem;
+    transform: skewX(0deg);
+  }
+  .thumbnailHolder {
+    transform: skewX(-8deg);
+    overflow: hidden;
+    box-shadow: 2px 2px 4px black;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -0.5rem;
+    transform: skewX(8deg) scale(1.1, 1.1);
+  }
+  .thumbnail:hover {
+    border-radius: 0 0 10px 10px;
+  }
+  .selected {
+    height: 18rem;
+    border-radius: 0 0 10px 10px;
+  }
+  .notSelected {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -0.5rem;
+    transform: skewX(8deg) scale(1.1, 1.1);
+  }
+  .selectedList {
+    margin-left: 0rem;
+    color: white;
+    width: 35rem;
+    transform: skewX(0deg);
+  }
+  .notSelectedList {
+    cursor: pointer;
+    color: white;
+    width: 15rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
   }
 </style>
