@@ -31,6 +31,9 @@ export default {
   a {
     text-decoration: none;
   }
+  .fa {
+    font-size: 1.2rem;
+  }
   .navTextHome:hover {
     color: red;
     text-shadow: 2px 2px 2px grey;
@@ -39,14 +42,15 @@ export default {
   .navHolder {
     display: flex;
     flex-wrap: nowrap;
-    align-items: baseline;
+    align-items: center;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    height: 100%;
   }
   .navHolder > div {
     text-align: center;
-    width: 8%;
+    margin-right: 1.2rem;
   }
   .navHolder > div::after {
     content: '';
