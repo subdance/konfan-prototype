@@ -1,20 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <div class="showBox" id="box1">
-      <video autoplay muted loop id="myVideo" >
-        <source src="./assets/video/trim1.mp4" type="video/mp4">
-      </video>
-      <transition name="el-fade-in-linear">
-        <div class="mainIntro" v-show='isTextOneShow'>
-          <span :style="styleObject1">{{ nowMainIntroText }}</span>
-        </div>
-      </transition>
-      <transition name="el-fade-in-linear">
-        <div class="mainIntro" v-show='isTextTwoShow'>
-          <span :style="styleObject2">{{ nowMainIntroText }}</span>
-        </div>
-      </transition>
-    </div>
+    <theater></theater>
     <div class="showBox" id="box2">
       <table>
         <tr>
@@ -121,9 +107,11 @@
 <script>
 import eventBus from '@/eventbus.js'
 import interview from '@/components/homePage_interview.vue'
+import theater from '@/components/homePage_theater.vue'
 export default {
   components: {
     interview,
+    theater,
   },
   data(){
     return {
@@ -140,26 +128,6 @@ export default {
         '以及些许手忙脚乱的练习，构成了云朵般的日常',
         '还有最最,最重要的——互相陪伴的彼此',
       ],
-      isTextOneShow: true,
-      isTextTwoShow: false,
-      textIndex: 1,
-      styleObject1: {
-        fontSize: '3rem',
-        color: '#F2F6FC',
-      },
-      styleObject2: {
-        fontSize: '3rem',
-        color: '#F2F6FC',
-      },
-      nowMainIntroText: "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】",
-      backMainIntroText: [
-        "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
-        "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”— 梓",
-        "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
-        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”— 澪",
-        "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”— 律",
-        "“大家都好厉害，不要扔下我独自长大哦”— 唯"
-      ],
       introPic: [
         'http://35.244.189.64/k-on-fan/image/home-pic/9.jpg',
         'http://35.244.189.64/k-on-fan/image/home-pic/4.jpg',
@@ -169,23 +137,12 @@ export default {
     }
   },
   created(){
-    setInterval(this.changeShow, 4000);
     eventBus.$emit('changeFixPlayer', true);
     eventBus.$emit('stopMusic', false);
   },
   computed:{
   },
   methods: {
-    changeShow(){
-      var length = this.backMainIntroText.length ;
-      this.isTextOneShow = !this.isTextOneShow;
-      this.nowMainIntroText = this.backMainIntroText[this.textIndex];
-      this.isTextTwoShow = !this.isTextTwoShow;
-      this.textIndex++;
-      if(this.textIndex == length){
-        this.textIndex = 0;
-      }
-    },
     setDisplay(index){
       this.$set(this.innerDisplayArray, index, true);
     },
@@ -269,45 +226,6 @@ export default {
   }
   .to-right {
     text-align: right;
-  }
-  .mainIntro {
-    display: inline-block;
-    padding: 1rem 2rem 1rem;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    margin: 0;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .mainIntro::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #303133;
-    opacity: 0.6;
-    z-index: -1;
-  }
-  .mainIntro::first-letter {
-    font-size: 4rem;
-  }
-  #box1 {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-  }
-  #myVideo {
-    position: absolute;
-    top: -6rem;
-    width: 100%;
-    z-index: -100;
   }
   #box2 {
     background: #ff6e7f;  /* fallback for old browsers */
