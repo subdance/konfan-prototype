@@ -236,7 +236,6 @@ export default {
     text-align: center;
     width: 100%;
     font-size: 2rem;
-    /* color: #303133; */
     color: #F2F6FC;
     font-weight: bold;
     mix-blend-mode: exclusion;

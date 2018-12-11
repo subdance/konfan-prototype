@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <div class="showBox" id="box1">
+    <div id="box1">
       <video autoplay muted loop id="myVideo" >
         <source src="../assets/video/trim1.mp4" type="video/mp4">
       </video>
@@ -67,16 +67,11 @@ export default {
     width: 100%;
     position: relative;
   }
-  .showBox {
-    background-size: cover;
-    width: 100%;
-    min-height: 760px;
-  }
   .mainIntro {
     display: inline-block;
     padding: 1rem 2rem 1rem;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     margin: 0;
     -ms-transform: translate(-50%, -50%);
@@ -100,15 +95,20 @@ export default {
     font-size: 4rem;
   }
   #box1 {
-    position: relative;
     width: 100%;
+    height: 55rem;
+    overflow: auto;
+    position: relative;
     overflow: hidden;
     z-index: 1;
   }
   #myVideo {
     position: absolute;
-    top: -6rem;
     width: 100%;
-    z-index: -100;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 </style>

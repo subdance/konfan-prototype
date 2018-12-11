@@ -24,17 +24,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="mcHolder">
-      <div class="mcIntroLeft">
-
-      </div>
-      <div class="mcIntroRight">
-
-      </div>
-      <div class="mcImgHolder">
-
-      </div>
-    </div> -->
   </div>
 </template>
 
