@@ -5,6 +5,7 @@
     ref='aplayer'
     :audio="audio"
     autoplay
+    :listMaxHeight='moePlayer.listMaxHeight'
     :volume='moePlayer.volume'
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
@@ -25,6 +26,7 @@ export default {
         isListFolded: false,
         theme: '#1396f1',
         volume: 0.2,
+        listMaxHeight: 800,//px
       },
       audio: [
         {
@@ -119,6 +121,7 @@ export default {
     position: fixed;
     top: 60px;
     right: 0;
-    width: 40rem;
+    width: 20vw;
+
   }
 </style>
