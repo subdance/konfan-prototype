@@ -27,10 +27,10 @@
 
 <script>
 import eventBus from '@/eventbus.js'
-import footBar from '@/components/footbar.vue'
-import iconHolder from '@/components/icon_holder.vue'
-import navBar from '@/components/navbar.vue'
-import scrollTop from '@/components/back_to_top.vue'
+import footBar from '@/components/general_footbar.vue'
+import iconHolder from '@/components/general_icon_holder.vue'
+import navBar from '@/components/general_navbar.vue'
+import scrollTop from '@/components/general_back_to_top.vue'
 export default {
   name: 'App',
   components: {
