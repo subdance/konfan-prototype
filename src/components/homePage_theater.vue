@@ -96,7 +96,7 @@ export default {
   }
   #box1 {
     width: 100%;
-    height: 55rem;
+    height: 100vh;
     overflow: auto;
     position: relative;
     overflow: hidden;
