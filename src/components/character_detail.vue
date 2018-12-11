@@ -480,6 +480,7 @@ export default {
   }
   table {
     margin: auto;
+    width: 80%;
   }
   #addTextHolder {
     font-size: 1.6rem;
