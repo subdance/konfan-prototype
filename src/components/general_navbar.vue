@@ -4,7 +4,7 @@
     <div><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></div>
     <div><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></div>
     <div><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></div>
-    <div><router-link to="/t" ><span class="navTextHome">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
+    <div id="last"><router-link to="/t" ><span class="navTextHome" style="color: white;">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
   </div>
 </template>
 
@@ -34,6 +34,11 @@ export default {
   .fa {
     font-size: 1.2rem;
   }
+  .navTextHome {
+    font-size: 1.6rem;
+    color: #df000a;
+    font-weight: bold;
+  }
   .navTextHome:hover {
     color: red;
     text-shadow: 2px 2px 2px grey;
@@ -62,9 +67,8 @@ export default {
   .navHolder > div:hover::after {
     transform: scale(1);
   }
-  .navTextHome {
-    font-size: 1.6rem;
-    color: #df000a;
-    font-weight: bold;
+  #last {
+    margin-left: auto;
   }
+
 </style>
