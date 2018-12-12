@@ -604,7 +604,7 @@ export default {
     transform: rotate(-20deg);
     box-shadow: 4px 4px 2px black;
     cursor: pointer;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
     overflow: hidden;
   }
   .outerHolder {
