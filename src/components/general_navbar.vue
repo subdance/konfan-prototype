@@ -61,7 +61,7 @@ export default {
     transform: translate(0, -50%);
     height: 100%;
   }
-  .navHolder > div {
+  .navHolder > div:not(:last-child) {
     text-align: center;
     margin-right: 1.2rem;
   }
@@ -93,6 +93,9 @@ export default {
     transform: translate(-50%, -50%);
   }
   @media only screen and (max-width: 600px) {
-
+    .navHolder {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 </style>
