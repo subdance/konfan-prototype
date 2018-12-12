@@ -143,6 +143,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
+    overflow: hidden;
   }
   .listBlock {
     cursor: pointer;
