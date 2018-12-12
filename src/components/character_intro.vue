@@ -134,7 +134,7 @@
     z-index: 1;
     margin: auto;
     background-image: url('../assets/background/1.png');
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     height: 100vh;
   }
   .imgHolder {

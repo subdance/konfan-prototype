@@ -46,8 +46,8 @@
           <div
             :class='{altHolder: isBigPic, smallAltHolder: !isBigPic}'
             @click='togglePic'
-            :style="{ backgroundImage: 'url(' + backPic[randomIndex] + ')' }"
             >
+            <img class="altImg" :src="backPic[randomIndex]" alt="">
           </div>
         </transition>
       </div>
@@ -480,6 +480,7 @@ export default {
   }
   table {
     margin: auto;
+    width: 80%;
   }
   #addTextHolder {
     font-size: 1.6rem;
@@ -588,10 +589,6 @@ export default {
   .altHolder {
     margin: auto;
     width: 80%;
-    height: 60rem;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
     border: 2rem solid white;
     box-shadow: 8px 8px 2px black;
     transition: 0.5s ease-in-out;
@@ -603,12 +600,12 @@ export default {
     left: -4rem;
     top: 8rem;
     width: 20rem;
-    height: 10rem;
     border: 0.5rem solid white;
     transform: rotate(-20deg);
     box-shadow: 4px 4px 2px black;
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
+    overflow: hidden;
   }
   .outerHolder {
     display: inline-block;
@@ -620,5 +617,9 @@ export default {
   .outerText {
     font-size: 1.1rem;
     color: #909399;
+  }
+  .altImg {
+    width: 100%;
+    margin-bottom: -1rem;
   }
 </style>
