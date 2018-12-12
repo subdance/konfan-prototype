@@ -35,13 +35,13 @@ export default {
     font-size: 1.2rem;
   }
   .navTextHome {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: #df000a;
     font-weight: bold;
   }
   .navTextHome:hover {
     color: red;
-    text-shadow: 2px 2px 2px grey;
+    text-shadow: 2px 2px 1px black;
     transition: all 200ms ease-in-out;
   }
   .navHolder {
