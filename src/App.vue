@@ -12,7 +12,6 @@
       />
     <el-header>
       <navBar style="position: relative; z-index: 1;"></navBar>
-      <iconHolder style=" z-index: 1;"></iconHolder>
     </el-header>
 
     <el-main>
@@ -28,7 +27,6 @@
 <script>
 import eventBus from '@/eventbus.js'
 import footBar from '@/components/general_footbar.vue'
-import iconHolder from '@/components/general_icon_holder.vue'
 import navBar from '@/components/general_navbar.vue'
 import scrollTop from '@/components/general_back_to_top.vue'
 export default {
@@ -36,7 +34,6 @@ export default {
   components: {
     navBar,
     footBar,
-    iconHolder,
     scrollTop,
   },
   data(){

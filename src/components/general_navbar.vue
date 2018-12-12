@@ -4,7 +4,15 @@
     <div><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></div>
     <div><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></div>
     <div><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></div>
-    <div id="last"><router-link to="/t" ><span class="navTextHome" style="color: white;">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
+    <div id="lastNavBlock"><router-link to="/t" ><span class="navTextHome" style="color: white;">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
+    <div class="iconHolder">
+      <a
+        href="https://baike.baidu.com/item/%E8%BD%BB%E9%9F%B3%E5%B0%91%E5%A5%B3/5182240?fr=aladdin"
+        target="_blank"
+        >
+        <img src='../assets/background/3.png'>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -67,8 +75,24 @@ export default {
   .navHolder > div:hover::after {
     transform: scale(1);
   }
-  #last {
+  #lastNavBlock {
     margin-left: auto;
   }
+  img {
+    height: 60px;
+    margin-top: -3px;
+  }
+  .iconHolder {
+    display: inline-block;
+    height: 60px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  @media only screen and (max-width: 600px) {
 
+  }
 </style>
