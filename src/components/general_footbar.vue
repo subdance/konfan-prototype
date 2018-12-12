@@ -1,7 +1,6 @@
 <template lang="html">
   <div id="footHolder">
     <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="iconPic" src="../assets/element/k-on.png" alt=""></a>
-
     <div class="textHolder">
       开源技术支持 :
       <span>
@@ -68,7 +67,7 @@ export default {
     position: relative;
   }
   .iconPic {
-    height: 66px;
+    height: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
