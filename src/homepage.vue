@@ -2,7 +2,8 @@
   <div class="mainContainer">
     <theater></theater>
     <div class="backgroundHolder">
-      <crossTable></crossTable>
+      <crossTable style="z-index: 20;"></crossTable>
+      <!-- <img class='floatingImg' src="http://35.244.189.64/k-on-fan/image/home-pic/guitar.png" alt=""> -->
       <div class="bottomHolder">
         <img class="bottomImg" src="http://35.244.189.64/k-on-fan/image/home-pic/10.png" alt="">
       </div>
@@ -73,6 +74,7 @@ export default {
   .mainContainer {
     width: 100%;
     position: relative;
+    overflow: hidden;
   }
   .bottomHolder {
     margin-top: -5rem;
@@ -86,5 +88,14 @@ export default {
     height:58em;
     object-fit: cover;
     object-position: top;
+  }
+  .floatingImg {
+    display: block;
+    position: absolute;
+    height:100vh;
+    left: 0;
+    transform: translate(-50%, 0) rotateZ(-90deg);
+    top: 250vh;
+    z-index: 0;
   }
 </style>
