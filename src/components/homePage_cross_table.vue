@@ -213,9 +213,4 @@ export default {
   .to-right {
     text-align: right;
   }
-  #box2 {
-    background: #ff6e7f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
 </style>
