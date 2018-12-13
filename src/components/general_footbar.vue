@@ -7,7 +7,7 @@
         <a target='_blank' href="https://cn.vuejs.org/">Vue.js&nbsp &nbsp</a>
         <a target='_blank' href="https://github.com/ElemeFE/element">Element.UI&nbsp &nbsp</a>
         <a target='_blank' href="https://github.com/MoePlayer/vue-aplayer">MoePlayer&nbsp &nbsp</a>
-        <a target='_blank' href="http://fontawesome.dashgame.com/">fontawesome</a>
+        <a target='_blank' href="http://fontawesome.dashgame.com/">FontAwesome</a>
       </span>
     </div>
     <popover title='内容助力感谢' :content='content'></popover>
@@ -75,8 +75,8 @@ export default {
   }
   .textHolder {
     position: absolute;
-    right:20rem;
-    top:0;
+    left: 100px;
+    top: 0;
     height: 66px;
     line-height: 66px;
     color: #606266;

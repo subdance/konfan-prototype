@@ -3,7 +3,7 @@
     <div class="contentHolder rightContent">
       <img class="contentImg" src="../assets/character/nodoka.jpg" alt="">
       <p class="contentText">
-        “轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演还是十分有感染力。”</br>
+        “轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演十分有感染力。”</br>
         <span class="name">学生会长--真锅和</br></span>
       </p>
     </div>
