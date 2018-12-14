@@ -176,7 +176,6 @@ export default {
     z-index: -1;
     transform: scale(1.08);
   }
-
   .innerHolder {
     z-index: 1;
     width: 100%;
@@ -190,9 +189,41 @@ export default {
     position: relative;
   }
   @media only screen and (max-width:600px) {
+    .flexContainer{
+      padding-top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
+    }
     .mainContainer {
       position: relative;
       z-index: 99;
     }
+    .flexPicItem {
+      position: relative;
+      width: 100%;
+      height: 30rem;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0;
+      z-index: 1;
+    }
+    .flexTextItem {
+      height: auto;
+      width: 100%;
+      position: static;
+      font-size: 1rem;
+      color: #303133;
+    }
+    .flexTextItem > div {
+      width: 100%;
+      position: static;
+      transform: translate(0, 0);
+    }
+    .innerHolder {
+      font-size: 2.5rem;
+    }
+
   }
 </style>
