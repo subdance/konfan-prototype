@@ -56,4 +56,9 @@ export default {
     object-fit: contain;
     object-position: center;
   }
+  @media only screen and (max-width: 600px) {
+    img {
+      height: 7rem;
+    }
+  }
 </style>
