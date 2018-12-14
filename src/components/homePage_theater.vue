@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <div id="box1" ref='box1'>
+    <div id="box1">
       <video autoplay muted loop id="myVideo" ref='myVideo'>
         <source src="../assets/video/trim1.mp4" type="video/mp4">
       </video>
@@ -94,9 +94,7 @@ export default {
   #box1 {
     width: 100%;
     height: 100vh;
-    overflow: auto;
     position: relative;
-    overflow: hidden;
     z-index: 1;
   }
   #myVideo {
@@ -146,7 +144,7 @@ export default {
       position: absolute;
       content: '';
       top: 0;
-      bottom: 0;
+      bottom: 1px;
       left: 0;
       background-color: black;
       opacity: 0.5;

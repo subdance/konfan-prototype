@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <div class="showBox" id="box2">
+    <div>
       <div class="flexContainer">
         <div
           class="flexPicItem"
@@ -168,7 +168,7 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     filter: blur(10px);
     background-color: black;
@@ -190,6 +190,9 @@ export default {
     position: relative;
   }
   @media only screen and (max-width:600px) {
-
+    .mainContainer {
+      position: relative;
+      z-index: 99;
+    }
   }
 </style>
