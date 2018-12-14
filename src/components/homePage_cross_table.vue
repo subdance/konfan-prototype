@@ -1,100 +1,90 @@
 <template lang="html">
   <div class="mainContainer">
     <div class="showBox" id="box2">
-      <table>
-        <tr>
-          <td >
-            <div
-              class="imgHolder"
-              :style="{ backgroundImage: 'url(' + introPic[0] + ')' }"
-              @mouseenter='setDisplay(0)'
-              @mouseleave='setHide(0)'
-              >
-              <div
-                class="innerHolder"
-                v-show='innerDisplayArray[0]'
-                >
-                于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="introTextHolder to-left">
-              <p>{{ introTitle[0] }}</p>
-              <p>{{ introText[0] }}</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="introTextHolder to-right">
-              <p>{{ introTitle[1] }}</p>
-              <p>{{ introText[1] }}</p>
-            </div>
-          </td>
-          <td >
-            <div
-              class="imgHolder"
-              :style="{ backgroundImage: 'url(' + introPic[1] + ')' }"
-              @mouseenter='setDisplay(1)'
-              @mouseleave='setHide(1)'
-              >
-              <div
-                class="innerHolder"
-                v-show='innerDisplayArray[1]'
-                >
-                废萌时代自此开启，“京都腿”与“京都脸”也被推向了世界。
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td >
-            <div
-              class="imgHolder"
-              :style="{ backgroundImage: 'url(' + introPic[2] + ')' }"
-              @mouseenter='setDisplay(2)'
-              @mouseleave='setHide(2)'
-              >
-              <div
-                class="innerHolder"
-                v-show='innerDisplayArray[2]'
-                >
-                五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="introTextHolder to-left">
-              <p>{{ introTitle[2] }}</p>
-              <p>{{ introText[2] }}</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="introTextHolder to-right">
-              <p>{{ introTitle[3] }}</p>
-              <p>{{ introText[3] }}</p>
-            </div>
-          </td>
-          <td >
-            <div
-              class="imgHolder"
-              :style="{ backgroundImage: 'url(' + introPic[3] + ')' }"
-              @mouseenter='setDisplay(3)'
-              @mouseleave='setHide(3)'
-              >
-              <div
-                class="innerHolder"
-                v-show='innerDisplayArray[3]'
-                >
-                轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
+      <div class="flexContainer">
+        <div
+          class="flexPicItem"
+          :style="{ backgroundImage: 'url(' + introPic[0] + ')' }"
+          @mouseenter='setDisplay(0)'
+          @mouseleave='setHide(0)'
+          >
+          <div
+            class="innerHolder"
+            v-show='innerDisplayArray[0]'
+            >
+            于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。
+          </div>
+        </div>
+        <div class="flexTextItem">
+          <div style="text-align: left;">
+            <p>{{ introTitle[0] }}</p>
+            <p>{{ introText[0] }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flexContainer">
+        <div class="flexTextItem">
+          <div style="text-align: right;">
+            <p>{{ introTitle[1] }}</p>
+            <p>{{ introText[1] }}</p>
+          </div>
+        </div>
+        <div
+          class="flexPicItem"
+          :style="{ backgroundImage: 'url(' + introPic[1] + ')' }"
+          @mouseenter='setDisplay(1)'
+          @mouseleave='setHide(1)'
+          >
+          <div
+            class="innerHolder"
+            v-show='innerDisplayArray[1]'
+            >
+            于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。
+          </div>
+        </div>
+      </div>
+      <div class="flexContainer">
+        <div
+          class="flexPicItem"
+          :style="{ backgroundImage: 'url(' + introPic[2] + ')' }"
+          @mouseenter='setDisplay(2)'
+          @mouseleave='setHide(2)'
+          >
+          <div
+            class="innerHolder"
+            v-show='innerDisplayArray[2]'
+            >
+            五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。
+          </div>
+        </div>
+        <div class="flexTextItem">
+          <div style="text-align: left;">
+            <p>{{ introTitle[2] }}</p>
+            <p>{{ introText[2] }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flexContainer">
+        <div class="flexTextItem">
+          <div style="text-align: right;">
+            <p>{{ introTitle[3] }}</p>
+            <p>{{ introText[3] }}</p>
+          </div>
+        </div>
+        <div
+          class="flexPicItem"
+          :style="{ backgroundImage: 'url(' + introPic[3] + ')' }"
+          @mouseenter='setDisplay(3)'
+          @mouseleave='setHide(3)'
+          >
+          <div
+            class="innerHolder"
+            v-show='innerDisplayArray[3]'
+            >
+            轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。
+          </div>
+        </div>
+      </div>
       <interview></interview>
     </div>
   </div>
@@ -144,38 +134,36 @@ export default {
   * {
     box-sizing: border-box;
   }
-  table {
-    width: 100%;
+  .flexContainer{
     padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-  td {
-    width: 50% !important;
-  }
-  .innerHolder {
-    z-index: 1;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    color: white;
-    font-size: 4rem;
-    text-align: center;
-    padding-top: 6rem;
+    flex-wrap: wrap;
   }
-  .mainContainer {
-    width: 100%;
+  .flexPicItem {
     position: relative;
-  }
-  .imgHolder {
-    margin: auto;
-    position: relative;
-    width: 80%;
+    width: 40%;
     height: 30rem;
     background-position: center;
     background-size: cover;
-    z-index: 1;
     border-radius: 7px;
-    box-shadow: 3px 3px 5px black;
+    z-index: 1;
   }
-  .imgHolder:hover::after {
+  .flexTextItem {
+    height: 30rem;
+    width: 40%;
+    position: relative;
+    font-size: 2rem;
+    color: #303133;
+  }
+  .flexTextItem > div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .flexPicItem:hover::after {
     content: '';
     position: absolute;
     top: 0;
@@ -188,29 +176,20 @@ export default {
     z-index: -1;
     transform: scale(1.08);
   }
-  .showBox {
-    background-size: cover;
+
+  .innerHolder {
+    z-index: 1;
     width: 100%;
-    min-height: 760px;
-  }
-  .subText {
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 6rem;
   }
-  .mainText {
-    color: white;
-    font-size: 3rem;
+  .mainContainer {
+    width: 100%;
+    position: relative;
   }
-  .introTextHolder {
-    font-size: 2rem;
-    color: #303133;
-    margin: auto;
-    width: 80%;
-  }
-  .to-left {
-    text-align: left;
-  }
-  .to-right {
-    text-align: right;
+  @media only screen and (max-width:600px) {
+
   }
 </style>
