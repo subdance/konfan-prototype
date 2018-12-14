@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="navHolder">
-    <div><router-link to="/"  @click='changeFixPlayer(true)'><span class="navTextHome">HTT活动室&nbsp<i class="fa fa-home fa-lg" style="color: white;"></i></span></router-link></div>
-    <div><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp<i class="fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></div>
-    <div><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp<i class="fa fa-image fa-lg" style="color: white;"></i></span></router-link></div>
-    <div><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp<i class="fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></div>
-    <div id="lastNavBlock"><router-link to="/t" ><span class="navTextHome" style="color: white;">雲上茶屋&nbsp<i class="fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/"  @click='changeFixPlayer(true)'><span class="navTextHome">HTT活动室&nbsp</span><i class="icon fa fa-home fa-lg" style="color: white;"></i></router-link></div>
+    <div><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp</span><i class="icon fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp</span><i class="icon fa fa-image fa-lg" style="color: white;"></i></span></router-link></div>
+    <div><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp</span><i class="icon fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></div>
+    <div id="lastNavBlock"><router-link to="/t" ><span class="navTextHome" style="color: white;">雲上茶屋&nbsp</span><i class="icon fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
     <div class="iconHolder">
       <a
         href="https://baike.baidu.com/item/%E8%BD%BB%E9%9F%B3%E5%B0%91%E5%A5%B3/5182240?fr=aladdin"
@@ -93,9 +93,27 @@ export default {
     transform: translate(-50%, -50%);
   }
   @media only screen and (max-width: 600px) {
-    .navHolder {
-      flex-direction: column;
-      flex-wrap: nowrap;
+    .navHolder > div {
+      flex-grow: 1;
+      margin-right: 0.5rem;
+    }
+    .navHolder > div::after {
+      content: '';
+      position: relative;
+      top: 0.5rem;
+      display: block;
+      border-bottom: 2px solid white;
+      transform: scale(0);
+      transition: transform 250ms ease-in-out;
+    }
+    .navTextHome {
+      display: none;
+    }
+    img {
+      display: none;
+    }
+    .icon {
+      font-size: 2.5rem;
     }
   }
 </style>
