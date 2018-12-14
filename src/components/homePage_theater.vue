@@ -6,12 +6,12 @@
       </video>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextOneShow'>
-          <span :style="styleObject1">{{ nowMainIntroText }}</span>
+          <span class="introText">{{ nowMainIntroText }}</span>
         </div>
       </transition>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextTwoShow'>
-          <span :style="styleObject2">{{ nowMainIntroText }}</span>
+          <span class="introText">{{ nowMainIntroText }}</span>
         </div>
       </transition>
     </div>
@@ -25,14 +25,6 @@ export default {
       isTextOneShow: true,
       isTextTwoShow: false,
       textIndex: 1,
-      styleObject1: {
-        fontSize: '3rem',
-        color: '#F2F6FC',
-      },
-      styleObject2: {
-        fontSize: '3rem',
-        color: '#F2F6FC',
-      },
       nowMainIntroText: "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】",
       backMainIntroText: [
         "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
@@ -63,12 +55,16 @@ export default {
 </script>
 
 <style scoped>
+  .introText {
+    font-size: 3rem;
+    color: #F2F6FC;
+  }
   .mainContainer {
+
     width: 100%;
     position: relative;
   }
   .mainIntro {
-    display: inline-block;
     padding: 1rem 2rem 1rem;
     position: absolute;
     top: 50%;
@@ -110,5 +106,47 @@ export default {
     margin: 0;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+  @media only screen and (max-width: 600px) {
+    .mainContainer {
+      padding-top: 60px;
+    }
+    #box1 {
+      height: 50vh;
+    }
+    #myVideo {
+      position: static;
+      width: 100%;
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    .transPart {
+      position: absolute;
+      bottom: 0;
+    }
+    .introText {
+      font-size: 1rem;
+    }
+    .mainIntro {
+      box-sizing: border-box;
+      padding: 1rem 2rem 1rem;
+      width: 100%;
+      position: static;
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    .mainIntro::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #303133;
+      opacity: 0.6;
+    }
+    .mainIntro::first-letter {
+      font-size: 2rem;
+    }
   }
 </style>
