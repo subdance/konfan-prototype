@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="mainContainer">
-    <div id="box1">
-      <video autoplay muted loop id="myVideo" >
+    <div id="box1" ref='box1'>
+      <video autoplay muted loop id="myVideo" ref='myVideo'>
         <source src="../assets/video/trim1.mp4" type="video/mp4">
       </video>
       <transition name="el-fade-in-linear">
@@ -39,6 +39,8 @@ export default {
   created(){
     setInterval(this.changeShow, 4000);
   },
+  mounted(){
+  },
   methods:{
     changeShow(){
       var length = this.backMainIntroText.length ;
@@ -60,7 +62,6 @@ export default {
     color: #F2F6FC;
   }
   .mainContainer {
-
     width: 100%;
     position: relative;
   }
@@ -112,13 +113,14 @@ export default {
       padding-top: 60px;
     }
     #box1 {
-      height: 50vh;
+      height: auto;
     }
     #myVideo {
       position: static;
       width: 100%;
       -ms-transform: translate(0, 0);
       transform: translate(0, 0);
+      margin: 0;
     }
     .transPart {
       position: absolute;
@@ -129,11 +131,16 @@ export default {
     }
     .mainIntro {
       box-sizing: border-box;
-      padding: 1rem 2rem 1rem;
+      padding: 0.3rem 2rem 0.3rem;
       width: 100%;
-      position: static;
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
       -ms-transform: translate(0, 0);
       transform: translate(0, 0);
+      border-radius: 0;
     }
     .mainIntro::after {
       position: absolute;
@@ -142,11 +149,11 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: #303133;
-      opacity: 0.6;
+      background-color: black;
+      opacity: 0.5;
     }
     .mainIntro::first-letter {
-      font-size: 2rem;
+      font-size: 1.3rem;
     }
   }
 </style>
