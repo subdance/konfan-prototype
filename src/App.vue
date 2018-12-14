@@ -128,5 +128,6 @@ export default {
   }
   .el-footer {
     padding: 0;
+    height: 66px;
   }
 </style>
