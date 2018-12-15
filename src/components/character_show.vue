@@ -1,25 +1,23 @@
 <template lang="html">
-  <div>
-    <div class="tabHolder">
-      <div class="carouselPart">
-        <el-carousel
-          indicator-position="inside"
-          height='100vh'
-          trigger='click'
-          :autoplay='autoplay'
+  <div class="tabHolder">
+    <div>
+      <el-carousel
+        indicator-position="inside"
+        trigger='click'
+        :autoplay='autoplay'
+        :height='carouselHeight'
+        >
+        <el-carousel-item
+          v-for="item in 5"
+          :key="item"
           >
-          <el-carousel-item
-            v-for="item in 5"
-            :key="item"
-            >
-            <div class="introHolder">
-              <p class="girlNameText">{{ backName[ item - 1 ] }}</p>
-              <p class="girlIntroText">{{ backIntro[ item - 1 ] }}</p>
-            </div>
-            <img class="bigImg" :src='backPic[ item - 1 ]' alt="">
-          </el-carousel-item>
-        </el-carousel>
-      </div>
+          <div class="introHolder">
+            <p class="girlNameText">{{ backName[ item - 1 ] }}</p>
+            <p class="girlIntroText">{{ backIntro[ item - 1 ] }}</p>
+          </div>
+          <img class="bigImg" :src='backPic[ item - 1 ]' alt="">
+        </el-carousel-item>
+      </el-carousel>
     </div>
   </div>
 </template>
@@ -49,10 +47,22 @@
           '辅音吉他手，唯宠',
         ],
         isIconShow: [true, false, false, false, false],
+        carouselHeight: '',
       }
     },
-  methods: {
-  },
+    created(){
+      this.setHeight();
+    },
+    methods: {
+      setHeight(){
+        if(window.innerWidth < 600){
+          this.carouselHeight = 60 + 'vh';
+        }
+        else{
+          this.carouselHeight = 100 + 'vh';
+        }
+      },
+    },
 }
 </script>
 
@@ -65,8 +75,6 @@
     height: 80rem;
     object-position: center;
     object-fit: cover;
-    opacity:1;
-    transition: opacity 0.5s linear;
   }
   .tabHolder {
     position: relative;
@@ -80,10 +88,7 @@
   .introHolder {
     position: absolute;
     bottom: 10rem;
-    left: 0;
-    display: inline-block;
-    margin-top: 40rem;
-    margin-left: 200px;
+    left: 20rem;
   }
   .girlNameText {
     font-size: 7rem;
@@ -96,5 +101,27 @@
     color: #C0C4CC;
     font-size: 2rem;
     font-weight: bold;
+  }
+  @media only screen and (max-width: 600px) {
+    .tabHolder {
+      padding-top: 60px;
+    }
+    .bigImg {
+      width: 100%;
+      height: 60vh;
+      object-position: center;
+      object-fit: cover;
+    }
+    .introHolder {
+      position: absolute;
+      bottom: 5vh;
+      left: 1rem;
+    }
+    .girlNameText {
+      font-size: 2rem;
+    }
+    .girlIntroText {
+      font-size: 1.5rem;
+    }
   }
 </style>
