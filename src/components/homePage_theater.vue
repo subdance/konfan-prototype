@@ -125,7 +125,7 @@ export default {
       bottom: 0;
     }
     .introText {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
     .mainIntro {
       box-sizing: border-box;

@@ -3,7 +3,6 @@
     <theater></theater>
     <div class="backgroundHolder">
       <crossTable style="z-index: 20;"></crossTable>
-      <!-- <img class='floatingImg' src="http://35.244.189.64/k-on-fan/image/home-pic/guitar.png" alt=""> -->
       <div class="bottomHolder">
         <img class="bottomImg" src="http://35.244.189.64/k-on-fan/image/home-pic/10.png" alt="">
       </div>
@@ -97,5 +96,10 @@ export default {
     transform: translate(-50%, 0) rotateZ(-90deg);
     top: 250vh;
     z-index: 0;
+  }
+  @media only screen and (max-width:600px) {
+    .bottomImg, .bottomHolder {
+      height: 20vh;
+    }
   }
 </style>
