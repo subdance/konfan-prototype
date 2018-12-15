@@ -39,7 +39,7 @@
             class="innerHolder"
             v-show='innerDisplayArray[1]'
             >
-            于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。
+            校园，废萌，社团，音乐等在当时新鲜无比的动画元素让轻音迅速走红。
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ export default {
     box-sizing: border-box;
   }
   .flexContainer{
-    padding-top: 4rem;
+    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -177,33 +177,35 @@ export default {
     transform: scale(1.08);
   }
   .innerHolder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     width: 100%;
     color: white;
     font-size: 4rem;
     text-align: center;
-    padding-top: 6rem;
   }
   .mainContainer {
     width: 100%;
     position: relative;
   }
   @media only screen and (max-width:600px) {
+    .mainContainer {
+      position: relative;
+      padding-top: 2rem;
+    }
     .flexContainer{
-      padding-top: 0;
       display: flex;
       justify-content: space-around;
       width: 100%;
       flex-wrap: wrap;
     }
-    .mainContainer {
-      position: relative;
-      z-index: 99;
-    }
     .flexPicItem {
       position: relative;
-      width: 100%;
-      height: 30rem;
+      width: 90%;
+      height: 20rem;
       background-position: center;
       background-size: cover;
       border-radius: 0;
@@ -211,9 +213,9 @@ export default {
     }
     .flexTextItem {
       height: auto;
-      width: 100%;
+      width: 90%;
       position: static;
-      font-size: 1rem;
+      font-size: 1.3rem;
       color: #303133;
     }
     .flexTextItem > div {
