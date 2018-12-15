@@ -58,7 +58,7 @@ export default {
   }
   @media only screen and (max-width: 600px) {
     img {
-      height: 7rem;
+      height: 10rem;
     }
   }
 </style>

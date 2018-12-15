@@ -99,7 +99,10 @@ export default {
   }
   @media only screen and (max-width:600px) {
     .bottomImg, .bottomHolder {
-      height: 20vh;
+      height: 30vh;
+    }
+    .bottomHolder {
+      margin-top: 3rem;
     }
   }
 </style>
