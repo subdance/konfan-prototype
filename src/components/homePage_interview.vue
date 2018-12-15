@@ -8,10 +8,10 @@
       </p>
     </div>
     <div class="contentHolder">
-        <p class="contentText">
-          “姐姐她以前可以无聊到在地上打滚，自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!”</br>
-          <span class="name">平泽唯的妹妹--平泽忧</br></span>
-        </p>
+      <p class="contentText">
+        “姐姐她以前可以无聊到在地上打滚，自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!”</br>
+        <span class="name">平泽唯的妹妹--平泽忧</br></span>
+      </p>
       <img class="contentImg" src="../assets/character/ui.jpg" alt="">
     </div>
     <div class="contentHolder">
@@ -72,5 +72,18 @@ export default {
     font-size: 1.5rem;
   }
   @media only screen and (max-width:600px) {
+    .contentHolder {
+      flex-wrap: wrap;
+    }
+    .contentImg {
+      width: 60vw;
+      margin-bottom: 1rem;
+    }
+    .contentHolder:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+    .contentText {
+      width: 70vw;
+    }
   }
 </style>
