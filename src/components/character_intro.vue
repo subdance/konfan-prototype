@@ -1,5 +1,12 @@
 <template lang="html">
-  <div  class="introHolder">
+  <div class="introHolder">
+    <div class="smallScreenSelector">
+      <div class="smallButton" @click='hideAndShow(1)'>Yui!</div>
+      <div class="smallButton" @click='hideAndShow(2)'>Ritsu!</div>
+      <div class="smallButton" @click='hideAndShow(3)'>Mio!</div>
+      <div class="smallButton" @click='hideAndShow(4)'>Tsumugi!</div>
+      <div class="smallButton" @click='hideAndShow(5)'>Azusa!</div>
+    </div>
     <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
     Yui!</div>
     <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
@@ -20,7 +27,7 @@
         </el-col>
         <el-col :span="7">
           <div class="imgHolder">
-            <img style="height: 600px;" :src="nowHeadPic" alt="">
+            <img  class="introImg" :src="nowHeadPic" alt="">
           </div>
         </el-col>
         <el-col :span="14">
@@ -84,9 +91,22 @@
           require('../assets/character_intro/mc4.png'),
           require('../assets/character_intro/mc5.png'),
         ],
+        isSmallScreen: false,
       }
     },
+    created(){
+      // this.isSmallScreen();
+    },
     methods:{
+      // isSmallScreen(){
+      //   if(window.innerWidth < 600){
+      //     this.isSmallScreen = true;
+      //   }
+      //   else{
+      //     this.isSmallScreen = false;
+      //   }
+      // },
+
       changeCharacter(index){
         var that = this;
         setTimeout(function(){
@@ -136,6 +156,8 @@
     background-image: url('../assets/background/1.png');
     background-repeat: repeat;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
   }
   .imgHolder {
     padding-top: 4rem;
@@ -168,6 +190,7 @@
     background-position: center;
     word-break: break-all;
     border-radius: 10px;
+
     border: 2px solid white;
     overflow: hidden;
     padding-left: 2rem;
@@ -212,6 +235,9 @@
     background-color: #303133;
     color: white;
   }
+  .smallScreenSelector {
+    display: none;
+  }
   .clicked {
     background-color: #303133;
     color: white;
@@ -240,6 +266,9 @@
     -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
     box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
     transition: 0.5s ease-in-out;
+  }
+  .introImg {
+    height: 600px;
   }
   #button1 {
     top: 5rem;
@@ -299,7 +328,7 @@
       width: 90%;
       height: auto;
       position: absolute;
-      top: 40vh;
+      top: 55vh;
       left: 50%;
       transform: translateX(-50%);
       background-image: none;
@@ -320,11 +349,44 @@
       position: relative;
       z-index: 999;
     }
+    .girlNameText {
+      font-size: 2rem;
+    }
+    .mainIntro {
+      font-size: 1.5rem;
+    }
     .girlTextHolder {
       display: none;
     }
+    .mainIntro {
+      line-height: 4rem;
+      letter-spacing: 0.4rem;
+    }
     .mcHolder {
       display: none;
+    }
+    .smallScreenSelector {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 0 1rem;
+    }
+    .smallButton {
+      box-sizing: border-box;
+      text-align: center;
+      flex-grow: 1;
+      font-size: 1.4rem;
+      color: #F56C6C;
+      border-radius: 20px;
+      border: 2px solid white;
+    }
+    .smallButton:hover {
+      color: white;
+    }
+    .imgHolder {
+      padding-top: 2rem;
+    }
+    .introImg {
+      height: 80vh;
     }
   }
 </style>
