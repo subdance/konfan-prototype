@@ -622,4 +622,13 @@ export default {
     width: 100%;
     margin-bottom: -1rem;
   }
+  @media only screen and (max-width:600px) {
+    .girlList {
+      flex-wrap: wrap;
+    }
+    .picTd {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
 </style>
