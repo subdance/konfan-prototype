@@ -64,6 +64,7 @@ export default {
   .mainContainer {
     width: 100%;
     position: relative;
+    background-color: #F2F6FC;
   }
   .mainIntro {
     padding: 1rem 2rem 1rem;

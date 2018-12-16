@@ -1,24 +1,22 @@
 <template lang="html">
   <div class="tabHolder">
-    <div>
-      <el-carousel
-        indicator-position="inside"
-        trigger='click'
-        :autoplay='autoplay'
-        :height='carouselHeight'
+    <el-carousel
+      :indicator-position="indicatorPos"
+      trigger='click'
+      :autoplay='autoplay'
+      :height='carouselHeight'
+      >
+      <el-carousel-item
+        v-for="item in 5"
+        :key="item"
         >
-        <el-carousel-item
-          v-for="item in 5"
-          :key="item"
-          >
-          <div class="introHolder">
-            <p class="girlNameText">{{ backName[ item - 1 ] }}</p>
-            <p class="girlIntroText">{{ backIntro[ item - 1 ] }}</p>
-          </div>
-          <img class="bigImg" :src='backPic[ item - 1 ]' alt="">
-        </el-carousel-item>
-      </el-carousel>
-    </div>
+        <div class="introHolder">
+          <p class="girlNameText">{{ backName[ item - 1 ] }}</p>
+          <p class="girlIntroText">{{ backIntro[ item - 1 ] }}</p>
+        </div>
+        <img class="bigImg" :src='backPic[ item - 1 ]' alt="">
+      </el-carousel-item>
+    </el-carousel>
   </div>
 </template>
 
@@ -48,6 +46,7 @@
         ],
         isIconShow: [true, false, false, false, false],
         carouselHeight: '',
+        indicatorPos: 'inside',
       }
     },
     created(){
@@ -57,9 +56,11 @@
       setHeight(){
         if(window.innerWidth < 600){
           this.carouselHeight = 60 + 'vh';
+          this.indicatorPos = 'outside';
         }
         else{
           this.carouselHeight = 100 + 'vh';
+          this.indicatorPos = 'inside';
         }
       },
     },
@@ -79,6 +80,7 @@
   .tabHolder {
     position: relative;
     width: 100%;
+    background-color: #303133;
   }
   .girlSubNameText {
     font-size: 1.5rem;
