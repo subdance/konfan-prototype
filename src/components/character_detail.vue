@@ -477,6 +477,7 @@ export default {
     width: 80%;
   }
   .flexHolder {
+    /* padding-top: 2rem; */
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -495,6 +496,7 @@ export default {
     margin: auto;
   }
   .mainHolder {
+    transition: 0.5s ease-in-out;
     width: 100%;
     padding-bottom: 1rem;
     background-image: url(../assets/background/4.png);
@@ -575,6 +577,7 @@ export default {
     overflow: hidden;
     min-height:62rem;
     position: relative;
+    transition: 0.5s ease-in-out;
   }
   .detailTd {
     color: #F2F6FC;
@@ -654,6 +657,7 @@ export default {
       box-shadow: 4px 4px 2px black;
       cursor: pointer;
       transition: 0.5s ease-in-out;
+      opacity: 0.5;
     }
     .flexHolder {
       flex-wrap: wrap;
