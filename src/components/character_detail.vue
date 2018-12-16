@@ -13,32 +13,26 @@
       </div>
       <div class="detailHolder">
         <transition name="el-fade-in-linear">
-          <div v-show='isDetailShowe'>
-            <table>
-              <tr>
-                <td class="detailTd">
-                  <p class="introPara" v-for='(paragraph) in backDetail1[index1].intro'> &nbsp  {{ paragraph }} </p>
-                </td>
-                <td class="detailTd">
-                  <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> &nbsp  {{ paragraph }}</p>
-                </td>
-                <td class="detailTd">
-                  <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
-                  <table style="text-align: center; position: relative;">
-                    <tr v-for='(basic, index) in basicIntro[index1].info'>
-                      <th>{{ basic.header }}</th>
-                      <td>{{ basic.detail }}</td>
-                    </tr>
-                    <div class="outerHolder">
-                      <span class="outerText">本文部分引自<a href="https://zh.moegirl.org/" target="_blank">萌娘百科</a>,文字内容遵守【知识共享 署名-非商业性使用-相同方式共享 3.0】协议。</span></br>
-                      <span class="outerText">本文部分引自<a href="https://wiki.komica.org/" target="_blank">KomicaWiki</a></span>
-                    </div>
-                  </table>
-                </td>
-              </tr>
-
-            </table>
-
+          <div v-show='isDetailShowe' class="flexHolder">
+            <div class="detailTd">
+              <p class="introPara" v-for='(paragraph) in backDetail1[index1].intro'> &nbsp  {{ paragraph }} </p>
+            </div>
+            <div class="detailTd">
+              <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> &nbsp  {{ paragraph }}</p>
+            </div>
+            <div class="detailTd">
+              <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
+              <table style="text-align: center; position: relative;">
+                <tr v-for='(basic, index) in basicIntro[index1].info'>
+                  <th>{{ basic.header }}</th>
+                  <td>{{ basic.detail }}</td>
+                </tr>
+              </table>
+              <div class="outerHolder">
+                <span class="outerText">本文部分引自<a href="https://zh.moegirl.org/" target="_blank">萌娘百科</a>,文字内容遵守【知识共享 署名-非商业性使用-相同方式共享 3.0】协议。</span></br>
+                <span class="outerText">本文部分引自<a href="https://wiki.komica.org/" target="_blank">KomicaWiki</a></span>
+              </div>
+            </div>
           </div>
         </transition>
 
@@ -482,6 +476,11 @@ export default {
     margin: auto;
     width: 80%;
   }
+  .flexHolder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
   #addTextHolder {
     font-size: 1.6rem;
     text-align: center;
@@ -496,7 +495,6 @@ export default {
     margin: auto;
   }
   .mainHolder {
-    padding-top: 4rem;
     width: 100%;
     padding-bottom: 1rem;
     background-image: url(../assets/background/4.png);
@@ -585,6 +583,7 @@ export default {
     padding: 1rem 1rem 0rem 1rem;
     vertical-align: top;
     border-right: 1px solid #C0C4CC;
+    position: relative;
   }
   .altHolder {
     margin: auto;
@@ -597,7 +596,7 @@ export default {
     background-position: center;
     background-size: cover;
     position: absolute;
-    left: -4rem;
+    left: -10rem;
     top: 8rem;
     width: 20rem;
     border: 0.5rem solid white;
@@ -608,10 +607,9 @@ export default {
     overflow: hidden;
   }
   .outerHolder {
-    display: inline-block;
     position: absolute;
-    bottom: -10rem;
-    right: 0;
+    bottom: 5rem;
+    right: 1rem;
     text-align: right;
   }
   .outerText {
@@ -623,12 +621,52 @@ export default {
     margin-bottom: -1rem;
   }
   @media only screen and (max-width:600px) {
+    .mainHolder {
+      min-height: 90vh;
+    }
+    .detailHolder  {
+      min-height: 0;
+      border-top: 5px solid #303133;
+    }
     .girlList {
       flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
     }
     .picTd {
       width: 30vw;
       height: 30vw;
+    }
+    .altHolder {
+      width: 90vw;
+      border: 10px solid white;
+      border-bottom: 20px solid white;
+    }
+    .smallAltHolder {
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      left: -8rem;
+      top: -8rem;
+      width: 20rem;
+      border: 0.5rem solid white;
+      transform: rotate(-45deg);
+      box-shadow: 4px 4px 2px black;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+    }
+    .flexHolder {
+      flex-wrap: wrap;
+    }
+    .detailTd {
+      max-width: 100%;
+    }
+    .outerHolder {
+      width: 90vw;
+      display: block;
+      position: static;
+      text-align: right;
+      margin-bottom: 1rem;
     }
   }
 </style>
