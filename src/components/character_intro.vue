@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="introHolder">
     <div class="smallScreenSelector">
-      <div class="smallButton" @click='hideAndShow(1)'>Yui!</div>
-      <div class="smallButton" @click='hideAndShow(2)'>Ritsu!</div>
-      <div class="smallButton" @click='hideAndShow(3)'>Mio!</div>
-      <div class="smallButton" @click='hideAndShow(4)'>Tsumugi!</div>
-      <div class="smallButton" @click='hideAndShow(5)'>Azusa!</div>
+      <div class="smallButton" @click='hideAndShow(1)'><span style="line-height:4rem">Yui!</span></div>
+      <div class="smallButton" @click='hideAndShow(2)'><span style="line-height:4rem">Ritsu!</span></div>
+      <div class="smallButton" @click='hideAndShow(3)'><span style="line-height:4rem">Mio!</span></div>
+      <div class="smallButton" @click='hideAndShow(4)'><span style="line-height:4rem">Tsumugi</span>!</div>
+      <div class="smallButton" @click='hideAndShow(5)'><span style="line-height:4rem">Azusa!</span></div>
     </div>
     <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
     Yui!</div>
@@ -371,6 +371,8 @@
       padding: 0 1rem;
     }
     .smallButton {
+
+      height: 4rem;
       box-sizing: border-box;
       text-align: center;
       flex-grow: 1;
