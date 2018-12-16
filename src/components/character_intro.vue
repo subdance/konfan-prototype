@@ -291,4 +291,40 @@
   #button5:hover {
     transform: rotate(-20deg);
   }
+  @media only screen and (max-width:600px) {
+    .button {
+      display: none;
+    }
+    .mainIntroHolder {
+      width: 90%;
+      height: auto;
+      position: absolute;
+      top: 40vh;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: none;
+      z-index: 1;
+    }
+    .mainIntroHolder::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #DCDFE6;
+      opacity: 0.4;
+      z-index: 0;
+    }
+    .girlNameText, .mainIntro {
+      position: relative;
+      z-index: 999;
+    }
+    .girlTextHolder {
+      display: none;
+    }
+    .mcHolder {
+      display: none;
+    }
+  }
 </style>
