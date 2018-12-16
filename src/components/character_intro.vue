@@ -95,18 +95,8 @@
       }
     },
     created(){
-      // this.isSmallScreen();
     },
     methods:{
-      // isSmallScreen(){
-      //   if(window.innerWidth < 600){
-      //     this.isSmallScreen = true;
-      //   }
-      //   else{
-      //     this.isSmallScreen = false;
-      //   }
-      // },
-
       changeCharacter(index){
         var that = this;
         setTimeout(function(){
