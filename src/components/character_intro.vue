@@ -374,13 +374,27 @@
       box-sizing: border-box;
       text-align: center;
       flex-grow: 1;
-      font-size: 1.4rem;
-      color: #F56C6C;
-      border-radius: 20px;
-      border: 2px solid white;
+      -webkit-border-radius: 0 10px 200px / 0 200px 14px 250px;
+      border-radius: 0 10px 200px / 0 200px 14px 250px;
+      z-index: 1;
+      cursor: pointer;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font: normal normal normal 2rem/1.3 "Gochi Hand", Helvetica, sans-serif;
+      color: rgba(255,0,106,0.58);
+      text-align: center;
+      white-space: pre;
+      background: -webkit-repeating-linear-gradient( -90deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
+      background: -moz-repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
+      background: repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
+      background-position: 50% 50%;
+      -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
+      box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
+      transition: 0.5s ease-in-out;
     }
     .smallButton:hover {
-      color: white;
+      color: #409EFF;
     }
     .imgHolder {
       padding-top: 2rem;
