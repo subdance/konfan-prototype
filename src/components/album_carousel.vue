@@ -20,9 +20,9 @@
     <div class="carouselPart">
       <p class="introText">乐器</p>
       <el-carousel
-        indicator-position="outside"
+        :indicator-position="carouselIndicator"
         height='40rem'
-        type="card"
+        :type="carouselType"
         trigger='click'
         :inerval='interval'
         >
@@ -43,7 +43,8 @@
     <div class="carouselPart">
       <p class="introText">梦</p>
       <el-carousel
-        height='65rem'
+        :indicator-position="carouselIndicator"
+        :height='carouselHeight'
         trigger='click'
         :autoplay='autoplay'
         >
@@ -64,7 +65,8 @@
     <div class="carouselPart">
       <p class="introText">律澪</p>
       <el-carousel
-        height='65rem'
+        :indicator-position="carouselIndicator"
+        :height='carouselHeight'
         trigger='click'
         :autoplay='autoplay'
         >
@@ -85,7 +87,8 @@
     <div class="carouselPart">
       <p class="introText">碰到狗狗,少女会怎样？</p>
       <el-carousel
-        height='65rem'
+        :indicator-position="carouselIndicator"
+        :height='carouselHeight'
         trigger='click'
         :autoplay='autoplay'
         >
@@ -103,6 +106,10 @@
       </el-carousel>
     </div>
 
+    <div class="bottomText">
+      <span>投稿功能正在研发中！！</span>
+    </div>
+
   </div>
 
 </template>
@@ -113,6 +120,9 @@ export default {
     return {
       interval: 1800,
       autoplay: false,
+      carouselType: 'card',
+      carouselIndicator: '',
+      carouselHeight: '65rem',
       nowPic1: [
         require('../assets/album/set1/1.png'),
         require('../assets/album/set1/2.png'),
@@ -173,6 +183,23 @@ export default {
       ],
     }
   },
+  created(){
+    this.isSmallScreen();
+  },
+  methods:{
+    isSmallScreen(){
+      if(window.innerWidth < 600) {
+        this.carouselType = '';
+        this.carouselIndicator = 'outside'
+        this.carouselHeight = '50vh';
+      }
+      else{
+        this.carouselType = 'card';
+        this.carouselIndicator = '';
+        this.carouselHeight = '65rem';
+      }
+    },
+  },
 }
 </script>
 
@@ -222,6 +249,11 @@ export default {
     width: 95%;
     margin: auto;
   }
+  .carouselPart:last-child {
+    padding-bottom: 10rem;
+    width: 95%;
+    margin: auto;
+  }
   .detailHolderOuter {
     text-align: center;
     position: relative;
@@ -231,7 +263,6 @@ export default {
     top: 2rem;
     width: 100%;
   }
-
   .detailText {
     text-align: center;
     width: 100%;
@@ -239,5 +270,59 @@ export default {
     color: #F2F6FC;
     font-weight: bold;
     mix-blend-mode: exclusion;
+  }
+  .bottomText {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .carouselPic {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .introText {
+      color: #606266;
+      font-size: 1.7rem;
+      text-align: center;
+      padding-left: 0;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+    .detailText {
+      text-align: center;
+      width: 100%;
+      font-size: 1.5rem;
+      color: #F2F6FC;
+      font-weight: bold;
+      mix-blend-mode: exclusion;
+    }
+    .textHolder {
+      padding-top: 70px;
+    }
+    .titileText {
+      font-size: 2rem;
+      color: #303133;
+    }
+    .icon {
+      text-align: left;
+      display: inline-block;
+      padding-left: 3rem;
+    }
+    .iconStyle {
+      font-size: 0.5rem;
+      text-shadow: 2px 2px 2px grey;
+    }
+    .titleHolder {
+      height: auto;
+    }
+    .carouselPart {
+      margin-bottom: 6rem;
+      width: 100%;
+      margin: auto;
+    }
   }
 </style>
