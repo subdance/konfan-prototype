@@ -194,5 +194,13 @@ export default {
       font-size: 0.4rem;
       font-style: italic;
     }
+    .mainContainer {
+      position: static;
+      transform: translate(0, 0);
+      width: 100%;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+    }
   }
 </style>

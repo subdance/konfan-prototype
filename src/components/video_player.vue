@@ -15,7 +15,7 @@
         v-for='(item, index) in videoList'
         @click='changeVideo(index)'
         >
-        <div class="thumbnailHolder">
+        <div class="thumbnailHolder" :class="{selectedSmall: isVideoSelected[index], notSelectedSmall:!isVideoSelected[index]}">
           <img
           class="thumbnail"
           :class="{selected: isVideoSelected[index], notSelected:!isVideoSelected[index]}"
@@ -205,7 +205,7 @@
   @media only screen and (max-width:600px) {
     .mainHolder {
       position: relative;
-      min-height: 50vh;
+      min-height: 40vh;
       height: auto;
     }
     .videoHolder {
@@ -229,11 +229,60 @@
     .listHolder {
       width: 100%;
       position: relative;
-      top: 0rem;
+      top: -5rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       flex-direction: row-reverse;
       overflow: hidden;
+      flex-wrap: wrap;
+      margin-bottom: -5rem;
+    }
+    .listBlock {
+      cursor: pointer;
+      color: white;
+      width: 50%;
+      transition: all 0.2s ease-in-out;
+      z-index: 1;
+    }
+    .listBlock:hover {
+      margin-left: 0rem;
+      color: white;
+      width: 50%;
+    }
+    .listBlock:not(:last-child) {
+      margin-left: 0;
+    }
+    .thumbnailHolder {
+      transform: skewX(0deg);
+      overflow: hidden;
+      box-shadow: 2px 2px 4px black;
+      box-sizing: border-box;
+    }
+    .thumbnail {
+      width: 100%;
+      height: 13rem;
+      object-fit: cover;
+      transition: all 0.2s ease-in-out;
+      margin-bottom: -0.5rem;
+      transform: skewX(0deg) scale(1.1, 1.1);
+    }
+    .selectedList {
+      margin-left: 0rem;
+      color: white;
+      width: 50%;
+      transform: skewX(0deg);
+    }
+    .selected {
+      height: 13rem;
+      border-radius: 0 0 10px 10px;
+    }
+    .selectedSmall {
+      box-sizing: border-box;
+      border: 8px solid white;
+    }
+    .notSelectedSmall {
+      box-sizing: border-box;
+      border: 8px solid transparent;
     }
   }
 </style>

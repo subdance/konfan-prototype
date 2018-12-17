@@ -28,12 +28,16 @@
 
 <style scoped>
   .mainHolder {
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     background-image: url('http://35.244.189.64/k-on-fan/image/video-room/5.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
+  }
+  @media screen only and (max-width: 600px) {
+    .mainHolder {
+    }
   }
 </style>
