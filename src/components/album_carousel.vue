@@ -124,10 +124,10 @@ export default {
       carouselIndicator: '',
       carouselHeight: '65rem',
       nowPic1: [
-        require('../assets/album/set1/1.png'),
-        require('../assets/album/set1/2.png'),
-        require('../assets/album/set1/3.png'),
-        require('../assets/album/set1/4.png'),
+        require('../assets/album/set1/1.jpg'),
+        require('../assets/album/set1/2.jpg'),
+        require('../assets/album/set1/3.jpg'),
+        require('../assets/album/set1/4.jpg'),
         require('../assets/album/set1/5.png'),
       ],
       nowText1: [

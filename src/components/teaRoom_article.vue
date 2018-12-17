@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="mainHolder">
+    <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
     <div class="single_row">
       <div class="collapse_title" @click='changeShow(0)'>
@@ -76,7 +77,7 @@ export default {
       maxHeight: [0, 0, 0, 0,],
       articleSet: [
         {
-          title: '那一日的夢',
+          title: '那一日的梦',
           intro: '轻音少女动画中的瞬间-18/11.26/午夜',
           para: [
             '在轻音部第一次合宿的那个海边的夜晚，唯晃晃悠悠地将放音机搬到了澪的面前',
@@ -85,7 +86,7 @@ export default {
             '唯像摇滚巨星一样，像站在最灿烂的舞台上一样，忘我地表演',
             '向来羞涩的澪已经忘了自己的表情，痴痴地望着唯',
             '还可以这样呀!',
-            '原来就算弹着不成调的曲子，就算舞台只是沙滩，也可以演奏的如此盛大，开心',
+            '原来就算弹着不成调的曲子，就算舞台只是沙滩，也可以演奏地如此盛大，开心',
             '澪心里软软的地方被触动了',
             '是那个存放着梦想的地方',
             '海风拂过澪的眼角，肌肤传来些许的清凉感',
@@ -223,11 +224,13 @@ export default {
     font-variant: small-caps;
     font-size: 3rem;
     color: #303133;
+    font-family: 'ZCOOL XiaoWei', serif;
   }
   .article_text {
     margin: 0;
     font-size: 1.8rem;
     color: #F2F6FC;
+    font-family: 'Noto Serif SC', serif;
   }
   .article_text::first-letter {
     font-size: 1.9rem;
