@@ -139,12 +139,12 @@ export default {
         '梓：Fender Japan Mustang MG69/MH CAR',
       ],
       nowPic2: [
-        'http://35.244.189.64/k-on-fan/image/album/set1/1.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/2.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/3.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/4.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/5.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/6.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set2/1.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set2/2.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set2/3.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set2/4.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set2/5.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set2/6.jpg',
       ],
       nowText2: [
         '烟花下的唯抱着吉他兴奋地跳着',
