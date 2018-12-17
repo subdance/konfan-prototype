@@ -171,10 +171,10 @@ export default {
         '“哎...真受不了你...”',
       ],
       nowPic4: [
-        'http://35.244.189.64/k-on-fan/image/album/set1/1.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/2.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/3.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set1/4.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set4/1.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set4/2.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set4/3.jpg',
+        'http://35.244.189.64/k-on-fan/image/album/set4/4.jpg',
       ],
       nowText4: [
         '“（可真是让人兴奋呢）—紬”',
