@@ -80,7 +80,7 @@ export default {
     this.listenChangeFixPlayer();
   },
   mounted(){
-    this.$refs.aplayer.play();
+    // this.$refs.aplayer.play();
   },
   methods:{
     listenChangeFixPlayer(){
@@ -92,7 +92,7 @@ export default {
           this.$refs.aplayer.pause();
         }
         else{
-          this.$refs.aplayer.play();
+          // this.$refs.aplayer.play();
         }
       })
     },

@@ -308,5 +308,22 @@ export default {
     .imgText {
       display: none;
     }
+    .title_text_adding {
+      margin-top: 3.5rem;
+      text-align: right;
+      padding-right: 1rem;
+      font-size: 1.1rem;
+      color: #F2F6FC;
+      font-style: italic;
+    }
+    .article_text::first-letter {
+      font-size: 1.8rem;
+    }
+    .collapse_title:hover {
+      cursor: pointer;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      border: 2px solid white;
+    }
   }
 </style>
