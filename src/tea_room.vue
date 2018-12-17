@@ -97,7 +97,13 @@ export default {
     this.changeFixPlayer(false);
     this.listenChangeList();
   },
+  mounted:function(){
+    this.playMusic();
+  },
   methods: {
+    playMusic(){
+      this.$refs.aplayer.play();
+    },
     changeFixPlayer(reg){
       eventBus.$emit('changeFixPlayer', reg)
     },

@@ -21,7 +21,7 @@
       <p class="introText">乐器</p>
       <el-carousel
         :indicator-position="carouselIndicator"
-        height='40rem'
+        :height='carouselHeightCard'
         :type="carouselType"
         trigger='click'
         :inerval='interval'
@@ -123,6 +123,7 @@ export default {
       carouselType: 'card',
       carouselIndicator: '',
       carouselHeight: '65rem',
+      carouselHeightCard: '40rem',
       nowPic1: [
         require('../assets/album/set1/1.jpg'),
         require('../assets/album/set1/2.jpg'),
@@ -192,11 +193,13 @@ export default {
         this.carouselType = '';
         this.carouselIndicator = 'outside'
         this.carouselHeight = '50vh';
+        this.carouselHeightCard = '50vh';
       }
       else{
         this.carouselType = 'card';
         this.carouselIndicator = '';
         this.carouselHeight = '65rem';
+        this.carouselHeightCard = '40rem';
       }
     },
   },
@@ -276,6 +279,7 @@ export default {
     color: white;
     font-size: 1.5rem;
     padding-bottom: 4rem;
+    margin-top: 4rem;
   }
   @media only screen and (max-width: 600px) {
     .carouselPic {
@@ -323,6 +327,13 @@ export default {
       margin-bottom: 6rem;
       width: 100%;
       margin: auto;
+    }
+    .bottomText {
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      padding-bottom: 4rem;
+      margin-top: 1rem;
     }
   }
 </style>
