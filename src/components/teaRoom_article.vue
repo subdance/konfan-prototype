@@ -265,4 +265,48 @@ export default {
     left:50%;
     transform: rotate(-3deg);
   }
+  @media only screen and (max-width: 600px) {
+    .collapse_title {
+      margin: auto;
+      width: 80vw;
+      height: 13rem;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      transition: 0.5s ease-out;
+      margin-bottom: 0rem;
+      position: relative;
+      border: 2px solid transparent;
+      box-shadow: 2px 2px 5px black;
+    }
+    .single_row {
+      padding-bottom: 1rem;
+    }
+    .collapse_text {
+      overflow: hidden;
+      transition: max-height  0.5s ease-out;
+      padding-left: 1rem;
+      width: 80vw;
+      margin: auto;
+      margin-top: 1rem;
+      position: relative;
+    }
+    .single_row:last-child {
+      padding-bottom: 4rem;
+    }
+    .articleImg {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+      border: 4px solid white;
+      border-bottom: 10px solid white;
+      transform: rotate(-3deg);
+      box-shadow: 4px 4px 2px black;
+      width: 35%;
+      object-position: center;
+      object-fit: cover;
+    }
+    .imgText {
+      display: none;
+    }
+  }
 </style>

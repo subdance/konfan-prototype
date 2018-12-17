@@ -122,6 +122,11 @@ export default {
     top: 60px;
     right: 0;
     width: 20vw;
-
+  }
+  @media only screen and (max-width:900px) {
+    .musicPlayer {
+      position: static;
+      width: auto;
+    }
   }
 </style>

@@ -625,7 +625,8 @@ export default {
   }
   @media only screen and (max-width:600px) {
     .mainHolder {
-      min-height: 90vh;
+      min-height: 70vh;
+      padding-bottom: 4rem;
     }
     .detailHolder  {
       min-height: 0;
