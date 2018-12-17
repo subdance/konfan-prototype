@@ -76,7 +76,7 @@ export default {
       flex-wrap: wrap;
     }
     .contentImg {
-      width: 60vw;
+      width: 45vw;
       margin-bottom: 1rem;
     }
     .contentHolder:nth-child(2) {
