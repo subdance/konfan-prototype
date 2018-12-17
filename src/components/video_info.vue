@@ -92,6 +92,10 @@ export default {
   * {
     box-sizing: border-box;
   }
+  p {
+    margin: 0;
+    padding: 0;
+  }
   .mainContainer {
     position: absolute;
     bottom:0;
@@ -133,6 +137,7 @@ export default {
   .infoText {
     text-align: center;
     margin: 0;
+    padding: 0;
     line-height: 10rem;
     font-size: 4rem;
     color: #606266;
@@ -146,5 +151,48 @@ export default {
     font-weight: normal;
     font-size: 1.5rem;
     font-style: italic;
+  }
+  @media only screen and (max-width:600px) {
+    .mainContainer {
+      position: absolute;
+      bottom:0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+    }
+    .imgHolder {
+      width: 12rem;
+      background-image: url(../assets/element/mc.png);
+      background-position: top;
+      background-size: cover;
+    }
+    .dialogHolder {
+      position: relative;
+      background: #DCDFE6;
+      border-radius: 10px;
+      height: 7rem;
+      top:0rem;
+    }
+    .infoText {
+      text-align: center;
+      margin: 0;
+      line-height: 2rem;
+      font-size: 4rem;
+      color: #606266;
+    }
+    .videoNameText {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'Dokdo', cursive;
+    }
+    .videoInfoText:before { content: ' '; display: block; }
+    .videoInfoText {
+      font-weight: normal;
+      font-size: 0.4rem;
+      font-style: italic;
+    }
   }
 </style>

@@ -202,4 +202,38 @@
     transition: all 0.2s ease-in-out;
     z-index: 1;
   }
+  @media only screen and (max-width:600px) {
+    .mainHolder {
+      position: relative;
+      min-height: 50vh;
+      height: auto;
+    }
+    .videoHolder {
+      padding-top: 0px;
+      position: relative;
+      min-height: 50vh;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+    .player {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translate(-50%, -0);
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 2px solid white;
+    }
+    .listHolder {
+      width: 100%;
+      position: relative;
+      top: 0rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      overflow: hidden;
+    }
+  }
 </style>
