@@ -18,7 +18,7 @@
     <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
     Azusa!</div>
     <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-    <transition name="el-zoom-in-center">
+    <transition name="el-fade-in-linear">
       <el-row v-show='isShow'>
         <el-col :span="3">
           <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
@@ -163,6 +163,7 @@
     bottom: 0;
     width: 22rem;
     height: 21rem;
+    z-index: 1;
   }
   .girlNameText {
     color: #df000a;
@@ -208,6 +209,7 @@
     font-size: 2rem;
     font-style: italic;
     color: #606266;
+    z-index: 2;
   }
   .nameTag {
     line-height: 4rem;
