@@ -261,14 +261,14 @@
     height: 600px;
   }
   #button1 {
-    top: 5rem;
+    top: 2rem;
     left: 1rem;
     -moz-transform: rotateZ(-4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     -webkit-transform: rotateZ(-4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     transform: rotateZ(-4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
   }
   #button2 {
-    top: 30rem;
+    bottom: 6rem;
     left: 3rem;
     -moz-transform: rotateZ(4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     -webkit-transform: rotateZ(4deg) scaleX(1) scaleY(1) scaleZ(1)  ;
@@ -276,7 +276,7 @@
   }
   #button3 {
     bottom: 0rem;
-    left: 55rem;
+    left: 35%;
     -moz-transform: rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     transform: rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)  ;
@@ -290,7 +290,7 @@
   }
   #button5 {
     bottom: 5rem;
-    right: 30rem;
+    right: 20%;
     -moz-transform: rotateZ(-7deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     -webkit-transform: rotateZ(-7deg) scaleX(1) scaleY(1) scaleZ(1)  ;
     transform: rotateZ(-7deg) scaleX(1) scaleY(1) scaleZ(1)  ;
