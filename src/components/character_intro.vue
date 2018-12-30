@@ -18,6 +18,7 @@
     <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
     Azusa!</div>
     <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <transition name="el-fade-in-linear">
       <el-row v-show='isShow'>
         <el-col :span="3">
@@ -145,9 +146,8 @@
     margin: auto;
     background-image: url('../assets/background/1.png');
     background-repeat: repeat;
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .imgHolder {
     padding-top: 4rem;
@@ -170,6 +170,7 @@
     font-weight: bold;
     font-size: 7rem;
     text-shadow: 3px 3px black;
+    /* font-family: 'ZCOOL KuaiLe', cursive; */
   }
   .mainIntroHolder {
     width: 35rem;
@@ -190,6 +191,7 @@
   .mainIntro {
     line-height: 4rem;
     letter-spacing: 0.8rem;
+    font-family: 'ZCOOL KuaiLe', cursive;
   }
   .introTextHolder {
     padding-top: 4rem;
@@ -243,8 +245,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 229px;
-    height: 208px;
+    width: 200px;
+    height: 200px;
     display:inline-block;
     padding: 30px 0 0;
     font: normal normal normal 5rem/1.3 "Gochi Hand", Helvetica, sans-serif;
@@ -316,6 +318,9 @@
     .button {
       display: none;
     }
+    .introHolder {
+      height: 100vh;
+    }
     .mainIntroHolder {
       width: 90%;
       height: auto;
@@ -343,15 +348,16 @@
     }
     .girlNameText {
       font-size: 2rem;
+      font-family: 'ZCOOL KuaiLe', cursive;
     }
     .mainIntro {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
     .girlTextHolder {
       display: none;
     }
     .mainIntro {
-      line-height: 4rem;
+      line-height: 3rem;
       letter-spacing: 0.4rem;
     }
     .mcHolder {
