@@ -192,6 +192,7 @@
     line-height: 4rem;
     letter-spacing: 0.8rem;
     font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 2.2rem;
   }
   .introTextHolder {
     padding-top: 4rem;
@@ -348,10 +349,7 @@
     }
     .girlNameText {
       font-size: 2rem;
-      font-family: 'ZCOOL KuaiLe', cursive;
-    }
-    .mainIntro {
-      font-size: 1.8rem;
+      /* font-family: 'ZCOOL KuaiLe', cursive; */
     }
     .girlTextHolder {
       display: none;

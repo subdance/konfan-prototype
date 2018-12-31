@@ -10,15 +10,18 @@
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
     <teaArticle></teaArticle>
+    <teaSentence></teaSentence>
   </div>
 </template>
 
 <script>
 import eventBus from '@/eventbus.js'
 import teaArticle from '@/components/teaRoom_article.vue'
+import teaSentence from '@/components/teaRoom_sentence.vue'
 export default {
   components: {
-    teaArticle
+    teaArticle,
+    teaSentence,
   },
   data(){
     return {
