@@ -25,11 +25,11 @@ export default {
         },
         {
           content: '正因为这些对你不重要，你才可以毫无顾忌地讲出来不是吗？',
-          source: '  化物语'
+          source: '化物语'
         },
         {
           content: '我的刻薄话使用铜四十克、锌二十五克、镍十五克、害羞五克、再加上恶意九十七公斤配成的。顺便说一下，害羞是骗人的。',
-          source: '  化物语'
+          source: '化物语'
         },
       ],
       sentence: [],
@@ -63,6 +63,7 @@ export default {
   .wordHolder {
     text-align: center;
     border: 1px solid black;
+    transition: 0.3s;
   }
   .word {
     font-size: 2rem;
@@ -70,11 +71,23 @@ export default {
   }
   .sourceHolder {
     text-align: center;
-    align-self: stretch;
+    /* align-self: stretch; */
+    border: 1px solid black;
+    transition: 0.3s;
   }
   .source {
     font-size: 2rem;
     font-family: 'ZCOOL XiaoWei', serif;
     color: white;
+  }
+  .wordHolder:hover {
+    background-color: white;
+    transform: scale(1.6, 1.6);
+    transition: 0.3s;
+  }
+  .sourceHolder:hover {
+    background-color: black;
+    transform: scale(1.6, 1.6);
+    transition: 0.3s;
   }
 </style>
