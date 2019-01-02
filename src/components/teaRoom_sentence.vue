@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="sentenceContainer" v-for='(singleSentence) in sentence'>
+  <div class="sentenceContainer">
+    <div class="singleSentenceContainer" v-for='(singleSentence) in sentence'>
       <div class="wordHolder" v-for='(word) in singleSentence.content'>
         <span class="word">{{ word }}</span>
       </div>
@@ -10,7 +10,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -55,6 +54,9 @@ export default {
 
 <style scoped>
   .sentenceContainer {
+    position: absolute;
+  }
+  .singleSentenceContainer {
     display: inline-flex;
     flex-direction: column;
     max-height: 600px;

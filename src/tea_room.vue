@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
+    <teaSentence></teaSentence>
     <aplayer
     class="musicPlayer"
     ref='aplayer'
@@ -10,7 +11,6 @@
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
     <teaArticle></teaArticle>
-    <teaSentence></teaSentence>
   </div>
 </template>
 
