@@ -1,18 +1,20 @@
 <template>
   <div class="sentenceContainer">
-    <div class="singleSentenceContainer" v-for='(singleSentence) in sentence'>
-      <div class="wordHolder" v-for='(word) in singleSentence.content'>
-        <span class="word">{{ word }}</span>
+    <button type="button" name="button" @click='wordTrick'>aaaa</button>
+    <transition-group class="singleSentenceContainer" v-for='(singleSentence) in sentence' tag='div'>
+      <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
+        <span class="word">{{ word.word }}</span>
       </div>
-      <div class="sourceHolder" v-for='(word) in singleSentence.source'>
+      <div class="sourceHolder" v-for='(word, index) in singleSentence.source' :key='index - 3'>
         <span class="source">{{ word }}</span>
         <link async href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
+// import _ from 'lodash.min.js'
 export default {
   data(){
     return {
@@ -40,19 +42,42 @@ export default {
   created(){
     this.generateSentence();
   },
+  mounted(){
+    let recaptchaScript = document.createElement('script')
+    recaptchaScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js')
+    document.head.appendChild(recaptchaScript)
+  },
   methods: {
     generateSentence(){
       for(let i = 0; i < this.rawSentence.length; i ++){
         this.sentence.push({});
         this.sentence[i].content = this.rawSentence[i].content.split('');
         this.sentence[i].source = this.rawSentence[i].source.split('');
+        for(let j = 0; j < this.sentence[i].content.length; j ++){
+          let temp = this.sentence[i].content[j];
+          this.sentence[i].content[j] = {};
+          this.sentence[i].content[j].word = temp;
+          this.sentence[i].content[j].id = j;
+        }
       }
-    }
+      console.log(this.sentence[0].content);
+    },
+    wordTrick(){
+      for(let i = 0; i < this.sentence.length; i ++){
+        this.sentence[i].content = _.shuffle(this.sentence[i].content);
+        this.sentence[i].source = _.shuffle(this.sentence[i].source);
+        var temp = this.sentence[i]
+        this.$set(this.sentence, i, temp );
+      }
+    },
   },
 }
 </script>
 
 <style scoped>
+  .flip-list-move {
+    transition: transform 2s;
+  }
   .sentenceContainer {
     position: absolute;
   }
