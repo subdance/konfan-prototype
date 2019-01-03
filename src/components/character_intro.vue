@@ -155,7 +155,7 @@
   }
   .mcHolder {
     position: absolute;
-    background-image: url('../assets/character_intro/mc1.png');
+    background-image: url('http://35.244.189.64/k-on-fan/image/character-intro/mc1.png');
     background-position: right bottom;
     background-size: contain;
     background-repeat: no-repeat;
