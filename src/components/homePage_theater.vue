@@ -2,7 +2,7 @@
   <div class="mainContainer">
     <div id="box1">
       <video autoplay muted loop id="myVideo" ref='myVideo'>
-        <source src="../assets/video/trim1.mp4" type="video/mp4">
+        <source src="http://35.244.189.64/k-on-fan/video/trim1.mp4" type="video/mp4">
       </video>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextOneShow'>

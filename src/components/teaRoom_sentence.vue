@@ -79,6 +79,7 @@ export default {
     transition: transform 2s;
   }
   .sentenceContainer {
+    display: none;
     position: absolute;
   }
   .singleSentenceContainer {

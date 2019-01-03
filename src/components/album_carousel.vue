@@ -155,12 +155,12 @@ export default {
         '永远一起唱我们的歌'
       ],
       nowPic3: [
-        require('../assets/album/set3/1.png'),
-        require('../assets/album/set3/2.png'),
-        require('../assets/album/set3/3.png'),
-        require('../assets/album/set3/4.png'),
-        require('../assets/album/set3/5.png'),
-        require('../assets/album/set3/6.png'),
+       'http://35.244.189.64/k-on-fan/image/album/set3/1.png',
+       'http://35.244.189.64/k-on-fan/image/album/set3/2.png',
+       'http://35.244.189.64/k-on-fan/image/album/set3/3.png',
+       'http://35.244.189.64/k-on-fan/image/album/set3/4.png',
+       'http://35.244.189.64/k-on-fan/image/album/set3/5.png',
+       'http://35.244.189.64/k-on-fan/image/album/set3/6.png',
       ],
       nowText3: [
         '“澪会生我的气吗？”',
