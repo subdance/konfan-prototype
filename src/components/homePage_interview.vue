@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <div class="contentHolder" v-for="(content,i) in contents" :key="i" >
+    <div class="contentHolder" v-for="(content,i) in contents" :key="i" :class="i%2==0?'left':'right'" >
       <img class="contentImg" :src="getImageUrl(content.pic)">
       <p class="contentText">
         “{{content.text}}”</br>
@@ -55,8 +55,11 @@ export default {
     align-items: center;
     padding: 1rem 0;
   }
+  .contentHolder.right > .contentImg {
+    order:1;
+  }
   .mainContainer {
-    margin-top: 4rem;
+    margin-top: 15rem;
     width: 100%;
     position: relative;
   }
@@ -70,13 +73,14 @@ export default {
     width: 30rem;
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 8px 8px 2px black;
+    box-shadow: 8px 8px 2px hsl(348, 3%, 40%);
   }
   .contentText {
     width: 40rem;
     display: inline-block;
     font-size: 2rem;
     color: white;
+    margin:0 50px;
   }
   .name {
     font-style: italic;
