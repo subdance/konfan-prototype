@@ -16,17 +16,17 @@ export default {
     return {
       contents: [
         {
-          pic: "../assets/character/nodoka.jpg",
+          pic: "nodoka.jpg",
           text: "轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演十分有感染力。",
           name: "学生会长--真锅和",
         },
         {
-          pic: "../assets/character/ui.jpg",
+          pic: "ui.jpg",
           text: "姐姐她以前可以无聊到在地上打滚，自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!",
           name: "平泽唯的妹妹--平泽忧"
         },
         {
-          pic: "../assets/character/sawako.jpg",
+          pic: "sawako.jpg",
           text: "我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。",
           name: "班主任，轻音部顾问, 前轻音部成员--山中佐和子"
         }
@@ -35,8 +35,7 @@ export default {
   },
   methods: {
     getImageUrl(pic) {
-      console.log(pic)
-      return require(pic)
+      return require('../assets/character/'+pic)
     }
   }
 }
