@@ -48,6 +48,21 @@
     </div>
 
     <div class="single_row">
+      <div class="collapse_title" @click='changeShow(4)'>
+        <span class="title_text">{{ articleSet[4].title }}</span>
+        <p class="title_text_adding">{{ articleSet[4].intro }}</p>
+      </div>
+      <div class="collapse_text" :style="{maxHeight: maxHeight[4] + 'px'}">
+        <p
+          class="article_text"
+          v-for='(paragraph, index) in articleSet[4].para'
+          :v-key='index'
+          > &nbsp &nbsp {{ paragraph }}
+        </p>
+      </div>
+    </div>
+
+    <div class="single_row">
       <div class="collapse_title" @click='changeShow(3)'>
         <span class="title_text">{{ articleSet[3].title }}</span>
         <p class="title_text_adding">{{ articleSet[3].intro }}</p>
@@ -74,7 +89,7 @@ import eventBus from '@/eventbus.js'
 export default {
   data(){
     return {
-      maxHeight: [0, 0, 0, 0,],
+      maxHeight: [0, 0, 0, 0, 0],
       articleSet: [
         {
           title: '那一日的梦',
@@ -154,6 +169,35 @@ export default {
             '愿自己能保持谦虚，保持勤奋，不放弃对幸福的追求',
           ],
         },
+        {
+          title: '一岁除',
+          intro: '2018的离去-19/1.6/夜',
+          para: [
+            '我预感到大多数人的一生最大成分应该就是那些毫无意义的时间碎片',
+            '然而我的2018年不是，也不知道这是幸运还是不幸：这一年发生了几件也许会改变我人生轨迹的事',
+            '按照大多数碌碌无为者的自慰金句：平平淡淡的人生才是幸福的，那我这年就不怎么幸福',
+            '按照冒险者，开括者，梦想家的人生信条：never stand still，那我这年又是幸福的',
+            '',
+            '‘不甘于成为被豢养的家畜，于是有些人翻山越岭来到了高墙之外。他们想看看外面的世界’',
+            '家畜有什么不好呢？温柔的一生，安静的一生。不用怎么努力，伸手就能够到自己被压抑的欲望所渴求的简单生活',
+            '但是那一天--',
+            '在中关村科技中心，无数和我年龄相仿的人从四面八方涌来，然后再交汇到百度，新浪微博等中国一线公司，我感到一种手足无措的惊讶：',
+            '原来这个世界上有这么多跟你差不多年纪，却比你更加努力，更加聪明，更加有价值的人',
+            '我从小以来的优越感在那时一击脱离，我感觉到了悔恨',
+            '虽然以前的我也知道世界很大，强人很多，但当这一事实用完全逼真的方式将我笼罩在其中时，我才领悟到这一点',
+            '‘你很弱，你自幼以来的成功，优越，满足感毫无意义，你的家乡只是一个池塘，你只是池塘里的一条小鱼’',
+            '那一瞬间我想我不会忘记',
+            '也就是在那时，我不再想呆在温柔乡了。我想去外面看看',
+            '我想知道，自己的‘器’',
+            '',
+            '至于2018年其他的事，倒是没有写出来的心思，如鱼饮水足矣',
+            '',
+            '跨年夜时，我窝在寝室里，一边擦鼻涕（感冒了）一边看红白歌会。虽然独自一人，但我却不知从何处感到了升腾的幸福感',
+            '地球只是公转一周，却足够让人世手舞足蹈，这就是人类伟大的浪漫吧',
+            '所以，新年快乐',
+            '',
+          ],
+        },
       ],
     }
   },
@@ -172,8 +216,10 @@ export default {
           this.$set(this.maxHeight, i, 0);
           nowTitle[i].style.boxShadow = '2px 2px 5px black';
         }
-        this.$set(this.maxHeight, index, nowText.scrollHeight);
+        this.$set(this.maxHeight, index, 1000);
         nowTitle[ index ].style.boxShadow = '0px 0px 0px black';
+        console.log(nowText.clientHeight);
+        console.log(nowText.scrollHeight);
       }
       else{
         this.$set(this.maxHeight, index, 0);
@@ -209,7 +255,7 @@ export default {
   }
   .collapse_text {
     overflow: hidden;
-    transition: max-height  0.5s ease-out;
+    transition: max-height  1s ease-out;
     padding-left: 2rem;
     width: 600px;
     margin: auto;
@@ -286,7 +332,7 @@ export default {
     }
     .collapse_text {
       overflow: hidden;
-      transition: max-height  0.5s ease-out;
+      transition: max-height  1s ease-out;
       padding-left: 1rem;
       width: 80vw;
       margin: auto;
