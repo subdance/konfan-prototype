@@ -48,21 +48,6 @@
     </div>
 
     <div class="single_row">
-      <div class="collapse_title" @click='changeShow(4)'>
-        <span class="title_text">{{ articleSet[4].title }}</span>
-        <p class="title_text_adding">{{ articleSet[4].intro }}</p>
-      </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[4] + 'px'}">
-        <p
-          class="article_text"
-          v-for='(paragraph, index) in articleSet[4].para'
-          :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}
-        </p>
-      </div>
-    </div>
-
-    <div class="single_row">
       <div class="collapse_title" @click='changeShow(3)'>
         <span class="title_text">{{ articleSet[3].title }}</span>
         <p class="title_text_adding">{{ articleSet[3].intro }}</p>
@@ -71,6 +56,21 @@
         <p
           class="article_text"
           v-for='(paragraph, index) in articleSet[3].para'
+          :v-key='index'
+          > &nbsp &nbsp {{ paragraph }}
+        </p>
+      </div>
+    </div>
+
+    <div class="single_row">
+      <div class="collapse_title" @click='changeShow(4)'>
+        <span class="title_text">{{ articleSet[4].title }}</span>
+        <p class="title_text_adding">{{ articleSet[4].intro }}</p>
+      </div>
+      <div class="collapse_text" :style="{maxHeight: maxHeight[4] + 'px'}">
+        <p
+          class="article_text"
+          v-for='(paragraph, index) in articleSet[4].para'
           :v-key='index'
           > &nbsp &nbsp {{ paragraph }}
         </p>
@@ -153,23 +153,6 @@ export default {
           ],
         },
         {
-          title: '我',
-          intro: '自我肖像-18/12.1/夜',
-          para: [
-            'Hi, how are you doing today?',
-            '我是sub/dance，湖北人，97年，北京211在读',
-            '我是一个悲观的理想主义者',
-            '喜欢大卫芬奇与库布里克的电影，还有OASIS领衔的一众英伦摇滚的乐队。',
-            '不过近些年（3年）爱好一直在向游戏，动画片，当然还有代码上转移。（大概就是变宅了◕ˇ∀ˇ◕）',
-            '喜欢逛reddit，已经有近 7000 karma了',
-            '大多数时间话比较少',
-            '虽然难以启齿，但我相信梦想，相信“你也可以改变世界”这种事情，相信“英雄”',
-            '崇拜那些为了理想奋斗的人',
-            '我享受用冷酷，愚笨的代码，来搭建出“舒服的页面，实现精准的操作”，这一过程。十分享受',
-            '愿自己能保持谦虚，保持勤奋，不放弃对幸福的追求',
-          ],
-        },
-        {
           title: '一岁除',
           intro: '2018的离去-19/1.6/夜',
           para: [
@@ -198,6 +181,23 @@ export default {
             '',
           ],
         },
+        {
+          title: '我',
+          intro: '自我肖像-18/12.1/夜',
+          para: [
+            'Hi, how are you doing today?',
+            '我是sub/dance，湖北人，97年，北京211在读',
+            '我是一个悲观的理想主义者',
+            '喜欢大卫芬奇与库布里克的电影，还有OASIS领衔的一众英伦摇滚的乐队。',
+            '不过近些年（3年）爱好一直在向游戏，动画片，当然还有代码上转移。（大概就是变宅了◕ˇ∀ˇ◕）',
+            '喜欢逛reddit，已经有近 7000 karma了',
+            '大多数时间话比较少',
+            '虽然难以启齿，但我相信梦想，相信“你也可以改变世界”这种事情，相信“英雄”',
+            '崇拜那些为了理想奋斗的人',
+            '我享受用冷酷，愚笨的代码，来搭建出“舒服的页面，实现精准的操作”，这一过程。十分享受',
+            '愿自己能保持谦虚，保持勤奋，不放弃对幸福的追求',
+          ],
+        },    
       ],
     }
   },
