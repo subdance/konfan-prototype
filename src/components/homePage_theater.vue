@@ -38,8 +38,10 @@ export default {
   },
   created(){
     setInterval(this.changeShow, 4000);
+
   },
   mounted(){
+    this.checkHeight();
   },
   methods:{
     changeShow(){
@@ -50,6 +52,12 @@ export default {
       this.textIndex++;
       if(this.textIndex == length){
         this.textIndex = 0;
+      }
+    },
+    checkHeight(){
+      if (document.getElementById('box1').clientHeight > 803) {
+        document.getElementById('box1').style.height = '804px';
+        console.log(document.getElementById('box1').clientHeight);
       }
     },
   },
