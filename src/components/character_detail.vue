@@ -596,7 +596,7 @@ export default {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
   }
   .cacheritsu {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
+    background-image: ·url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
   }
   .cachemio {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
@@ -622,6 +622,9 @@ export default {
     vertical-align: top;
     border-right: 1px solid #C0C4CC;
     position: relative;
+  }
+  .detailTd:last-of-type {
+    border-right: 0px solid #C0C4CC;
   }
   .altHolder {
     margin: auto;
