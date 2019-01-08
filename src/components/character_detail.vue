@@ -477,7 +477,6 @@ export default {
     width: 80%;
   }
   .flexHolder {
-    /* padding-top: 2rem; */
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -575,15 +574,16 @@ export default {
   }
   .detailHolder {
     overflow: hidden;
-    min-height:62rem;
+    min-height:50rem;
     position: relative;
     transition: 0.5s ease-in-out;
   }
   .detailTd {
+    margin: 0 1rem;
     color: #F2F6FC;
     font-size: 1.7rem;
     max-width: 40rem;
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem 2rem;
     vertical-align: top;
     border-right: 1px solid #C0C4CC;
     position: relative;
@@ -608,11 +608,9 @@ export default {
     cursor: pointer;
     transition: 0.5s ease-in-out;
     overflow: hidden;
+    opacity: 0.4;
   }
   .outerHolder {
-    position: absolute;
-    bottom: 5rem;
-    right: 1rem;
     text-align: right;
   }
   .outerText {

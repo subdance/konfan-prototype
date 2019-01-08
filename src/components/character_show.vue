@@ -58,11 +58,11 @@
           this.carouselHeight = 60 + 'vh';
           this.indicatorPos = 'outside';
         }
-        else{
-          this.carouselHeight = 100 + 'vh';
-          this.indicatorPos = 'inside';
-        }
-      },
+      else{
+        this.carouselHeight = 100 + 'vh';
+        this.indicatorPos = 'inside';
+      }
+      }
     },
 }
 </script>
@@ -73,7 +73,7 @@
   }
   .bigImg {
     width: 100%;
-    height: 80rem;
+    height: 100vh;
     object-position: center;
     object-fit: cover;
   }
