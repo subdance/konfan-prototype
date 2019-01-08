@@ -1,7 +1,7 @@
 <template>
   <div class="sentenceContainer">
     <button type="button" name="button" @click='wordTrick'>aaaa</button>
-    <transition-group class="singleSentenceContainer" v-for='(singleSentence) in sentence' tag='div'>
+    <transition-group class="singleSentenceContainer" v-for='(singleSentence) in sentence' tag='div' name='flip-list'>
       <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
         <span class="word">{{ word.word }}</span>
       </div>
@@ -60,7 +60,6 @@ export default {
           this.sentence[i].content[j].id = j;
         }
       }
-      console.log(this.sentence[0].content);
     },
     wordTrick(){
       for(let i = 0; i < this.sentence.length; i ++){
@@ -75,9 +74,6 @@ export default {
 </script>
 
 <style scoped>
-  .flip-list-move {
-    transition: transform 2s;
-  }
   .sentenceContainer {
     display: none;
     position: absolute;
@@ -89,38 +85,47 @@ export default {
     width: 100px;
     flex-wrap: wrap-reverse;
     align-content: center;
-    /* margin-right: 10px; */
   }
   .wordHolder {
+    overflow: hidden;
     text-align: center;
     border: 1px solid black;
-    transition: 0.3s;
+    transition: background-color 0.2s,
+                transform 1.3s;
     margin-left: 3px;
-  }
-  .word {
-    font-size: 2rem;
-    font-family: 'ZCOOL XiaoWei', serif;
-  }
-  .sourceHolder {
-    text-align: center;
-    border: 1px solid black;
-    transition: 0.3s;
-    margin-left: 3px;
-  }
-  .source {
-    font-size: 2rem;
-    font-family: 'ZCOOL XiaoWei', serif;
-    color: white;
   }
   .wordHolder:hover {
     background-color: white;
-    transform: scale(1.6, 1.6);
-    transition: 0.15s;
     border: 1px solid white;
+  }
+  .word {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: 'ZCOOL XiaoWei', serif;
+    transition: transform 0.3s;
+  }
+  .word:hover {
+    transform: scale(2, 2);
+  }
+  .source {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: white;
+    transition: transform 0.3s;
+  }
+  .source:hover {
+    transform: scale(2, 2);
+  }
+  .sourceHolder {
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid black;
+    transition: background-color 0.2s,
+                transform 1s;
+    margin-left: 3px;
   }
   .sourceHolder:hover {
     background-color: black;
-    transform: scale(1.6, 1.6);
-    transition: 0.15s;
   }
 </style>
