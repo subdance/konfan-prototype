@@ -44,6 +44,23 @@
             <img class="altImg" :src="backPic[randomIndex]" alt="">
           </div>
         </transition>
+        <div class="cache">
+          <div class="cacheyui">
+
+          </div>
+          <div class="cacheritsu">
+
+          </div>
+          <div class="cachemio">
+
+          </div>
+          <div class="cachemugi">
+
+          </div>
+          <div class="cacheazusa">
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -532,45 +549,63 @@ export default {
     color: #C0C4CC;
   }
   #yui {
-    background-image: url('../assets/character_element/yui1.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui1.jpg');
   }
   #yui:hover {
-    background-image: url('../assets/character_element/yui2.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
     filter: blur(0px);
     transform: scale(1.2) rotate(15deg);;
     z-index: 999;
   }
   #ritsu {
-    background-image: url('../assets/character_element/ritsu1.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu1.jpg');
   }
   #ritsu:hover {
-    background-image: url('../assets/character_element/ritsu2.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
     filter: blur(0px);
     transform: scale(1.1) rotate(-15deg);;
   }
   #mio {
-    background-image: url('../assets/character_element/mio1.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio1.jpg');
   }
   #mio:hover {
-    background-image: url('../assets/character_element/mio2.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
     filter: blur(0px);
     transform: rotate(-30deg);;
   }
   #mugi {
-    background-image: url('../assets/character_element/mugi1.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi1.jpg');
   }
   #mugi:hover {
-    background-image: url('../assets/character_element/mugi2.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi2.jpg');
     filter: blur(0px);
     transform: rotate(10deg);
   }
   #azusa {
-    background-image: url('../assets/character_element/azusa1.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa1.jpg');
   }
   #azusa:hover {
-    background-image: url('../assets/character_element/azusa2.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa2.jpg');
     filter: blur(0px);
     transform: scale(1.3);
+  }
+  .cache > div {
+    display: none;
+  }
+  .cacheyui {
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
+  }
+  .cacheritsu {
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
+  }
+  .cachemio {
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
+  }
+  .cachemugi {
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi2.jpg');
+  }
+  .cacheazusa {
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa2.jpg');
   }
   .detailHolder {
     overflow: hidden;
