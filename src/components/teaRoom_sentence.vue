@@ -1,7 +1,7 @@
 <template>
   <div class="sentenceContainer">
     <button type="button" name="button" @click='wordTrick'>aaaa</button>
-    <transition-group class="singleSentenceContainer" v-for='(singleSentence) in sentence' tag='div' name='flip-list'>
+    <transition-group class="singleSentenceContainer" v-for='(singleSentence, index) in sentence' tag='div' name='flip-list' :key='index'>
       <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
         <span class="word">{{ word.word }}</span>
       </div>
