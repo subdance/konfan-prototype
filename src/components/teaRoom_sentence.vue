@@ -1,7 +1,7 @@
 <template>
   <div class="sentenceContainer">
     <button type="button" name="button" @click='wordTrick'>aaaa</button>
-    <transition-group class="singleSentenceContainer" v-for='(singleSentence) in sentence' tag='div' name='flip-list' :key='singleSentence'>
+    <transition-group class="singleSentenceContainer" v-for='(singleSentence) in sentence' tag='div' name='flip-list'>
       <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
         <span class="word">{{ word.word }}</span>
       </div>
@@ -15,6 +15,7 @@
 
 <script>
 // import _ from 'lodash.min.js'
+import eventBus from '@/eventbus.js'
 export default {
   data(){
     return {
@@ -37,15 +38,28 @@ export default {
         }
       ],
       sentence: [],
+      isWordOrdered: true,
     }
   },
   created(){
     this.generateSentence();
+    this.listenOrderStatus();
   },
   mounted(){
     let recaptchaScript = document.createElement('script')
     recaptchaScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js')
     document.head.appendChild(recaptchaScript)
+  },
+  watch: {
+    isWordOrdered: function(){
+      var that = this;
+      if (this.isWordOrdered){
+        setTimeout(function(){that.generateSentence()}, 800);
+      }
+      else {
+        setTimeout(function(){that.wordTrick()}, 800);
+      }
+    }
   },
   methods: {
     generateSentence(){
@@ -64,10 +78,15 @@ export default {
     wordTrick(){
       for(let i = 0; i < this.sentence.length; i ++){
         this.sentence[i].content = _.shuffle(this.sentence[i].content);
-        this.sentence[i].source = _.shuffle(this.sentence[i].source);
+        // this.sentence[i].source = _.shuffle(this.sentence[i].source);
         var temp = this.sentence[i]
         this.$set(this.sentence, i, temp );
       }
+    },
+    listenOrderStatus(){
+      eventBus.$on('orderArticle', reg => {
+        this.isWordOrdered = reg;
+      });
     },
   },
 }
@@ -75,7 +94,7 @@ export default {
 
 <style scoped>
   .sentenceContainer {
-    display: none;
+    /* display: none; */
     position: absolute;
   }
   .singleSentenceContainer {
@@ -91,7 +110,7 @@ export default {
     text-align: center;
     border: 1px solid black;
     transition: background-color 0.2s,
-                transform 1.3s;
+                transform 2s;
     margin-left: 3px;
   }
   .wordHolder:hover {

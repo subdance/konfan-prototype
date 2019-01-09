@@ -197,7 +197,7 @@ export default {
             '我享受用冷酷，愚笨的代码，来搭建出“舒服的页面，实现精准的操作”，这一过程。十分享受',
             '愿自己能保持谦虚，保持勤奋，不放弃对幸福的追求',
           ],
-        },    
+        },
       ],
     }
   },
@@ -209,6 +209,7 @@ export default {
 
     changeShow(index){
       eventBus.$emit('changeList', true);
+
       let nowText = document.getElementsByClassName('collapse_text')[index];
       let nowTitle = this.getDOMArray('collapse_title');
       if(!this.maxHeight[index]){
@@ -217,12 +218,12 @@ export default {
           nowTitle[i].style.boxShadow = '2px 2px 5px black';
         }
         this.$set(this.maxHeight, index, 1000);
+        eventBus.$emit('orderArticle', false);
         nowTitle[ index ].style.boxShadow = '0px 0px 0px black';
-        console.log(nowText.clientHeight);
-        console.log(nowText.scrollHeight);
       }
       else{
         this.$set(this.maxHeight, index, 0);
+        eventBus.$emit('orderArticle', true);
         nowTitle[ index ].style.boxShadow = '2px 2px 5px black';
       }
     },
