@@ -1,5 +1,22 @@
 <template lang="html">
   <div class="mainHolder">
+    <div class="cache">
+      <div class="cacheyui">
+
+      </div>
+      <div class="cacheritsu">
+
+      </div>
+      <div class="cachemio">
+
+      </div>
+      <div class="cachemugi">
+
+      </div>
+      <div class="cacheazusa">
+
+      </div>
+    </div>
     <div id="addTextHolder">
       <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非粉丝会成员禁止翻阅！<i class="el-icon-star-on"></i></p>
     </div>
@@ -35,7 +52,6 @@
             </div>
           </div>
         </transition>
-
         <transition name="el-fade-in-linear">
           <div
             :class='{altHolder: isBigPic, smallAltHolder: !isBigPic}'
@@ -44,23 +60,6 @@
             <img class="altImg" :src="backPic[randomIndex]" alt="">
           </div>
         </transition>
-        <div class="cache">
-          <div class="cacheyui">
-
-          </div>
-          <div class="cacheritsu">
-
-          </div>
-          <div class="cachemio">
-
-          </div>
-          <div class="cachemugi">
-
-          </div>
-          <div class="cacheazusa">
-
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -590,7 +589,8 @@ export default {
     transform: scale(1.3);
   }
   .cache > div {
-    display: none;
+    position: absolute;
+    opacity: 0;
   }
   .cacheyui {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');

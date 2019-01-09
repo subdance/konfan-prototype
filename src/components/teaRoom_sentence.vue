@@ -1,6 +1,5 @@
 <template>
-  <div class="sentenceContainer">
-    <!-- <button type="button" name="button" @click='wordTrick'>aaaa</button> -->
+  <div :class="{leftSentenceContainer: type, rightSentenceContainer: !type}">
     <transition-group class="singleSentenceContainer" v-for='(singleSentence, index) in sentence' tag='div' name='flip-list' :key='index'>
       <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
         <span class="word">{{ word.word }}</span>
@@ -14,29 +13,37 @@
 </template>
 
 <script>
-// import _ from 'lodash.min.js'
 import eventBus from '@/eventbus.js'
 export default {
+  props:{
+    type: Boolean,
+  },
   data(){
     return {
-      rawSentence: [
+      rawSentence1: [
         {
-          content: '不被人取笑的人生，我反而觉得超级无聊呢。人们不都是喜欢看着大家的笑容活下去吗？',
+          content: '你觉得一个真正努力的人会觉得自己很努力吗？',
           source: '化物语',
         },
         {
-          content: '正因为这些对你不重要，你才可以毫无顾忌地讲出来不是吗？',
-          source: '化物语'
+          content: '当你无法回头的时候，才是真正的旅行',
+          source: '比宇宙更遥远的地方'
         },
         {
-          content: '我的刻薄话使用铜四十克、锌二十五克、镍十五克、害羞五克、再加上恶意九十七公斤配成的。顺便说一下，害羞是骗人的。',
-          source: '化物语'
+          content: '做你自己，因为别人都有人做了',
+          source: '奥斯卡-王尔德'
         },
-        {
-          content: '能让封闭内心的人随心所欲地说出想说的话的对象只有两种。一种是被对方讨厌了也没关系的，还有一种是不必担心被对方讨厌。',
-          source: '化物语'
-        }
       ],
+        rawSentence2: [
+          {
+            content: '这是一个考验，来自过去的考验，人的成长，就是战胜自己不成熟的过去。',
+            source: 'JOJO的奇妙历险',
+          },
+          {
+            content: '不过傲慢分为两种。一种是能力过于低下，还有一种是志向异常远大的。前者显得非常愚蠢，后者是难得一见的珍贵种类。',
+            source: 'Fate/Zero'
+          },
+        ],
       sentence: [],
       isWordOrdered: true,
     }
@@ -44,6 +51,7 @@ export default {
   created(){
     this.generateSentence();
     this.listenOrderStatus();
+    setTimeout(this.wordTrick, 1500);
   },
   mounted(){
     let recaptchaScript = document.createElement('script')
@@ -63,22 +71,38 @@ export default {
   },
   methods: {
     generateSentence(){
-      for(let i = 0; i < this.rawSentence.length; i ++){
-        this.sentence.push({});
-        this.sentence[i].content = this.rawSentence[i].content.split('');
-        this.sentence[i].source = this.rawSentence[i].source.split('');
-        for(let j = 0; j < this.sentence[i].content.length; j ++){
-          let temp = this.sentence[i].content[j];
-          this.sentence[i].content[j] = {};
-          this.sentence[i].content[j].word = temp;
-          this.sentence[i].content[j].id = j;
+      this.sentence = [];
+      if (this.type) {
+        for(let i = 0; i < this.rawSentence1.length; i ++){
+          this.sentence.push({});
+          this.sentence[i].content = this.rawSentence1[i].content.split('');
+          this.sentence[i].source = this.rawSentence1[i].source.split('');
+          for(let j = 0; j < this.sentence[i].content.length; j ++){
+            let temp = this.sentence[i].content[j];
+            this.sentence[i].content[j] = {};
+            this.sentence[i].content[j].word = temp;
+            this.sentence[i].content[j].id = j;
+          }
         }
       }
+      else {
+        for(let i = 0; i < this.rawSentence2.length; i ++){
+          this.sentence.push({});
+          this.sentence[i].content = this.rawSentence2[i].content.split('');
+          this.sentence[i].source = this.rawSentence2[i].source.split('');
+          for(let j = 0; j < this.sentence[i].content.length; j ++){
+            let temp = this.sentence[i].content[j];
+            this.sentence[i].content[j] = {};
+            this.sentence[i].content[j].word = temp;
+            this.sentence[i].content[j].id = j;
+          }
+        }
+      }
+
     },
     wordTrick(){
       for(let i = 0; i < this.sentence.length; i ++){
         this.sentence[i].content = _.shuffle(this.sentence[i].content);
-        // this.sentence[i].source = _.shuffle(this.sentence[i].source);
         var temp = this.sentence[i]
         this.$set(this.sentence, i, temp );
       }
@@ -93,9 +117,15 @@ export default {
 </script>
 
 <style scoped>
-  .sentenceContainer {
-    /* display: none; */
+  .leftSentenceContainer {
     position: absolute;
+    top: 70px;
+    left: 0px;
+  }
+  .rightSentenceContainer {
+    position: absolute;
+    top: 300px;
+    right: 30px;
   }
   .singleSentenceContainer {
     display: inline-flex;
@@ -106,12 +136,14 @@ export default {
     align-content: center;
   }
   .wordHolder {
+    width: 25px;
     overflow: hidden;
     text-align: center;
     border: 1px solid black;
     transition: background-color 0.2s,
                 transform 2s;
     margin-left: 3px;
+
   }
   .wordHolder:hover {
     background-color: white;
@@ -127,6 +159,7 @@ export default {
     transform: scale(2, 2);
   }
   .source {
+
     display: inline-block;
     font-size: 2rem;
     font-family: 'ZCOOL XiaoWei', serif;
@@ -137,6 +170,7 @@ export default {
     transform: scale(2, 2);
   }
   .sourceHolder {
+    width: 25px;
     overflow: hidden;
     text-align: center;
     border: 1px solid black;
@@ -148,7 +182,7 @@ export default {
     background-color: black;
   }
   @media only screen and (max-width: 600px) {
-    .sentenceContainer {
+    .leftSentenceContainer, .rightSentenceContainer {
       display: none;
     }
   }

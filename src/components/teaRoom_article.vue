@@ -209,7 +209,6 @@ export default {
 
     changeShow(index){
       eventBus.$emit('changeList', true);
-
       let nowText = document.getElementsByClassName('collapse_text')[index];
       let nowTitle = this.getDOMArray('collapse_title');
       if(!this.maxHeight[index]){
@@ -217,13 +216,13 @@ export default {
           this.$set(this.maxHeight, i, 0);
           nowTitle[i].style.boxShadow = '2px 2px 5px black';
         }
-        this.$set(this.maxHeight, index, 1000);
         eventBus.$emit('orderArticle', false);
+        this.$set(this.maxHeight, index, 1000);
         nowTitle[ index ].style.boxShadow = '0px 0px 0px black';
       }
       else{
-        this.$set(this.maxHeight, index, 0);
         eventBus.$emit('orderArticle', true);
+        this.$set(this.maxHeight, index, 0);
         nowTitle[ index ].style.boxShadow = '2px 2px 5px black';
       }
     },

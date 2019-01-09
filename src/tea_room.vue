@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="mainContainer">
-    <teaSentence></teaSentence>
+    <teaSentence :type='leftType'></teaSentence>
+    <teaSentence :type='rightType'></teaSentence>
     <aplayer
     class="musicPlayer"
     ref='aplayer'
@@ -25,6 +26,8 @@ export default {
   },
   data(){
     return {
+      leftType: true,
+      rightType: false,
       moePlayer: {
         isListFolded: false,
         theme: '#1396f1',
@@ -121,6 +124,7 @@ export default {
 
 <style scoped>
   .mainContainer {
+    position: relative;
     padding-top: 60px;
     background: #009FFF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
