@@ -1,6 +1,6 @@
 <template>
   <div class="sentenceContainer">
-    <button type="button" name="button" @click='wordTrick'>aaaa</button>
+    <!-- <button type="button" name="button" @click='wordTrick'>aaaa</button> -->
     <transition-group class="singleSentenceContainer" v-for='(singleSentence, index) in sentence' tag='div' name='flip-list' :key='index'>
       <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
         <span class="word">{{ word.word }}</span>
@@ -146,5 +146,10 @@ export default {
   }
   .sourceHolder:hover {
     background-color: black;
+  }
+  @media only screen and (max-width: 600px) {
+    .sentenceContainer {
+      display: none;
+    }
   }
 </style>
