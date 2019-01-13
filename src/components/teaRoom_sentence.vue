@@ -62,10 +62,10 @@ export default {
     isWordOrdered: function(){
       var that = this;
       if (this.isWordOrdered){
-        setTimeout(function(){that.generateSentence()}, 800);
+        setTimeout(function(){that.generateSentence()}, 500);
       }
       else {
-        setTimeout(function(){that.wordTrick()}, 800);
+        setTimeout(function(){that.wordTrick()}, 500);
       }
     }
   },
@@ -119,18 +119,20 @@ export default {
 <style scoped>
   .leftSentenceContainer {
     position: absolute;
-    top: 70px;
+    top: 300px;
     left: 0px;
+    display: none;
   }
   .rightSentenceContainer {
     position: absolute;
     top: 300px;
     right: 30px;
+    display: none;
   }
   .singleSentenceContainer {
     display: inline-flex;
     flex-direction: column;
-    max-height: 600px;
+    max-height: 500px;
     width: 100px;
     flex-wrap: wrap-reverse;
     align-content: center;
@@ -141,7 +143,7 @@ export default {
     text-align: center;
     border: 1px solid black;
     transition: background-color 0.2s,
-                transform 2s;
+                transform 1s;
     margin-left: 3px;
 
   }
