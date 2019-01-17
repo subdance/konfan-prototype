@@ -2,82 +2,22 @@
   <div class="mainHolder">
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
-    <div class="single_row">
-      <div class="collapse_title" @click='changeShow(0)'>
-        <span class="title_text">{{ articleSet[0].title }}</span>
-        <p class="title_text_adding">{{ articleSet[0].intro }}</p>
+    <div class="single_row" v-for='(item, index) in articleSet'>
+      <div class="collapse_title" @click='changeShow(index)'>
+        <span class="title_text">{{ item.title }}</span>
+        <p class="title_text_adding">{{ item.intro }}</p>
       </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[0] + 'px'}">
+      <div class="collapse_text" :style="{maxHeight: maxHeight[index] + 'px'}">
         <p
           class="article_text"
-          v-for='(paragraph, index) in articleSet[0].para'
+          v-for='(paragraph, index) in item.para'
           :v-key='index'
           > &nbsp &nbsp {{ paragraph }}
         </p>
-      </div>
-    </div>
-
-    <div class="single_row">
-      <div class="collapse_title" @click='changeShow(1)'>
-        <span class="title_text">{{ articleSet[1].title }}</span>
-        <p class="title_text_adding">{{ articleSet[1].intro }}</p>
-      </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[1] + 'px'}">
-        <p
-          class="article_text"
-          v-for='(paragraph, index) in articleSet[1].para'
-          :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}
-        </p>
-      </div>
-    </div>
-
-    <div class="single_row">
-      <div class="collapse_title" @click='changeShow(2)'>
-        <span class="title_text">{{ articleSet[2].title }}</span>
-        <p class="title_text_adding">{{ articleSet[2].intro }}</p>
-      </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[2] + 'px'}">
-        <p
-          class="article_text"
-          v-for='(paragraph, index) in articleSet[2].para'
-          :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}
-        </p>
-      </div>
-    </div>
-
-    <div class="single_row">
-      <div class="collapse_title" @click='changeShow(3)'>
-        <span class="title_text">{{ articleSet[3].title }}</span>
-        <p class="title_text_adding">{{ articleSet[3].intro }}</p>
-      </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[3] + 'px'}">
-        <p
-          class="article_text"
-          v-for='(paragraph, index) in articleSet[3].para'
-          :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}
-        </p>
-      </div>
-    </div>
-
-    <div class="single_row">
-      <div class="collapse_title" @click='changeShow(4)'>
-        <span class="title_text">{{ articleSet[4].title }}</span>
-        <p class="title_text_adding">{{ articleSet[4].intro }}</p>
-      </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[4] + 'px'}">
-        <p
-          class="article_text"
-          v-for='(paragraph, index) in articleSet[4].para'
-          :v-key='index'
-          > &nbsp &nbsp {{ paragraph }}
-        </p>
-        <div style="text-align: center;">
+        <div style="text-align: center;" v-show='!(index - 4)'>
           <img class="articleImg" src="http://35.244.189.64/k-on-fan/image/article/1.jpg" alt="">
         </div>
-        <p class="imgText">摄于2016-秋</p>
+        <p class="imgText" v-show='!(index - 4)'>摄于2016-秋</p>
       </div>
     </div>
 
@@ -217,7 +157,7 @@ export default {
           nowTitle[i].style.boxShadow = '2px 2px 5px black';
         }
         eventBus.$emit('orderArticle', false);
-        this.$set(this.maxHeight, index, 1000);
+        this.$set(this.maxHeight, index, nowText.scrollHeight);
         nowTitle[ index ].style.boxShadow = '0px 0px 0px black';
       }
       else{
@@ -255,7 +195,7 @@ export default {
   }
   .collapse_text {
     overflow: hidden;
-    transition: max-height  1s ease-in-out;
+    transition: max-height  1s;
     padding-left: 2rem;
     width: 600px;
     margin: auto;
