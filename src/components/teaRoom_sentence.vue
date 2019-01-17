@@ -1,10 +1,10 @@
 <template>
   <div :class="{leftSentenceContainer: type, rightSentenceContainer: !type}">
-    <transition-group class="singleSentenceContainer" v-for='(singleSentence, index) in sentence' tag='div' name='flip-list' :key='index'>
+    <transition-group class="singleSentenceContainer" v-for='(singleSentence, index) in sentence' tag='div' name='flip-list' :key='index + 100'>
       <div class="wordHolder" v-for='(word, index) in singleSentence.content' :key='word.id'>
         <span class="word">{{ word.word }}</span>
       </div>
-      <div class="sourceHolder" v-for='(word, index) in singleSentence.source' :key='index - 3'>
+      <div class="sourceHolder" v-for='(word, index) in singleSentence.source' :key='index - 9'>
         <span class="source">{{ word }}</span>
         <link async href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
       </div>
@@ -62,10 +62,10 @@ export default {
     isWordOrdered: function(){
       var that = this;
       if (this.isWordOrdered){
-        setTimeout(function(){that.generateSentence()}, 500);
+        setTimeout(function(){that.generateSentence()}, 800);
       }
       else {
-        setTimeout(function(){that.wordTrick()}, 500);
+        setTimeout(function(){that.wordTrick()}, 800);
       }
     }
   },
@@ -121,13 +121,14 @@ export default {
     position: absolute;
     top: 300px;
     left: 0px;
-    display: none;
+    min-height: 200px;
   }
   .rightSentenceContainer {
     position: absolute;
     top: 300px;
     right: 30px;
-    display: none;
+    min-height: 200px;
+    /* display: none; */
   }
   .singleSentenceContainer {
     display: inline-flex;

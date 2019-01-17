@@ -156,14 +156,14 @@ export default {
           this.$set(this.maxHeight, i, 0);
           nowTitle[i].style.boxShadow = '2px 2px 5px black';
         }
-        eventBus.$emit('orderArticle', false);
         this.$set(this.maxHeight, index, nowText.scrollHeight);
-        nowTitle[ index ].style.boxShadow = '0px 0px 0px black';
+        eventBus.$emit('orderArticle', false);
+        nowTitle[index].style.boxShadow = '0px 0px 0px black';
       }
       else{
         eventBus.$emit('orderArticle', true);
         this.$set(this.maxHeight, index, 0);
-        nowTitle[ index ].style.boxShadow = '2px 2px 5px black';
+        nowTitle[index].style.boxShadow = '2px 2px 5px black';
       }
     },
   },
@@ -181,7 +181,7 @@ export default {
     height: 13rem;
     padding-top: 1rem;
     padding-left: 2rem;
-    transition: 0.5s ease-out;
+    transition: 0.5s;
     margin-bottom: 1rem;
     position: relative;
     border: 2px solid transparent;
@@ -261,7 +261,7 @@ export default {
       height: 13rem;
       padding-top: 1rem;
       padding-left: 1rem;
-      transition: 0.5s ease-out;
+      transition: 0.5s;
       margin-bottom: 0rem;
       position: relative;
       border: 2px solid transparent;
@@ -272,7 +272,7 @@ export default {
     }
     .collapse_text {
       overflow: hidden;
-      transition: max-height  1s ease-out;
+      transition: max-height 1s ;
       padding-left: 1rem;
       width: 80vw;
       margin: auto;
