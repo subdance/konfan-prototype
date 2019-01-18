@@ -14,9 +14,16 @@ export default {
     }
   },
   mounted(){
-    this.$nextTick(function() {
-      this.listenScroll();
-    });
+    // this.$nextTick(function() {
+    //   this.listenScroll();
+    // });
+    var that = this;
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        that.isActivated = true;
+      } else {
+      that.isActivated = false;
+      }};
   },
   methods: {
     listenScroll(){
