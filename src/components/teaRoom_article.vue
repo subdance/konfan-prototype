@@ -2,7 +2,7 @@
   <div class="mainHolder">
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
-    <div class="single_row" v-for='(item, index) in articleSet'>
+    <div class="single_row" v-for='(item, index) in articleSet' :id="index">
       <div class="collapse_title" @click='changeShow(index)'>
         <span class="title_text">{{ item.title }}</span>
         <p class="title_text_adding">{{ item.intro }}</p>
@@ -166,8 +166,19 @@ export default {
         nowTitle[index].style.boxShadow = '2px 2px 5px black';
       }
     },
-  },
 
+    collectInfo(){
+      var infoSet = [];
+      for (let i = 0; i < this.articleSet.length; i ++) {
+        infoSet.push(this.articleSet[i].title);
+      }
+      eventBus.$emit('catalogInfo', infoSet);
+    }
+  },
+  mounted(){
+    this.collectInfo();
+
+  },
 }
 </script>
 

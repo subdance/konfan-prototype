@@ -122,13 +122,14 @@ export default {
     top: 300px;
     left: 0px;
     min-height: 200px;
+    display: none;
   }
   .rightSentenceContainer {
     position: absolute;
     top: 300px;
     right: 30px;
     min-height: 200px;
-    /* display: none; */
+    display: none;
   }
   .singleSentenceContainer {
     display: inline-flex;
