@@ -1,6 +1,13 @@
 <template lang="html">
   <div class="catalogContainer">
-   <a v-for='(item, index) in titleInfo' :href="anchro[index]">{{ titleInfo[index] }}</a>
+   <a
+     v-for='(item, index) in titleInfo'
+     href='#'
+     :v-scroll-to="'#' + anchro[index]"
+     @click='showArticle(index)'
+     >
+     {{ titleInfo[index] }}
+   </a>
   </div>
 </template>
 
@@ -14,6 +21,7 @@ export default {
     }
   },
   created(){
+    this.clearAll();
     eventBus.$on('catalogInfo', reg => {
       for (let i = 0; i < reg.length; i++) {
         this.titleInfo.push(reg[i]);
@@ -24,7 +32,8 @@ export default {
         temp2 = i;
         temp2 = temp2.toString();
         var tempString = temp1.concat(temp2);
-        this.anchro.push(tempString);
+        // this.anchro.push(tempString);
+        this.anchro.push(temp2);
       }
       console.log(this.anchro);
     });
@@ -32,6 +41,13 @@ export default {
   mounted(){
   },
   methods: {
+    clearAll(){
+      this.titleInfo = [];
+      this.anchro = [];
+    },
+    showArticle(index){
+      console.log(index);
+    },
   },
 }
 </script>

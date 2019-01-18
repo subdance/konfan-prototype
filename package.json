@@ -17,6 +17,7 @@
     "vue-aplayer": "^1.6.1",
     "vue-dplayer": "0.0.10",
     "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.13.0",
     "vue-video-player": "^5.0.2"
   },
   "devDependencies": {

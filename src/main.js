@@ -17,6 +17,10 @@ Vue.use(APlayer, {
 
 Vue.use(ElementUI);
 
+var VueScrollTo = require('vue-scrollto');
+
+Vue.use(VueScrollTo)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
