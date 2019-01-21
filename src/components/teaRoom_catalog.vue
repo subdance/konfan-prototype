@@ -50,7 +50,7 @@ export default {
       setTimeout(function(){
         var top = element.offsetTop - 10;
         window.scrollTo(0, top);
-      }, 800)
+      }, 700)
     },
   },
 }
@@ -59,6 +59,21 @@ export default {
 <style lang="css" scoped>
   .catalogContainer {
     position: fixed;
-    top: 100px;
+    top: 70px;
+    margin-top: -5px;
+  }
+  .catalogContainer > p {
+    color: #303133;
+    margin: 5px 10px;
+    padding: 1px 3px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 5px black;
+  }
+  .catalogContainer > p:hover {
+    background-color: #DCDFE6;
+    transform: translate(0, -2px);
   }
 </style>

@@ -194,7 +194,7 @@ export default {
     height: 13rem;
     padding-top: 1rem;
     padding-left: 2rem;
-    transition: 0.5s;
+    transition: 0.6s;
     margin-bottom: 1rem;
     position: relative;
     border: 2px solid transparent;
@@ -208,7 +208,7 @@ export default {
   }
   .collapse_text {
     overflow: hidden;
-    transition: max-height  1s;
+    transition: max-height 0.6s;
     padding-left: 2rem;
     width: 600px;
     margin: auto;
@@ -274,7 +274,7 @@ export default {
       height: 13rem;
       padding-top: 1rem;
       padding-left: 1rem;
-      transition: 0.5s;
+      transition: 0.6s;
       margin-bottom: 0rem;
       position: relative;
       border: 2px solid transparent;
@@ -285,7 +285,7 @@ export default {
     }
     .collapse_text {
       overflow: hidden;
-      transition: max-height 1s ;
+      transition: max-height 0.6s ;
       padding-left: 1rem;
       width: 80vw;
       margin: auto;
