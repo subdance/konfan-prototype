@@ -2,9 +2,7 @@
   <div class="catalogContainer">
    <a
      v-for='(item, index) in titleInfo'
-     href='#'
-     :v-scroll-to="'#' + anchro[index]"
-     @click='showArticle(index)'
+     @click='scrollTo(index)'
      >
      {{ titleInfo[index] }}
    </a>
@@ -26,14 +24,13 @@ export default {
       for (let i = 0; i < reg.length; i++) {
         this.titleInfo.push(reg[i]);
       }
-      let temp1 = '#';
+      let temp1 = 'article';
       let temp2;
       for (let i = 0; i < reg.length; i++) {
         temp2 = i;
         temp2 = temp2.toString();
         var tempString = temp1.concat(temp2);
-        // this.anchro.push(tempString);
-        this.anchro.push(temp2);
+        this.anchro.push(tempString);
       }
       console.log(this.anchro);
     });
@@ -45,8 +42,12 @@ export default {
       this.titleInfo = [];
       this.anchro = [];
     },
-    showArticle(index){
-      console.log(index);
+    scrollTo(index){
+      index = index.toString();
+      var refName = 'article'.concat(index);
+      var element = document.getElementById(refName);
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
     },
   },
 }
