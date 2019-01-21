@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="catalogContainer">
-   <a
+   <p
      v-for='(item, index) in titleInfo'
      @click='scrollTo(index)'
      >
      {{ titleInfo[index] }}
-   </a>
+   </p>
   </div>
 </template>
 
@@ -32,7 +32,6 @@ export default {
         var tempString = temp1.concat(temp2);
         this.anchro.push(tempString);
       }
-      console.log(this.anchro);
     });
   },
   mounted(){
@@ -47,12 +46,19 @@ export default {
       index = index.toString();
       var refName = 'article'.concat(index);
       var element = document.getElementById(refName);
-      var top = element.offsetTop;
-      window.scrollTo(0, top);
+      var that = this;
+      setTimeout(function(){
+        var top = element.offsetTop - 10;
+        window.scrollTo(0, top);
+      }, 800)
     },
   },
 }
 </script>
 
 <style lang="css" scoped>
+  .catalogContainer {
+    position: fixed;
+    top: 100px;
+  }
 </style>
