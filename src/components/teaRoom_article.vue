@@ -177,7 +177,9 @@ export default {
   },
   mounted(){
     this.collectInfo();
-
+    eventBus.$on('openArticle', reg => {
+      this.changeShow(reg);
+    })
   },
 }
 </script>

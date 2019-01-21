@@ -43,6 +43,7 @@ export default {
       this.anchro = [];
     },
     scrollTo(index){
+      eventBus.$emit('openArticle', index)
       index = index.toString();
       var refName = 'article'.concat(index);
       var element = document.getElementById(refName);
