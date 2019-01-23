@@ -7,6 +7,22 @@
       <div class="smallButton" @click='hideAndShow(4)'><span style="line-height:4rem">Tsumugi</span>!</div>
       <div class="smallButton" @click='hideAndShow(5)'><span style="line-height:4rem">Azusa!</span></div>
     </div>
+    <div class="cachePart">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/yui1.png" alt="">
+    </div>
+    <div class="cachePart">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/ritsu1.png" alt="">
+    </div>
+    <div class="cachePart">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mio1.png" alt="">
+    </div>
+    <div class="cachePart">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mugi1.png" alt="">
+    </div>
+    <div class="cachePart">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/azusa1.png" alt="">
+    </div>
+
     <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
     Yui!</div>
     <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
@@ -314,6 +330,14 @@
   }
   #button5:hover {
     transform: rotate(-20deg);
+  }
+  .cachePart {
+    position: absolute;
+    opacity: 0;
+  }
+  .cachePart > img {
+    position: absolute;
+    opacity: 0;
   }
   @media only screen and (max-width:600px) {
     .button {
