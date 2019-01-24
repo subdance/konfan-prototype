@@ -9,18 +9,23 @@
     </div>
     <div class="cachePart">
       <img src="http://35.244.189.64/k-on-fan/image/character-intro/yui1.png" alt="">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc1.png" alt="">
     </div>
     <div class="cachePart">
       <img src="http://35.244.189.64/k-on-fan/image/character-intro/ritsu1.png" alt="">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc2.png" alt="">
     </div>
     <div class="cachePart">
       <img src="http://35.244.189.64/k-on-fan/image/character-intro/mio1.png" alt="">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc3.png" alt="">
     </div>
     <div class="cachePart">
       <img src="http://35.244.189.64/k-on-fan/image/character-intro/mugi1.png" alt="">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc4.png" alt="">
     </div>
     <div class="cachePart">
       <img src="http://35.244.189.64/k-on-fan/image/character-intro/azusa1.png" alt="">
+      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc5.png" alt="">
     </div>
 
     <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
@@ -334,10 +339,13 @@
   .cachePart {
     position: absolute;
     opacity: 0;
+    z-index: -1;
   }
   .cachePart > img {
     position: absolute;
     opacity: 0;
+    z-index: -1;
+    max-height: 100px;
   }
   @media only screen and (max-width:600px) {
     .button {

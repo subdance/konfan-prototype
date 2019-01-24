@@ -1,5 +1,8 @@
 <template lang="html">
   <div class="catalogContainer">
+    <div class="responsiveContainer">
+      <span>目录</span>
+    </div>
     <p
       v-for='(item, index) in titleInfo'
       @click='scrollTo(index)'
@@ -75,5 +78,37 @@ export default {
   .catalogContainer > p:hover {
     background-color: #DCDFE6;
     transform: translate(0, -2px);
+  }
+  .responsiveContainer {
+    display: none;
+  }
+  @media only screen and (max-width: 600px) {
+    .catalogContainer {
+      position: fixed;
+      z-index: 990;
+      max-width: 30px;
+      max-height: 30px;
+      top: 150px;
+      left: 5px;
+      border-radius: 5px;
+      background-color: white;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+    .catalogContainer:hover {
+      max-width: 200px;
+      max-height: 1000px;
+    }
+    .catalogContainer:hover > .responsiveContainer{
+      width: 100%;
+      height: 40px;
+    }
+    .responsiveContainer {
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
   }
 </style>
