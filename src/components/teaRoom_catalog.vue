@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="catalogContainer">
-   <p
-     v-for='(item, index) in titleInfo'
-     @click='scrollTo(index)'
-     >
-     {{ titleInfo[index] }}
-   </p>
+    <p
+      v-for='(item, index) in titleInfo'
+      @click='scrollTo(index)'
+      >
+      {{ titleInfo[index] }}
+    </p>
   </div>
 </template>
 
