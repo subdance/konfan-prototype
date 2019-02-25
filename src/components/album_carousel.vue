@@ -192,8 +192,8 @@ export default {
       if(window.innerWidth < 600) {
         this.carouselType = '';
         this.carouselIndicator = 'outside'
-        this.carouselHeight = '50vh';
-        this.carouselHeightCard = '50vh';
+        this.carouselHeight = '41vh';
+        this.carouselHeightCard = '41vh';
       }
       else{
         this.carouselType = 'card';
@@ -282,9 +282,15 @@ export default {
     margin-top: 4rem;
   }
   @media only screen and (max-width: 600px) {
+    .carouselPicCard {
+      border-radius: 10px;
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
     .carouselPic {
       width: 100%;
-      height: 50vh;
+      height: 40vh;
       object-fit: cover;
       border-radius: 10px;
     }

@@ -259,6 +259,7 @@
     color: white;
   }
   .button {
+    border: 4px solid white;
     position: absolute;
     -webkit-border-radius: 0 10px 200px / 0 200px 14px 250px;
     border-radius: 0 10px 200px / 0 200px 14px 250px;
@@ -281,6 +282,7 @@
     background-position: 50% 50%;
     -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
     box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
+    box-shadow: 3px 3px 3px black;
     transition: 0.5s ease-in-out;
   }
   .introImg {
@@ -399,7 +401,6 @@
       padding: 0 1rem;
     }
     .smallButton {
-
       height: 4rem;
       box-sizing: border-box;
       text-align: center;

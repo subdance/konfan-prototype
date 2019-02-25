@@ -18,7 +18,7 @@
       </div>
     </div>
     <div id="addTextHolder">
-      <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非粉丝会成员禁止翻阅！<i class="el-icon-star-on"></i></p>
+      <p id="addText"><i class="el-icon-star-on"></i>下方绝密档案,非粉丝会成员禁止点击！<i class="el-icon-star-on"></i></p>
     </div>
     <div class="tableHolder">
       <div class="girlList">
@@ -596,7 +596,7 @@ export default {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
   }
   .cacheritsu {
-    background-image: ·url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
   }
   .cachemio {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
@@ -659,6 +659,13 @@ export default {
     width: 100%;
     margin-bottom: -1rem;
   }
+  .mainHolder {
+  @supports (-webkit-appearance:none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
+}
   @media only screen and (max-width:600px) {
     .mainHolder {
       min-height: 70vh;
