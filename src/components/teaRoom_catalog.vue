@@ -95,11 +95,11 @@ export default {
       overflow: hidden;
       transition: all 0.5s;
     }
-    .catalogContainer:hover, .catalogContainer:active {
+    .catalogContainer:active {
       max-width: 200px;
       max-height: 1000px;
     }
-    .catalogContainer:hover > .responsiveContainer{
+    .catalogContainer:active> .responsiveContainer{
       width: 100%;
       height: 40px;
     }
