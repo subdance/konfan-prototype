@@ -94,10 +94,12 @@ export default {
       background-color: white;
       overflow: hidden;
       transition: all 0.5s;
+      cursor: pointer;
     }
     .catalogContainer:hover, .catalogContainer:active {
       max-width: 200px;
       max-height: 1000px;
+      cursor: pointer;
     }
     .catalogContainer:hover, .catalogContainer:active > .responsiveContainer{
       width: 100%;

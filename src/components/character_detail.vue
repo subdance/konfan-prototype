@@ -659,13 +659,6 @@ export default {
     width: 100%;
     margin-bottom: -1rem;
   }
-  .mainHolder {
-  @supports (-webkit-appearance:none) {
-    .os-android & {
-      min-height: calc(100vh - 56px);
-    }
-  }
-}
   @media only screen and (max-width:600px) {
     .mainHolder {
       min-height: 70vh;
