@@ -354,13 +354,13 @@
       display: none;
     }
     .introHolder {
-      height: 100vh;
+      height: 700px;
     }
     .mainIntroHolder {
       width: 90%;
       height: auto;
       position: absolute;
-      top: 55vh;
+      top: 300px;
       left: 50%;
       transform: translateX(-50%);
       background-image: none;
@@ -391,6 +391,7 @@
     .mainIntro {
       line-height: 3rem;
       letter-spacing: 0.4rem;
+      font-size: 1.9rem;
     }
     .mcHolder {
       display: none;
@@ -431,7 +432,7 @@
       padding-top: 2rem;
     }
     .introImg {
-      height: 80vh;
+      height: 600px;
     }
   }
 </style>

@@ -38,7 +38,7 @@
               <p class="introPara" v-for='(paragraph) in backDetail2[index2].intro'> &nbsp  {{ paragraph }}</p>
             </div>
             <div class="detailTd">
-              <p class="introPara"> &nbsp {{ nowDetail3 }}</p>
+              <p class="introPara"> &nbsp &nbsp {{ nowDetail3 }}</p>
               <table style="text-align: center; position: relative;">
                 <tr v-for='(basic, index) in basicIntro[index1].info'>
                   <th>{{ basic.header }}</th>
@@ -661,7 +661,7 @@ export default {
   }
   @media only screen and (max-width:600px) {
     .mainHolder {
-      min-height: 70vh;
+      min-height: 550px;
       padding-bottom: 4rem;
     }
     .detailHolder  {
@@ -701,6 +701,7 @@ export default {
     }
     .detailTd {
       max-width: 100%;
+      padding: 0 2rem;
     }
     .outerHolder {
       width: 90vw;
@@ -708,6 +709,9 @@ export default {
       position: static;
       text-align: right;
       margin-bottom: 1rem;
+    }
+    .introPara {
+      font-size: 0.9rem;
     }
   }
 </style>
