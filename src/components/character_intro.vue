@@ -49,7 +49,7 @@
         </el-col>
         <el-col :span="7">
           <div class="imgHolder">
-            <img  class="introImg" :src="nowHeadPic" alt="">
+            <img class="introImg" :src="nowHeadPic" alt="">
           </div>
         </el-col>
         <el-col :span="14">
@@ -286,6 +286,8 @@
     transition: 0.5s ease-in-out;
   }
   .introImg {
+    object-fit: contain;
+    width: 100%;
     height: 600px;
   }
   #button1 {
@@ -432,6 +434,7 @@
       padding-top: 2rem;
     }
     .introImg {
+      width: 100%;
       height: 600px;
     }
   }
