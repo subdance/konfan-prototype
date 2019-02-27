@@ -58,10 +58,10 @@
           this.carouselHeight = 300;
           this.indicatorPos = 'outside';
         }
-      else{
-        this.carouselHeight = 100 + 'vh';
-        this.indicatorPos = 'inside';
-      }
+        else{
+          this.carouselHeight = 100 + 'vh';
+          this.indicatorPos = 'inside';
+        }
       }
     },
 }
