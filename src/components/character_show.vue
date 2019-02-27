@@ -55,7 +55,7 @@
     methods: {
       setHeight(){
         if(window.innerWidth < 600){
-          this.carouselHeight = 60 + 'vh';
+          this.carouselHeight = 300;
           this.indicatorPos = 'outside';
         }
       else{
@@ -110,13 +110,13 @@
     }
     .bigImg {
       width: 100%;
-      height: 60vh;
+      height: 300px;
       object-position: center;
       object-fit: cover;
     }
     .introHolder {
       position: absolute;
-      bottom: 5vh;
+      top: 3rem;
       left: 1rem;
     }
     .girlNameText {
