@@ -18,7 +18,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">乐器</p>
+      <!-- <p class="introText">乐器</p> -->
       <el-carousel
         :indicator-position="carouselIndicator"
         :height='carouselHeightCard'
@@ -41,7 +41,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">梦</p>
+      <!-- <p class="introText">梦</p> -->
       <el-carousel
         :indicator-position="carouselIndicator"
         :height='carouselHeight'
@@ -63,7 +63,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">律澪</p>
+      <!-- <p class="introText">律澪</p> -->
       <el-carousel
         :indicator-position="carouselIndicator"
         :height='carouselHeight'
@@ -85,7 +85,7 @@
     </div>
 
     <div class="carouselPart">
-      <p class="introText">碰到狗狗,少女会怎样？</p>
+      <!-- <p class="introText">碰到狗狗,少女会怎样？</p> -->
       <el-carousel
         :indicator-position="carouselIndicator"
         :height='carouselHeight'
@@ -192,8 +192,8 @@ export default {
       if(window.innerWidth < 600) {
         this.carouselType = '';
         this.carouselIndicator = 'outside'
-        this.carouselHeight = '41vh';
-        this.carouselHeightCard = '41vh';
+        this.carouselHeight = '250px';
+        this.carouselHeightCard = '250px';
       }
       else{
         this.carouselType = 'card';
@@ -263,7 +263,7 @@ export default {
   }
   .detailHolderInnerCard {
     position: absolute;
-    top: 2rem;
+    top: 0rem;
     width: 100%;
   }
   .detailText {
@@ -285,13 +285,13 @@ export default {
     .carouselPicCard {
       border-radius: 10px;
       width: 100%;
-      height: 40vh;
-      object-fit: cover;
+      height: 250px;
+      object-fit: contain;
     }
     .carouselPic {
       width: 100%;
-      height: 40vh;
-      object-fit: cover;
+      height: 250px;
+      object-fit: contain;
       border-radius: 10px;
     }
     .introText {
