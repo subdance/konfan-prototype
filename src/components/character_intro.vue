@@ -43,7 +43,7 @@
     <transition name="el-fade-in-linear">
       <el-row v-show='isShow'>
         <el-col :span="3">
-          <div style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
+          <div id="addition" style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
           {{ verticalText }}
           </div>
         </el-col>
@@ -287,7 +287,6 @@
   }
   .introImg {
     object-fit: contain;
-    width: 100%;
     height: 600px;
   }
   #button1 {
@@ -434,8 +433,11 @@
       padding-top: 2rem;
     }
     .introImg {
-      width: 100%;
-      height: 600px;
+      object-fit: contain;
+      width: 100vw;
+    }
+    #addition {
+      display: none;
     }
   }
 </style>
