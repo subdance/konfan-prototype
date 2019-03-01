@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
+    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <div>
       <div class="flexContainer">
         <div
@@ -101,7 +102,7 @@ export default {
       innerDisplayArray: [false, false, false, false, ],
       introTitle: [
         'K-ON是“轻音部”这一高中社团的简称',
-        '两位吉他手，一个键盘手，一个鼓手',
+        '两位吉他手，一个键盘手，一个贝斯手，一个鼓手',
         '可口的点心，悠闲的午后',
         '生活，音乐，懵懂的梦想',
       ],
@@ -154,8 +155,9 @@ export default {
     height: 30rem;
     width: 40%;
     position: relative;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #303133;
+    font-family: 'ZCOOL KuaiLe', cursive;
   }
   .flexTextItem > div {
     width: 100%;
@@ -205,9 +207,10 @@ export default {
     .flexPicItem {
       position: relative;
       width: 90%;
-      height: 20rem;
+      height: 18rem;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
       border-radius: 0;
       z-index: 1;
     }

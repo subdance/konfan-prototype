@@ -248,9 +248,8 @@ export default {
     font-style: italic;
   }
   .carouselPart {
-    margin-bottom: 6rem;
     width: 95%;
-    margin: auto;
+    margin: 3rem auto;
   }
   .carouselPart:last-child {
     padding-bottom: 10rem;

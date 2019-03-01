@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="tabHolder">
+    <link async href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Merienda+One" rel="stylesheet">
     <el-carousel
       :indicator-position="indicatorPos"
       trigger='click'
@@ -11,7 +12,7 @@
         :key="item"
         >
         <div class="introHolder">
-          <p class="girlNameText">{{ backName[ item - 1 ] }}</p>
+          <p ><span class="girlNameText">{{ backName[ item - 1 ] }}</span><span class="subName">{{ backNameJ[ item - 1 ] }}</span></p>
           <p class="girlIntroText">{{ backIntro[ item - 1 ] }}</p>
         </div>
         <img class="bigImg" :src='backPic[ item - 1 ]' alt="">
@@ -37,6 +38,7 @@
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: '主唱，主音吉他，团宠',
         backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Akiyama Mio', 'Kotobuki Tsumugi', 'Nakano Azusa'],
+        backNameJ: ['ひらさわ ゆい', 'あきやま みお', 'たいなか りつ', 'ことぶき つむぎ', 'なかの あずさ'],
         backIntro: [
           '主唱，主音吉他，团宠',
           '部长，架子鼓手，搞笑担当',
@@ -98,6 +100,15 @@
     color: #df000a;
     text-shadow: 3px 3px 1px grey, -1px -1px 1px grey, 1px -1px 1px grey, 0px 0px 0px grey;
     -webkit-text-stroke: 1px white;
+    font-family: 'Merienda One', cursive;
+  }
+  .subName {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #df000a;
+    text-shadow: 3px 3px 1px grey, -1px -1px 1px grey, 1px -1px 1px grey, 0px 0px 0px grey;
+    -webkit-text-stroke: 1px white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
   }
   .girlIntroText {
     color: #C0C4CC;

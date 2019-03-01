@@ -538,7 +538,6 @@ export default {
     box-shadow: 8px 8px 2px black;
   }
   .blurTd {
-    filter: blur(3px);
   }
   .introPara {
     text-align:justify;
@@ -552,7 +551,6 @@ export default {
   }
   #yui:hover {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
-    filter: blur(0px);
     transform: scale(1.2) rotate(15deg);;
     z-index: 999;
   }
@@ -561,7 +559,6 @@ export default {
   }
   #ritsu:hover {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
-    filter: blur(0px);
     transform: scale(1.1) rotate(-15deg);;
   }
   #mio {
@@ -569,7 +566,6 @@ export default {
   }
   #mio:hover {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
-    filter: blur(0px);
     transform: rotate(-30deg);;
   }
   #mugi {
@@ -577,7 +573,6 @@ export default {
   }
   #mugi:hover {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi2.jpg');
-    filter: blur(0px);
     transform: rotate(10deg);
   }
   #azusa {
@@ -585,7 +580,6 @@ export default {
   }
   #azusa:hover {
     background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa2.jpg');
-    filter: blur(0px);
     transform: scale(1.3);
   }
   .cache > div {
