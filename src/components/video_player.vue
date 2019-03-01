@@ -256,7 +256,9 @@
       transform: skewX(0deg);
       overflow: hidden;
       box-shadow: 2px 2px 4px black;
+      border-radius: 10px;
       box-sizing: border-box;
+      margin: 1rem 1rem;
     }
     .thumbnail {
       width: 100%;
@@ -265,6 +267,8 @@
       transition: all 0.2s ease-in-out;
       margin-bottom: -0.5rem;
       transform: skewX(0deg) scale(1.1, 1.1);
+      border: 8px solid transparent;
+      border-radius: 10px;
     }
     .selectedList {
       margin-left: 0rem;
@@ -277,12 +281,12 @@
       border-radius: 0 0 10px 10px;
     }
     .selectedSmall {
-      box-sizing: border-box;
-      border: 8px solid white;
+      box-sizing: content-box;
+      border: 2px solid white;
     }
     .notSelectedSmall {
       box-sizing: border-box;
-      border: 8px solid transparent;
+      border: 2px solid transparent;
     }
   }
 </style>

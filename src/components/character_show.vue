@@ -133,6 +133,9 @@
     .girlNameText {
       font-size: 2rem;
     }
+    .subName {
+      font-size: 1.5rem
+    }
     .girlIntroText {
       font-size: 1.5rem;
     }
