@@ -205,13 +205,13 @@
   @media only screen and (max-width:600px) {
     .mainHolder {
       position: relative;
-      min-height: 40vh;
       height: auto;
+      min-height: 600px;
     }
     .videoHolder {
       padding-top: 0px;
       position: relative;
-      min-height: 50vh;
+      min-height: 360px;
       overflow: hidden;
       text-align: center;
       padding-bottom: 4rem;
@@ -267,7 +267,7 @@
       transition: all 0.2s ease-in-out;
       margin-bottom: -0.5rem;
       transform: skewX(0deg) scale(1.1, 1.1);
-      border: 8px solid transparent;
+      border: 6px solid transparent;
       border-radius: 10px;
     }
     .selectedList {
@@ -282,11 +282,11 @@
     }
     .selectedSmall {
       box-sizing: content-box;
-      border: 2px solid white;
+      border: 4px solid white;
     }
     .notSelectedSmall {
       box-sizing: border-box;
-      border: 2px solid transparent;
+      border: 4px solid transparent;
     }
   }
 </style>
