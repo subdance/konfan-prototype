@@ -116,7 +116,7 @@ export default {
         'http://35.244.189.64/k-on-fan/image/home-pic/9.jpg',
         'http://35.244.189.64/k-on-fan/image/home-pic/4.jpg',
         'http://35.244.189.64/k-on-fan/image/home-pic/8.jpg',
-        'http://35.244.189.64/k-on-fan/image/home-pic/1.jpg',
+        'http://35.244.189.64/k-on-fan/image/home-pic/2.jpg',
       ],
     }
   },
@@ -209,16 +209,17 @@ export default {
       width: 90%;
       height: 18rem;
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
-      border-radius: 0;
+      border-radius: 10px;
+      overflow: hidden;
       z-index: 1;
     }
     .flexTextItem {
       height: auto;
       width: 90%;
       position: static;
-      font-size: 1.3rem;
+      font-size: 1.7rem;
       color: #303133;
     }
     .flexTextItem > div {

@@ -39,7 +39,7 @@
             </div>
             <div class="detailTd">
               <p class="introPara"> &nbsp &nbsp {{ nowDetail3 }}</p>
-              <table style="text-align: center; position: relative;">
+              <table class="tableItem" style="text-align: center; position: relative;">
                 <tr v-for='(basic, index) in basicIntro[index1].info'>
                   <th>{{ basic.header }}</th>
                   <td>{{ basic.detail }}</td>
@@ -653,6 +653,16 @@ export default {
     width: 100%;
     margin-bottom: -1rem;
   }
+  .tableItem th {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #C0C4CC;
+  }
+  .tableItem td {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #C0C4CC;
+  }
   @media only screen and (max-width:600px) {
     .mainHolder {
       min-height: 550px;
@@ -696,6 +706,7 @@ export default {
     .detailTd {
       max-width: 100%;
       padding: 0 2rem;
+      border: none;
     }
     .outerHolder {
       width: 90vw;

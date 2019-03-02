@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
+    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <div id="box1">
       <video autoplay muted loop id="myVideo" ref='myVideo'>
         <source src="http://35.244.189.64/k-on-fan/video/trim1.mp4" type="video/mp4">
@@ -14,6 +15,14 @@
           <span class="introText">{{ nowMainIntroText }}</span>
         </div>
       </transition>
+    </div>
+    <div id="box2">
+      <div class="textHolder">
+        <p id="headerText">轻音部</br>的配方是:</p>
+        <p id="p1">音乐</p>
+        <p id="p2">课后的茶点</p>
+        <p id="p3">与轻飘飘的时光</p>
+      </div>
     </div>
   </div>
 </template>
@@ -106,6 +115,9 @@ export default {
     position: relative;
     z-index: 1;
   }
+  #box2 {
+    display: none
+  }
   #myVideo {
     position: absolute;
     width: 100%;
@@ -121,7 +133,26 @@ export default {
     }
     #box1 {
       height: auto;
+      display: none;
     }
+    #box2 {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height:300px;
+      background-image: url('http://35.244.189.64/k-on-fan/image/home-pic/1.jpg');
+      background-position: right;
+      background-size: cover;
+    }
+    /* #box2::after {
+      content: "";
+      position: absolute;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.25);
+    } */
     #myVideo {
       position: static;
       width: 100%;
@@ -160,6 +191,48 @@ export default {
     }
     .mainIntro::first-letter {
       font-size: 1.3rem;
+    }
+    p {
+      margin: 0;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      letter-spacing: 10px;
+    }
+    .textHolder {
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translate(0, -40%);
+      background: #FC5C7D;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      padding-left: 20px;
+    }
+    #headerText {
+      font-size: 2rem;
+      font-family: serif;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      font-weight: 800;
+    }
+    #p1 {
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+    #p2 {
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+    #p3 {
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 10px;
     }
   }
 </style>
