@@ -155,7 +155,7 @@ export default {
     height: 30rem;
     width: 40%;
     position: relative;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #303133;
     font-family: 'ZCOOL KuaiLe', cursive;
   }

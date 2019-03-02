@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="mainContainer">
+  <div class="mainContainer2">
     <div class="contentHolder">
       <img class="contentImg" src="../assets/character/nodoka.jpg" alt="">
       <p class="contentText">
@@ -8,8 +8,8 @@
       </p>
     </div>
     <div class="contentHolder">
-      <p class="contentText">
-        “姐姐她以前可以无聊到在地上打滚，自从开始学吉他之后，就很少看到她百无聊奈的样子了！姐姐她在轻音部真的成长了很多!”</br>
+      <p class="left contentText">
+        “姐姐她在轻音部真的成长了很多!”</br>
         <span class="name">平泽唯的妹妹--平泽忧</br></span>
       </p>
       <img class="contentImg" src="../assets/character/ui.jpg" alt="">
@@ -20,6 +20,9 @@
           “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”</br>
           <span class="name">班主任，轻音部顾问, 前轻音部成员--山中佐和子</br></span>
         </p>
+    </div>
+    <div class="help">
+      <p>点击右下角的大小姐回到顶部哦</p>
     </div>
   </div>
 </template>
@@ -42,20 +45,17 @@ export default {
     flex-wrap: nowrap;
     align-items: center;
     padding: 1rem 0;
+    position: relative;
+    text-align: center;
+    display: flex;
   }
-  .mainContainer {
+  .mainContainer2 {
     margin-top: 4rem;
     width: 100%;
     position: relative;
   }
-  .contentHolder {
-    position: relative;
-    text-align: center;
-    display: flex;
-    min-height: 30rem;
-  }
   .contentImg {
-    width: 30rem;
+    width: 20rem;
     border-radius: 50%;
     border: 2px solid white;
     box-shadow: 8px 8px 2px black;
@@ -65,25 +65,60 @@ export default {
     display: inline-block;
     font-size: 2rem;
     color: white;
+    position: relative;
+    border-radius: 15px;
+    /* background: white; */
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid white;
+    padding: 20px;
+  }
+  .contentText:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: white;
+    border-top: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-top: -20px;
   }
   .name {
     font-style: italic;
     color: #606266;
     font-size: 1.5rem;
   }
+  .help {
+    margin-top: 10px;
+    text-align: center;
+    color: #909399;
+    font-size: 1.5rem;
+  }
   @media only screen and (max-width:600px) {
+    .mainContainer2 {
+      margin-top: 0px;
+    }
     .contentHolder {
       flex-wrap: wrap;
     }
     .contentImg {
       width: 45vw;
-      margin-bottom: 1rem;
     }
     .contentHolder:nth-child(2) {
       flex-direction: column-reverse;
     }
+    .contentText:nth-child(2) {
+      margin-top: 2rem;
+    }
     .contentText {
       width: 70vw;
+    }
+    .left {
+      margin-top: 2rem;
     }
   }
 </style>

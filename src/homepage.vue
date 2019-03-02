@@ -102,7 +102,7 @@ export default {
       height: 30vh;
     }
     .bottomHolder {
-      margin-top: 3rem;
+      margin-top: 1.5rem;
     }
   }
 </style>
