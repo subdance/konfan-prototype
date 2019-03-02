@@ -2,13 +2,13 @@
   <div class="mainContainer2">
     <div class="contentHolder">
       <img class="contentImg" src="../assets/character/nodoka.jpg" alt="">
-      <p class="contentText">
+      <p class="contentText rotate1">
         “轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演十分有感染力。”</br>
         <span class="name">学生会长--真锅和</br></span>
       </p>
     </div>
     <div class="contentHolder">
-      <p class="left contentText">
+      <p class="left contentText rotate2" >
         “姐姐她在轻音部真的成长了很多!”</br>
         <span class="name">平泽唯的妹妹--平泽忧</br></span>
       </p>
@@ -16,7 +16,7 @@
     </div>
     <div class="contentHolder">
       <img class="contentImg" src="../assets/character/sawako.jpg" alt="">
-        <p class="contentText">
+        <p class="contentText rotate3">
           “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”</br>
           <span class="name">班主任，轻音部顾问, 前轻音部成员--山中佐和子</br></span>
         </p>
@@ -66,12 +66,12 @@ export default {
     font-size: 2rem;
     color: white;
     position: relative;
-    border-radius: 15px;
-    /* background: white; */
+    border-radius: 25px;
     margin-left: 20px;
     margin-right: 20px;
-    border: 2px solid white;
+    border: 8px solid white;
     padding: 20px;
+    box-shadow: 3px 3px 5px black;
   }
   .contentText:after {
     content: '';
@@ -80,12 +80,12 @@ export default {
     left: 50%;
     width: 0;
     height: 0;
-    border: 20px solid transparent;
+    border: 30px solid transparent;
     border-bottom-color: white;
     border-top: 0;
     border-left: 0;
-    margin-left: -10px;
-    margin-top: -20px;
+    margin-left: -15px;
+    margin-top: -30px;
   }
   .name {
     font-style: italic;
@@ -97,6 +97,15 @@ export default {
     text-align: center;
     color: #909399;
     font-size: 1.5rem;
+  }
+  .rotate1 {
+    transform: rotate(3deg);
+  }
+  .rotate2 {
+    transform: rotate(-5deg);
+  }
+  .rotate3 {
+    transform: rotate(2deg);
   }
   @media only screen and (max-width:600px) {
     .mainContainer2 {

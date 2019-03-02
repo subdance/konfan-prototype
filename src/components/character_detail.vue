@@ -526,8 +526,8 @@ export default {
     position: relative;
   }
   .picTd {
-    width: 19rem;
-    height: 19rem;
+    width: 15rem;
+    height: 15rem;
     cursor: pointer;
     background-position: center;
     background-size: cover;
@@ -654,12 +654,12 @@ export default {
     margin-bottom: -1rem;
   }
   .tableItem th {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: normal;
     color: #C0C4CC;
   }
   .tableItem td {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: normal;
     color: #C0C4CC;
   }
@@ -716,6 +716,12 @@ export default {
       margin-bottom: 1rem;
     }
     .introPara {
+      font-size: 1.3rem;
+    }
+    .tableItem th {
+      font-size: 1.3rem;
+    }
+    .tableItem td {
       font-size: 1.3rem;
     }
   }

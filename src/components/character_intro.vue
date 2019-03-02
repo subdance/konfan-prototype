@@ -191,7 +191,7 @@
     font-weight: bold;
     font-size: 7rem;
     text-shadow: 3px 3px black;
-    /* font-family: 'ZCOOL KuaiLe', cursive; */
+    font-family: 'ZCOOL KuaiLe', cursive;
   }
   .mainIntroHolder {
     width: 35rem;
@@ -203,7 +203,7 @@
     background-position: center;
     word-break: break-all;
     border-radius: 10px;
-
+    padding-top:20px;
     border: 2px solid white;
     overflow: hidden;
     padding-left: 2rem;

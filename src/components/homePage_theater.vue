@@ -213,7 +213,7 @@ export default {
     }
     #headerText {
       font-size: 2rem;
-      font-family: serif;
+      /* font-family: serif; */
       background-clip: text;
       color: transparent;
       -webkit-background-clip: text;
