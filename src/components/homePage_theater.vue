@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+    <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
     <div id="box1">
       <video autoplay muted loop id="myVideo" ref='myVideo'>
         <source src="http://35.244.189.64/k-on-fan/video/trim1.mp4" type="video/mp4">
@@ -17,12 +17,14 @@
       </transition>
     </div>
     <div id="box2">
-      <div class="textHolder">
-        <p id="headerText">轻音部</br>的配方是:</p>
-        <p id="p1">音乐</p>
-        <p id="p2">课后的茶点</p>
-        <p id="p3">与轻飘飘的时光</p>
-      </div>
+      <!-- <div class="textHolder"> -->
+
+        <!-- <p id="headerText">轻音部</br>的配方是:</p> -->
+        <div id="p1"><img class="icon" src='../assets/background/3.png'></div>
+
+        <!-- <p id="p2">课后的茶点</p>
+        <p id="p3">与轻飘飘的时光</p> -->
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -141,7 +143,7 @@ export default {
       width: 100%;
       height:300px;
       background-image: url('http://35.244.189.64/k-on-fan/image/home-pic/1.jpg');
-      background-position: right;
+      background-position: left;
       background-size: cover;
     }
     /* #box2::after {
@@ -194,35 +196,47 @@ export default {
     }
     p {
       margin: 0;
-      font-family: 'ZCOOL KuaiLe', cursive;
+      /* font-family: 'ZCOOL KuaiLe', cursive; */
+      font-family: 'Noto Serif SC', serif;
       letter-spacing: 10px;
+      writing-mode: vertical-lr;
     }
     .textHolder {
       width: 100%;
-      position: absolute;
+      /* position: absolute;
       left: 0px;
       top: 50%;
-      transform: translate(0, -40%);
-      background: #FC5C7D;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to left, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      transform: translate(0, -40%); */
+      background: #FC5C7D;  /* fallback for old browsers */background: #FC5C7D;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      padding-left: 20px;
     }
     #headerText {
       font-size: 2rem;
-      /* font-family: serif; */
       background-clip: text;
       color: transparent;
       -webkit-background-clip: text;
       font-weight: 800;
     }
     #p1 {
+      position: absolute;
+      /* right: 0vw;
+      top: 30vw; */
+      right: 0;
+      bottom: 40vw;
+      /* padding-top: 10px;
+      padding-left: 30px; */
       font-size: 3rem;
       font-weight: bolder;
       margin-bottom: 10px;
+      /* color: #606266; */
+      /* border: 2px solid white; */
+      /* box-shadow: 3px 3px 10px black; */
+      /* transform: rotate(90deg); */
     }
     #p2 {
       font-size: 3rem;
@@ -233,6 +247,14 @@ export default {
       font-size: 3rem;
       font-weight: bolder;
       margin-bottom: 10px;
+    }
+    .spin {
+      color: #f55e83;
+      /* font-size: 3rem; */
+    }
+    .icon {
+      width: 70vw;
+      object-fit: cover;
     }
   }
 </style>
