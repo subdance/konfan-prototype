@@ -190,30 +190,29 @@
     color: #df000a;
     font-weight: bold;
     font-size: 7rem;
-    text-shadow: 3px 3px black;
+    text-shadow: 3px 3px 5px black;
     font-family: 'ZCOOL KuaiLe', cursive;
   }
   .mainIntroHolder {
     width: 35rem;
     height: 40rem;
     font-size: 2rem;
-    box-shadow: 4px 4px 3px black;
     background-image: url('../assets/background/1.gif');
     background-repeat: repeat-y;
     background-position: center;
     word-break: break-all;
-    border-radius: 10px;
     padding-top:20px;
-    border: 2px solid white;
     overflow: hidden;
     padding-left: 2rem;
     color: #303133;
+    box-shadow: 2px 2px 2px black;
   }
   .mainIntro {
     line-height: 4rem;
     letter-spacing: 0.8rem;
     font-family: 'ZCOOL KuaiLe', cursive;
     font-size: 2.2rem;
+    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
   }
   .introTextHolder {
     padding-top: 4rem;
@@ -366,6 +365,9 @@
       transform: translateX(-50%);
       background-image: none;
       z-index: 1;
+      box-shadow: none;
+      padding-left: 1rem;
+      text-align: center;
     }
     .mainIntroHolder::before {
       content: '';
@@ -375,7 +377,7 @@
       bottom: 0;
       left: 0;
       background-color: #DCDFE6;
-      opacity: 0.4;
+      opacity: 0.8;
       z-index: 0;
     }
     .girlNameText, .mainIntro {
@@ -383,8 +385,7 @@
       z-index: 999;
     }
     .girlNameText {
-      font-size: 2rem;
-      /* font-family: 'ZCOOL KuaiLe', cursive; */
+      font-size: 2.5rem;
     }
     .girlTextHolder {
       display: none;
