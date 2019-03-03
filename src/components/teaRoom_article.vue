@@ -283,7 +283,7 @@ export default {
     .collapse_title {
       margin: auto;
       width: 80vw;
-      height: 13rem;
+      height: 10rem;
       padding-top: 1rem;
       padding-left: 1rem;
       transition: 0.6s;
@@ -322,6 +322,9 @@ export default {
     .imgText {
       display: none;
     }
+    .title_text {
+      font-size: 1.8rem;
+    }
     .title_text_adding {
       margin-top: 3.5rem;
       text-align: right;
@@ -330,8 +333,11 @@ export default {
       color: #F2F6FC;
       font-style: italic;
     }
+    .article_text {
+      font-size: 1.5rem;
+    }
     .article_text::first-letter {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
     .collapse_title:hover {
       cursor: pointer;
