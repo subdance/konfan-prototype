@@ -23,6 +23,7 @@
           </div>
         </div>
       </div>
+      <div class="cutLine"></div>
       <div class="flexContainer">
         <div class="flexTextItem">
           <div style="text-align: right;">
@@ -65,6 +66,7 @@
           </div>
         </div>
       </div>
+      <div class="cutLine"></div>
       <div class="flexContainer">
         <div class="flexTextItem">
           <div style="text-align: right;">
@@ -136,28 +138,30 @@ export default {
     box-sizing: border-box;
   }
   .flexContainer{
-    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   .flexPicItem {
     position: relative;
     width: 40%;
-    height: 30rem;
+    height: 25rem;
     background-position: center;
     background-size: cover;
-    border-radius: 7px;
+    border-radius: 15px;
     z-index: 1;
   }
   .flexTextItem {
-    height: 30rem;
+    height: 25rem;
     width: 40%;
     position: relative;
     font-size: 2.5rem;
     color: #303133;
     font-family: 'ZCOOL KuaiLe', cursive;
+    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
   }
   .flexTextItem > div {
     width: 100%;
@@ -198,6 +202,16 @@ export default {
       position: relative;
       padding-top: 2rem;
     }
+    .cutLine {
+      width: 80%;
+      height: 1px;
+      border: 0.5px solid #606266;
+      box-sizing: border-box;
+      margin: auto;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
+    }
     .flexContainer{
       display: flex;
       justify-content: space-around;
@@ -207,7 +221,7 @@ export default {
     .flexPicItem {
       position: relative;
       width: 90%;
-      height: 18rem;
+      height: 15rem;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

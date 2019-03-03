@@ -224,19 +224,13 @@ export default {
     }
     #p1 {
       position: absolute;
-      /* right: 0vw;
-      top: 30vw; */
-      right: 0;
-      bottom: 40vw;
-      /* padding-top: 10px;
-      padding-left: 30px; */
+      left: 50%;
+      top: 50%;
+      transform: translate(-45%, -50%);
       font-size: 3rem;
       font-weight: bolder;
       margin-bottom: 10px;
-      /* color: #606266; */
-      /* border: 2px solid white; */
-      /* box-shadow: 3px 3px 10px black; */
-      /* transform: rotate(90deg); */
+
     }
     #p2 {
       font-size: 3rem;

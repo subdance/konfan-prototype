@@ -72,6 +72,7 @@ export default {
     border: 8px solid white;
     padding: 20px;
     box-shadow: 3px 3px 5px black;
+    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
   }
   .contentText:after {
     content: '';
@@ -91,12 +92,13 @@ export default {
     font-style: italic;
     color: #606266;
     font-size: 1.5rem;
+    margin-bottom: -10px;
   }
   .help {
-    margin-top: 10px;
     text-align: center;
-    color: #909399;
-    font-size: 1.5rem;
+    color: #303133;
+    font-size: 1rem;
+    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
   }
   .rotate1 {
     transform: rotate(3deg);
@@ -124,7 +126,8 @@ export default {
       margin-top: 2rem;
     }
     .contentText {
-      width: 70vw;
+      width: 60vw;
+      font-size: 1.5rem;
     }
     .left {
       margin-top: 2rem;
