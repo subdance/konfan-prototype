@@ -1,5 +1,6 @@
 <template lang="html">
   <div v-bind:class="[isSmallScreen ? 'smallScreenCatalogContainer' : 'bigScreenCatalogContainer']">
+    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <div class="responsiveContainer">
       <span @click='showPanel()'>目录</span>
       <a @click='closePanel()' class="close"></a>
@@ -70,14 +71,19 @@ export default {
         var targetCross = document.getElementsByClassName('close');
         targetDiv[0].style.maxWidth = '200px';
         targetDiv[0].style.maxHeight = '1000px';
+        targetDiv[0].style.borderRadius = '5px';
+        targetDiv[0].style.paddingBottom = '10px';
         targetCross[0].style.display = 'block';
+        targetCross[0].style.borderRadius = '0px';
       }
     },
     closePanel(){
       var targetDiv = document.getElementsByClassName('smallScreenCatalogContainer');
       var targetCross = document.getElementsByClassName('close');
-      targetDiv[0].style.maxWidth = '40px';
-      targetDiv[0].style.maxHeight = '40px';
+      targetDiv[0].style.maxWidth = '30px';
+      targetDiv[0].style.maxHeight = '30px';
+      targetDiv[0].style.paddingBottom = '0px';
+      targetDiv[0].style.borderRadius = '50%';
       targetCross[0].style.display = 'none';
     },
   },
@@ -111,15 +117,19 @@ export default {
   .smallScreenCatalogContainer {
     position: fixed;
     z-index: 990;
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 30px;
+    max-height: 30px;
     top: 150px;
-    left: 5px;
-    border-radius: 5px;
+    border-radius: 50%;
     background-color: white;
     overflow: hidden;
-    transition: all 0.5s;
     cursor: pointer;
+    border: 2px solid #409EFF;
+
+  }
+  .responsiveContainer > span {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: #409EFF;
   }
   .crossStatus {
     display: none;
@@ -127,16 +137,16 @@ export default {
   @media only screen and (max-width: 600px) {
     .responsiveContainer {
       display: block;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
       text-align: center;
     }
     .close {
       display: none;
       position: absolute;
       right: 12px;
-      top: 12px;
+      top: 5px;
       width: 15px;
       height: 15px;
     }
@@ -146,7 +156,7 @@ export default {
       content: ' ';
       height: 15px;
       width: 2px;
-      background-color: #333;
+      background-color: #409EFF;
     }
     .close:before {
       transform: rotate(45deg);
