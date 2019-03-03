@@ -8,6 +8,7 @@
     <p
       v-for='(item, index) in titleInfo'
       @click='scrollTo(index)'
+      class="cataText"
       >
       {{ titleInfo[index] }}
     </p>
@@ -163,6 +164,9 @@ export default {
     }
     .close:after {
       transform: rotate(-45deg);
+    }
+    .cataText {
+      color: #409EFF!important;
     }
   }
 </style>
