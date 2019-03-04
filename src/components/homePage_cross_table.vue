@@ -170,13 +170,12 @@ export default {
     transform: translate(0, -50%);
   }
   .flexPicItem:hover::after {
-    /* border-radius: 15px; */
+    border-radius: 15px;
     content: '';
     position: absolute;
-    /* top: 0;
-    right: 0; */
+    top: 0;
+    right: 0;
     width: 100%;
-    height: 200px;
     bottom: 0px;
     left: 0;
     /* filter: blur(10px); */
@@ -188,15 +187,14 @@ export default {
   }
   .innerHolder {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,0 );
+    transform: translate(-50%, -50%);
     z-index: 1;
     width: 100%;
     color: white;
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
-    transition: all 0.2s;
   }
   .mainContainer {
     width: 100%;
@@ -247,7 +245,7 @@ export default {
       transform: translate(0, 0);
     }
     .innerHolder {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
     }
 
   }
