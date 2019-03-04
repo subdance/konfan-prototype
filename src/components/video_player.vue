@@ -146,7 +146,7 @@
     overflow: hidden;
   }
   .listBlock {
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     color: white;
     width: 15rem;
     transition: all 0.2s ease-in-out;
@@ -196,7 +196,7 @@
     transform: skewX(0deg);
   }
   .notSelectedList {
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     color: white;
     width: 15rem;
     transition: all 0.2s ease-in-out;
@@ -238,7 +238,7 @@
       margin-bottom: -5rem;
     }
     .listBlock {
-      cursor: pointer;
+      cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
       color: white;
       width: 50%;
       transition: all 0.2s ease-in-out;

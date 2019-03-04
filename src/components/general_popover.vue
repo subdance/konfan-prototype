@@ -44,7 +44,7 @@ export default {
     top: 50%;
     transform: translate(0, -50%);
     right: 8rem;
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     color: #606266;
     transition: 0.2s;
     z-index: 9999;

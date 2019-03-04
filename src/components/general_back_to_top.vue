@@ -37,16 +37,7 @@ export default {
     },
 
     goBack($event){
-      // $('html,body').animate({
-      //   scrollTop: 0
-      // }, 'slow', 'swing');
       $("html,body").animate({ scrollTop: 0 }, "slow");
-
-      // $('body,html').animate({scrollTop:$(".navHolder").height()},600)
-      // $("html, body").animate({scrollTop: 0}, 1000);
-
-      // $event.preventDefault();
-      // $('html, body').animate({scrollTop:0}, '300');
     }
   },
 
@@ -57,7 +48,7 @@ export default {
   #back2Top {
       overflow: hidden;
       z-index: 999;
-      cursor: pointer;
+      cursor: url(../assets/element/cursor-click.png) 14 0,pointer;;
       position: fixed;
       bottom: -0.5rem;
       right: 0;

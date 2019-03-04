@@ -104,7 +104,7 @@ export default {
     padding: 1px 3px;
     text-align: center;
     font-size: 1rem;
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     transition: all 0.2s;
     box-shadow: 2px 2px 5px black;
   }
@@ -124,8 +124,9 @@ export default {
     border-radius: 50%;
     background-color: white;
     overflow: hidden;
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     border: 2px solid #409EFF;
+    box-sizing: content-box;
 
   }
   .responsiveContainer > span {
@@ -150,6 +151,7 @@ export default {
       top: 5px;
       width: 15px;
       height: 15px;
+      box-sizing: content-box;
     }
     .close:before, .close:after {
       position: absolute;

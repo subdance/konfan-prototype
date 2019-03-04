@@ -213,10 +213,10 @@ export default {
     box-shadow: 2px 2px 5px black;
   }
   .collapse_title:hover {
-    cursor: pointer;
     padding-left: 5rem;
     padding-right: 5rem;
     border: 2px solid white;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
   }
   .collapse_text {
     overflow: hidden;
@@ -340,7 +340,6 @@ export default {
       font-size: 1.5rem;
     }
     .collapse_title:hover {
-      cursor: pointer;
       padding-left: 3rem;
       padding-right: 3rem;
       border: 2px solid white;
