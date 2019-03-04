@@ -170,28 +170,33 @@ export default {
     transform: translate(0, -50%);
   }
   .flexPicItem:hover::after {
+    /* border-radius: 15px; */
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    /* top: 0;
+    right: 0; */
+    width: 100%;
+    height: 200px;
     bottom: 0px;
     left: 0;
-    filter: blur(10px);
+    /* filter: blur(10px); */
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.6;
     z-index: -1;
-    transform: scale(1.08);
+    transition: all 0.2s;
+    /* transform: scale(1.08); */
   }
   .innerHolder {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,0 );
     z-index: 1;
     width: 100%;
     color: white;
     font-size: 4rem;
     text-align: center;
+    transition: all 0.2s;
   }
   .mainContainer {
     width: 100%;
