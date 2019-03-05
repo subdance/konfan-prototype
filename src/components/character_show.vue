@@ -38,7 +38,7 @@
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: '主唱，主音吉他，团宠',
         backName: ['Hirasawa Yui', 'Tainaka Ritsu', 'Akiyama Mio', 'Kotobuki Tsumugi', 'Nakano Azusa'],
-        backNameJ: ['ひらさわ ゆい', 'あきやま みお', 'たいなか りつ', 'ことぶき つむぎ', 'なかの あずさ'],
+        backNameJ: ['ひらさわ ゆい', 'たいなか りつ', 'あきやま みお', 'ことぶき つむぎ', 'なかの あずさ'],
         backIntro: [
           '主唱，主音吉他，团宠',
           '部长，架子鼓手，搞笑担当',
