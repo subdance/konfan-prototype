@@ -237,7 +237,7 @@
   .nameTag {
     line-height: 4rem;
     font-size: 2rem;
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     float: left;
     width: 20%;
     color: #606266;
@@ -263,7 +263,7 @@
     -webkit-border-radius: 0 10px 200px / 0 200px 14px 250px;
     border-radius: 0 10px 200px / 0 200px 14px 250px;
     z-index: 1;
-    cursor: pointer;
+    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -411,7 +411,7 @@
       -webkit-border-radius: 0 10px 200px / 0 200px 14px 250px;
       border-radius: 0 10px 200px / 0 200px 14px 250px;
       z-index: 1;
-      cursor: pointer;
+      cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
