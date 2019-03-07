@@ -272,6 +272,7 @@
     display:inline-block;
     padding: 30px 0 0;
     font: normal normal normal 5rem/1.3 "Gochi Hand", Helvetica, sans-serif;
+    font-size: 4rem;
     color: rgba(255,0,106,0.58);
     text-align: center;
     white-space: pre;
