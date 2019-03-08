@@ -6,6 +6,7 @@
       trigger='click'
       :autoplay='autoplay'
       :height='carouselHeight'
+      arrow='always'
       >
       <el-carousel-item
         v-for="item in 5"

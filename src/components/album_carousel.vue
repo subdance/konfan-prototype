@@ -18,7 +18,6 @@
     </div>
 
     <div class="carouselPart">
-      <!-- <p class="introText">乐器</p> -->
       <el-carousel
         :indicator-position="carouselIndicator"
         :height='carouselHeightCard'
@@ -40,68 +39,24 @@
       </el-carousel>
     </div>
 
-    <div class="carouselPart">
-      <!-- <p class="introText">梦</p> -->
+    <div class="carouselPart" v-for='(carousel, index) in picSet'>
       <el-carousel
         :indicator-position="carouselIndicator"
         :height='carouselHeight'
         trigger='click'
         :autoplay='autoplay'
+        arrow='always'
         >
         <el-carousel-item
-          v-for="item in 6"
+          v-for="item in carousel.text.length"
           :key="item"
           >
           <div class="detailHolderOuter">
             <div class="detailHolderInnerCard">
-              <span class="detailText">{{ nowText2[ item - 1 ] }}</span>
+              <span class="detailText">{{ carousel.text[ item - 1 ] }}</span>
             </div>
           </div>
-          <img class="carouselPic" :src='nowPic2[item - 1]' alt="">
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-
-    <div class="carouselPart">
-      <!-- <p class="introText">律澪</p> -->
-      <el-carousel
-        :indicator-position="carouselIndicator"
-        :height='carouselHeight'
-        trigger='click'
-        :autoplay='autoplay'
-        >
-        <el-carousel-item
-          v-for="item in 6"
-          :key="item"
-          >
-          <div class="detailHolderOuter">
-            <div class="detailHolderInnerCard">
-              <span class="detailText">{{ nowText3[ item - 1 ] }}</span>
-            </div>
-          </div>
-          <img class="carouselPic" :src='nowPic3[item - 1]' alt="">
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-
-    <div class="carouselPart">
-      <!-- <p class="introText">碰到狗狗,少女会怎样？</p> -->
-      <el-carousel
-        :indicator-position="carouselIndicator"
-        :height='carouselHeight'
-        trigger='click'
-        :autoplay='autoplay'
-        >
-        <el-carousel-item
-          v-for="item in 4"
-          :key="item"
-          >
-          <div class="detailHolderOuter">
-            <div class="detailHolderInnerCard">
-              <span class="detailText">{{ nowText4[ item - 1 ] }}</span>
-            </div>
-          </div>
-          <img class="carouselPic" :src='nowPic4[item - 1]' alt="">
+          <img class="carouselPic" :src='carousel.pic[ item - 1 ]' alt="">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -181,6 +136,58 @@ export default {
         '“走别的路行吗...”—澪',
         '“没事的啦~”—律',
         '“小狗乖哦小狗乖哦”—唯',
+      ],
+      picSet: [
+        {
+          text: [
+            '烟花下的唯抱着吉他兴奋地跳着',
+            '那无拘无束地样子，羞涩的澪从来不敢想象',
+            '滑动着拨片，唯望着澪',
+            '梦...演唱会...武道馆...',
+            '这样啊，原来我的梦想只是永远和你们在一起',
+            '永远一起唱我们的歌'
+          ],
+          pic: [
+            'http://35.244.189.64/k-on-fan/image/album/set2/1.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set2/2.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set2/3.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set2/4.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set2/5.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set2/6.jpg',
+          ],
+        },
+        {
+          text: [
+            '“澪会生我的气吗？”',
+            '“不生气啊，那还用说...”',
+            '“只是，没有律的鼓，会有点寂寞”',
+            '“虽然有点抢，但我还是喜欢律充满气势，力道十足的鼓点”',
+            '“那就陪我到睡着嘛~求你啦澪”',
+            '“哎...真受不了你...”',
+          ],
+          pic: [
+            'http://35.244.189.64/k-on-fan/image/album/set3/1.png',
+            'http://35.244.189.64/k-on-fan/image/album/set3/2.png',
+            'http://35.244.189.64/k-on-fan/image/album/set3/3.png',
+            'http://35.244.189.64/k-on-fan/image/album/set3/4.png',
+            'http://35.244.189.64/k-on-fan/image/album/set3/5.png',
+            'http://35.244.189.64/k-on-fan/image/album/set3/6.png',
+          ],
+        },
+        {
+          text: [
+            '“（可真是让人兴奋呢）—紬”',
+            '“走别的路行吗...”—澪',
+            '“没事的啦~”—律',
+            '“小狗乖哦小狗乖哦”—唯',
+          ],
+          pic: [
+            'http://35.244.189.64/k-on-fan/image/album/set4/1.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set4/2.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set4/3.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set4/4.jpg',
+          ],
+        }
       ],
     }
   },
