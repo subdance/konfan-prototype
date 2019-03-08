@@ -77,7 +77,7 @@ export default {
       autoplay: false,
       carouselType: 'card',
       carouselIndicator: '',
-      carouselHeight: '65rem',
+      carouselHeight: '50rem',
       carouselHeightCard: '40rem',
       nowPic1: [
         'http://35.244.189.64/k-on-fan/image/album/set1/1.jpg',
@@ -92,50 +92,6 @@ export default {
         '澪：Fender japan JB62-DMC/VSP/3TS LH',
         '紬：KORG Triton Extreme 76、KORG RK-100',
         '梓：Fender Japan Mustang MG69/MH CAR',
-      ],
-      nowPic2: [
-        'http://35.244.189.64/k-on-fan/image/album/set2/1.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set2/2.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set2/3.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set2/4.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set2/5.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set2/6.jpg',
-      ],
-      nowText2: [
-        '烟花下的唯抱着吉他兴奋地跳着',
-        '那无拘无束地样子，羞涩的澪从来不敢想象',
-        '滑动着拨片，唯望着澪',
-        '梦...演唱会...武道馆...',
-        '这样啊，原来我的梦想只是永远和你们在一起',
-        '永远一起唱我们的歌'
-      ],
-      nowPic3: [
-       'http://35.244.189.64/k-on-fan/image/album/set3/1.png',
-       'http://35.244.189.64/k-on-fan/image/album/set3/2.png',
-       'http://35.244.189.64/k-on-fan/image/album/set3/3.png',
-       'http://35.244.189.64/k-on-fan/image/album/set3/4.png',
-       'http://35.244.189.64/k-on-fan/image/album/set3/5.png',
-       'http://35.244.189.64/k-on-fan/image/album/set3/6.png',
-      ],
-      nowText3: [
-        '“澪会生我的气吗？”',
-        '“不生气啊，那还用说...”',
-        '“只是，没有律的鼓，会有点寂寞”',
-        '“虽然有点抢，但我还是喜欢律充满气势，力道十足的鼓点”',
-        '“那就陪我到睡着嘛~求你啦澪”',
-        '“哎...真受不了你...”',
-      ],
-      nowPic4: [
-        'http://35.244.189.64/k-on-fan/image/album/set4/1.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set4/2.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set4/3.jpg',
-        'http://35.244.189.64/k-on-fan/image/album/set4/4.jpg',
-      ],
-      nowText4: [
-        '“（可真是让人兴奋呢）—紬”',
-        '“走别的路行吗...”—澪',
-        '“没事的啦~”—律',
-        '“小狗乖哦小狗乖哦”—唯',
       ],
       picSet: [
         {
@@ -187,7 +143,33 @@ export default {
             'http://35.244.189.64/k-on-fan/image/album/set4/3.jpg',
             'http://35.244.189.64/k-on-fan/image/album/set4/4.jpg',
           ],
-        }
+        },
+        {
+          text: [
+            '不论多冷 我都感觉幸福',
+            '看着你跑来 吐出的白气随着起伏',
+            '整齐的刘海 和你很是相配',
+            '“喜欢”要如何开口',
+            '舞动的雪 起伏的心情',
+            '怎么 就像从未经历过这一切',
+            '如此明亮的 泛着白光的街道',
+            '我随着你走过 要是能牵着手就好了啊',
+            '你调皮的笑容 真是好看',
+            '但是我也想看到 羞红了脸的你',
+          ],
+          pic: [
+            'http://35.244.189.64/k-on-fan/image/album/set5/1.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/2.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/3.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/4.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/5.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/6.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/7.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/8.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/9.jpg',
+            'http://35.244.189.64/k-on-fan/image/album/set5/10.jpg',
+          ],
+        },
       ],
     }
   },
@@ -205,7 +187,7 @@ export default {
       else{
         this.carouselType = 'card';
         this.carouselIndicator = '';
-        this.carouselHeight = '65rem';
+        this.carouselHeight = '60rem';
         this.carouselHeightCard = '40rem';
       }
     },
