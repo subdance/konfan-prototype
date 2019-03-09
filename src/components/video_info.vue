@@ -184,14 +184,14 @@ export default {
       color: #606266;
     }
     .videoNameText {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: bold;
       font-family: 'Dokdo', cursive;
     }
     .videoInfoText:before { content: ' '; display: block; }
     .videoInfoText {
       font-weight: normal;
-      font-size: 0.4rem;
+      font-size: 1rem;
       font-style: italic;
     }
     .mainContainer {

@@ -2,7 +2,7 @@
   <div v-bind:class="[isSmallScreen ? 'smallScreenCatalogContainer' : 'bigScreenCatalogContainer']">
     <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <div class="responsiveContainer">
-      <span @click='showPanel()'>目录</span>
+      <span class="cata" @click='showPanel()'>目录</span>
       <a @click='closePanel()' class="close"></a>
     </div>
     <p
@@ -169,6 +169,9 @@ export default {
     }
     .cataText {
       color: #409EFF!important;
+    }
+    .cata {
+      font-size: 1.5rem;
     }
   }
 </style>

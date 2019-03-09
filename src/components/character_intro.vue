@@ -197,7 +197,7 @@
     width: 35rem;
     height: 40rem;
     font-size: 2rem;
-    background-image: url('../assets/background/1.gif');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/elemets/1.gif');
     background-repeat: repeat-y;
     background-position: center;
     word-break: break-all;
@@ -223,7 +223,7 @@
     bottom: 15rem;
     width: 30rem;
     height:25rem;
-    background-image: url('../assets/element/dialog1.png');
+    background-image: url('http://35.244.189.64/k-on-fan/image/element/elemets/dialog1.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
