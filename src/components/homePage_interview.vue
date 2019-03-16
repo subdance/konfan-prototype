@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="mainContainer2">
     <div class="contentHolder">
-      <img class="contentImg" src='http://35.244.189.64/k-on-fan/image/element/elemets/nodoka.jpg' alt="">
+      <img class="contentImg" src='https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/nodoka.jpg' alt="">
       <p class="contentText rotate1">
         “轻音部啊...虽然平日里马马虎虎，但在学院祭上的表演十分有感染力。”</br>
         <span class="name">学生会长--真锅和</br></span>
@@ -12,10 +12,10 @@
         “姐姐她在轻音部真的成长了很多!”</br>
         <span class="name">平泽唯的妹妹--平泽忧</br></span>
       </p>
-      <img class="contentImg" src='http://35.244.189.64/k-on-fan/image/element/elemets/ui.jpg' alt="">
+      <img class="contentImg" src='https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/ui.jpg' alt="">
     </div>
     <div class="contentHolder">
-      <img class="contentImg" src='http://35.244.189.64/k-on-fan/image/element/elemets/sawako.jpg' alt="">
+      <img class="contentImg" src='https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/sawako.jpg' alt="">
         <p class="contentText rotate3">
           “我十分感谢这群孩子让我当她们的顾问。还有很多特别的衣服想给她们穿呢。”</br>
           <span class="name">班主任，轻音部顾问, 前轻音部成员--山中佐和子</br></span>

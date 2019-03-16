@@ -31,7 +31,7 @@
     min-height: 100vh;
     width: 100%;
     position: relative;
-    background-image: url('http://35.244.189.64/k-on-fan/image/video-room/5.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/5.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;

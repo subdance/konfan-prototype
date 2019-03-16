@@ -28,13 +28,13 @@
     data(){
       return{
         autoplay: false,
-        nowBackPic: 'http://35.244.189.64/k-on-fan/image/character-intro/yui',
+        nowBackPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui.jpeg',
         backPic: [
-          'http://35.244.189.64/k-on-fan/image/character-intro/yui',
-          'http://35.244.189.64/k-on-fan/image/character-intro/ritsu',
-          'http://35.244.189.64/k-on-fan/image/character-intro/mio',
-          'http://35.244.189.64/k-on-fan/image/character-intro/mugi',
-          'http://35.244.189.64/k-on-fan/image/character-intro/azusa',
+          'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui.jpeg',
+          'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/ritsu.jpeg',
+          'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mio.jpeg',
+          'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mugi.jpeg',
+          'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/azusa.jpeg',
         ],
         nowGirlName: 'Hirasawa Yui',
         nowGirlIntro: '主唱，主音吉他，团宠',

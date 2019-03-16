@@ -3,7 +3,7 @@
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
     <div id="box1">
       <video autoplay muted loop id="myVideo" ref='myVideo'>
-        <source src="http://35.244.189.64/k-on-fan/video/trim1.mp4" type="video/mp4">
+        <source src="https://konfan.oss-cn-beijing.aliyuncs.com/video/trim1.mp4" type="video/mp4">
       </video>
       <transition name="el-fade-in-linear">
         <div class="mainIntro" v-show='isTextOneShow'>
@@ -142,7 +142,7 @@ export default {
       display: block;
       width: 100%;
       height:300px;
-      background-image: url('http://35.244.189.64/k-on-fan/image/home-pic/1.jpg');
+      background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/home/1.jpg');
       background-position: left;
       background-size: cover;
     }

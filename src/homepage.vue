@@ -4,7 +4,7 @@
     <div class="backgroundHolder">
       <crossTable style="z-index: 20;"></crossTable>
       <div class="bottomHolder">
-        <img class="bottomImg" src="http://35.244.189.64/k-on-fan/image/home-pic/10.png" alt="">
+        <img class="bottomImg" src="https://konfan.oss-cn-beijing.aliyuncs.com/image/home/10.png" alt="">
       </div>
     </div>
   </div>
@@ -37,10 +37,10 @@ export default {
         '还有最最,最重要的——互相陪伴的彼此',
       ],
       introPic: [
-        'http://35.244.189.64/k-on-fan/image/home-pic/9.jpg',
-        'http://35.244.189.64/k-on-fan/image/home-pic/4.jpg',
-        'http://35.244.189.64/k-on-fan/image/home-pic/8.jpg',
-        'http://35.244.189.64/k-on-fan/image/home-pic/1.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/9.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/4.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/8.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/1.jpg',
       ],
     }
   },

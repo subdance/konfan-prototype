@@ -73,10 +73,10 @@ export default {
       isBigPic: true,
       isBlur: [true, true, true, true, true],
       backPic: [
-        'http://35.244.189.64/k-on-fan/image/video-room/1.jpg',
-        'http://35.244.189.64/k-on-fan/image/video-room/2.jpg',
-        'http://35.244.189.64/k-on-fan/image/video-room/3.jpg',
-        'http://35.244.189.64/k-on-fan/image/video-room/4.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/1.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/2.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/3.jpg',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/4.jpg',
       ],
       randomIndex: 0,
       isDetailShowe: false,
@@ -547,39 +547,39 @@ export default {
     color: #C0C4CC;
   }
   #yui {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui1.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/yui1.jpg');
   }
   #yui:hover {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/yui2.jpg');
     transform: scale(1.2) rotate(15deg);;
     z-index: 999;
   }
   #ritsu {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu1.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/ritsu1.jpg');
   }
   #ritsu:hover {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/ritsu2.jpg');
     transform: scale(1.1) rotate(-15deg);;
   }
   #mio {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio1.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/mio1.jpg');
   }
   #mio:hover {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/mio2.jpg');
     transform: rotate(-30deg);;
   }
   #mugi {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi1.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/mugi1.jpg');
   }
   #mugi:hover {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/mugi2.jpg');
     transform: rotate(10deg);
   }
   #azusa {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa1.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/azusa1.jpg');
   }
   #azusa:hover {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/azusa2.jpg');
     transform: scale(1.3);
   }
   .cache > div {
@@ -587,19 +587,19 @@ export default {
     opacity: 0;
   }
   .cacheyui {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/yui2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/yiu2.jpg');
   }
   .cacheritsu {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/ritsu2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/ritsu2.jpg');
   }
   .cachemio {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mio2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/mio2.jpg');
   }
   .cachemugi {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/mugi2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/mugi2.jpg');
   }
   .cacheazusa {
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/character/azusa2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/azusa2.jpg');
   }
   .detailHolder {
     overflow: hidden;

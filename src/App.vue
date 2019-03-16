@@ -46,32 +46,32 @@ export default {
         {
           name: 'わたしの恋はホッチキス/订书机之恋',
           artist: '放課後ティータイム',
-          url: 'http://35.244.189.64/k-on-fan/music/love.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/1.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/love.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/1.jpeg',
         },
         {
           name: 'ふわふわ時間/轻飘飘的时光',
           artist: '放課後ティータイム',
-          url: 'http://35.244.189.64/k-on-fan/music/time.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/2.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/time.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/2.jpeg',
         },
         {
           name: 'ふでペン 〜ボールペン〜/毛笔圆珠笔',
           artist: '放課後ティータイム',
-          url: 'http://35.244.189.64/k-on-fan/music/pen.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/3.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/pen.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/3.jpeg',
         },
         {
           name: 'U&I',
           artist: '放課後ティータイム',
-          url: 'http://35.244.189.64/k-on-fan/music/u%26i.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/1.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/u%26i.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/4.jpeg',
         },
         {
           name: '天使にふれたよ!',
           artist: '放課後ティータイム',
-          url: 'http://35.244.189.64/k-on-fan/music/angel.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/7.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/angel.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/5.jpeg',
         },
       ],
     }
@@ -92,7 +92,6 @@ export default {
           this.$refs.aplayer.pause();
         }
         else{
-          // this.$refs.aplayer.play();
         }
       })
     },

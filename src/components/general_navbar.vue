@@ -10,7 +10,7 @@
         href="https://baike.baidu.com/item/%E8%BD%BB%E9%9F%B3%E5%B0%91%E5%A5%B3/5182240?fr=aladdin"
         target="_blank"
         >
-        <img src='../assets/background/3.png'>
+        <img src='https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/3.png'>
       </a>
     </div>
   </div>

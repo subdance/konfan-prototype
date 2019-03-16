@@ -8,24 +8,24 @@
       <div class="smallButton" @click='hideAndShow(5)'><span style="line-height:4rem">Azusa!</span></div>
     </div>
     <div class="cachePart">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/yui1.png" alt="">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc1.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui1.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc1.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/ritsu1.png" alt="">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc2.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/ritsu1.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc2.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mio1.png" alt="">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc3.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mio1.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc3.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mugi1.png" alt="">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc4.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mugi1.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc4.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/azusa1.png" alt="">
-      <img src="http://35.244.189.64/k-on-fan/image/character-intro/mc5.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/azusa1.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc5.png" alt="">
     </div>
 
     <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
@@ -97,21 +97,21 @@
           '樱丘女子高中轻音部辅音吉他手，是第二年轻音部新加入的成员。做事认真，却又不时地透露出小孩子气。有着十分强悍的吉他能力。',
         ],
         verticalText: '.',
-        nowHeadPic: 'http://35.244.189.64/k-on-fan/image/character-intro/yui1.png',
+        nowHeadPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui1.png',
         backHeadPic: [
-        'http://35.244.189.64/k-on-fan/image/character-intro/yui1.png',
-        'http://35.244.189.64/k-on-fan/image/character-intro/ritsu1.png',
-        'http://35.244.189.64/k-on-fan/image/character-intro/mio1.png',
-        'http://35.244.189.64/k-on-fan/image/character-intro/mugi1.png',
-        'http://35.244.189.64/k-on-fan/image/character-intro/azusa1.png',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui1.png',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/ritsu1.png',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mio1.png',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mugi1.png',
+        'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/azusa1.png',
         ],
-        nowMcPic: 'http://35.244.189.64/k-on-fan/image/character-intro/mc1.png',
+        nowMcPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc1.png',
         backMcPic: [
-         'http://35.244.189.64/k-on-fan/image/character-intro/mc1.png',
-         'http://35.244.189.64/k-on-fan/image/character-intro/mc2.png',
-         'http://35.244.189.64/k-on-fan/image/character-intro/mc3.png',
-         'http://35.244.189.64/k-on-fan/image/character-intro/mc4.png',
-         'http://35.244.189.64/k-on-fan/image/character-intro/mc5.png',
+         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc1.png',
+         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc2.png',
+         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc3.png',
+         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc4.png',
+         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc5.png',
         ],
         isSmallScreen: false,
       }
@@ -176,7 +176,7 @@
   }
   .mcHolder {
     position: absolute;
-    background-image: url('http://35.244.189.64/k-on-fan/image/character-intro/mc1.png');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc1.png');
     background-position: right bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@
     width: 35rem;
     height: 40rem;
     font-size: 2rem;
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/elemets/1.gif');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/1.gif');
     background-repeat: repeat-y;
     background-position: center;
     word-break: break-all;
@@ -223,7 +223,7 @@
     bottom: 15rem;
     width: 30rem;
     height:25rem;
-    background-image: url('http://35.244.189.64/k-on-fan/image/element/elemets/dialog1.png');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/dialog1.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

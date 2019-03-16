@@ -41,33 +41,33 @@ export default {
         {
           name: 'あの日の夢',
           artist: '百石元',
-          url: 'http://35.244.189.64/k-on-fan/music/dream.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/7.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/dream.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/7.jpeg',
         },
         {
           name: 'Autumn breeze with you',
           artist: '百石元',
-          url: 'http://35.244.189.64/k-on-fan/music/autumn.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/1.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/autum.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/1.jpeg',
         },
         {
           name: 'いい夢見てね',
           artist: '百石元',
-          url: 'http://35.244.189.64/k-on-fan/music/sweetdream.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/6.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/sweetdream.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/6.jpeg',
 
         },
         {
           name: 'Winter night in a warm room',
           artist: '百石元',
-          url: 'http://35.244.189.64/k-on-fan/music/winternight.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/5.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/winternight.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/5.jpeg',
         },
         {
           name: 'U&I 〜夕日の綺麗なあの丘で〜',
           artist: '百石元',
-          url: 'http://35.244.189.64/k-on-fan/music/instui.mp3',
-          cover: 'http://35.244.189.64/k-on-fan/image/music-cover/3.JPG',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/instui.mp3',
+          cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/3.jpeg',
         },
         // {
         //   name: 'わたしの恋はホッチキス/订书机之恋',
