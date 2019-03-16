@@ -587,7 +587,7 @@ export default {
     opacity: 0;
   }
   .cacheyui {
-    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/yiu2.jpg');
+    background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/yui2.jpg');
   }
   .cacheritsu {
     background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/ritsu2.jpg');
