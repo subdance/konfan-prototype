@@ -47,7 +47,7 @@ export default {
         {
           name: 'Autumn breeze with you',
           artist: '百石元',
-          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/autum.mp3',
+          url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/autumn.mp3',
           cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/1.jpeg',
         },
         {
