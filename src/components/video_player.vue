@@ -32,12 +32,12 @@
   export default {
     data(){
       return {
-        isVideoSelected: [false, false, false, false, false, false, false, true,],
+        isVideoSelected: [true, false, false, false, false, false, false, false,],
         nowPlaying: {
           id: 8,
           name: '',
-          poster: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/video-cover/8.jpg',
-          src: 'https://konfan.oss-cn-beijing.aliyuncs.com/video/7.mp4',
+          poster: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/video-cover/1.jpg',
+          src: 'https://konfan.oss-cn-beijing.aliyuncs.com/video/3.mp4',
         },
         videoList: [
           {
