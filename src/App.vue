@@ -79,9 +79,6 @@ export default {
   created(){
     this.listenChangeFixPlayer();
   },
-  mounted(){
-    // this.$refs.aplayer.play();
-  },
   methods:{
     listenChangeFixPlayer(){
       eventBus.$on('changeFixPlayer', reg => {
