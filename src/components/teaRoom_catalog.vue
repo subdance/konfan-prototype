@@ -110,7 +110,6 @@ export default {
   }
   .bigScreenCatalogContainer > p:hover, .smallScreenCatalogContainer > p:hover {
     background-color: #DCDFE6;
-    transform: translate(0, -2px);
   }
   .responsiveContainer {
     display: none;

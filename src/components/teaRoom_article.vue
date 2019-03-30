@@ -215,6 +215,7 @@ export default {
   .collapse_title:hover {
     /* padding-left: 5rem;
     padding-right: 5rem; */
+    transform: translate(0, -5%);
     border: 2px solid white;
     cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
   }
