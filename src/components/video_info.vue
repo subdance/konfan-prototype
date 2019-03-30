@@ -165,7 +165,7 @@ export default {
     }
     .imgHolder {
       width: 12rem;
-      background-image: url(../assets/element/mc.png);
+      background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/mc.png');
       background-position: top;
       background-size: cover;
     }

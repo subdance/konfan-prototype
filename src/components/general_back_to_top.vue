@@ -1,7 +1,7 @@
 <template lang="html">
   <transition name="el-fade-in-linear">
     <a v-show='isActivated' id="back2Top" title="点我试试看" @click='goBack($event)'>
-      <img src="../assets/element/2.png" alt="">
+      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/2.png" alt="">
     </a>
   </transition>
 </template>

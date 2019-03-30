@@ -156,7 +156,6 @@
     margin-left: -4rem;
   }
   .listBlock:hover {
-    margin-left: -2rem;
     color: white;
     width: 35rem;
     transform: skewX(0deg);
@@ -173,9 +172,6 @@
     transition: all 0.2s ease-in-out;
     margin-bottom: -0.5rem;
     transform: skewX(8deg) scale(1.1, 1.1);
-  }
-  .thumbnail:hover {
-    border-radius: 0 0 10px 10px;
   }
   .selected {
     height: 18rem;
