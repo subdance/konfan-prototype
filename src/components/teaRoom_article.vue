@@ -160,27 +160,26 @@ export default {
     },
 
     showArticle(index, $event){
-      if($event.target.className === 'collapse_title'){
+      // console.log($event.target.className);
+      if($event.target.className === 'collapse_title' || 'title_text_adding' || 'title_text'){
         eventBus.$emit('changeList', true);
         let nowText = document.getElementsByClassName('collapse_text')[index];//事件委托
         let nowTitle = this.getDOMArray('collapse_title');
         if(!this.maxHeight[index]){
           this.maxHeight.forEach(
-            (item, innerIndex, array) => {
-              this.$set(array, item, 0);
+            (item, forEachIndex, array) => {
+              this.$set(array, forEachIndex, 0);
             }
-          )
+          )//手风琴效果，全部卡片高度缩小
+          nowTitle.forEach((item) => {item.style.boxShadow = '2px 2px 5px black';})
           this.$set(this.maxHeight, index, nowText.scrollHeight);
-          eventBus.$emit('orderArticle', false);
           nowTitle[index].style.boxShadow = '0px 0px 0px black';
         }
         else{
-          eventBus.$emit('orderArticle', true);
           this.$set(this.maxHeight, index, 0);
           nowTitle[index].style.boxShadow = '2px 2px 5px black';
         }
       }
-
     },
 
     collectInfo(){
@@ -194,7 +193,7 @@ export default {
   mounted(){
     this.collectInfo();
     eventBus.$on('openArticle', reg => {
-      this.changeShow(reg);
+      this.showArticle(reg);
     })
   },
 }
