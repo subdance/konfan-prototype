@@ -2,8 +2,8 @@
   <div class="mainHolder">
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
-    <div class="single_row" v-for='(item, index) in articleSet' :id=" 'article' + index" @click='showArticle(index, $event)'>
-      <div class="collapse_title" >
+    <div class="single_row" v-for='(item, index) in articleSet' :id=" 'article' + index" >
+      <div class="collapse_title" @click='showArticle(index, $event)'>
         <span class="title_text">{{ item.title }}</span>
         <p class="title_text_adding">{{ item.intro }}</p>
       </div>
@@ -160,25 +160,22 @@ export default {
     },
 
     showArticle(index, $event){
-      // console.log($event.target.className);
-      if($event.target.className === 'collapse_title' || 'title_text_adding' || 'title_text'){
-        eventBus.$emit('changeList', true);
-        let nowText = document.getElementsByClassName('collapse_text')[index];//事件委托
-        let nowTitle = this.getDOMArray('collapse_title');
-        if(!this.maxHeight[index]){
-          this.maxHeight.forEach(
-            (item, forEachIndex, array) => {
-              this.$set(array, forEachIndex, 0);
-            }
-          )//手风琴效果，全部卡片高度缩小
-          nowTitle.forEach((item) => {item.style.boxShadow = '2px 2px 5px black';})
-          this.$set(this.maxHeight, index, nowText.scrollHeight);
-          nowTitle[index].style.boxShadow = '0px 0px 0px black';
-        }
-        else{
-          this.$set(this.maxHeight, index, 0);
-          nowTitle[index].style.boxShadow = '2px 2px 5px black';
-        }
+      eventBus.$emit('changeList', true);
+      let nowText = document.getElementsByClassName('collapse_text')[index];
+      let nowTitle = this.getDOMArray('collapse_title');
+      if(!this.maxHeight[index]){
+        this.maxHeight.forEach(
+          (item, forEachIndex, array) => {
+            this.$set(array, forEachIndex, 0);
+          }
+        )//手风琴效果，全部卡片高度缩小
+        nowTitle.forEach((item) => {item.style.boxShadow = '2px 2px 5px black';})
+        this.$set(this.maxHeight, index, nowText.scrollHeight);
+        nowTitle[index].style.boxShadow = '0px 0px 0px black';
+      }
+      else{
+        this.$set(this.maxHeight, index, 0);
+        nowTitle[index].style.boxShadow = '2px 2px 5px black';
       }
     },
 
@@ -216,8 +213,8 @@ export default {
     box-shadow: 2px 2px 5px black;
   }
   .collapse_title:hover {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    /* padding-left: 5rem;
+    padding-right: 5rem; */
     border: 2px solid white;
     cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
   }
@@ -343,8 +340,6 @@ export default {
       font-size: 1.5rem;
     }
     .collapse_title:hover {
-      padding-left: 3rem;
-      padding-right: 3rem;
       border: 2px solid white;
     }
   }
