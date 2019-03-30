@@ -2,8 +2,8 @@
   <div class="mainHolder">
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
-    <div class="single_row" v-for='(item, index) in articleSet' :id=" 'article' + index">
-      <div class="collapse_title" @click='changeShow(index)'>
+    <div class="single_row" v-for='(item, index) in articleSet' :id=" 'article' + index" @click='showArticle(index, $event)'>
+      <div class="collapse_title" >
         <span class="title_text">{{ item.title }}</span>
         <p class="title_text_adding">{{ item.intro }}</p>
       </div>
@@ -159,24 +159,28 @@ export default {
       return Array.prototype.slice.call(temp);
     },
 
-    changeShow(index){
-      eventBus.$emit('changeList', true);
-      let nowText = document.getElementsByClassName('collapse_text')[index];
-      let nowTitle = this.getDOMArray('collapse_title');
-      if(!this.maxHeight[index]){
-        for(let i = 0; i < this.maxHeight.length; i ++){
-          this.$set(this.maxHeight, i, 0);
-          nowTitle[i].style.boxShadow = '2px 2px 5px black';
+    showArticle(index, $event){
+      if($event.target.className === 'collapse_title'){
+        eventBus.$emit('changeList', true);
+        let nowText = document.getElementsByClassName('collapse_text')[index];//事件委托
+        let nowTitle = this.getDOMArray('collapse_title');
+        if(!this.maxHeight[index]){
+          this.maxHeight.forEach(
+            (item, innerIndex, array) => {
+              this.$set(array, item, 0);
+            }
+          )
+          this.$set(this.maxHeight, index, nowText.scrollHeight);
+          eventBus.$emit('orderArticle', false);
+          nowTitle[index].style.boxShadow = '0px 0px 0px black';
         }
-        this.$set(this.maxHeight, index, nowText.scrollHeight);
-        eventBus.$emit('orderArticle', false);
-        nowTitle[index].style.boxShadow = '0px 0px 0px black';
+        else{
+          eventBus.$emit('orderArticle', true);
+          this.$set(this.maxHeight, index, 0);
+          nowTitle[index].style.boxShadow = '2px 2px 5px black';
+        }
       }
-      else{
-        eventBus.$emit('orderArticle', true);
-        this.$set(this.maxHeight, index, 0);
-        nowTitle[index].style.boxShadow = '2px 2px 5px black';
-      }
+
     },
 
     collectInfo(){
