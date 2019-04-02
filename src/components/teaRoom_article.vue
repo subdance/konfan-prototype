@@ -267,7 +267,7 @@ export default {
     box-sizing: border-box;
     border: 10px solid white;
     border-bottom: 40px solid white;
-    transform: rotate(-3deg);
+    transform: rotate(3deg);
     box-shadow: 4px 4px 2px black;
     width: 35%;
     object-position: center;
@@ -278,7 +278,7 @@ export default {
     position: absolute;
     bottom: 2rem;
     left:50%;
-    transform: rotate(-3deg);
+    transform: rotate(3deg);
   }
   @media only screen and (max-width: 600px) {
     .collapse_title {
