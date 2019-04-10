@@ -7,7 +7,7 @@
         <span class="title_text">{{ item.title }}</span>
         <p class="title_text_adding">{{ item.intro }}</p>
       </div>
-      <div class="collapse_text" :style="{maxHeight: maxHeight[index] + 'px'}">
+      <div class="collapse_text">
         <p
           class="article_text"
           v-for='(paragraph, index) in item.para'
@@ -29,7 +29,6 @@ import eventBus from '@/eventbus.js'
 export default {
   data(){
     return {
-      maxHeight: [0, 0, 0, 0, 0, 0],
       articleSet: [
         {
           title: '那一日的梦',
@@ -160,24 +159,28 @@ export default {
 
     showArticle(index, $event){
       eventBus.$emit('changeList', true);
-      let nowText = document.getElementsByClassName('collapse_text')[index];
-      let nowTitle = this.getDOMArray('collapse_title');
-      if(!this.maxHeight[index]){
-        this.maxHeight.forEach(
-          (item, forEachIndex, array) => {
-            this.$set(array, forEachIndex, 0);
-          }
-        )//手风琴效果，全部卡片高度缩小
-        nowTitle.forEach((item) => {item.style.boxShadow = '2px 2px 5px black';})
-        this.$set(this.maxHeight, index, nowText.scrollHeight);
-        nowTitle[index].style.boxShadow = '0px 0px 0px black';
+      let allText = this.getDOMArray('collapse_text');
+      let allTitle = this.getDOMArray('collapse_title');
+      let nowText = this.getDOMArray('collapse_text')[index];
+      let nowTitle = this.getDOMArray('collapse_title')[index];
+      let height = nowText.scrollHeight;
+      if(!parseInt(nowText.style.maxHeight)){
+        allText.forEach((item) =>{
+          item.style.maxHeight = '0px';
+        } )
+        allTitle.forEach( (item) => {
+          item.style.boxShadow = '2px 2px 5px black';
+        } )
+        //手风琴效果，全部卡片高度缩小
+        nowTitle.style.boxShadow = '2px 2px 5px black';
+        nowText.style.maxHeight = height + 'px';
+        nowTitle.style.boxShadow = '0px 0px 0px black';
       }
       else{
-        this.$set(this.maxHeight, index, 0);
-        nowTitle[index].style.boxShadow = '2px 2px 5px black';
+        nowText.style.maxHeight = '0px'
+        nowTitle.style.boxShadow = '2px 2px 5px black';
       }
     },
-
     collectInfo(){
       var infoSet = [];
       for (let i = 0; i < this.articleSet.length; i ++) {
@@ -212,20 +215,19 @@ export default {
     box-shadow: 2px 2px 5px black;
   }
   .collapse_title:hover {
-    /* padding-left: 5rem;
-    padding-right: 5rem; */
     transform: translate(0, -5%);
     border: 2px solid white;
     cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
   }
   .collapse_text {
     overflow: hidden;
-    transition: max-height 0.6s;
+    transition: max-height 1s;
     padding-left: 2rem;
     width: 600px;
     margin: auto;
     margin-top: 1rem;
     position: relative;
+    max-height: 0px;
   }
   .single_row {
     padding-bottom: 3rem;
