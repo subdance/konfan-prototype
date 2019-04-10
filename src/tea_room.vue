@@ -1,8 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
     <catalog></catalog>
-    <teaSentence :type='leftType'></teaSentence>
-    <teaSentence :type='rightType'></teaSentence>
     <aplayer
     class="musicPlayer"
     ref='aplayer'
@@ -19,12 +17,10 @@
 <script>
 import eventBus from '@/eventbus.js'
 import teaArticle from '@/components/teaRoom_article.vue'
-import teaSentence from '@/components/teaRoom_sentence.vue'
 import catalog from '@/components/teaRoom_catalog.vue'
 export default {
   components: {
     teaArticle,
-    teaSentence,
     catalog,
   },
   data(){
