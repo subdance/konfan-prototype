@@ -45,6 +45,24 @@ export default {
           info: 'Reddit主页',
           link: 'https://www.reddit.com/user/guillermocs18',
         },
+        {
+          id: 5,
+          name: '风花之主',
+          info: 'BILIBILI主页',
+          link: 'https://space.bilibili.com/6460984',
+        },
+        {
+          id: 6,
+          name: '月下狂笙',
+          info: 'BILIBILI主页',
+          link: 'https://space.bilibili.com/50436533',
+        },
+        {
+          id: 7,
+          name: '凸白凸',
+          info: 'BILIBILI主页',
+          link: 'https://space.bilibili.com/4797382',
+        },
       ]
     }
 
