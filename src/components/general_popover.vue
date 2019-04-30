@@ -33,13 +33,13 @@ export default {
   a {
     text-decoration: none;
     color: #409EFF;
+    font-weight: bold;
   }
   .mainContainer {
+    box-sizing: border-box;
     border: 2px solid white;
     border-radius: 10px;
     padding: 0 1rem;
-    height: 2rem;
-    line-height: 2rem;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -57,12 +57,22 @@ export default {
     visibility: visible;
     position: absolute;
     left: -2px;
-    top: -10rem;
+    top: -12rem;
     border: 2px solid white;
     cursor: default;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
     z-index: 9999;
+  }
+  .contetHolderShow:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
   }
   .contetHolderHide{
     visibility: hidden;
@@ -74,6 +84,7 @@ export default {
   }
   .titleText {
     font-size: 1rem;
+    line-height: 2rem;
   }
   .name {
     color: white;
