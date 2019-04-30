@@ -148,7 +148,7 @@ export default {
   .flexPicItem {
     position: relative;
     width: 40%;
-    height: 25rem;
+    height: 320px;
     background-position: center;
     background-size: cover;
     border-radius: 15px;
@@ -224,7 +224,7 @@ export default {
     .flexPicItem {
       position: relative;
       width: 90%;
-      height: 15rem;
+      height: 200px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
