@@ -78,13 +78,13 @@ export default {
   .bottomHolder {
     margin-top: -5rem;
     width: 100%;
-    height:58rem;
+    max-height: 800px;
     overflow: hidden;
   }
   .bottomImg {
     margin: auto;
     width: 100%;
-    height:58em;
+    max-height: 800px;
     object-fit: cover;
     object-position: top;
   }
