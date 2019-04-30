@@ -14,10 +14,9 @@
           :v-key='index'
           > &nbsp &nbsp {{ paragraph }}
         </p>
-        <div style="text-align: center;" v-show='!(index - 5)'>
+        <div style="text-align: center;" v-show='!(index - 6)'>
           <img class="articleImg" src="https://konfan.oss-cn-beijing.aliyuncs.com/image/article/1.jpg" alt="">
         </div>
-        <p class="imgText" v-show='!(index - 5)'>摄于2016-秋</p>
       </div>
     </div>
 
@@ -32,7 +31,7 @@ export default {
       articleSet: [
         {
           title: '那一日的梦',
-          intro: '轻音少女动画中的瞬间-18/11.26/午夜',
+          intro: '永远的轻音',
           para: [
             '在轻音部第一次合宿的那个海边的夜晚，唯晃晃悠悠地将放音机搬到了澪的面前',
             '一瞬间，早已准备好的烟花在唯的背后划向天空。唯夸张地滑动着拨片，开怀地跳跃着',
@@ -55,19 +54,6 @@ export default {
           ],
         },
         {
-          title: '一些小事',
-          intro: '让我感到开心的事情-18/12.2/午夜',
-          para: [
-            '冬天的周末，一起床发现窗外下雪了',
-            '周五最后一节课的大扫除',
-            '新年去超市买完年货坐在返程的公交车上',
-            '在圣诞节看到烟火',
-            '看到朋友，控制不住的想笑，想讲很俗的段子',
-            '跟别人谈梦想，别人也在认真地听',
-            '今晚可以熬夜',
-          ],
-        },
-        {
           title: '故事的起因与未完待续',
           intro: '关于这个网站-18/10.01/夜',
           para: [
@@ -85,6 +71,19 @@ export default {
             '',
             '这就是故事的起因',
             '剩下的就期待未完待续吧',
+          ],
+        },
+        {
+          title: '一些小事',
+          intro: '让我感到开心的事情-18/12.2/午夜',
+          para: [
+            '冬天的周末，一起床发现窗外下雪了',
+            '周五最后一节课的大扫除',
+            '新年去超市买完年货坐在返程的公交车上',
+            '在圣诞节看到烟火',
+            '看到朋友，控制不住的想笑，想讲很俗的段子',
+            '跟别人谈梦想，别人也在认真地听',
+            '今晚可以熬夜',
           ],
         },
         {
@@ -129,6 +128,17 @@ export default {
             '',
             '下次再回家，应该是2020年的除夕了吧。',
             '下次再看到爷爷奶奶，我会说“我过的很好，我回家了”',
+          ],
+        },
+        {
+          title: '再见，然后吹响下一曲',
+          intro: '离开联想-19/3.25/午后',
+          para: [
+            '上周从联想前端开发离职了！',
+            '也舍不得。半年的实习，我很感谢联想。作为我的第一份工作，这是一个有某种意义的地方',
+            '多年以后，我也许仍会记得在这儿面试那天，悠悠的风与颠簸的333路。还有那个手心冒汗的自己，在联想大厦气派的穹顶下不安地等待',
+            '',
+            '离开时，中关村的天空依然像那个遥远的夏日般，碧空如洗。',
           ],
         },
         {
@@ -232,6 +242,13 @@ export default {
   .single_row {
     padding-bottom: 3rem;
   }
+  .single_row:first-of-type .title_text {
+    background-color: white;
+    color: #f25d8e;
+  }
+  .single_row:first-of-type .title_text_adding {
+    font-style: normal;
+  }
   .title_text {
     font-weight: bold;
     font-variant: small-caps;
@@ -269,7 +286,7 @@ export default {
     border: 10px solid white;
     border-bottom: 40px solid white;
     transform: rotate(3deg);
-    box-shadow: 4px 4px 2px black;
+    box-shadow: 4px 4px 8px black;
     width: 35%;
     object-position: center;
     object-fit: cover;
@@ -282,6 +299,13 @@ export default {
     transform: rotate(3deg);
   }
   @media only screen and (max-width: 600px) {
+    .single_row:first-of-type .title_text {
+      background-color: white;
+      color: #f25d8e;
+    }
+    .single_row:first-of-type .title_text_adding {
+      font-style: normal;
+    }
     .collapse_title {
       margin: auto;
       width: 80vw;
@@ -316,7 +340,7 @@ export default {
       border: 4px solid white;
       border-bottom: 10px solid white;
       transform: rotate(-3deg);
-      box-shadow: 4px 4px 2px black;
+      box-shadow: 4px 4px 8px black;
       width: 35%;
       object-position: center;
       object-fit: cover;
