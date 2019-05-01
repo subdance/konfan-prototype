@@ -93,15 +93,15 @@ export default {
             '“似水流年是一个人所有的一切，只有这个东西，才真正归你所有。其余的一切，都是片刻的欢愉和不幸。”',
             '在2018的末尾注视这一年，感觉自己越来越迷糊了。',
             '',
-            '‘不甘于成为被豢养的家畜，于是有些人翻山越岭来到了高墙之外。他们想看看外面的世界’',
-            '但是那一天--',
+            '‘不甘于成为被豢养的家畜，于是有些人来到了高墙之外。他们想看看外面的世界’',
+            '但是那一天',
             '在中关村科技中心，无数和我年龄相仿的人从四面八方涌来，然后再交汇到百度，新浪微博等中国一线公司，我感到一种手足无措的惊讶：',
-            '原来这个世界上有这么多跟你差不多年纪，却比你更加努力，更加聪明，更加有价值的人',
-            '我从小以来的优越感不见了，我感觉到了悔恨',
+            '在面试中受到打击的我，一瞬间意识到：',
+            '原来这个世界上满是跟你差不多年纪，却比你更加努力，更加聪明，更加有价值的人',
+            '我从小以来的优越感不见了，取而代之的是悔恨',
             '以前的我也知道世界很大，强人很多，但当这一事实用逼真的方式将我笼罩在其中时，我才理解到这一点',
             '‘你很弱，你自幼以来的成功，优越，满足感毫无意义，你的家乡只是一个池塘，你只是池塘里的一条小鱼’',
-            '那一瞬间像钉子，钉在我心里',
-            '也就是在那时，我不再想呆在温柔乡了。我想去外面看看',
+            '就是在那时，我不再想呆在那个南方小城的温柔乡了。我想去外面看看',
             '我想知道，自己的‘器’',
             '以上，是我2018最想记录的一件事',
             '其他的事，如鱼饮水就好',
@@ -109,7 +109,7 @@ export default {
             '跨年夜时，我窝在寝室里，一边擦鼻涕（感冒了）一边看红白歌会。虽然独自一人，但我却不知从何处感到了升腾的幸福感',
             '地球只是公转一周，却足够让人世手舞足蹈，这就是人类伟大的浪漫吧',
             'This is the stand-alone-complex',
-            '所以，新年快乐',
+            '所以，以上，新年快乐',
           ],
         },
         {
@@ -126,6 +126,7 @@ export default {
             '也许他们不懂我，也不了解我的苦闷，但是和他们呆在一起总是很安心。',
             '这是18年默默朝夕相处的默契吧。',
             '',
+            '在回京的火车上，云彩飞驰，山风在窗外的田间绿野穿梭',
             '下次再回家，应该是2020年的除夕了吧。',
             '下次再看到爷爷奶奶，我会说“我过的很好，我回家了”',
           ],
@@ -143,18 +144,18 @@ export default {
         },
         {
           title: '我',
-          intro: '自我肖像-18/12.1/夜',
+          intro: '少年不十分',
           para: [
-            'Hi, how are you doing today?',
+            'How are you doing today?',
             '我是sub/dance，湖北人，97年，北京211在读',
-            '我是一个悲观的理想主义者',
-            '喜欢大卫芬奇与库布里克的电影，还有OASIS领衔的一众英伦摇滚的乐队。',
-            '不过近些年（3年）爱好一直在向游戏，动画片，当然还有代码上转移。（大概就是变宅了◕ˇ∀ˇ◕）',
-            '喜欢逛reddit，已经有 7k+ karma了',
+            '我好像是一个悲观的理想主义者',
+            '喜欢大卫芬奇的电影，制作手工模型，听OASIS领衔的一众英伦摇滚。当然还有代码',
+            '近些年（3年）爱好一直在向游戏，动画片上转移（大概就是变宅了◕ˇ∀ˇ◕）',
+            'reddit重度用户，各账号合计有 10k+ karma， 不喜微博',
             '大多数时间话比较少',
-            '虽然难以启齿，但我相信梦想;相信“你也可以改变世界”这种事情;相信“英雄”',
-            '崇拜那些为了理想奋斗的人',
-            '我享受用冷酷，愚笨的代码，来“搭建出舒服的页面，实现精准的操作”，这一过程。十分享受',
+            '相信梦想;相信“你也可以改变世界”这种事情;相信“英雄”',
+            '崇拜那些为了某些东西奋斗的人',
+            '享受用冷酷，愚笨的代码，来“构造美妙的页面，实现精准的操作”这一过程',
             '愿自己能保持谦虚，保持勤奋，不放弃对幸福的追求',
           ],
         },
@@ -249,6 +250,13 @@ export default {
   .single_row:first-of-type .title_text_adding {
     font-style: normal;
   }
+  .single_row:last-of-type .title_text {
+    background-color: white;
+    color: #f25d8e;
+  }
+  .single_row:last-of-type .title_text_adding {
+    font-style: normal;
+  }
   .title_text {
     font-weight: bold;
     font-variant: small-caps;
@@ -306,6 +314,13 @@ export default {
     .single_row:first-of-type .title_text_adding {
       font-style: normal;
     }
+    .single_row:last-of-type .title_text {
+      background-color: white;
+      color: #f25d8e;
+    }
+    .single_row:last-of-type .title_text_adding {
+      font-style: normal;
+    }
     .collapse_title {
       margin: auto;
       width: 80vw;
@@ -339,7 +354,7 @@ export default {
       box-sizing: border-box;
       border: 4px solid white;
       border-bottom: 10px solid white;
-      transform: rotate(-3deg);
+      transform: rotate(3deg);
       box-shadow: 4px 4px 8px black;
       width: 35%;
       object-position: center;
