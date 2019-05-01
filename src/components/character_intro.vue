@@ -191,7 +191,6 @@
     font-weight: bold;
     font-size: 7rem;
     text-shadow: 3px 3px 5px black;
-    font-family: 'ZCOOL KuaiLe', cursive;
   }
   .mainIntroHolder {
     width: 35rem;
