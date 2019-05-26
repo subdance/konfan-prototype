@@ -15,7 +15,7 @@ Vue.use(APlayer, {
   productionTip: true,
 });
 
-require('@/assets/font-awesome-4.7.0/css/font-awesome.min.css')
+// require('@/assets/font-awesome-4.7.0/css/font-awesome.min.css')
 
 Vue.use(ElementUI);
 
