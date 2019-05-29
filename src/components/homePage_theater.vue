@@ -17,14 +17,7 @@
       </transition>
     </div>
     <div id="box2">
-      <!-- <div class="textHolder"> -->
-
-        <!-- <p id="headerText">轻音部</br>的配方是:</p> -->
         <div id="p1"><img class="icon" src='../assets/background/3.png'></div>
-
-        <!-- <p id="p2">课后的茶点</p>
-        <p id="p3">与轻飘飘的时光</p> -->
-      <!-- </div> -->
     </div>
   </div>
 </template>
