@@ -26,7 +26,7 @@
 
 <script>
 import eventBus from '@/eventbus.js'
-import footBar from '@/components/general_footbar.vue'
+import footBar from '@/components/gene_footbar_new.vue'
 import navBar from '@/components/general_navbar.vue'
 import scrollTop from '@/components/general_back_to_top.vue'
 export default {
