@@ -104,7 +104,7 @@ export default {
     padding: 1px 3px;
     text-align: center;
     font-size: 1rem;
-    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
+    cursor: pointer;
     transition: all 0.2s;
     box-shadow: 2px 2px 5px black;
   }
@@ -123,7 +123,7 @@ export default {
     border-radius: 50%;
     background-color: white;
     overflow: hidden;
-    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
+    cursor: pointer;
     border: 2px solid #409EFF;
     box-sizing: content-box;
 

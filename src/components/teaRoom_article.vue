@@ -228,7 +228,7 @@ export default {
   .collapse_title:hover {
     transform: translate(0, -5%);
     border: 2px solid white;
-    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;
+    cursor: pointer;
   }
   .collapse_text {
     overflow: hidden;

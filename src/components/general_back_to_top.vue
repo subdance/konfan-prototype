@@ -52,19 +52,15 @@ export default {
     display: inline-block;
     overflow: hidden;
     z-index: 999;
-    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;;
+    cursor: pointer;
     position: fixed;
     bottom: -0.5rem;
     right: 0;
     text-decoration: none;
   }
   img {
-    height: 10rem;
     width: 80px;
   }
   @media only screen and (max-width: 600px) {
-    img {
-      height: 10rem;
-    }
   }
 </style>

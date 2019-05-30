@@ -528,7 +528,7 @@ export default {
   .picTd {
     width: 15rem;
     height: 15rem;
-    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;;
+    cursor: pointer;
     background-position: center;
     background-size: cover;
     transition: 0.2s;
@@ -637,7 +637,7 @@ export default {
     border: 0.5rem solid white;
     transform: rotate(-20deg);
     box-shadow: 4px 4px 2px black;
-    cursor: url(../assets/element/cursor-click.png) 14 0,pointer;;
+    cursor: pointer;
     transition: 0.5s ease-in-out;
     overflow: hidden;
     opacity: 0.4;
@@ -696,7 +696,7 @@ export default {
       border: 0.5rem solid white;
       transform: rotate(-45deg);
       box-shadow: 4px 4px 2px black;
-      cursor: url(../assets/element/cursor-click.png) 14 0,pointer;;
+      cursor: pointer;
       transition: 0.5s ease-in-out;
       opacity: 0.5;
     }
