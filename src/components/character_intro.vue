@@ -218,17 +218,17 @@
   }
   .girlTextHolder {
     position: absolute;
-    right: 5rem;
+    right: 0rem;
     bottom: 15rem;
-    width: 30rem;
+    width: 25rem;
     height:25rem;
     background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/dialog1.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    padding: 6rem 5rem 0 7rem;
-    font-size: 2rem;
+    padding: 6rem 5rem 0 5rem;
+    font-size: 1.9rem;
     font-style: italic;
     color: #606266;
     z-index: 2;
@@ -266,8 +266,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     display:inline-block;
     padding: 30px 0 0;
     font: normal normal normal 5rem/1.3 "Gochi Hand", Helvetica, sans-serif;

@@ -22,11 +22,11 @@
     </div>
     <div class="tableHolder">
       <div class="girlList">
-        <div @click='changeDetail(1)' :class="{ picTd: true, blurTd: isBlur[0] }" id="yui"></div>
-        <div @click='changeDetail(2)' :class="{ picTd: true, blurTd: isBlur[1] }" id="ritsu"></div>
-        <div @click='changeDetail(3)' :class="{ picTd: true, blurTd: isBlur[2] }" id="mio"></div>
-        <div @click='changeDetail(4)' :class="{ picTd: true, blurTd: isBlur[3] }" id="mugi"></div>
-        <div @click='changeDetail(5)' :class="{ picTd: true, blurTd: isBlur[4] }" id="azusa"></div>
+        <div @click='changeDetail(1)' :class="{ picTd: true, 'selected-pic': isSelected[0]}" id="yui"></div>
+        <div @click='changeDetail(2)' :class="{ picTd: true, 'selected-pic': isSelected[1]}" id="ritsu"></div>
+        <div @click='changeDetail(3)' :class="{ picTd: true, 'selected-pic': isSelected[2]}" id="mio"></div>
+        <div @click='changeDetail(4)' :class="{ picTd: true, 'selected-pic': isSelected[3]}" id="mugi"></div>
+        <div @click='changeDetail(5)' :class="{ picTd: true, 'selected-pic': isSelected[4]}" id="azusa"></div>
       </div>
       <div class="detailHolder">
         <transition name="el-fade-in-linear">
@@ -71,7 +71,7 @@ export default {
   data(){
     return{
       isBigPic: true,
-      isBlur: [true, true, true, true, true],
+      isSelected: [false, false, false, false, false],
       backPic: [
         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/1.jpg',
         'https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/2.jpg',
@@ -435,25 +435,41 @@ export default {
       ],
     }
   },
-  created(){
+  created() {
     this.generateRandom();
   },
+
+  mounted() {
+    // this.makeSelected();
+  },
+
   methods:{
     changeDetail(index){
       this.isBigPic = false;
       var that  = this;
       this.isAltShow = false;
       this.isDetailShowe = false;
-      for(let i = 0; i < this.isBlur.length; i++){
-        this.isBlur[i] = true;
+      for(let i = 0; i < this.isSelected.length; i++){
+        this.isSelected[i] = false;
       }
-      this.isBlur[ index - 1 ] = false;
+      this.isSelected[ index - 1 ] = true;
       setTimeout(function(){
         that.index1 = index - 1;
         that.index2 = index - 1;
         that.nowDetail3 = that.backDetail3[ index - 1 ];
         that.isDetailShowe = true;
       }, 100);
+      this.makeSelected(index - 1);
+    },
+
+    makeSelected(index) {
+      let picSet = document.querySelectorAll('.picTd');
+      picSet.forEach((item, innerIndex) => {
+        // item.classList.remove('selected-pic');
+        if (innerIndex == index) {
+          item.classList.add('selected-pic');
+        }
+      })
     },
 
     togglePic(){
@@ -497,6 +513,9 @@ export default {
     justify-content: center;
     flex-wrap: nowrap;
   }
+  .selected-pic {
+    border: 5px solid #ff7c81 !important;
+  }
   #addTextHolder {
     font-size: 1.6rem;
     text-align: center;
@@ -536,8 +555,6 @@ export default {
     overflow: hidden;
     border: 4px solid white;
     box-shadow: 8px 8px 2px black;
-  }
-  .blurTd {
   }
   .introPara {
     text-align:justify;
