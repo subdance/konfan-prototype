@@ -2,8 +2,8 @@
   <div class="mainHolder">
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
-    <div class="single_row" v-for='(item, index) in articleSet' :id=" 'article' + index" >
-      <div class="collapse_title" @click='showArticle(index, $event)'>
+    <div class="single_row" v-for='(item, index) in articleSet' :id="'article' + index" >
+      <div class="collapse_title" @click='toggleArticle(index)'>
         <span class="title_text">{{ item.title }}</span>
         <p class="title_text_adding">{{ item.intro }}</p>
       </div>
@@ -144,7 +144,7 @@ export default {
         },
         {
           title: '我',
-          intro: '少年不十分',
+          intro: '你好，你好',
           para: [
             'How are you doing today?',
             '我是sub/dance，湖北人，97年，北京211在读',
@@ -162,36 +162,31 @@ export default {
       ],
     }
   },
+  ///
   methods: {
     getDOMArray(className){
       var temp = document.getElementsByClassName(className);
       return Array.prototype.slice.call(temp);
     },
 
-    showArticle(index, $event){
+    toggleArticle(index) {
+      let title = document.querySelectorAll('.collapse_title');
+      let content = document.querySelectorAll('.collapse_text');
       eventBus.$emit('changeList', true);
-      let allText = this.getDOMArray('collapse_text');
-      let allTitle = this.getDOMArray('collapse_title');
-      let nowText = this.getDOMArray('collapse_text')[index];
-      let nowTitle = this.getDOMArray('collapse_title')[index];
-      let height = nowText.scrollHeight;
-      if(!parseInt(nowText.style.maxHeight)){
-        allText.forEach((item) =>{
-          item.style.maxHeight = '0px';
-        } )
-        allTitle.forEach( (item) => {
-          item.style.boxShadow = '2px 2px 5px black';
-        } )
-        //手风琴效果，全部卡片高度缩小
-        nowTitle.style.boxShadow = '2px 2px 5px black';
-        nowText.style.maxHeight = height + 'px';
-        nowTitle.style.boxShadow = '0px 0px 0px black';
-      }
-      else{
-        nowText.style.maxHeight = '0px'
-        nowTitle.style.boxShadow = '2px 2px 5px black';
-      }
+      content.forEach((item, innerIndex) => {
+        item.className = 'collapse_text';
+        if (index == innerIndex) {
+          item.classList.add('expand_text')
+        }
+      });
+      title.forEach((item, innerIndex) => {
+        item.className = 'collapse_title';
+        if (index == innerIndex) {
+          item.classList.add('collapse_title_selected');
+        }
+      })
     },
+
     collectInfo(){
       var infoSet = [];
       for (let i = 0; i < this.articleSet.length; i ++) {
@@ -200,10 +195,11 @@ export default {
       eventBus.$emit('catalogInfo', infoSet);
     }
   },
+  ///
   mounted(){
     this.collectInfo();
     eventBus.$on('openArticle', reg => {
-      this.showArticle(reg);
+      this.toggleArticle(reg);
     })
   },
 }
@@ -230,6 +226,9 @@ export default {
     border: 2px solid white;
     cursor: pointer;
   }
+  .collapse_title_selected {
+    border: 2px solid white;
+  }
   .collapse_text {
     overflow: hidden;
     transition: max-height 1s;
@@ -239,6 +238,9 @@ export default {
     margin-top: 1rem;
     position: relative;
     max-height: 0px;
+  }
+  .expand_text {
+    max-height: 999px;
   }
   .single_row {
     padding-bottom: 3rem;

@@ -10,7 +10,7 @@
       @click='scrollTo(index)'
       class="cataText"
       >
-      {{ titleInfo[index] }}
+      {{ index+1 + '. ' + titleInfo[index] }}
     </p>
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
         var tempString = temp1.concat(temp2);
         this.anchro.push(tempString);
       }
+      eventBus.$off('catalogInfo', reg);
     });
     this.screenCheck();
   },
@@ -102,14 +103,14 @@ export default {
     color: #303133;
     margin: 5px 10px;
     padding: 1px 3px;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.2s;
-    box-shadow: 2px 2px 5px black;
+    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
   }
   .bigScreenCatalogContainer > p:hover, .smallScreenCatalogContainer > p:hover {
-    background-color: #DCDFE6;
+    text-decoration: underline;
   }
   .responsiveContainer {
     display: none;
