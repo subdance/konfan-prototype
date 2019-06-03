@@ -174,15 +174,29 @@ export default {
       let content = document.querySelectorAll('.collapse_text');
       eventBus.$emit('changeList', true);
       content.forEach((item, innerIndex) => {
-        item.className = 'collapse_text';
         if (index == innerIndex) {
-          item.classList.add('expand_text')
+          if (item.classList.contains('expand_text')) {
+            item.className = 'collapse_text';
+          }
+          else {
+            item.classList.add('expand_text');
+          }
+        }
+        else {
+          item.className = 'collapse_text';
         }
       });
       title.forEach((item, innerIndex) => {
-        item.className = 'collapse_title';
         if (index == innerIndex) {
-          item.classList.add('collapse_title_selected');
+          if (item.classList.contains('collapse_title_selected')) {
+            item.className = 'collapse_title';
+          }
+          else {
+            item.classList.add('collapse_title_selected');
+          }
+        }
+        else {
+          item.className = 'collapse_title';
         }
       })
     },
