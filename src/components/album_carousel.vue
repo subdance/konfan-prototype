@@ -104,9 +104,9 @@ export default {
             '永远一起唱我们的歌'
           ],
           pic: [
-            'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/1.jpg',
-            'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/2.jpg',
             'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/3.jpg',
+            'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/2.jpg',
+            'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/1.jpg',
             'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/4.jpg',
             'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/5.jpg',
             'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set2/6.jpg',
