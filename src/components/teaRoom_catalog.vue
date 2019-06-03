@@ -1,6 +1,5 @@
 <template lang="html">
   <div v-bind:class="[isSmallScreen ? 'smallScreenCatalogContainer' : 'bigScreenCatalogContainer']">
-    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <div class="responsiveContainer">
       <span class="cata" @click='showPanel()'>目录</span>
       <a @click='closePanel()' class="close"></a>
@@ -130,7 +129,6 @@ export default {
 
   }
   .responsiveContainer > span {
-    font-family: 'ZCOOL KuaiLe', cursive;
     color: #409EFF;
   }
   .crossStatus {
