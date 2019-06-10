@@ -100,7 +100,6 @@ export default {
   },
   created(){
     this.changeFixPlayer(false);
-    this.listenChangeList();
   },
   mounted:function(){
     this.playMusic();
@@ -111,11 +110,6 @@ export default {
     },
     changeFixPlayer(reg){
       eventBus.$emit('changeFixPlayer', reg)
-    },
-    listenChangeList(){
-      eventBus.$on('changeList' ,reg => {
-        this.$refs.aplayer.hideList();
-      })
     },
   },
 }
