@@ -13,6 +13,8 @@ Vue.use(APlayer, {
   productionTip: true,
 });
 
+import "velocity-animate/velocity.js";
+
 Vue.use(ElementUI);
 
 var VueScrollTo = require('vue-scrollto');

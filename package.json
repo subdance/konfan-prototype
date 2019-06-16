@@ -13,6 +13,7 @@
     "@moefe/vue-aplayer": "^2.0.0-beta.2",
     "element-ui": "^2.9.1",
     "hls.js": "^0.11.0",
+    "velocity-animate": "^2.0.5",
     "vue": "^2.5.2",
     "vue-aplayer": "^1.6.1",
     "vue-dplayer": "0.0.10",
