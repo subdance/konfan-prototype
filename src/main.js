@@ -7,15 +7,11 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import $ from 'jquery'
-
 import APlayer from '@moefe/vue-aplayer';
 Vue.use(APlayer, {
   defaultCover: 'https://github.com/u3u.png',
   productionTip: true,
 });
-
-// require('@/assets/font-awesome-4.7.0/css/font-awesome.min.css')
 
 Vue.use(ElementUI);
 
