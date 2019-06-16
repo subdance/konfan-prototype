@@ -1,6 +1,6 @@
 <template lang="html">
   <transition name="el-fade-in-linear">
-    <a v-show='isActivated' id="back2Top" title="点我试试看" @click='goBack($event)'>
+    <a v-show='isActivated' id="back2Top" title="点我试试看" @click='goBack'>
       <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/2%20%281%29.png" class='pic'alt="">
     </a>
   </transition>
@@ -36,11 +36,12 @@ export default {
       });
     },
 
-    goBack($event){
-      $("html,body").animate(
-        {
-          scrollTop: 0
-        }, 100);
+    goBack(evt){
+      window.scrollTo(0, 0);
+      // $("html,body").animate(
+      //   {
+      //     scrollTop: 0
+      //   }, 100);
     }
   },
 
