@@ -171,6 +171,10 @@ export default {
     },
 
     toggleArticle(index) {
+      this.$router.push('/hi')
+      setTimeout(() => {
+        eventBus.$emit('showArticle', this.articleSet[index]);
+      }, 500)
       let title = document.querySelectorAll('.collapse_title');
       let content = document.querySelectorAll('.collapse_text');
       eventBus.$emit('changeList', true);

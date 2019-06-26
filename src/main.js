@@ -6,8 +6,11 @@ import router from './router'
 //import ElementUI
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+import 'fullpage.js/dist/fullpage.css'
 import APlayer from '@moefe/vue-aplayer';
+import VueFullPage from 'vue-fullpage.js'
+
+Vue.use(VueFullPage);
 Vue.use(APlayer, {
   defaultCover: 'https://github.com/u3u.png',
   productionTip: true,
