@@ -5,7 +5,6 @@
         <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="icon-pic" src="../assets/element/k-on.png" alt=""></a>
       </div>
       <div class="footbar-item">
-        <!-- <i class="fab fa-twitter fa-5x"></i> -->
         <span>@bout me &nbsp &nbsp</span> 
         <a target='_blank' href='https://twitter.com/H1gh_and_Dry'><i class="fa fa-twitter fa-5x custom-icon"></i></a>
         <div class="seperate-line"></div>
@@ -85,7 +84,20 @@ export default {
     .footbar-item:nth-child(1) {
       display: none;
     }
+    .icon-pic {
+      height: 25px;
+      width: 100px;
+    }
+    .footbar-item:nth-child(2) {
+      width: 100px;
+      order: 2;
+    }
     .footbar-item:nth-child(3) {
+      order: 1;
+      width: 90px;
+      overflow: hidden;
+    }
+    .footbar-item:nth-child(3) > span {
       display: none;
     }
   }

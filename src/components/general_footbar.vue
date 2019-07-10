@@ -1,14 +1,6 @@
 <template lang="html">
   <div id="footHolder">
     <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="iconPic" src="../assets/element/k-on.png" alt=""></a>
-    <!-- <div class="textHolder">
-      开源技术支持 :
-      <div><a target='_blank' href="https://cn.vuejs.org/">Vue.js&nbsp &nbsp</a></div>
-      <div><a target='_blank' href="https://github.com/ElemeFE/element">Element.UI&nbsp &nbsp</a></div>
-      <div><a target='_blank' href="https://github.com/MoePlayer/vue-aplayer">MoePlayer&nbsp &nbsp</a></div>
-      <div><a target='_blank' href="http://fontawesome.dashgame.com/">FontAwesome</a></div>
-    </div> -->
-    <!--<div class='foot-icon'><i class="fab fa-twitter"></i></div>-->
     <div class='foot-icon'><i class="fa fa-twitter fa-5x"></i></div>
     <popover class="bigScreen" title='内容助力感谢' :content='content'></popover>
   </div>
