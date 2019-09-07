@@ -1,16 +1,16 @@
 <template lang="html">
-  <div class="mainContainer">
-    <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+  <div class="main-container">
+    <!-- <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet"> -->
     <div id="box1">
-        <video autoplay muted loop id="myVideo" ref='myVideo'>
+        <video autoplay muted loop id="my-video" ref='myVideo'>
             <source src="https://konfan.oss-cn-beijing.aliyuncs.com/video/trim1.mp4" type="video/mp4">
         </video>
         <transition 
             name="el-fade-in-linear"
             @after-leave="afterLeave"
             >
-            <div class="mainIntro" v-show='isTextShow'>
-                <span class="introText">{{ nowShowingText }}</span>
+            <div class="main-intro" v-show='isTextShow'>
+                <span class="intro-text">{{ nowShowingText }}</span>
             </div>
         </transition>
     </div>
@@ -24,27 +24,27 @@
 export default {
     data(){
         return {
-        isTextShow: false,
-        currentIndex: 0,
-        backMainIntroText: [
-            "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
-            "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”— 梓",
-            "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
-            "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”— 澪",
-            "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”— 律",
-            "“大家都好厉害，不要扔下我独自长大哦”— 唯"
-        ],
+            isTextShow: false,//默认为文字为不显示状态
+            currentIndex: 0,//当前文字的索引
+            textArray: [
+                "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
+                "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”— 梓",
+                "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
+                "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”— 澪",
+                "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”— 律",
+                "“大家都好厉害，不要扔下我独自长大哦”— 唯"
+            ]
         }
     },
     beforeMount(){
-        this.triggerSwitching();
+        this.triggerSwitching();//触发轮播
     },
     mounted(){
         this.checkHeight();
     },
     computed: {
         nowShowingText() {
-            return this.backMainIntroText[this.currentIndex];
+            return this.textArray[this.currentIndex];
         }
     },
     methods:{
@@ -52,7 +52,7 @@ export default {
             setTimeout(() => {
                 this.isTextShow = true;
             }, 0)
-            setInterval(() => {
+            setInterval(() => {//触发afterleave
                 this.isTextShow = false;
             }, 4500)
         },
@@ -61,26 +61,25 @@ export default {
             this.isTextShow = true;
         },
         checkHeight(){
-        if (document.getElementById('box1').clientHeight > 803) {
-            document.getElementById('box1').style.height = '804px';
-            console.log(document.getElementById('box1').clientHeight);
-        }
+            if (document.getElementById('box1').clientHeight > 803) {
+                document.getElementById('box1').style.height = '804px';
+            }
         },
     },
 }
 </script>
 
 <style scoped>
-  .introText {
+  .intro-text {
     font-size: 3rem;
     color: #F2F6FC;
   }
-  .mainContainer {
+  .main-container {
     width: 100%;
     position: relative;
     background-color: #F2F6FC;
   }
-  .mainIntro {
+  .main-intro {
     padding: 1rem 2rem 1rem;
     position: absolute;
     top: 50%;
@@ -92,7 +91,7 @@ export default {
     border-radius: 10px;
     overflow: hidden;
   }
-  .mainIntro::after {
+  .main-intro::after {
     position: absolute;
     content: '';
     top: 0;
@@ -103,7 +102,7 @@ export default {
     opacity: 0.6;
     z-index: -1;
   }
-  .mainIntro::first-letter {
+  .main-intro::first-letter {
     font-size: 4rem;
   }
   #box1 {
@@ -111,20 +110,17 @@ export default {
     height: 100vh;
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
   #box2 {
     display: none
   }
-  #myVideo {
+  #my-video {
     position: absolute;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    transform: translate(-50%, -50%);
   }
   @media only screen and (max-width: 600px) {
-    .mainContainer {
+    .main-container {
       padding-top: 60px;
     }
     #box1 {
@@ -140,16 +136,8 @@ export default {
       background-position: left;
       background-size: cover;
     }
-    /* #box2::after {
-      content: "";
-      position: absolute;
-      top:0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.25);
-    } */
-    #myVideo {
+
+    #my-video {
       position: static;
       width: 100%;
       -ms-transform: translate(0, 0);
@@ -160,10 +148,10 @@ export default {
       position: absolute;
       bottom: 0;
     }
-    .introText {
+    .intro-text {
       font-size: 1.3rem;
     }
-    .mainIntro {
+    .main-intro {
       box-sizing: border-box;
       padding: 0.3rem 2rem 0.3rem;
       width: 100%;
@@ -176,7 +164,7 @@ export default {
       transform: translate(0, 0);
       border-radius: 0;
     }
-    .mainIntro::after {
+    .main-intro::after {
       position: absolute;
       content: '';
       top: 0;
@@ -185,7 +173,7 @@ export default {
       background-color: black;
       opacity: 0.5;
     }
-    .mainIntro::first-letter {
+    .main-intro::first-letter {
       font-size: 1.3rem;
     }
     p {
