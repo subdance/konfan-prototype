@@ -16,8 +16,8 @@
 
 <script>
 import eventBus from '@/eventbus.js'
-import teaArticle from '@/components/teaRoom_article.vue'
-import catalog from '@/components/teaRoom_catalog.vue'
+import teaArticle from '@/components/tea_room/teaRoom_article.vue'
+import catalog from '@/components/tea_room/teaRoom_catalog.vue'
 export default {
   components: {
     teaArticle,

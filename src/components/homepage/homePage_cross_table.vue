@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import interview from '@/components/homePage_interview.vue'
+import interview from '@/components/homepage/homePage_interview.vue'
 export default {
   components:{
     interview,

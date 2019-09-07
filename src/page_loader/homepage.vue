@@ -12,9 +12,9 @@
 
 <script>
 import eventBus from '@/eventbus.js'
-import interview from '@/components/homePage_interview.vue'
-import theater from '@/components/homePage_theater.vue'
-import crossTable from '@/components/homePage_cross_table.vue'
+import interview from '@/components/homepage/homePage_interview.vue'
+import theater from '@/components/homepage/homePage_theater.vue'
+import crossTable from '@/components/homepage/homePage_cross_table.vue'
 export default {
   components: {
     interview,

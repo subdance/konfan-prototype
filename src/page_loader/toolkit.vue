@@ -11,11 +11,10 @@
 
 <script>
 // @ is an alias to /src
-import section1 from '@/components/section_1.vue'
-// import HelloWorld from '@/components/HelloWorld.vue'
-import section2 from '@/components/section_2.vue'
-import section3 from '@/components/section_3.vue'
-import section4 from '@/components/section_4.vue'
+import section1 from '@/components/toolkit/section_1.vue'
+import section2 from '@/components/toolkit/section_2.vue'
+import section3 from '@/components/toolkit/section_3.vue'
+import section4 from '@/components/toolkit/section_4.vue'
 
 
 

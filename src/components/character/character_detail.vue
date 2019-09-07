@@ -533,7 +533,7 @@ export default {
     transition: 0.5s ease-in-out;
     width: 100%;
     padding-bottom: 1rem;
-    background-image: url(../assets/background/4.png);
+    background-image: url(../../assets/background/4.png);
   }
   .girlList {
     display: flex;

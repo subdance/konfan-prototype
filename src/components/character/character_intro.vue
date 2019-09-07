@@ -165,7 +165,7 @@
     position: relative;
     z-index: 1;
     margin: auto;
-    background-image: url('../assets/background/1.png');
+    background-image: url('../../assets/background/1.png');
     background-repeat: repeat;
     width: 100%;
     /* overflow: hidden; */

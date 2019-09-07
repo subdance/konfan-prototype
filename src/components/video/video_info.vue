@@ -108,7 +108,7 @@ export default {
   }
   .imgHolder {
     width: 10%;
-    background-image: url(../assets/element/mc.png);
+    background-image: url(../../assets/element/mc.png);
     background-position: top;
     background-size: cover;
   }

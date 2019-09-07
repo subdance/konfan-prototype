@@ -17,7 +17,7 @@
       </transition>
     </div>
     <div id="box2">
-        <div id="p1"><img class="icon" src='../assets/background/3.png'></div>
+        <div id="p1"><img class="icon" src='../../assets/background/3.png'></div>
     </div>
   </div>
 </template>

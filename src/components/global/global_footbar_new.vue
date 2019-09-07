@@ -2,7 +2,7 @@
     <div id="footbar-container">
       <div class="footbar-item"></div>
       <div class="footbar-item">
-        <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="icon-pic" src="../assets/element/k-on.png" alt=""></a>
+        <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="icon-pic" src="../../assets/element/k-on.png" alt=""></a>
       </div>
       <div class="footbar-item">
         <span>@bout me &nbsp &nbsp</span> 

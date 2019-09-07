@@ -7,8 +7,8 @@
 
 <script>
   import eventBus from '@/eventbus.js'
-  import videoPlayer from '@/components/video_player.vue'
-  import videoInfo from '@/components/video_info.vue'
+  import videoPlayer from '@/components/video/video_player.vue'
+  import videoInfo from '@/components/video/video_info.vue'
   export default {
     components:{
       videoPlayer,

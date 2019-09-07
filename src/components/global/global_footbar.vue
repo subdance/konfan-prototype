@@ -1,13 +1,13 @@
 <template lang="html">
   <div id="footHolder">
-    <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="iconPic" src="../assets/element/k-on.png" alt=""></a>
+    <a target='_blank' href="http://www.tbs.co.jp/anime/k-on/index-j.html"><img class="iconPic" src="../../assets/element/k-on.png" alt=""></a>
     <div class='foot-icon'><i class="fa fa-twitter fa-5x"></i></div>
     <popover class="bigScreen" title='内容助力感谢' :content='content'></popover>
   </div>
 </template>
 
 <script>
-import popover from '@/components/general_popover.vue'
+// import popover from '@/components/general_popover.vue'
 export default {
   components:{
     popover,

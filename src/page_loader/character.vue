@@ -8,9 +8,9 @@
 
 <script>
 import eventBus from '@/eventbus.js'
-import characterShow from '@/components/character_show.vue'
-import characterIntro from '@/components/character_intro.vue'
-import characterDetail from '@/components/character_detail.vue'
+import characterShow from '@/components/character/character_show.vue'
+import characterIntro from '@/components/character/character_intro.vue'
+import characterDetail from '@/components/character/character_detail.vue'
 export default {
   components: {
     characterShow,

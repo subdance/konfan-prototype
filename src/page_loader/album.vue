@@ -6,7 +6,7 @@
 
 <script>
 import eventBus from '@/eventbus.js'
-import carousel from '@/components/album_carousel.vue'
+import carousel from '@/components/album/album_carousel.vue'
 export default {
   components: {
     carousel,
