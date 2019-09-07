@@ -2,19 +2,17 @@
   <div class="mainContainer">
     <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
     <div id="box1">
-      <video autoplay muted loop id="myVideo" ref='myVideo'>
-        <source src="https://konfan.oss-cn-beijing.aliyuncs.com/video/trim1.mp4" type="video/mp4">
-      </video>
-      <transition name="el-fade-in-linear">
-        <div class="mainIntro" v-show='isTextOneShow'>
-          <span class="introText">{{ nowMainIntroText }}</span>
-        </div>
-      </transition>
-      <transition name="el-fade-in-linear">
-        <div class="mainIntro" v-show='isTextTwoShow'>
-          <span class="introText">{{ nowMainIntroText }}</span>
-        </div>
-      </transition>
+        <video autoplay muted loop id="myVideo" ref='myVideo'>
+            <source src="https://konfan.oss-cn-beijing.aliyuncs.com/video/trim1.mp4" type="video/mp4">
+        </video>
+        <transition 
+            name="el-fade-in-linear"
+            @after-leave="afterLeave"
+            >
+            <div class="mainIntro" v-show='isTextShow'>
+                <span class="introText">{{ nowShowingText }}</span>
+            </div>
+        </transition>
     </div>
     <div id="box2">
         <div id="p1"><img class="icon" src='../../assets/background/3.png'></div>
@@ -24,47 +22,51 @@
 
 <script>
 export default {
-  data(){
-    return {
-      isTextOneShow: true,
-      isTextTwoShow: false,
-      textIndex: 1,
-      nowMainIntroText: "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】",
-      backMainIntroText: [
-        "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
-        "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”— 梓",
-        "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
-        "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”— 澪",
-        "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”— 律",
-        "“大家都好厉害，不要扔下我独自长大哦”— 唯"
-      ],
-    }
-  },
-  created(){
-    setInterval(this.changeShow, 4000);
-
-  },
-  mounted(){
-    this.checkHeight();
-  },
-  methods:{
-    changeShow(){
-      var length = this.backMainIntroText.length ;
-      this.isTextOneShow = !this.isTextOneShow;
-      this.nowMainIntroText = this.backMainIntroText[this.textIndex];
-      this.isTextTwoShow = !this.isTextTwoShow;
-      this.textIndex++;
-      if(this.textIndex == length){
-        this.textIndex = 0;
-      }
+    data(){
+        return {
+        isTextShow: false,
+        currentIndex: 0,
+        backMainIntroText: [
+            "“如果你说最喜欢我 我会用最最喜欢回应你。”—【相遇天使】 ",
+            "“请不要毕业 就算只是喝茶不排练也没关系 请不要毕业”— 梓",
+            "“要是喜欢的概率 能用公式算出来 那该有多好”—【订书机之恋】",
+            "“没有过分显眼的地方，但也不会埋没于大家的音色之中。我就一直想做那样的贝斯手”— 澪",
+            "“也就是说，放学后下午茶是把现在高中生的‘摇滚精神’表现出来的乐队吧”— 律",
+            "“大家都好厉害，不要扔下我独自长大哦”— 唯"
+        ],
+        }
     },
-    checkHeight(){
-      if (document.getElementById('box1').clientHeight > 803) {
-        document.getElementById('box1').style.height = '804px';
-        console.log(document.getElementById('box1').clientHeight);
-      }
+    beforeMount(){
+        this.triggerSwitching();
     },
-  },
+    mounted(){
+        this.checkHeight();
+    },
+    computed: {
+        nowShowingText() {
+            return this.backMainIntroText[this.currentIndex];
+        }
+    },
+    methods:{
+        triggerSwitching() {
+            setTimeout(() => {
+                this.isTextShow = true;
+            }, 0)
+            setInterval(() => {
+                this.isTextShow = false;
+            }, 4500)
+        },
+        afterLeave() {
+            this.currentIndex = this.currentIndex == 5 ? 0 : this.currentIndex + 1 ;
+            this.isTextShow = true;
+        },
+        checkHeight(){
+        if (document.getElementById('box1').clientHeight > 803) {
+            document.getElementById('box1').style.height = '804px';
+            console.log(document.getElementById('box1').clientHeight);
+        }
+        },
+    },
 }
 </script>
 
@@ -119,7 +121,6 @@ export default {
     top: 50%;
     left: 50%;
     margin: 0;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   @media only screen and (max-width: 600px) {
