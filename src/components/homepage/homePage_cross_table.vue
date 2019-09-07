@@ -1,252 +1,154 @@
 <template lang="html">
-  <div class="mainContainer">
-    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
-    <div>
-      <div class="flexContainer">
-        <div
-          class="flexPicItem"
-          :style="{ backgroundImage: 'url(' + introPic[0] + ')' }"
-          @mouseenter='setDisplay(0)'
-          @mouseleave='setHide(0)'
-          >
-          <div
-            class="innerHolder"
-            v-show='innerDisplayArray[0]'
-            >
-            于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。
-          </div>
+    <div class="main-container">
+        <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+        <div class="single-line" v-for="(item, index) in introText">
+            <div class="pic-holder" :class="{'pic-holder-odd': index % 2 !== 0 }">
+                <img class="main-pic" :src="item.backgroundPic"></img>
+                <div class="inner-text-holder">
+                    {{ item.innerText }}
+                </div>
+            </div>
+            <div class="text-holder" :class="{'text-holder-odd': index % 2 !== 0 }">
+                <p>
+                    {{ item.upperText }}
+                </p>
+                <p>
+                    {{ item.bottomText }}
+                </p>
+            </div>
         </div>
-        <div class="flexTextItem">
-          <div style="text-align: left;">
-            <p>{{ introTitle[0] }}</p>
-            <p>{{ introText[0] }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="cutLine"></div>
-      <div class="flexContainer">
-        <div class="flexTextItem">
-          <div style="text-align: right;">
-            <p>{{ introTitle[1] }}</p>
-            <p>{{ introText[1] }}</p>
-          </div>
-        </div>
-        <div
-          class="flexPicItem"
-          :style="{ backgroundImage: 'url(' + introPic[1] + ')' }"
-          @mouseenter='setDisplay(1)'
-          @mouseleave='setHide(1)'
-          >
-          <div
-            class="innerHolder"
-            v-show='innerDisplayArray[1]'
-            >
-            校园，废萌，社团，音乐等在当时新鲜无比的动画元素让轻音迅速走红。
-          </div>
-        </div>
-      </div>
-      <div class="flexContainer">
-        <div
-          class="flexPicItem"
-          :style="{ backgroundImage: 'url(' + introPic[2] + ')' }"
-          @mouseenter='setDisplay(2)'
-          @mouseleave='setHide(2)'
-          >
-          <div
-            class="innerHolder"
-            v-show='innerDisplayArray[2]'
-            >
-            五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。
-          </div>
-        </div>
-        <div class="flexTextItem">
-          <div style="text-align: left;">
-            <p>{{ introTitle[2] }}</p>
-            <p>{{ introText[2] }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="cutLine"></div>
-      <div class="flexContainer">
-        <div class="flexTextItem">
-          <div style="text-align: right;">
-            <p>{{ introTitle[3] }}</p>
-            <p>{{ introText[3] }}</p>
-          </div>
-        </div>
-        <div
-          class="flexPicItem"
-          :style="{ backgroundImage: 'url(' + introPic[3] + ')' }"
-          @mouseenter='setDisplay(3)'
-          @mouseleave='setHide(3)'
-          >
-          <div
-            class="innerHolder"
-            v-show='innerDisplayArray[3]'
-            >
-            轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。
-          </div>
-        </div>
-      </div>
-      <interview></interview>
     </div>
-  </div>
 </template>
 
 <script>
-import interview from '@/components/homepage/homePage_interview.vue'
 export default {
-  components:{
-    interview,
-  },
-  data(){
-    return {
-      innerDisplayArray: [false, false, false, false, ],
-      introTitle: [
-        'K-ON是“轻音部”这一高中社团的简称',
-        '两位吉他手，一个键盘手，一个贝斯手，一个鼓手',
-        '可口的点心，悠闲的午后',
-        '生活，音乐，懵懂的梦想',
-      ],
-      introText: [
-        '在这一社团中，五位少女成立了名为“放学后下午茶”（HTT）的乐队',
-        '和一位贪吃的顾问，便是这个社团的全部成员',
-        '以及些许手忙脚乱的练习，构成了云朵般的日常',
-        '还有最最,最重要的——互相陪伴的彼此',
-      ],
-      introPic: [
-        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/9.jpg',
-        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/4.jpg',
-        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/8.jpg',
-        'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/2.jpg',
-      ],
+    data(){
+        return {
+            introText: [
+                {
+                    backgroundPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/9.jpg',
+                    upperText: 'K-ON是“轻音部”这一高中社团的简称',
+                    bottomText: '在这一社团中，五位少女成立了名为“放学后下午茶”（HTT）的乐队',
+                    innerText: '于2009年播出的轻音少女，成为了大热的现象级作品，甚至有了强国之源的美誉。'
+                },
+                {
+                    backgroundPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/4.jpg',
+                    upperText: '两位吉他手，一个键盘手，一个贝斯手，一个鼓手',
+                    bottomText: '和一位贪吃的顾问，便是这个社团的全部成员',
+                    innerText: '校园，废萌，社团，音乐等在当时新鲜无比的动画元素让轻音迅速走红。'
+                },
+                {
+                    backgroundPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/8.jpg',
+                    upperText: '可口的点心，悠闲的午后',
+                    bottomText: '以及些许手忙脚乱的练习，构成了云朵般的日常',
+                    innerText: ' 五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。'
+                },
+                {
+                    backgroundPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/2.jpg',
+                    upperText: '生活，音乐，懵懂的梦想',
+                    bottomText: '还有最最,最重要的——互相陪伴的彼此',
+                    innerText: '轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。'
+                }
+            ],
     }
   },
   methods: {
-    setDisplay(index){
-      this.$set(this.innerDisplayArray, index, true);
-    },
-    setHide(index){
-      this.$set(this.innerDisplayArray, index, false);
-    },
   },
 }
 </script>
 
 <style scoped>
-  * {
-    box-sizing: border-box;
-  }
-  .flexContainer{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  .flexPicItem {
-    position: relative;
-    width: 40%;
-    height: 320px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 15px;
-    z-index: 1;
-  }
-  .flexTextItem {
-    height: 25rem;
-    width: 40%;
-    position: relative;
-    font-size: 2.5rem;
-    color: #303133;
-    font-family: 'ZCOOL KuaiLe', cursive;
-    text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
-  }
-  .flexTextItem > div {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-  .flexPicItem:hover::after {
-    border-radius: 15px;
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    bottom: 0px;
-    left: 0;
-    /* filter: blur(10px); */
-    background-color: black;
-    opacity: 0.6;
-    z-index: -1;
-    transition: all 0.2s;
-    /* transform: scale(1.08); */
-  }
-  .innerHolder {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 100%;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-  }
-  .mainContainer {
-    width: 100%;
-    position: relative;
-  }
-  @media only screen and (max-width:600px) {
-    .mainContainer {
-      position: relative;
-      padding-top: 2rem;
+    * {
+        box-sizing: border-box;
     }
-    .cutLine {
-      width: 80%;
-      height: 1px;
-      border: 0.5px solid #606266;
-      box-sizing: border-box;
-      margin: auto;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-      box-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
+    .main-container {
+        width: 100%;
+        padding-top: 30px;
     }
-    .flexContainer{
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      flex-wrap: wrap;
+    .single-line {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
     }
-    .flexPicItem {
-      position: relative;
-      width: 90%;
-      height: 200px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 10px;
-      overflow: hidden;
-      z-index: 1;
+    .single-line:nth-child(2n + 1) {
+        flex-flow: row-reverse nowrap;
     }
-    .flexTextItem {
-      height: auto;
-      width: 90%;
-      position: static;
-      font-size: 1.7rem;
-      color: #303133;
+    .pic-holder {
+        flex: 0 0 600px;
+        height: 400px;
+        margin-right: 100px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .flexTextItem > div {
-      width: 100%;
-      position: static;
-      transform: translate(0, 0);
+    .inner-text-holder {
+        color: black;
+        font-size: 2rem;
+        position: relative;
+        flex: 0 0 400px;
+        z-index: 2;
+        opacity: 0;
+        animation: innerTextFade 0.6s ease-in-out;
     }
-    .innerHolder {
-      font-size: 1.5rem;
+    .pic-holder:hover .inner-text-holder {
+        opacity: 1;
+        animation: innerTextShow 0.2s ease-in-out;
     }
-
-  }
+    .pic-holder:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 337.5px;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.432);
+        z-index: 1;
+        opacity: 0;
+        animation: innerTextFade 0.6s ease-in-out;
+    }
+    .pic-holder:hover:before {
+        opacity: 1;
+        animation: innerTextShow 0.2s ease-in-out;
+    }
+    @keyframes innerTextShow {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes innerTextFade {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    .pic-holder-odd {
+        margin-right: 0px;
+        margin-left: 100px;
+    }
+    .main-pic {
+        flex: 0 0 600px;
+        height: 337.5px;
+        position: absolute;
+        z-index: 0;
+    }
+    .text-holder {
+        flex: 0 0 600px;
+    }
+    .text-holder > p {
+        text-align: left;
+        font-size: 1.8rem;
+        text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
+    }
+    .text-holder-odd > p {
+        text-align: right;
+    }
 </style>
