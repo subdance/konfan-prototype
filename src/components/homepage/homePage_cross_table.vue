@@ -139,6 +139,10 @@ export default {
         height: 337.5px;
         position: absolute;
         z-index: 0;
+        box-shadow: 0 0 3px black;
+    }
+    .pic-holder:hover .main-pic {
+        box-shadow: 0 0 6px black;
     }
     .text-holder {
         flex: 0 0 600px;
@@ -150,5 +154,53 @@ export default {
     }
     .text-holder-odd > p {
         text-align: right;
+    }
+
+
+    /*  */
+    /*  */
+    @media (max-width: 600px) {
+        * {
+            overflow: hidden;
+        }
+        .single-line {
+            display: block;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .pic-holder {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+        .pic-holder:before {
+            height: calc( 350 * 9 / 16 * 1px);
+            width: 350px;
+        }
+        .inner-text-holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            transform: translate(-50%, -50%);
+            font-size: 17px;
+        }
+        .main-pic {
+            margin: auto;
+            width: 350px;
+            height: calc( 350 * 9 / 16 * 1px);
+            display: block;
+            position: static;
+        }
+        .text-holder > p {
+            text-align: center;
+            font-size: 15px;
+        }
+        .pic-holder-odd {
+            margin-left: 0px;
+        }
+
     }
 </style>
