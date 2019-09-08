@@ -50,8 +50,8 @@ export default {
                     innerText: '轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。'
                 }
             ],
-    }
-  },
+        }
+    },
   methods: {
   },
 }
@@ -149,8 +149,9 @@ export default {
     }
     .text-holder > p {
         text-align: left;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
+        font-family: 'ZCOOL KuaiLe', cursive;
     }
     .text-holder-odd > p {
         text-align: right;

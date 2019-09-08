@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="main-container">
-    <!-- <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <div id="box1">
         <video autoplay muted loop id="my-video" ref='myVideo'>
             <source src="https://konfan.oss-cn-beijing.aliyuncs.com/video/trim1.mp4" type="video/mp4">
@@ -73,6 +73,7 @@ export default {
     .intro-text {
         font-size: 3rem;
         color: #F2F6FC;
+        font-family: 'ZCOOL KuaiLe', cursive;
     }
     .main-container {
         width: 100%;
