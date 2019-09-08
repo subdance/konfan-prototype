@@ -70,167 +70,123 @@ export default {
 </script>
 
 <style scoped>
-  .intro-text {
-    font-size: 3rem;
-    color: #F2F6FC;
-  }
-  .main-container {
-    width: 100%;
-    position: relative;
-    background-color: #F2F6FC;
-  }
-  .main-intro {
-    padding: 1rem 2rem 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .main-intro::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #303133;
-    opacity: 0.6;
-    z-index: -1;
-  }
-  .main-intro::first-letter {
-    font-size: 4rem;
-  }
-  #box1 {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
-  #box2 {
-    display: none
-  }
-  #my-video {
-    position: absolute;
-    width: 100%;
-  }
-  @media only screen and (max-width: 600px) {
-    .main-container {
-      padding-top: 60px;
-    }
-    #box1 {
-      height: auto;
-      display: none;
-    }
-    #box2 {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      height:300px;
-      background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/home/1.jpg');
-      background-position: left;
-      background-size: cover;
-    }
-
-    #my-video {
-      position: static;
-      width: 100%;
-      -ms-transform: translate(0, 0);
-      transform: translate(0, 0);
-      margin: 0;
-    }
-    .transPart {
-      position: absolute;
-      bottom: 0;
-    }
     .intro-text {
-      font-size: 1.3rem;
+        font-size: 3rem;
+        color: #F2F6FC;
+    }
+    .main-container {
+        width: 100%;
+        position: relative;
+        background-color: #F2F6FC;
     }
     .main-intro {
-      box-sizing: border-box;
-      padding: 0.3rem 2rem 0.3rem;
-      width: 100%;
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: 0;
-      left: 0;
-      -ms-transform: translate(0, 0);
-      transform: translate(0, 0);
-      border-radius: 0;
+        padding: 1rem 2rem 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 10px;
+        overflow: hidden;
     }
     .main-intro::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      bottom: 1px;
-      left: 0;
-      background-color: black;
-      opacity: 0.5;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #303133;
+        opacity: 0.6;
+        z-index: -1;
     }
     .main-intro::first-letter {
-      font-size: 1.3rem;
+        font-size: 4rem;
     }
-    p {
-      margin: 0;
-      /* font-family: 'ZCOOL KuaiLe', cursive; */
-      font-family: 'Noto Serif SC', serif;
-      letter-spacing: 10px;
-      writing-mode: vertical-lr;
+    #box1 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
     }
-    .textHolder {
-      width: 100%;
-      /* position: absolute;
-      left: 0px;
-      top: 50%;
-      transform: translate(0, -40%); */
-      background: #FC5C7D;  /* fallback for old browsers */background: #FC5C7D;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+    #box2 {
+        display: none
     }
-    #headerText {
-      font-size: 2rem;
-      background-clip: text;
-      color: transparent;
-      -webkit-background-clip: text;
-      font-weight: 800;
+    #my-video {
+        position: absolute;
+        width: 100%;
+    }
+  @media only screen and (max-width: 600px) {
+    .main-container {
+        padding-top: 60px;
+    }
+    #box1 {
+        height: auto;
+        display: none;
+    }
+    #box2 {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height:300px;
+        background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/home/1.jpg');
+        background-position: left;
+        background-size: cover;
+    }
+    #my-video {
+        position: static;
+        width: 100%;
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        margin: 0;
+    }
+    .transPart {
+        position: absolute;
+        bottom: 0;
+    }
+    .intro-text {
+        font-size: 1.3rem;
+    }
+    .main-intro {
+        box-sizing: border-box;
+        padding: 0.3rem 2rem 0.3rem;
+        width: 100%;
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+    .main-intro::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 1px;
+        left: 0;
+        background-color: black;
+        opacity: 0.5;
+    }
+    .main-intro::first-letter {
+        font-size: 1.3rem;
     }
     #p1 {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-45%, -50%);
-      font-size: 3rem;
-      font-weight: bolder;
-      margin-bottom: 10px;
-
-    }
-    #p2 {
-      font-size: 3rem;
-      font-weight: bolder;
-      margin-bottom: 10px;
-    }
-    #p3 {
-      font-size: 3rem;
-      font-weight: bolder;
-      margin-bottom: 10px;
-    }
-    .spin {
-      color: #f55e83;
-      /* font-size: 3rem; */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-45%, -50%);
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-bottom: 10px;
     }
     .icon {
-      width: 70vw;
-      object-fit: cover;
+        width: 70vw;
+        object-fit: cover;
     }
   }
 </style>
