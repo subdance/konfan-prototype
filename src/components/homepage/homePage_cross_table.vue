@@ -44,7 +44,7 @@ export default {
                     innerText: ' 五位主角的声优成为了行业内的新星，日后多次在名作中出演主役。'
                 },
                 {
-                    backgroundPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/2.jpg',
+                    backgroundPic: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/3.jpg',
                     upperText: '生活，音乐，懵懂的梦想',
                     bottomText: '还有最最,最重要的——互相陪伴的彼此',
                     innerText: '轻音的漫画依然在连载着，也许某一天这段温暖的故事会再次回归。'
