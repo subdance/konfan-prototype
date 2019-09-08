@@ -141,9 +141,6 @@ export default {
         z-index: 0;
         box-shadow: 0 0 3px black;
     }
-    .pic-holder:hover .main-pic {
-        box-shadow: 0 0 6px black;
-    }
     .text-holder {
         flex: 0 0 600px;
     }

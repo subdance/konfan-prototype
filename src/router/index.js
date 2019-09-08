@@ -6,7 +6,7 @@ import album from '@/page_loader/album.vue'
 import teaRoom from '@/page_loader/tea_room.vue'
 import videoRoom from '@/page_loader/video_room.vue'
 import article from '@/page_loader/tea_room_detail.vue'
-import toolkit from '@/page_loader/toolkit.vue'
+// import toolkit from '@/page_loader/toolkit.vue'
 
 
 Vue.use(Router)
@@ -38,10 +38,9 @@ export default new Router({
       path: '/hi',
       component: article,
     },
-    {
-      path: '/toolkit',
-      component: toolkit,
-    },
-
+    // {
+    //   path: '/toolkit',
+    //   component: toolkit,
+    // },
   ]
 })
