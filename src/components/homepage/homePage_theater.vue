@@ -71,7 +71,8 @@ export default {
 
 <style scoped>
     .intro-text {
-        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        font-size: 3.5rem;
         color: #F2F6FC;
         font-family: 'ZCOOL KuaiLe', cursive;
     }
@@ -85,14 +86,12 @@ export default {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: 0;
-        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         z-index: 1;
         border-radius: 10px;
         overflow: hidden;
     }
-    .main-intro::after {
+    .main-intro:before {
         position: absolute;
         content: '';
         top: 0;
