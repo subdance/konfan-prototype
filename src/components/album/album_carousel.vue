@@ -26,15 +26,15 @@
         :inerval='interval'
         >
         <el-carousel-item
-          v-for="item in 5"
-          :key="item"
-          >
-          <div class="detailHolderOuter">
-            <div class="detailHolderInnerCard">
-              <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
+            v-for="item in 5"
+            :key="item"
+            >
+            <div class="detailHolderOuter">
+                <div class="detailHolderInnerCard">
+                <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
+                </div>
             </div>
-          </div>
-          <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
+            <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -56,7 +56,9 @@
               <span class="detailText">{{ carousel.text[ item - 1 ] }}</span>
             </div>
           </div>
-          <img class="carouselPic" :src='carousel.pic[ item - 1 ]' alt="">
+          <div class="carouselPicHolder">
+            <img class="carouselPic" :src='carousel.pic[ item - 1 ]' alt="">
+          </div>
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -190,138 +192,149 @@ export default {
 </script>
 
 <style scoped>
-  .carouselPicCard {
-    border-radius: 10px;
-    width: 100%;
-    height: 40rem;
-    object-fit: cover;
-  }
-  .carouselPic {
-    width: 100%;
-    height: 65rem;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  .titleHolder {
-    height: 30rem;
-  }
-  .textHolder {
-    padding-top: 170px;
-  }
-  .titileText {
-    font-size: 4rem;
-    color: #303133;
-  }
-  .icon {
-    text-align: left;
-    display: inline-block;
-    padding-left: 3rem;
-  }
-  .iconStyle {
-    text-shadow: 2px 2px 2px grey;
-  }
-  .text {
-    text-align: center;
-  }
-  .introText {
-    color: #606266;
-    font-size: 2rem;
-    padding-left: 5rem;
-    margin-bottom: 0;
-    font-style: italic;
-  }
-  .carouselPart {
-    width: 95%;
-    margin: 3rem auto;
-  }
-  .carouselPart:last-child {
-    padding-bottom: 10rem;
-    width: 95%;
-    margin: auto;
-  }
-  .detailHolderOuter {
-    text-align: center;
-    position: relative;
-  }
-  .detailHolderInnerCard {
-    position: absolute;
-    top: 0rem;
-    width: 100%;
-  }
-  .detailText {
-    text-align: center;
-    width: 100%;
-    font-size: 2rem;
-    color: #F2F6FC;
-    font-weight: bold;
-    mix-blend-mode: exclusion;
-  }
-  .bottomText {
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    padding-bottom: 4rem;
-    margin-top: 4rem;
-  }
-  @media only screen and (max-width: 600px) {
     .carouselPicCard {
-      border-radius: 10px;
-      width: 100%;
-      height: 250px;
-      object-fit: contain;
+        border-radius: 10px;
+        width: 100%;
+        height: 40rem;
+        object-fit: cover;
+    }
+    .carouselPicHolder {
+        position: relative;
+        padding-bottom: 56.2%;
+        height: 0px;
+        border-radius: 10px;
+        overflow: hidden;
     }
     .carouselPic {
-      width: 100%;
-      height: 250px;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-    .introText {
-      color: #606266;
-      font-size: 1.7rem;
-      text-align: center;
-      padding-left: 0;
-      margin-bottom: 0;
-      font-style: italic;
-    }
-    .detailText {
-      text-align: center;
-      width: 100%;
-      font-size: 1.5rem;
-      color: #F2F6FC;
-      font-weight: bold;
-      mix-blend-mode: exclusion;
-    }
-    .textHolder {
-      padding-top: 70px;
-    }
-    .titileText {
-      font-size: 2rem;
-      color: #303133;
-    }
-    .icon {
-      text-align: left;
-      display: inline-block;
-      padding-left: 3rem;
-    }
-    .iconStyle {
-      font-size: 0.5rem;
-      text-shadow: 2px 2px 2px grey;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-width: 1357px;
+        object-fit: cover;
+        display: block;
+        border-radius: 10px;
+
     }
     .titleHolder {
-      height: auto;
+        height: 30rem;
+    }
+    .textHolder {
+        padding-top: 170px;
+    }
+    .titileText {
+        font-size: 4rem;
+        color: #303133;
+    }
+    .icon {
+        text-align: left;
+        display: inline-block;
+        padding-left: 3rem;
+    }
+    .iconStyle {
+        text-shadow: 2px 2px 2px grey;
+    }
+    .text {
+        text-align: center;
+    }
+    .introText {
+        color: #606266;
+        font-size: 2rem;
+        padding-left: 5rem;
+        margin-bottom: 0;
+        font-style: italic;
     }
     .carouselPart {
-      margin-bottom: 6rem;
-      width: 100%;
-      margin: auto;
+        width: 95%;
+        margin: 3rem auto;
+    }
+    .carouselPart:last-child {
+        padding-bottom: 10rem;
+        width: 95%;
+        margin: auto;
+    }
+    .detailHolderOuter {
+        text-align: center;
+        position: relative;
+    }
+    .detailHolderInnerCard {
+        position: absolute;
+        top: 0rem;
+        width: 100%;
+    }
+    .detailText {
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+        color: #F2F6FC;
+        font-weight: bold;
+        mix-blend-mode: exclusion;
     }
     .bottomText {
-      text-align: center;
-      color: white;
-      font-size: 1.5rem;
-      padding-bottom: 4rem;
-      margin-top: 1rem;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        padding-bottom: 4rem;
+        margin-top: 4rem;
     }
-  }
+    @media only screen and (max-width: 600px) {
+        .carouselPicCard {
+        border-radius: 10px;
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        }
+        .carouselPic {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        border-radius: 10px;
+        }
+        .introText {
+        color: #606266;
+        font-size: 1.7rem;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 0;
+        font-style: italic;
+        }
+        .detailText {
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
+        color: #F2F6FC;
+        font-weight: bold;
+        mix-blend-mode: exclusion;
+        }
+        .textHolder {
+        padding-top: 70px;
+        }
+        .titileText {
+        font-size: 2rem;
+        color: #303133;
+        }
+        .icon {
+        text-align: left;
+        display: inline-block;
+        padding-left: 3rem;
+        }
+        .iconStyle {
+        font-size: 0.5rem;
+        text-shadow: 2px 2px 2px grey;
+        }
+        .titleHolder {
+        height: auto;
+        }
+        .carouselPart {
+        margin-bottom: 6rem;
+        width: 100%;
+        margin: auto;
+        }
+        .bottomText {
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        padding-bottom: 4rem;
+        margin-top: 1rem;
+        }
+    }
 </style>
