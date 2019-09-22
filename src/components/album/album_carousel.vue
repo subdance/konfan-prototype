@@ -260,14 +260,20 @@ export default {
         position: absolute;
         top: 0rem;
         width: 100%;
+        z-index: 999;
     }
     .detailText {
+        padding: 0px 5px;
         text-align: center;
         width: 100%;
         font-size: 2rem;
         color: #F2F6FC;
         font-weight: bold;
+        position: relative;
+        z-index: 999;
         mix-blend-mode: exclusion;
+        background-color: rgba(0, 0, 0, 0.342);
+        border-radius: 5px;
     }
     .bottomText {
         text-align: center;
