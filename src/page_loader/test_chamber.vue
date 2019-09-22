@@ -1,12 +1,19 @@
 <template>
     <div class="main-container">
-        <div>
+        <!-- <div>
             <input type="text" v-model="slogan" @change="shuffle">
         </div>
         <div class="flex-holder">
             <div v-for="(item, index) in words" :key="index">
                 <div>{{ item }}</div>
             </div>
+        </div> -->
+        <div class="pic-holder">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+            <div>d</div>
+            <div>e</div>
         </div>
     </div>
 </template>
@@ -32,10 +39,32 @@ export default {
 </script>
 
 <style scoped>
+    .main-container {
+        width: 100%;
+        padding-top: 60px;
+        overflow: hidden;
+    }
+    .pic-holder {
+        width: 500%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .pic-holder > div {
+        width: 20%;
+        height: 300px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
 * {
     box-sizing: border-box;
 }
-.main-container {
+/* .main-container {
     width: 100%;
     padding-top: 60px;
 }
@@ -47,7 +76,6 @@ export default {
     display: flex;
     flex-flow: row wrap;
     min-height: 100vh;
-    /* align-items: center; */
     align-content: center;
 }
 .flex-holder > div {
@@ -64,6 +92,6 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 </style>

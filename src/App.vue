@@ -1,27 +1,27 @@
 <template>
-  <el-container>
-    <scrollTop></scrollTop>
-    <aplayer
-      ref='aplayer'
-      :audio="audio"
-      :lrcType="0"
-      :volume='moePlayer.volume'
-      fixed
-      autoplay
-      v-show='moePlayer.isFixPlayerShow'
-      />
-    <el-header>
-      <navBar style="position: relative; z-index: 1;"></navBar>
-    </el-header>
+    <el-container>
+        <scrollTop></scrollTop>
+        <aplayer
+            ref='aplayer'
+            :audio="audio"
+            :lrcType="0"
+            :volume='moePlayer.volume'
+            fixed
+            autoplay
+            v-show='moePlayer.isFixPlayerShow'
+            />
+        <el-header>
+            <navBar style="position: relative; z-index: 1;"></navBar>
+        </el-header>
 
-    <el-main>
-      <router-view/>
-    </el-main>
+        <el-main>
+            <router-view/>
+        </el-main>
 
-    <el-footer>
-      <footBar></footBar>
-    </el-footer>
-  </el-container>
+        <el-footer>
+            <footBar></footBar>
+        </el-footer>
+    </el-container>
 </template>
 
 <script>

@@ -39,9 +39,6 @@ export default {
     beforeMount(){
         this.triggerSwitching();//触发轮播
     },
-    mounted(){
-        // this.checkHeight();
-    },
     computed: {
         nowShowingText() {
             return this.textArray[this.currentIndex];
@@ -59,12 +56,7 @@ export default {
         afterLeave() {
             this.currentIndex = this.currentIndex == 5 ? 0 : this.currentIndex + 1 ;
             this.isTextShow = true;
-        },
-        checkHeight(){
-            if (document.getElementById('box1').clientHeight > 803) {
-                document.getElementById('box1').style.height = '804px';
-            }
-        },
+        }
     },
 }
 </script>
