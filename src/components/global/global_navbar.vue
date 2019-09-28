@@ -28,7 +28,6 @@ export default {
       eventBus.$emit('changeFixPlayer', reg)
     },
   },
-
 }
 </script>
 

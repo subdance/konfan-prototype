@@ -23,7 +23,6 @@
             </p>
         </div>
     </div>
-
   </div>
 </template>
 
@@ -221,11 +220,11 @@ export default {
         }
     },
     created() {
-        this.classController = this.generateClassController();
-        this.backUp = this.generateClassController();
+        this.classController = this._generateClassController();
+        this.backUp = this._generateClassController();
     },
     methods: {
-        generateClassController() {//生成用于控制扩张/收缩样式的控制数组
+        _generateClassController() {//生成用于控制扩张/收缩样式的控制数组
             let length = this.articleSet.length;
             return new Array(length).fill(false);
         },
@@ -244,9 +243,6 @@ export default {
   },
     mounted(){
         this.collectInfo();
-        eventBus.$on('openArticle', reg => {
-            this.toggleArticle(reg);
-        })
     },
 }
 </script>
