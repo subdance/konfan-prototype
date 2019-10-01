@@ -7,12 +7,14 @@
                     v-for="(item, index) in article"
                     :key="index"
                     class="title-holder"
+                    :class="{'showing-title': index == showingIndex}"
                     >
                     <p 
                         class="title-text" 
                         @click="toggleArticle(index)"
                         >
-                        <i class="fa fa-circle-o list-icon"></i>
+                        <i v-show="showingIndex == index" class="fa fa-dot-circle-o list-icon"></i>
+                        <i v-show="showingIndex !== index" class="fa fa-circle-o list-icon"></i>
                         {{item.title}}
                     </p>
                     <p class="intro-text">{{item.intro}}</p>
@@ -22,7 +24,10 @@
                     class="title-holder"
                     @click="toCover"
                     >
-                    <span class="switch-text">合上书</span>
+                    <span class="switch-text">
+                        合上书
+                        <i class="fa fa-book"></i>
+                    </span>
                 </div>
             </div>
             <div class="content-wrapper">
@@ -313,15 +318,15 @@ export default {
         /* border-right: 1px solid black; */
     }
     .title-wrapper {
-        flex: 0 0 200px;
+        flex: 0 0 220px;
         position: relative;
     }
     .title-wrapper:first-child {
         border-right: 1px solid #9093994f;
     }
-    .title-wrapper:first-child * {
+    .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
-        opacity: 0.6;
+        opacity: 0.5;
     }
     .title-wrapper:first-child:hover * {
         opacity: 1;
@@ -334,6 +339,7 @@ export default {
         cursor: pointer;
         transition: 0.2s;
         color: #909399;
+        font-size: 12px;
     }
     .switch-text:hover {
         color: #409EFF;
@@ -341,8 +347,8 @@ export default {
     }
     .title-text {
         font-weight: bold;
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 12px;
+        line-height: 12px;
         cursor: pointer;
         transition: 0.2s;
     }
@@ -350,8 +356,17 @@ export default {
         color: #409EFF
     }
     .intro-text {
-        font-size: 0.8rem;
+        font-size: 12px;
         color: #606266;
+    }
+    .showing-title .title-text {
+        opacity: 1 !important;
+    }
+    .showing-title .intro-text {
+        opacity: 1 !important;
+    }
+    .showing-title i {
+        opacity: 1 !important;
     }
     .content-wrapper {
         flex: 0 0 500px;
@@ -379,24 +394,28 @@ export default {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -200%);
-        font-size: 5rem;
+        font-size: 50px;
         font-weight: bold;
         font-family: 'ZCOOL XiaoWei', serif;
     }
     .paragraph {
-        line-height: 1.8rem;
+        line-height: 18px;
+        font-size: 18px;
         margin-bottom: 10px;
+        font-family: 'ZCOOL XiaoWei', serif;
+
     }
     .para-title {
         font-weight: bold;
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 30px;
+        line-height: 3px;
         padding-left: 20px;
+        font-family: 'ZCOOL XiaoWei', serif;
     }
     .para-intro {
         text-align: right;
         display: block;
-        font-size: 1rem;
+        font-size: 12px;
         font-style: italic;
         color: #909399;
         margin-bottom: 10px;
@@ -406,16 +425,19 @@ export default {
         border-left: 2px solid #909399;
         padding: 10px 10px;
         padding-bottom: 15px;
+        font-family: 'Times New Roman', Times, serif
     }
     .quote::first-letter {
         opacity: 0;
+        color: transparent;
         margin-right: -10px;
     }
     .paragraph::first-letter {
         padding-left: 20px;
     }
     div {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
+
 
 </style>
