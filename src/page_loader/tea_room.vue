@@ -10,7 +10,8 @@
     :volume='moePlayer.volume'
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
-    <teaArticle></teaArticle>
+    <new-tea-article class="custom"></new-tea-article>
+    <!-- <teaArticle></teaArticle> -->
   </div>
 </template>
 
@@ -18,10 +19,12 @@
 import eventBus from '@/eventbus.js'
 import teaArticle from '@/components/tea_room/teaRoom_article.vue'
 import catalog from '@/components/tea_room/teaRoom_catalog.vue'
+import newTeaArticle from '@/components/tea_room/teaRoom_redesign.vue'
 export default {
   components: {
     teaArticle,
     catalog,
+    newTeaArticle
   },
   data(){
     return {
@@ -119,17 +122,18 @@ export default {
   .mainContainer {
     position: relative;
     padding-top: 60px;
-    background: #009FFF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 800px;
-    transition: 1s;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .musicPlayer {
     position: fixed;
     top: 60px;
     right: 0;
     width: 20vw;
+    z-index: 999;
   }
   @media only screen and (max-width:900px) {
     .musicPlayer {
