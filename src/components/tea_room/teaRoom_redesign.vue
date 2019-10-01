@@ -11,7 +11,7 @@
                         class="title-text" 
                         @click="toggleArticle(index)"
                         >
-                        <i class="fa fa-circle-o"></i>
+                        <i class="fa fa-circle-o list-icon"></i>
                         {{item.title}}
                     </p>
                     <p class="intro-text">{{item.intro}}</p>
@@ -62,6 +62,7 @@ export default {
             visibleController: false,
             statusController: null,
             articleInShow: null,
+            showingIndex: null,
             article: [
                 {
                     title: '那一日的梦',
@@ -259,9 +260,12 @@ export default {
             this.statusController = [...new Array(controllerSum).fill(false)];
         },
         toCover() {
+            this.showingIndex = null;
             this.isCoverShow = true;
         },
         toggleArticle(index) {
+            if (this.showingIndex == index) return;
+            this.showingIndex = index;
             this.isCoverShow = false;
             this.visibleController = false;
             this.articleInShow = {...{}};
@@ -283,6 +287,9 @@ export default {
         margin: 0px;
         color: #303133;
     }
+    .list-icon {
+        color: #df000a;
+    }
     .main-container {
         position: relative;
         padding-top: 40px;
@@ -297,10 +304,18 @@ export default {
         /* border-right: 1px solid black; */
     }
     .title-wrapper {
-        flex: 0 0 220px;
+        flex: 0 0 200px;
+        position: relative;
     }
     .title-wrapper:first-child {
         border-right: 1px solid #9093994f;
+    }
+    .title-wrapper:first-child * {
+        transition: 0.2s;
+        opacity: 0.6;
+    }
+    .title-wrapper:first-child:hover * {
+        opacity: 1;
     }
     .title-wrapper .title-holder {
         margin-bottom: 10px;
@@ -330,14 +345,10 @@ export default {
         color: #606266;
     }
     .content-wrapper {
-        flex: 0 0 450px;
+        flex: 0 0 500px;
         position: relative;
-        padding-top: 20px;
-        padding-bottom: 40px;
-        margin-bottom: 60px;
-        margin-left: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 20px 50px 40px 10px;
+        margin: 0px 0px 60px 40px;
         border-right: 1px solid #9093994f;
     }
     .content-wrapper > .cover-holder {
