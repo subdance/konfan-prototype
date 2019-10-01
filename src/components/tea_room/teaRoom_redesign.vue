@@ -36,6 +36,10 @@
                         class="content-holder"
                         v-if="visibleController && !isCoverShow"
                         >
+                        <p>
+                            <span class="para-title">{{articleInShow.title}}</span>
+                            <span class="para-intro">{{articleInShow.intro}}</span>
+                        </p>
                         <p
                             v-for="(item, index) in articleInShow.para"
                             :key="index"
@@ -360,10 +364,25 @@ export default {
         line-height: 1.8rem;
         margin-bottom: 10px;
     }
+    .para-title {
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-left: 20px;
+    }
+    .para-intro {
+        text-align: right;
+        display: block;
+        font-size: 1rem;
+        font-style: italic;
+        color: #909399;
+        margin-bottom: 10px;
+    }
     .quote {
         color: #909399;
         border-left: 2px solid #909399;
         padding: 10px 10px;
+        padding-bottom: 15px;
     }
     .quote::first-letter {
         opacity: 0;
