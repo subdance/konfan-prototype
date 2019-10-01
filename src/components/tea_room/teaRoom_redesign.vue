@@ -1,5 +1,6 @@
 <template>
     <div class="main-container">
+        <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
         <div class="main-wrapper">
             <div class="title-wrapper">
                 <div
@@ -17,7 +18,7 @@
                     <p class="intro-text">{{item.intro}}</p>
                 </div>
                 <div
-                    v-if="!isCoverShow"
+                    v-show="!isCoverShow"
                     class="title-holder"
                     @click="toCover"
                     >
@@ -25,12 +26,16 @@
                 </div>
             </div>
             <div class="content-wrapper">
-                <div
-                    v-if="isCoverShow"
-                    class="cover-holder"
-                    >
-                    this shall be cover
-                </div>
+                <transition name="el-fade-in">
+                    <div
+                        v-show="isCoverShow"
+                        class="cover-holder"
+                        >
+                        <div class="cover-text-holder">
+                            乐谱集
+                        </div>
+                    </div>
+                </transition>
                 <transition name="el-fade-in">
                     <div 
                         class="content-holder"
@@ -359,6 +364,24 @@ export default {
         position: absolute;
         top: 0px;
         left: 0px;
+        width: 100%;
+        height: 600px;
+        background-position: center;
+        background-size: contain;
+        background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/article/cover.jpg');
+        box-shadow: 3px 3px 10px black;
+        transition: 0.2s;
+    }
+    .cover-text-holder {
+        color: white;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        font-size: 5rem;
+        font-weight: bold;
+        font-family: 'ZCOOL XiaoWei', serif;
     }
     .paragraph {
         line-height: 1.8rem;
