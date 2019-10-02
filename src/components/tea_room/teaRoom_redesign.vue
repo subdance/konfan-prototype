@@ -35,6 +35,7 @@
                     <div
                         v-show="isCoverShow"
                         class="cover-holder"
+                        @click="toggleArticle(0)"
                         >
                         <div class="cover-text-holder">
                             乐谱集
@@ -322,11 +323,11 @@ export default {
         position: relative;
     }
     .title-wrapper:first-child {
-        border-right: 1px solid #9093994f;
+        /* border-right: 1px solid #df000a; */
     }
     .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
-        opacity: 0.5;
+        opacity: 0.2;
     }
     .title-wrapper:first-child:hover * {
         opacity: 1;
@@ -373,7 +374,7 @@ export default {
         position: relative;
         padding: 20px 50px 40px 10px;
         margin: 0px 0px 60px 40px;
-        border-right: 1px solid #9093994f;
+        /* border-right: 1px solid #df000a; */
     }
     .content-wrapper > .cover-holder {
         position: absolute;
@@ -384,8 +385,13 @@ export default {
         background-position: center;
         background-size: contain;
         background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/article/cover.jpg');
-        box-shadow: 3px 3px 10px black;
+        box-shadow: 0px 0px 20px black;
         transition: 0.2s;
+        cursor: pointer;
+    }
+    .content-wrapper > .cover-holder:hover {
+        transform: scale(1.05) rotate(5deg);
+        box-shadow: 6px 6px 10px black;
     }
     .cover-text-holder {
         color: white;
@@ -400,10 +406,9 @@ export default {
     }
     .paragraph {
         line-height: 18px;
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 10px;
-        font-family: 'ZCOOL XiaoWei', serif;
-
+        font-family: 'Times New Roman', Times, serif
     }
     .para-title {
         font-weight: bold;
@@ -421,11 +426,14 @@ export default {
         margin-bottom: 10px;
     }
     .quote {
+        font-size: 16px;
         color: #909399;
         border-left: 2px solid #909399;
         padding: 10px 10px;
         padding-bottom: 15px;
-        font-family: 'Times New Roman', Times, serif
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 18px;
+
     }
     .quote::first-letter {
         opacity: 0;
