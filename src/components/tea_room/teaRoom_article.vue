@@ -245,7 +245,7 @@ export default {
         this.collectInfo();
         this.$notify.info({
           title: '你好( ´･ω･)ﾉ(._.`)',
-          message: '此板块的手机版停止维护，使用大屏幕查看获得最新内容',
+          message: '此板块的手机版停止维护，使用大屏幕查看获得全新内容',
           duration: 5000,
           offset: 100
         });
