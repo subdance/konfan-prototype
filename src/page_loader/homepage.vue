@@ -26,6 +26,16 @@ export default {
         eventBus.$emit('changeFixPlayer', true);
         eventBus.$emit('stopMusic', false);
     },
+    mounted() {
+        if (window.innerWidth < 600) {
+            this.$notify.info({
+            title: '你好( ´･ω･)ﾉ(._.`)',
+            message: '使用大屏幕浏览此板块以获得完整体验',
+            duration: 0,
+            offset: 100
+            });
+        }
+    }
 }
 </script>
 
