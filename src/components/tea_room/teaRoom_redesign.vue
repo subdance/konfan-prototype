@@ -453,9 +453,40 @@ export default {
     .paragraph::first-letter {
         padding-left: 20px;
     }
-    div {
-        font-size: 24px;
-    }
+    @media only screen and (max-width: 1000px) {
+        .main-wrapper {
+            flex-flow: column wrap;
+        }
+        .title-wrapper {
+            text-align: center;
+            width: 100%;
+        }
+        .title-text:hover {
+            color: #303133;
+        }
+        .title-wrapper:first-child .title-holder * {
+            transition: 0.2s;
+            opacity: 1;
+        }
+        .title-wrapper:last-child {
+            flex: 0 0 0px;
+            padding-bottom: 100px;
+        }
+        .content-wrapper {
+            margin: 0px;
+            margin-top: 20px;
+            width: 100vw;
+            padding: 10px 25px;
+            flex: 0 0 auto;
+            min-height: 400px;
+        }
+        .content-wrapper > .cover-holder {
+            position: static;
+            height: 420px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
+    }
 
 </style>

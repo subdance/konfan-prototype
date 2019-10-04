@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mainContainer">
-    <catalog></catalog>
+    <!-- <catalog></catalog> -->
     <aplayer
     class="musicPlayer"
     ref='aplayer'
@@ -10,8 +10,7 @@
     :volume='moePlayer.volume'
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
-    <teaArticle v-if="isSmallScreen"></teaArticle>
-    <new-tea-article v-else class="custom" ></new-tea-article>
+    <new-tea-article class="custom" ></new-tea-article>
   </div>
 </template>
 
@@ -108,9 +107,6 @@ export default {
     this.playMusic();
   },
   computed: {
-    isSmallScreen() {
-      return window.innerWidth < 1200     
-    }
   },
   methods: {
     playMusic(){
@@ -142,11 +138,6 @@ export default {
     .musicPlayer {
       position: static;
       width: auto;
-    }
-    .mainContainer {
-      background: #12c2e9;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to top, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to top, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
   }
 </style>
