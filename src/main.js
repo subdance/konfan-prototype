@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-//import ElementUI
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'fullpage.js/dist/fullpage.css'
@@ -16,7 +15,6 @@ Vue.use(APlayer, {
   productionTip: true,
 });
 
-import "velocity-animate/velocity.js";
 
 Vue.use(ElementUI);
 
