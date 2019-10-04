@@ -1,6 +1,5 @@
 <template lang="html">
     <div class="main-container">
-        <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
         <div class="single-line" v-for="(item, index) in introText">
             <div class="pic-holder" :class="{'pic-holder-odd': index % 2 !== 0 }">
                 <img class="main-pic" :src="item.backgroundPic"></img>

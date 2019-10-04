@@ -4,15 +4,9 @@
         <div class="textHolder">
             <div class="text">
             <span class="iconStyle">
-                <i class="fa fa-camera-retro fa-5x"></i>
-                &nbsp &nbsp
-                <i class="fa fa-diamond fa-5x"></i>
-                &nbsp &nbsp
-                <i class="fa fa-heart fa-5x"></i>
-                &nbsp &nbsp
                 <i class="fa fa-music fa-spin fa-5x"></i>
             </span>
-            <span class="titileText">捕捉轻音部的闪光瞬间(●'◡'●)</span>
+            <span class="titileText">捕捉轻音部的闪光瞬间</span>
             </div>
         </div>
         </div>
@@ -223,6 +217,7 @@ export default {
     .titileText {
         font-size: 4rem;
         color: #303133;
+        font-family: 'ZCOOL KuaiLe', cursive;
     }
     .icon {
         text-align: left;

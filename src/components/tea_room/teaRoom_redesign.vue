@@ -1,6 +1,5 @@
 <template>
     <div class="main-container">
-        <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
         <div class="main-wrapper">
             <div class="title-wrapper">
                 <div

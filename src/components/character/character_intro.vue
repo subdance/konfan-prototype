@@ -38,8 +38,6 @@
     Tsumugi!</div>
     <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
     Azusa!</div>
-    <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-    <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <transition name="el-fade-in-linear">
       <el-row v-show='isShow'>
         <el-col :span="3">

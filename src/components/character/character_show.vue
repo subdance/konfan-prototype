@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="tabHolder">
-    <link async href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Merienda+One" rel="stylesheet">
     <el-carousel
       :indicator-position="indicatorPos"
       trigger='click'

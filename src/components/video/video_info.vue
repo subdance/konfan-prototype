@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="mainContainer">
-    <link async href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
     <div class="imgHolder">
     </div>
     <div class="dialogHolder">

@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="mainHolder">
-    <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
     <p class="mainTitle">或远或近的记录</p>
     <div class="single_row" v-for='(item, index) in articleSet' :id="'article' + index" >
         <div 
