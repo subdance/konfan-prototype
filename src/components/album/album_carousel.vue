@@ -34,7 +34,7 @@
                             <span class="detailText">{{ nowText1[ item - 1 ] }}</span>
                         </div>
                     </div>
-                    <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt="">
+                    <img class="carouselPicCard" :src='nowPic1[ item - 1 ]' alt=""></img>
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -172,7 +172,7 @@ export default {
         }
     },
     created(){
-        this.isSmallScreen();
+        // this.isSmallScreen();
     },
     mounted() {
         this.generateHeight();
@@ -202,7 +202,6 @@ export default {
         position: relative;
         padding-bottom: 56.2%;
         height: 0px;
-        border-radius: 10px;
         overflow: hidden;
     }
     .carouselPicWraper {
@@ -214,7 +213,6 @@ export default {
         height: 100%;
         object-fit: cover;
         display: block;
-        border-radius: 10px;
     }
     .titleHolder {
         height: 30rem;
@@ -285,7 +283,6 @@ export default {
     }
     @media only screen and (max-width: 600px) {
         .carouselPicCard {
-        border-radius: 10px;
         width: 100%;
         height: 250px;
         object-fit: contain;
@@ -294,7 +291,6 @@ export default {
         width: 100%;
         height: 250px;
         object-fit: contain;
-        border-radius: 10px;
         }
         .introText {
         color: #606266;
