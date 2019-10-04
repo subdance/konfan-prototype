@@ -91,9 +91,9 @@ export default {
                 'https://konfan.oss-cn-beijing.aliyuncs.com/image/album/set1/5.png',
             ],
             nowText1: [
-                '唯：Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
-                '律：Yamaha Hipgig HG6T46RMMY',
                 '澪：Fender japan JB62-DMC/VSP/3TS LH',
+                '律：Yamaha Hipgig HG6T46RMMY',
+                '唯：Gibson 2008 Les Paul Standard Heritage Cherry Sunburst',
                 '紬：KORG Triton Extreme 76、KORG RK-100',
                 '梓：Fender Japan Mustang MG69/MH CAR',
             ],
