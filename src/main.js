@@ -5,29 +5,20 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import 'fullpage.js/dist/fullpage.css'
 import APlayer from '@moefe/vue-aplayer';
-import VueFullPage from 'vue-fullpage.js'
 
-Vue.use(VueFullPage);
 Vue.use(APlayer, {
-  defaultCover: 'https://github.com/u3u.png',
-  productionTip: true,
+    defaultCover: 'https://github.com/u3u.png',
+    productionTip: true,
 });
-
-
 Vue.use(ElementUI);
 
-var VueScrollTo = require('vue-scrollto');
-
-Vue.use(VueScrollTo)
-
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })

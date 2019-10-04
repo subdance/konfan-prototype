@@ -7,9 +7,6 @@ import teaRoom from '@/page_loader/tea_room.vue'
 import videoRoom from '@/page_loader/video_room.vue'
 import chamber from '@/page_loader/test_chamber.vue'
 
-import toolkit from '@/page_loader/toolkit.vue'
-
-
 Vue.use(Router)
 
 export default new Router({
@@ -38,10 +35,6 @@ export default new Router({
     {
       path: '/chamber',
       component: chamber,
-    },
-    {
-      path: '/toolkit',
-      component: toolkit,
     },
   ]
 })
