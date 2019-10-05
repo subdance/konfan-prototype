@@ -37,7 +37,7 @@
                         @click="toggleArticle(0)"
                         >
                         <div class="cover-text-holder">
-                            极东乐园笔记
+                            极东<br />乐<br />园笔记
                         </div>
                     </div>
                 </transition>
@@ -136,15 +136,12 @@ export default {
         justify-content: center;  
         align-items: flex-start;
     }
-    .main-wrapper > div {
-        /* border-right: 1px solid black; */
-    }
     .title-wrapper {
         flex: 0 0 220px;
         position: relative;
     }
     .title-wrapper:first-child {
-        /* border-right: 1px solid #df000a; */
+        border-right: 1px solid #df000a;
     }
     .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
@@ -195,7 +192,7 @@ export default {
         position: relative;
         padding: 20px 50px 40px 10px;
         margin: 0px 0px 60px 40px;
-        /* border-right: 1px solid #df000a; */
+        border-right: 1px solid #df000a;
     }
     .content-wrapper > .cover-holder {
         position: absolute;
@@ -219,7 +216,7 @@ export default {
         display: block;
         position: absolute;
         top: 10%;
-        left: 75%;
+        right: 10%;
         font-size: 50px;
         font-weight: bold;
         font-family: 'ZCOOL XiaoWei', serif;

@@ -1,9 +1,9 @@
 <template>
     <div class="main-container">
         <div class="main-wrapper">
-            <div class="title-wrapper">
-                <el-button @click="drawer = true" type="danger" plain style="margin: auto; display: inline-block">
-                    <span style="font-family: 'ZCOOL XiaoWei', serif;">目录召唤</span>
+            <div class="title-wrapper-button">
+                <el-button @click="drawer = true" type="danger" plain>
+                    <span style="font-family: 'ZCOOL XiaoWei', serif; font-size: 20px;">✮目录召唤✡</span>
                 </el-button>
             </div>
             <div class="content-wrapper">
@@ -14,8 +14,7 @@
                         @click="toggleArticle(0)"
                         >
                         <div class="cover-text-holder">
-                            极东乐园<br />
-                            笔记
+                            极东<br />乐<br />园笔记
                         </div>
                     </div>
                 </transition>
@@ -141,21 +140,15 @@ export default {
         margin: 0px;
         color: #303133;
     }
+    .title-wrapper-button {
+        text-align: center;
+    }
     .list-icon {
         color: #df000a;
     }
     .main-container {
         position: relative;
         padding-top: 20px;
-    }
-    .main-wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;  
-        align-items: flex-start;
-    }
-    .title-wrapper {
-        position: relative;
     }
     .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
@@ -265,25 +258,12 @@ export default {
     .main-wrapper {
         flex-flow: column wrap;
     }
-    .title-wrapper {
-        text-align: center;
-        width: 100%;
-    }
     .title-text:hover {
         color: #303133;
     }
     .title-wrapper{
-        display: inline-block;
-        width: auto;
-        margin: auto;
-    }
-    .title-wrapper:first-child .title-holder * {
-        transition: 0.2s;
-        opacity: 1;
-    }
-    .title-wrapper:last-child {
-        flex: 0 0 0px;
-        padding-bottom: 100px;
+        text-align: center;
+        position: relative;
     }
     .content-wrapper {
         margin: 0px;
