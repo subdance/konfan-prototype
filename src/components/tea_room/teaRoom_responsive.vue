@@ -158,9 +158,6 @@ export default {
         text-align: center;
         position: relative;
     }
-    .title-wrapper:first-child .title-holder * {
-        transition: 0.2s;
-    }
     .title-wrapper .title-holder {
         margin-bottom: 10px;
     }
@@ -170,7 +167,6 @@ export default {
     .switch-text {
         border-bottom: 1px solid #909399;
         cursor: pointer;
-        transition: 0.2s;
         color: #909399;
         font-size: 12px;
     }
@@ -183,7 +179,6 @@ export default {
         font-size: 12px;
         line-height: 12px;
         cursor: pointer;
-        transition: 0.2s;
     }
     .title-text:hover {
         color: #409EFF
@@ -209,7 +204,7 @@ export default {
         background-size: contain;
         background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/article/cover.jpg');
         box-shadow: 0px 0px 20px black;
-        transition: 0.3s;
+        transition: 0.4s;
     }
     .content-wrapper > .cover-holder:hover {
         transform: rotate(30deg) scale(0.8);
