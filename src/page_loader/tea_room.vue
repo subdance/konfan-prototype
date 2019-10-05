@@ -10,20 +10,21 @@
     :volume='moePlayer.volume'
     :listFolded='moePlayer.isListFolded'
     :theme='moePlayer.theme' />
-    <new-tea-article class="custom" ></new-tea-article>
+    <small-tea-article v-if="isSmallScreen"></small-tea-article>
+    <new-tea-article v-else class="custom" ></new-tea-article>
   </div>
 </template>
 
 <script>
 import eventBus from '@/eventbus.js'
-import teaArticle from '@/components/tea_room/teaRoom_article.vue'
 import catalog from '@/components/tea_room/teaRoom_catalog.vue'
 import newTeaArticle from '@/components/tea_room/teaRoom_redesign.vue'
+import smallTeaArticle from '@/components/tea_room/teaRoom_responsive.vue'
 export default {
   components: {
-    teaArticle,
     catalog,
-    newTeaArticle
+    newTeaArticle,
+    smallTeaArticle
   },
   data(){
     return {
@@ -107,6 +108,9 @@ export default {
     this.playMusic();
   },
   computed: {
+    isSmallScreen() {
+      return window.innerWidth < 1100;
+    }
   },
   methods: {
     playMusic(){

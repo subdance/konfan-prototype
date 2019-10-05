@@ -2,32 +2,9 @@
     <div class="main-container">
         <div class="main-wrapper">
             <div class="title-wrapper">
-                <div
-                    v-for="(item, index) in article"
-                    :key="index"
-                    class="title-holder"
-                    :class="{'showing-title': index == showingIndex}"
-                    >
-                    <p 
-                        class="title-text" 
-                        @click="toggleArticle(index)"
-                        >
-                        <i v-show="showingIndex == index" class="fa fa-dot-circle-o list-icon"></i>
-                        <i v-show="showingIndex !== index" class="fa fa-circle-o list-icon"></i>
-                        {{item.title}}
-                    </p>
-                    <p class="intro-text">{{item.intro}}</p>
-                </div>
-                <div
-                    v-show="!isCoverShow"
-                    class="title-holder"
-                    @click="toCover"
-                    >
-                    <span class="switch-text">
-                        合上书
-                        <i class="fa fa-book"></i>
-                    </span>
-                </div>
+                <el-button @click="drawer = true" type="danger" plain style="margin-left: 16px;">
+                    <span style="font-family: 'ZCOOL XiaoWei', serif;">目录召唤</span>
+                </el-button>
             </div>
             <div class="content-wrapper">
                 <transition name="el-fade-in">
@@ -37,7 +14,7 @@
                         @click="toggleArticle(0)"
                         >
                         <div class="cover-text-holder">
-                            乐谱集
+                            极东乐园笔记
                         </div>
                     </div>
                 </transition>
@@ -65,7 +42,43 @@
 
             </div>
         </div>
+        <el-drawer
+            title="目录"
+            :visible.sync="drawer"
+            :direction="direction"
+            size='80%'
+            >
+            <div class="title-wrapper">
+                <div
+                    v-for="(item, index) in article"
+                    :key="index"
+                    class="title-holder"
+                    :class="{'showing-title': index == showingIndex}"
+                    >
+                    <p 
+                        class="title-text" 
+                        @click="toggleArticle(index)"
+                        >
+                        <i v-show="showingIndex == index" class="fa fa-dot-circle-o list-icon"></i>
+                        <i v-show="showingIndex !== index" class="fa fa-circle-o list-icon"></i>
+                        {{item.title}}
+                    </p>
+                    <p class="intro-text">{{item.intro}}</p>
+                </div>
+                <div
+                    v-show="!isCoverShow"
+                    class="title-holder"
+                    @click="toCover"
+                    >
+                    <span class="switch-text">
+                        合上书
+                        <i class="fa fa-book"></i>
+                    </span>
+                </div>
+            </div>
+        </el-drawer>
     </div>
+    
 </template>
 
 <script>
@@ -73,6 +86,8 @@ import { articleData } from '@/components/tea_room/article.js'
 export default {
     data() {
         return {
+            drawer: false,
+            direction: 'ltr',
             isCoverShow: true,
             visibleController: false,
             statusController: null,
@@ -98,6 +113,7 @@ export default {
         toCover() {
             this.showingIndex = null;
             this.isCoverShow = true;
+            this.drawer = false;
         },
         toggleArticle(index) {
             if (this.showingIndex == index) return;
@@ -105,11 +121,12 @@ export default {
             this.isCoverShow = false;
             this.visibleController = false;
             this.articleInShow = {...{}};
+            this.drawer = false;
             setTimeout(() => {
                 this.articleInShow = {...this.article[index]};
                 this.visibleController = true;
             }, 300)
-        }
+        },
     }
 }
 </script>
@@ -128,7 +145,7 @@ export default {
     }
     .main-container {
         position: relative;
-        padding-top: 40px;
+        padding-top: 20px;
     }
     .main-wrapper {
         display: flex;
@@ -140,7 +157,6 @@ export default {
         /* border-right: 1px solid black; */
     }
     .title-wrapper {
-        flex: 0 0 220px;
         position: relative;
     }
     .title-wrapper:first-child {
@@ -148,10 +164,6 @@ export default {
     }
     .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
-        opacity: 0.2;
-    }
-    .title-wrapper:first-child:hover * {
-        opacity: 1;
     }
     .title-wrapper .title-holder {
         margin-bottom: 10px;
@@ -220,10 +232,12 @@ export default {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -200%);
+        transform: translate(-50%, -50%);
         font-size: 50px;
         font-weight: bold;
         font-family: 'ZCOOL XiaoWei', serif;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
     }
     .paragraph {
         line-height: 18px;
@@ -264,4 +278,43 @@ export default {
     .paragraph::first-letter {
         padding-left: 20px;
     }
+    @media only screen and (max-width: 1000px) {
+        .main-container {
+            max-width: 375px;
+        }
+        .main-wrapper {
+            flex-flow: column wrap;
+        }
+        .title-wrapper {
+            text-align: center;
+            width: 100%;
+        }
+        .title-text:hover {
+            color: #303133;
+        }
+        .title-wrapper:first-child .title-holder * {
+            transition: 0.2s;
+            opacity: 1;
+        }
+        .title-wrapper:last-child {
+            flex: 0 0 0px;
+            padding-bottom: 100px;
+        }
+        .content-wrapper {
+            margin: 0px;
+            margin-top: 20px;
+            width: 100vw;
+            padding: 10px 25px;
+            flex: 0 0 auto;
+            min-height: 400px;
+        }
+        .content-wrapper > .cover-holder {
+            position: static;
+            height: 420px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
 </style>
