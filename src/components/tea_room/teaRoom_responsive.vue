@@ -2,7 +2,7 @@
     <div class="main-container">
         <div class="main-wrapper">
             <div class="title-wrapper">
-                <el-button @click="drawer = true" type="danger" plain style="margin-left: 16px;">
+                <el-button @click="drawer = true" type="danger" plain style="margin: auto;">
                     <span style="font-family: 'ZCOOL XiaoWei', serif;">目录召唤</span>
                 </el-button>
             </div>
@@ -153,9 +153,6 @@ export default {
         justify-content: center;  
         align-items: flex-start;
     }
-    .main-wrapper > div {
-        /* border-right: 1px solid black; */
-    }
     .title-wrapper {
         position: relative;
     }
@@ -240,7 +237,7 @@ export default {
         writing-mode: vertical-rl;
     }
     .paragraph {
-        line-height: 18px;
+        line-height: 20px;
         font-size: 16px;
         margin-bottom: 10px;
         font-family: 'Times New Roman', Times, serif
@@ -248,7 +245,7 @@ export default {
     .para-title {
         font-weight: bold;
         font-size: 30px;
-        line-height: 3px;
+        line-height: 30px;
         padding-left: 20px;
         font-family: 'ZCOOL XiaoWei', serif;
     }
@@ -256,9 +253,10 @@ export default {
         text-align: right;
         display: block;
         font-size: 12px;
+        line-height: 12px;
         font-style: italic;
         color: #909399;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .quote {
         font-size: 16px;
@@ -267,8 +265,7 @@ export default {
         padding: 10px 10px;
         padding-bottom: 15px;
         font-family: 'Times New Roman', Times, serif;
-        line-height: 18px;
-
+        line-height: 20px;
     }
     .quote::first-letter {
         opacity: 0;
@@ -278,43 +275,39 @@ export default {
     .paragraph::first-letter {
         padding-left: 20px;
     }
-    @media only screen and (max-width: 1000px) {
-        .main-container {
-            max-width: 375px;
-        }
-        .main-wrapper {
-            flex-flow: column wrap;
-        }
-        .title-wrapper {
-            text-align: center;
-            width: 100%;
-        }
-        .title-text:hover {
-            color: #303133;
-        }
-        .title-wrapper:first-child .title-holder * {
-            transition: 0.2s;
-            opacity: 1;
-        }
-        .title-wrapper:last-child {
-            flex: 0 0 0px;
-            padding-bottom: 100px;
-        }
-        .content-wrapper {
-            margin: 0px;
-            margin-top: 20px;
-            width: 100vw;
-            padding: 10px 25px;
-            flex: 0 0 auto;
-            min-height: 400px;
-        }
-        .content-wrapper > .cover-holder {
-            position: static;
-            height: 420px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
+    .main-container {
+        max-width: 375px;
     }
-
+    .main-wrapper {
+        flex-flow: column wrap;
+    }
+    .title-wrapper {
+        text-align: center;
+        width: 100%;
+    }
+    .title-text:hover {
+        color: #303133;
+    }
+    .title-wrapper:first-child .title-holder * {
+        transition: 0.2s;
+        opacity: 1;
+    }
+    .title-wrapper:last-child {
+        flex: 0 0 0px;
+        padding-bottom: 100px;
+    }
+    .content-wrapper {
+        margin: 0px;
+        margin-top: 20px;
+        width: 100vw;
+        padding: 10px 25px;
+        flex: 0 0 auto;
+        min-height: 400px;
+    }
+    .content-wrapper > .cover-holder {
+        position: static;
+        height: 420px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 </style>
