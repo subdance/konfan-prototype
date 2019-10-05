@@ -45,6 +45,7 @@
             :direction="direction"
             size='80%'
             :modal="false"
+            style="will-change: transform, opacity"
             >
             <div class="title-wrapper">
                 <div
@@ -198,13 +199,15 @@ export default {
     }
     .content-holder {
         min-height: 400px;
+        will-change: transform, opacity;
     }
     .content-wrapper > .cover-holder {
         background-position: center;
         background-size: contain;
         background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/article/cover.jpg');
         box-shadow: 0px 0px 20px black;
-        transition: 0.4s;
+        transition: 0.3s;
+        will-change: transform, opacity;
     }
     .content-wrapper > .cover-holder:hover {
         transform: rotate(30deg) scale(0.8);
