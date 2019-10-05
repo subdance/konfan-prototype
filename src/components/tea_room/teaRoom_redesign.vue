@@ -37,7 +37,7 @@
                         @click="toggleArticle(0)"
                         >
                         <div class="cover-text-holder">
-                            乐谱集
+                            极东乐园笔记
                         </div>
                     </div>
                 </transition>
@@ -207,7 +207,7 @@ export default {
         background-size: contain;
         background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/article/cover.jpg');
         box-shadow: 0px 0px 20px black;
-        transition: 0.2s;
+        transition: 0.5s;
         cursor: pointer;
     }
     .content-wrapper > .cover-holder:hover {
@@ -218,12 +218,13 @@ export default {
         color: white;
         display: block;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -200%);
+        top: 10%;
+        left: 75%;
         font-size: 50px;
         font-weight: bold;
         font-family: 'ZCOOL XiaoWei', serif;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
     }
     .paragraph {
         line-height: 18px;

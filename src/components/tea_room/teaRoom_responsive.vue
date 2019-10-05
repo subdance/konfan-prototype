@@ -2,19 +2,20 @@
     <div class="main-container">
         <div class="main-wrapper">
             <div class="title-wrapper">
-                <el-button @click="drawer = true" type="danger" plain style="margin: auto;">
+                <el-button @click="drawer = true" type="danger" plain style="margin: auto; display: inline-block">
                     <span style="font-family: 'ZCOOL XiaoWei', serif;">目录召唤</span>
                 </el-button>
             </div>
             <div class="content-wrapper">
                 <transition name="el-fade-in">
                     <div
-                        v-show="isCoverShow"
+                        v-if="isCoverShow"
                         class="cover-holder"
                         @click="toggleArticle(0)"
                         >
                         <div class="cover-text-holder">
-                            极东乐园笔记
+                            极东乐园<br />
+                            笔记
                         </div>
                     </div>
                 </transition>
@@ -156,9 +157,6 @@ export default {
     .title-wrapper {
         position: relative;
     }
-    .title-wrapper:first-child {
-        /* border-right: 1px solid #df000a; */
-    }
     .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
     }
@@ -199,29 +197,15 @@ export default {
     .showing-title i {
         opacity: 1 !important;
     }
-    .content-wrapper {
-        flex: 0 0 500px;
-        position: relative;
-        padding: 20px 50px 40px 10px;
-        margin: 0px 0px 60px 40px;
-        /* border-right: 1px solid #df000a; */
-    }
     .content-wrapper > .cover-holder {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 600px;
         background-position: center;
         background-size: contain;
         background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/article/cover.jpg');
         box-shadow: 0px 0px 20px black;
-        transition: 0.2s;
-        cursor: pointer;
+        transition: 0.3s;
     }
     .content-wrapper > .cover-holder:hover {
-        transform: scale(1.05) rotate(5deg);
-        box-shadow: 6px 6px 10px black;
+        transform: rotate(30deg) scale(0.8);
     }
     .cover-text-holder {
         color: white;
@@ -288,6 +272,11 @@ export default {
     .title-text:hover {
         color: #303133;
     }
+    .title-wrapper{
+        display: inline-block;
+        width: auto;
+        margin: auto;
+    }
     .title-wrapper:first-child .title-holder * {
         transition: 0.2s;
         opacity: 1;
@@ -302,11 +291,11 @@ export default {
         width: 100vw;
         padding: 10px 25px;
         flex: 0 0 auto;
-        min-height: 400px;
+        min-height: 500px;
     }
     .content-wrapper > .cover-holder {
-        position: static;
-        height: 420px;
+        position: relative;
+        height: 500px;
         background-repeat: no-repeat;
         background-size: cover;
     }
